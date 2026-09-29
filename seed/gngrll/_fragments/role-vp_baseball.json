@@ -1,0 +1,95 @@
+{
+  "role": "vp_baseball",
+  "description": "The VP of Baseball leads baseball operations across GNGRLL's player-pitch divisions (AA ages 7-8, AAA Minors ages 9-10, Majors ages 11-12, and Juniors/Seniors ages 13-16), coordinating with the president, coaching coordinator, and scheduler. Responsibilities run year-round: publishing game and practice schedules in GameChanger, running spring indoor/clinic practices, organizing division playoffs with brackets and rules, standing up summer baseball, and managing Junior/Senior commitment letters and rosters. The VP works closely with the softball VP, umpire-in-chief, and safety officer to keep the on-field program balanced, competitive, and fun for kids across all levels.",
+  "calendar": [
+    {
+      "title": "Junior & Senior baseball commitment letters due",
+      "weekOfFY": 51,
+      "kind": "due",
+      "description": "Collect Junior & Senior baseball commitment responses (due Nov 30) and publish the roster by Nov 1 so summer-season Junior/Senior teams can be planned early in the FY."
+    },
+    {
+      "title": "Spring indoor practice / clinic schedule set",
+      "weekOfFY": 23,
+      "kind": "due",
+      "description": "Finalize the clinic-style indoor practice schedule (gym/YMCA time slots, Saturday sessions into April) for AA/AAA/Majors, coordinating coaches and pooled stations before teams move to the fields."
+    },
+    {
+      "title": "Draft complete - build team practice/game schedules",
+      "weekOfFY": 24,
+      "kind": "reminder",
+      "description": "With drafts done and teams finalized, work with coaches and the scheduler to lay out division practice and game schedules ahead of the season start (approx. April 10)."
+    },
+    {
+      "title": "Game & practice schedules posted in GameChanger",
+      "weekOfFY": 27,
+      "kind": "due",
+      "description": "Publish and update AA/AAA/Majors baseball (and coordinate Tee Ball/Coach Pitch/Softball) practice and game schedules in GameChanger with correct start dates, fields, and times."
+    },
+    {
+      "title": "Playoff schedule, rules & brackets announcement",
+      "weekOfFY": 34,
+      "kind": "due",
+      "description": "Send the league-wide baseball playoff email covering the schedule by division, seeding/home-team rules, pitch-count regulations, AA player-pitch clarifications, and bracket formats (single vs double elimination). See playoffs_tournament__baseball-playoff-schedule-rules.md."
+    },
+    {
+      "title": "Summer baseball registration & season setup",
+      "weekOfFY": 34,
+      "kind": "reminder",
+      "description": "Open summer baseball / summer-ball registration and set up the summer season (divisions, rosters, schedules) as the regular season wraps into playoffs."
+    },
+    {
+      "title": "Season retrospective - baseball divisions",
+      "weekOfFY": 42,
+      "kind": "reminder",
+      "description": "Review the post-season survey and division feedback for baseball (AA/AAA/Majors/Juniors/Seniors) to feed next-year rule, structure, and scheduling planning."
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Publish Junior & Senior baseball roster by Nov 1",
+      "dueWeekOfFY": 51,
+      "description": "Send Junior & Senior baseball commitment letters, collect responses (due Nov 30), and publish the confirmed roster by Nov 1 so summer-team formation can begin early in the fiscal year."
+    },
+    {
+      "title": "Rules / division review for baseball",
+      "dueWeekOfFY": 19,
+      "description": "Contribute to the annual rules and division review (farm system, coach-pitch/player-pitch transition, age structure, playing-up) so baseball division rules are set before assessments and drafts."
+    },
+    {
+      "title": "Book spring indoor practice time and schedule",
+      "dueWeekOfFY": 23,
+      "description": "Secure gym/YMCA time and build the clinic-style indoor practice schedule for AA/AAA/Majors, coordinating coaches, assistant coaches, and volunteer setup crews for nets and bins."
+    },
+    {
+      "title": "Coordinate post-draft practice/game schedule build",
+      "dueWeekOfFY": 24,
+      "description": "After the draft and coaches meeting, work with the scheduler and coaches to finalize the baseball practice and game calendar leading into opening day (approx. April 10)."
+    },
+    {
+      "title": "Enter and update baseball schedules in GameChanger",
+      "dueWeekOfFY": 27,
+      "description": "Ensure AA/AAA/Majors coaches have entered practice and game schedules in GameChanger with correct start dates, fields, and times, and post league updates for families."
+    },
+    {
+      "title": "Prepare baseball playoff schedule, brackets & rules",
+      "dueWeekOfFY": 33,
+      "description": "Draw first-round matchups, build brackets (single vs double elimination by division), assemble the pitch-count and playoff rules summary, and coordinate the end-of-season BBQ / Home Run Derby with the president."
+    },
+    {
+      "title": "Send baseball playoff schedule/rules email",
+      "dueWeekOfFY": 34,
+      "description": "Distribute the league-wide 'Baseball Playoff Schedule, Rules, & Brackets' announcement using the playoffs_tournament template with placeholders for dates, formats, distances, and the pitch-count link filled in."
+    },
+    {
+      "title": "Launch summer baseball registration and season",
+      "dueWeekOfFY": 34,
+      "description": "Open summer baseball / summer-ball registration, set divisions and team counts, and stand up schedules and rosters for the summer program following the regular season."
+    },
+    {
+      "title": "Baseball season retrospective input",
+      "dueWeekOfFY": 42,
+      "description": "Review end-of-season survey results and division feedback for baseball and summarize what went well / what to change for next year's structure, scheduling, and rules."
+    }
+  ]
+}

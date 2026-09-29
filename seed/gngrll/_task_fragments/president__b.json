@@ -1,0 +1,298 @@
+[
+  {
+    "title": "Finalize season calendar",
+    "dueWeekOfFY": 24,
+    "details": "Lock down the full season calendar so every downstream activity has a firm date to build against. This consolidates clinics, assessments, coaches clinics, drafts, field cleanups, first-game dates, and the All-Star letter/deadline dates into one authoritative reference. It matters because uniform ordering, scheduling, and family communications all key off these dates, and drafts in particular must land before uniform-order cutoffs.",
+    "steps": [
+      "Gather draft dates from the prior year's calendar and confirm gym/field availability and any Little League deadlines.",
+      "Sequence winter clinics, assessments, and coaches clinics ahead of the drafts for each division.",
+      "Set division draft dates so they complete before the uniform-order cutoff (drafts historically finalized by late March).",
+      "Add field cleanup/workdays, first-game targets, and the All-Star Letter-of-Intent due date (early-to-mid May in recent seasons).",
+      "Circulate the draft calendar to the board for review and adjust for conflicts.",
+      "Publish the finalized calendar to the website and reference it in registration and clinic communications."
+    ],
+    "links": [
+      {"type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies"},
+      {"type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies"},
+      {"type": "template", "ref": "practice__winter-clinics", "label": "Winter Clinics announcement template"}
+    ]
+  },
+  {
+    "title": "Send division draft invites",
+    "dueWeekOfFY": 24,
+    "details": "Invite each division's head and assistant coaches to their draft and set the meeting. This kicks off team formation for the season and must be timed so all divisions draft before the uniform-order cutoff. The invite establishes the roster of participating coaches, proposes evenings, and shares the online meeting details so remote coaches can attend.",
+    "steps": [
+      "Email the confirmed head/assistant coach list for the division and note any coaches still needed (e.g., aiming for 6 teams at AAA for scheduling and playing time).",
+      "Propose evening dates and confirm the final date, allowing slack to recruit an additional coach if a division is short.",
+      "Explain the snake-order draft mechanics (1-6, 6-1) and coach's-kid/assistant-coach rules so coaches arrive prepared.",
+      "Include the Google Meet video link and any dial-in for coaches attending remotely.",
+      "Attach the draft sheet/info and flag any special cases (e.g., an all-town team highlighted for skipping).",
+      "Send a same-day reminder with the meeting link before the draft (drafts have run at 7:30pm)."
+    ],
+    "links": [
+      {"type": "template", "ref": "draft__schedule-invite", "label": "Draft schedule invite template"},
+      {"type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference"},
+      {"type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies"}
+    ]
+  },
+  {
+    "title": "Release draft results and collect team names",
+    "dueWeekOfFY": 25,
+    "details": "After each division drafts, publish the per-team rosters and practice schedules to coaches, then collect each team's ranked team-name choices. This lets coaches introduce themselves and begin scheduling, and the ranked choices with a coin-flip tiebreaker prevent duplicate team names across the division. It occurs immediately after the draft and before rosters are entered into GameChanger.",
+    "steps": [
+      "Evaluate drafted teams for age, average-score, and overall balance and process any equitable trades before finalizing.",
+      "Send each coach their team roster and the initial practice schedule.",
+      "Ask coaches to reach out to their teams to introduce themselves and begin scheduling practices.",
+      "Collect ranked team-name choices from each coach and resolve duplicate requests using a coin-flip tiebreaker.",
+      "Confirm the final team names back to coaches so they can be entered into GameChanger."
+    ],
+    "links": [
+      {"type": "template", "ref": "draft__results-and-team-names", "label": "Draft results and team names template"},
+      {"type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference"},
+      {"type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies"}
+    ]
+  },
+  {
+    "title": "Ensure rosters published to GameChanger",
+    "dueWeekOfFY": 26,
+    "details": "Direct the secretary to enter each drafted team into GameChanger and confirm the rosters are posted so families and coaches can view teams and schedules. GameChanger is the league's official app for rosters, schedules, and coach-family communication, so this is a prerequisite for practices and games. Import issues are common, so plan for follow-up and re-posting.",
+    "steps": [
+      "Direct the secretary to enter each finalized team and roster into GameChanger.",
+      "Confirm each team imports correctly, retrying if teams fail to import or spin during setup.",
+      "Announce to families that rosters are posted and that their login matches their Sports Connect/registration login.",
+      "Share the GameChanger FAQ link for families who have not used the app (info.gnglittleleague.org/frequently-asked-questions/game-changer).",
+      "Note that families may need to reload their team if they hit earlier import issues, and invite questions."
+    ],
+    "links": [
+      {"type": "template", "ref": "draft__publish-rosters", "label": "Roster entry to GameChanger template"},
+      {"type": "template", "ref": "schedule__gamechanger-rosters", "label": "GameChanger for rosters/schedule template"},
+      {"type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/game-changer", "label": "GameChanger FAQ"}
+    ]
+  },
+  {
+    "title": "Announce optional pre-season practices",
+    "dueWeekOfFY": 27,
+    "details": "Announce optional outdoor pre-season practices to families so teams can get on the field before games begin without losing good-weather days. Coaches post specific times and fields to GameChanger, so the announcement points families there and sets weather expectations. It runs in the weeks after drafts and before the regular season opens.",
+    "steps": [
+      "Confirm which divisions will hold optional outdoor practices and which fields are available.",
+      "Tell families coaches will add practice times and fields to GameChanger and to check there for assignments.",
+      "Direct families to download the GameChanger app and sign in with their registration login (https://www.gc.com), and share the FAQ for finding their team.",
+      "Set expectations that practices are optional and weather-dependent, and to bundle up for cool early-season conditions.",
+      "Note any divisions still being worked out so families know more may follow."
+    ],
+    "links": [
+      {"type": "template", "ref": "schedule__optional-practices", "label": "Optional practices template"},
+      {"type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/game-changer", "label": "GameChanger FAQ"},
+      {"type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference"}
+    ]
+  },
+  {
+    "title": "Distribute District 6 and All-Star tournament info",
+    "dueWeekOfFY": 27,
+    "details": "Share District 6 updates, interleague forms, and All-Star tournament dates with the board and coaches so the league can plan for tournament and interleague play. This keeps the board aligned on district deadlines and gives coaches early visibility into the All-Star timeline. It happens in-season as District 6 finalizes schedules and affidavit/eligibility requirements.",
+    "steps": [
+      "Collect current District 6 updates, interleague forms, and All-Star tournament dates from the district administrator.",
+      "Summarize the relevant deadlines (commitment/letter-of-intent, affidavit signing, tournament brackets) for the board.",
+      "Distribute the info and any required interleague forms to the board and affected coaches.",
+      "Point families and coaches to the All-Stars/Tournaments FAQ for eligibility and scheduling details.",
+      "Track district deadlines that require league action (rosters, affidavits) and assign owners."
+    ],
+    "links": [
+      {"type": "template", "ref": "playoffs_tournament__d6-allstar-tournament-info", "label": "D6 All-Star tournament info template"},
+      {"type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies"},
+      {"type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/all-stars-tournaments", "label": "All-Stars & Tournaments FAQ"}
+    ]
+  },
+  {
+    "title": "Broadcast season schedules update",
+    "dueWeekOfFY": 28,
+    "details": "Send families a season-opening schedule status by division, directing them to GameChanger for the authoritative schedule. This manages expectations when the scheduling system is still being finalized and tells each division when practices and games start. It is sent as the regular season opens, often while the scheduling provider is still resolving sync issues.",
+    "steps": [
+      "Confirm the current status of the scheduling system and each division's practice/game start dates.",
+      "Give a per-division breakdown of what is posted versus pending (e.g., tee ball/coach pitch start weeks, AA/AAA/Majors practice and game starts).",
+      "Explain that coaches will enter upcoming practices in GameChanger until full schedules are posted.",
+      "Direct all families to GameChanger for their schedule and note when full schedules are expected.",
+      "Send the update to all families across divisions and invite questions."
+    ],
+    "links": [
+      {"type": "template", "ref": "schedule__schedules-update", "label": "Schedules update template"},
+      {"type": "template", "ref": "schedule__gamechanger-rosters", "label": "GameChanger for rosters/schedule template"},
+      {"type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/game-changer", "label": "GameChanger FAQ"}
+    ]
+  },
+  {
+    "title": "Coordinate Snack Shack setup and staffing",
+    "dueWeekOfFY": 31,
+    "details": "Coordinate opening the Snack Shack and recruiting volunteer staffing (baseball and softball) so concessions are ready when games start. Concessions are a key league fundraiser and require setup plus a steady rotation of volunteers. This is done right before the season's first games and repeated for softball opening day.",
+    "steps": [
+      "Confirm the Snack Shack is stocked, cleaned, and set up ahead of the first games.",
+      "Recruit or confirm a concessions/Snack Shack manager to run day-to-day operations.",
+      "Post volunteer sign-ups for opening day and early game dates, including a separate softball opening-day slot.",
+      "Coordinate field maintenance and setup alongside concessions where they overlap.",
+      "Follow up on unfilled shifts and remind families that help keeps the Snack Shack open."
+    ],
+    "links": [
+      {"type": "template", "ref": "snack_shack__opening-day-volunteers", "label": "Snack Shack opening-day volunteers template"},
+      {"type": "template", "ref": "snack_shack__concessions-manager-recruit", "label": "Concessions manager recruit template"},
+      {"type": "template", "ref": "opening_day__snack-shack-volunteers", "label": "Snack Shack volunteers - opening day template"}
+    ]
+  },
+  {
+    "title": "Broadcast field etiquette and start times",
+    "dueWeekOfFY": 31,
+    "details": "Send families field rules, start times, arrival windows, and neighbor-respect reminders to keep events safe and on good terms with shared facilities. This became critical when weekday events at fields overlapped with other town programs and a safety incident occurred in a pickup line. It is sent early in the game season and reissued whenever start times or arrival windows change.",
+    "steps": [
+      "Identify overlaps between league events and other programs at shared fields (e.g., town rec pickup lines).",
+      "Set adjusted start times and a no-early-arrival window to reduce congestion (e.g., events start at 6pm, no arrival before 5:30pm).",
+      "Publish warm-up and game start windows per division so families know when to arrive.",
+      "Explain the safety rationale and stress respecting neighbors and shared-facility partners.",
+      "Send to all affected families and repeat if start times or arrival rules change."
+    ],
+    "links": [
+      {"type": "template", "ref": "fields_facilities__field-etiquette-access", "label": "Field etiquette and start times template"},
+      {"type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference"},
+      {"type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects"}
+    ]
+  },
+  {
+    "title": "Manage All-Star commitment intake",
+    "dueWeekOfFY": 32,
+    "details": "Collect All-Star commitment (Letter of Intent) forms by the deadline and verify each division has a full 14-player slate before accepting a nomination. Without a submitted form a player cannot be considered for tournament play, so intake determines which teams can even be fielded. The deadline runs early-to-mid May, historically due by 11:59pm on a set date.",
+    "steps": [
+      "Publish the online Letter-of-Intent/commitment form with the deadline (recent seasons due ~May 18-19 at 11:59pm).",
+      "Direct families to the All-Stars FAQ for eligibility and to route questions to their manager or the secretary.",
+      "Include the school-residency permission option so the district can verify enrollment in bulk.",
+      "Send a reminder before the deadline and consolidate all submissions (including earlier paper forms) in one place.",
+      "Tally commitments by division/level and confirm a full 14-player slate before accepting a nomination.",
+      "Flag any division short of 14 for a team-not-fielded decision."
+    ],
+    "links": [
+      {"type": "template", "ref": "all_stars__commitment-form", "label": "All-Star commitment form template"},
+      {"type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies"},
+      {"type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/all-stars-tournaments", "label": "All-Stars & Tournaments FAQ"}
+    ]
+  },
+  {
+    "title": "Schedule playoffs and end-of-season events",
+    "dueWeekOfFY": 33,
+    "details": "Build the playoff brackets and plan the end-of-season celebration (championship-day BBQ and Home Run Derby) with volunteers. Playoffs run the first two weeks of June with double-elimination brackets and consolation games, and championship day features a free BBQ. This work sets the competitive close of the season and the community celebration around it.",
+    "steps": [
+      "Draw first-round matchups by random draw and update schedules so the last set-opponent game is the first playoff game.",
+      "Publish double-elimination brackets online and note placeholders for unknown later-round matchups.",
+      "Set home-team rules (first round by coin flip, later rounds by playoff winning percentage) and rainout/make-up plans.",
+      "Include consolation-game guidance so eliminated teams end on a fun note (medals, treats, Banana Ball).",
+      "Plan the championship-day BBQ (free burgers/hot dogs/chips/drinks starting ~11am) and recruit grill and Snack Shack volunteers.",
+      "Coordinate a Home Run Derby with age-tiered stations and sign-ups if running the event."
+    ],
+    "links": [
+      {"type": "template", "ref": "playoffs_tournament__baseball-playoff-schedule-rules", "label": "Baseball playoff schedule/rules/brackets template"},
+      {"type": "template", "ref": "playoffs_tournament__softball-championship-day-bbq", "label": "Softball championship day & BBQ template"},
+      {"type": "template", "ref": "fundraising__event-volunteer-signup", "label": "Event volunteer signup template"}
+    ]
+  },
+  {
+    "title": "Run All-Star team and coach selection",
+    "dueWeekOfFY": 34,
+    "details": "Conduct the All-Star roster votes by division/level and elect head and assistant coaches, pending background checks. This determines which players and coaches represent the league in tournament play and must follow the league's voting and eligibility rules. It runs after commitment intake closes and full slates are confirmed.",
+    "steps": [
+      "Confirm the eligible player pool per division/level from committed Letters of Intent.",
+      "Run the roster vote for each division/level following league voting procedures.",
+      "Elect a head coach and assistant coaches for each team, contingent on background checks.",
+      "Confirm all selected coaches have current, cleared background checks before announcing.",
+      "Notify elected head coaches and have them finalize their coaching staff (e.g., naming a third coach).",
+      "Prepare finalized rosters for board approval."
+    ],
+    "links": [
+      {"type": "template", "ref": "all_stars__coach-voting", "label": "All-Star voting & coaches template"},
+      {"type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies"},
+      {"type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles"}
+    ]
+  },
+  {
+    "title": "Obtain board approval of All-Star rosters",
+    "dueWeekOfFY": 35,
+    "details": "Present the finalized All-Star rosters per division for formal board approval, then notify coaches. Board approval is the governance checkpoint that authorizes the teams to represent the league in tournament play. It follows selection and precedes setting up teams in GameChanger and scheduling practices.",
+    "steps": [
+      "Compile the finalized roster for each division/level from the completed selection votes.",
+      "Present the rosters to the board and obtain a recorded approval motion.",
+      "Confirm all coaches on approved teams have cleared background checks.",
+      "Notify head coaches of approval and set up each team in GameChanger.",
+      "Announce the head coach and roster to families and enable practice scheduling."
+    ],
+    "links": [
+      {"type": "template", "ref": "all_stars__roster-board-approval", "label": "All-Star roster board approval template"},
+      {"type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies"},
+      {"type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles"}
+    ]
+  },
+  {
+    "title": "Send team-not-fielded notices",
+    "dueWeekOfFY": 38,
+    "details": "Notify affected families when a division lacks enough commitments to field an All-Star team. A full 14-player slate is required, and when a division falls short the league cannot nominate a team, so families need a clear, timely explanation. This is sent once commitment tallies confirm a shortfall.",
+    "steps": [
+      "Confirm the division's committed count is below the required 14-player slate.",
+      "Draft a clear notice explaining the team cannot be fielded and why the minimum matters.",
+      "Offer any alternatives where applicable (combined/interleague options or fall/other play).",
+      "Send the notice to affected families in that division and thank them for committing.",
+      "Update the board and district on which teams will and will not be fielded."
+    ],
+    "links": [
+      {"type": "template", "ref": "all_stars__team-not-fielded", "label": "Team not fielded template"},
+      {"type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies"},
+      {"type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/all-stars-tournaments", "label": "All-Stars & Tournaments FAQ"}
+    ]
+  },
+  {
+    "title": "Send coach conduct reminders",
+    "dueWeekOfFY": 42,
+    "details": "Send game-conduct reminders to coaches during summer/All-Star ball and follow up promptly on any parent complaint. Maintaining positive sideline and dugout behavior protects players, volunteers, and the league's standing, especially in higher-stakes tournament play. This runs through the summer season and is triggered again whenever a conduct concern is reported.",
+    "steps": [
+      "Send a periodic game-conduct reminder to coaches emphasizing positivity toward kids, umpires, and volunteers.",
+      "Reinforce dugout safety expectations and uniform enforcement of team behavior rules.",
+      "When a complaint arrives, acknowledge it promptly and gather firsthand accounts from involved coaches/volunteers.",
+      "Follow up with the coach and, where needed, the parents to resolve the issue and restore a safe environment.",
+      "Escalate to the board and document if behavior does not improve after warnings."
+    ],
+    "links": [
+      {"type": "template", "ref": "conduct_safety__coach-conduct-reminder", "label": "Coach conduct reminder template"},
+      {"type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles"},
+      {"type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies"}
+    ]
+  },
+  {
+    "title": "Facilitate post-season business meeting",
+    "dueWeekOfFY": 46,
+    "details": "Run the post-season board meeting to review the season survey, confirm fall ball counts, plan the banquet/parade and awards/rings, and schedule board elections. This is the league's transition meeting from the current season into the offseason and next-year planning. It sets the agenda for wrap-up work and leadership continuity.",
+    "steps": [
+      "Announce the meeting date and circulate an agenda covering survey review, fall ball, banquet/parade, awards/rings, and elections.",
+      "Review the end-of-season survey results and pull out actionable feedback.",
+      "Confirm fall ball counts and any interleague/District 6 fall commitments.",
+      "Plan the banquet/parade and decide on awards and championship rings with owners and budget.",
+      "Schedule board elections and identify open positions and candidates.",
+      "Assign end-of-season to-do items (concessions cleanout, gear bins, field maintenance) and record decisions in the minutes."
+    ],
+    "links": [
+      {"type": "template", "ref": "board_meeting__announcement", "label": "Board meeting announcement template"},
+      {"type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting agenda & notes template"},
+      {"type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles"}
+    ]
+  },
+  {
+    "title": "Draft following-year calendar",
+    "dueWeekOfFY": 51,
+    "details": "Draft the following year's calendar (registration, clinics, assessments, coaches clinics, season dates, and All-Stars) for board review. Building the calendar in the offseason gives the board time to align on dates before registration opens and lets all downstream planning key off firm dates. This is a year-end planning task that seeds the next season's operations.",
+    "steps": [
+      "Start from the current year's calendar and note what worked or needs to shift.",
+      "Set registration open/close dates and the winter clinic and assessment schedule.",
+      "Place coaches clinics and division draft dates ahead of the uniform-order cutoff.",
+      "Set season start dates, opening day, and playoff/championship targets.",
+      "Add the All-Star Letter-of-Intent deadline and tournament windows.",
+      "Circulate the draft calendar for board review and revise before publishing."
+    ],
+    "links": [
+      {"type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies"},
+      {"type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies"},
+      {"type": "template", "ref": "board_meeting__announcement", "label": "Board meeting announcement template"}
+    ]
+  }
+]

@@ -1,0 +1,146 @@
+{
+  "role": "equipment_coordinator",
+  "description": "The **Equipment Coordinator** manages GNGRLL's playing equipment inventory and purchasing across the year: bats, baseballs/softballs, catcher's gear, helmets, tees, nets, and the field gear bins, along with storage security. Key responsibilities include the fall and pre-season equipment inventories, purchasing replacement and season-prep gear within board-approved spending caps (e.g. up to $5,000/season, bats not to exceed $2,000, balls $1,400-$2,500, helmets up to $2,000), setting up Tee Ball/Coach Pitch field bins, and recruiting volunteers to assemble gear bins. At end of season the coordinator leads gear collection, sorting, and storage (gear bags/bins, batting cage nets) and the concessions/upstairs cleanout.",
+  "calendar": [
+    {
+      "title": "End-of-season gear collection and storage kickoff",
+      "weekOfFY": 0,
+      "kind": "reminder",
+      "description": "Kick off end-of-season to-do items: concessions clean out, gear bag/bin collection, batting cage nets, upstairs cleanout, and banner retrieval."
+    },
+    {
+      "title": "Bat/ball/team equipment replacement purchases for next season",
+      "weekOfFY": 1,
+      "kind": "due",
+      "description": "Identify and order bat/ball/team equipment replacements for next season within approved caps (bats not to exceed $2,000; balls $1,400-$2,500)."
+    },
+    {
+      "title": "Equipment inventory and needs discussion",
+      "weekOfFY": 2,
+      "kind": "meeting",
+      "description": "Present equipment inventory and needs at the board meeting: bats, baseballs, catcher's gear, mowers/tractors, bins, and storage security."
+    },
+    {
+      "title": "Fall equipment inventory",
+      "weekOfFY": 7,
+      "kind": "due",
+      "description": "Complete the fall equipment inventory to establish what is on hand and what must be replaced before the coming season."
+    },
+    {
+      "title": "Season prep equipment purchases (winter)",
+      "weekOfFY": 9,
+      "kind": "due",
+      "description": "Order season-prep equipment: helmets, catcher's gear, baseballs/softballs, bats, and nets ahead of spring."
+    },
+    {
+      "title": "Season prep equipment purchases (balls, tees, cage)",
+      "weekOfFY": 10,
+      "kind": "due",
+      "description": "Continue season-prep purchasing: balls, helmets, catcher's gear, bats, tees, and batting cage supplies."
+    },
+    {
+      "title": "Equipment inventory and pre-season purchasing",
+      "weekOfFY": 18,
+      "kind": "due",
+      "description": "Run the pre-season inventory and purchasing pass: helmets, catcher's gear, baseballs/softballs, bats, tees, and nets."
+    },
+    {
+      "title": "Team and field equipment purchases (spending motion)",
+      "weekOfFY": 22,
+      "kind": "meeting",
+      "description": "Bring team and field equipment purchases (helmets, catcher's gear, balls, bats, mowers, drags) to the board with a spending motion (e.g. up to $5,000 at discretion of president + equipment manager)."
+    },
+    {
+      "title": "Tee Ball / Coach Pitch field setup",
+      "weekOfFY": 27,
+      "kind": "due",
+      "description": "Set up Tee Ball / Coach Pitch fields with bins, gear, and helmets per field ahead of the season start."
+    },
+    {
+      "title": "Ball order and season equipment stocking",
+      "weekOfFY": 30,
+      "kind": "due",
+      "description": "Place the baseballs/softballs order and stock season equipment (tees, buckets, helmets, catcher's gear)."
+    },
+    {
+      "title": "Equipment setup volunteer recruitment",
+      "weekOfFY": 30,
+      "kind": "reminder",
+      "description": "Recruit volunteers to assemble the gear bins for each field, setting up pop-up tents to organize gear by field."
+    },
+    {
+      "title": "End-of-season gear collection, sort, and storage",
+      "weekOfFY": 42,
+      "kind": "due",
+      "description": "Collect, sort, and store end-of-season gear: gear bags, bins, batting cage nets, and uniforms."
+    },
+    {
+      "title": "Equipment inventory scheduling and volunteer recruitment",
+      "weekOfFY": 49,
+      "kind": "reminder",
+      "description": "Schedule the next equipment inventory and recruit volunteers to help count and organize gear."
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Coordinate end-of-season gear bag/bin collection",
+      "dueWeekOfFY": 0,
+      "description": "Collect gear bags and bins from teams, retrieve batting cage nets and banners, and complete concessions/upstairs cleanout."
+    },
+    {
+      "title": "Order bat/ball/team equipment replacements",
+      "dueWeekOfFY": 1,
+      "description": "Purchase replacement bats, balls, and team equipment for next season within approved caps (bats <= $2,000; balls $1,400-$2,500)."
+    },
+    {
+      "title": "Prepare equipment inventory and needs report",
+      "dueWeekOfFY": 2,
+      "description": "Inventory bats, baseballs, catcher's gear, mowers/tractors, and bins; assess storage security and present needs to the board."
+    },
+    {
+      "title": "Complete fall equipment inventory",
+      "dueWeekOfFY": 7,
+      "description": "Conduct the fall inventory of all playing equipment to establish on-hand stock and replacement list."
+    },
+    {
+      "title": "Purchase winter season-prep equipment",
+      "dueWeekOfFY": 9,
+      "description": "Order helmets, catcher's gear, baseballs/softballs, bats, tees, and nets for the coming season."
+    },
+    {
+      "title": "Run pre-season equipment inventory and purchasing",
+      "dueWeekOfFY": 18,
+      "description": "Complete pre-season inventory and order helmets, catcher's gear, balls, bats, tees, and nets to fill gaps before games."
+    },
+    {
+      "title": "Prepare equipment spending motion for board",
+      "dueWeekOfFY": 22,
+      "description": "Draft the team/field equipment purchase list and spending motion (e.g. up to $5,000) for board approval with the president."
+    },
+    {
+      "title": "Set up Tee Ball / Coach Pitch field bins",
+      "dueWeekOfFY": 27,
+      "description": "Assemble and place gear bins, helmets, and equipment on Tee Ball and Coach Pitch fields before the season begins."
+    },
+    {
+      "title": "Place ball order and stock season equipment",
+      "dueWeekOfFY": 30,
+      "description": "Order baseballs/softballs and stock tees, buckets, helmets, and catcher's gear for in-season use."
+    },
+    {
+      "title": "Recruit equipment setup volunteers",
+      "dueWeekOfFY": 30,
+      "description": "Send the equipment setup volunteer request and organize a bin-assembly day with pop-up tents per field."
+    },
+    {
+      "title": "Collect, sort, and store end-of-season gear",
+      "dueWeekOfFY": 42,
+      "description": "Gather gear bags, bins, cage nets, and uniforms; sort and store securely for the offseason."
+    },
+    {
+      "title": "Schedule equipment inventory and recruit volunteers",
+      "dueWeekOfFY": 49,
+      "description": "Set the next inventory date and line up volunteers to count and organize equipment."
+    }
+  ]
+}

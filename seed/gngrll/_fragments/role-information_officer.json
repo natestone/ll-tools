@@ -1,0 +1,195 @@
+{
+  "role": "information_officer",
+  "description": "The League Info Officer (LIO) is GNGRLL's communications and information hub, responsible for reaching the full league population with the right message at the right time. This role runs the mass email blasts (registration pushes, certified-volunteer process, merchandise store, photo logistics), maintains the public information website and registration portal, and reports registration and player-count numbers to the board throughout the season. The LIO also coordinates photo day scheduling with the photographer, manages merch/fanwear ordering announcements, and compiles the end-of-season survey and season retrospective for the board.",
+  "calendar": [
+    {
+      "title": "End-of-season survey open to families",
+      "weekOfFY": 2,
+      "kind": "reminder",
+      "description": "Launch the post-season survey to players' families and coaches capturing positives, negatives, and complaints for the board's season retrospective."
+    },
+    {
+      "title": "Season retrospective / survey review at board meeting",
+      "weekOfFY": 7,
+      "kind": "meeting",
+      "description": "Present compiled end-of-season survey results and season recap/feedback to the board for the fall planning cycle."
+    },
+    {
+      "title": "Sponsorship / donor recognition update",
+      "weekOfFY": 9,
+      "kind": "reminder",
+      "description": "Coordinate sponsor thank-you and donor management materials (plaques, banners, framed jerseys) alongside the president and sponsorship coordinator."
+    },
+    {
+      "title": "Registration opens - launch announcement",
+      "weekOfFY": 14,
+      "kind": "due",
+      "description": "Push the season-open registration email to the full league population and run/promote open registration nights; begin tracking signup numbers by division."
+    },
+    {
+      "title": "Season calendar / key dates published",
+      "weekOfFY": 14,
+      "kind": "due",
+      "description": "Finalize and post key dates (registration open, clinics, assessments, draft, season start, photo day, playoffs, All-Stars) to the website and email."
+    },
+    {
+      "title": "Website / IT refresh for new season",
+      "weekOfFY": 14,
+      "kind": "reminder",
+      "description": "Update the information website: URL changes, division info pages, calendar, and registration-portal links for the coming season."
+    },
+    {
+      "title": "Certified Volunteer Process blast",
+      "weekOfFY": 19,
+      "kind": "due",
+      "description": "Email all registered users the annual 3-step certification process (register, background check, yearly Abuse Awareness Training) and badge pickup details."
+    },
+    {
+      "title": "Registration update - division signup counts",
+      "weekOfFY": 21,
+      "kind": "meeting",
+      "description": "Report division-by-division signup counts to the board as registration approaches close, flagging under- or over-subscribed divisions."
+    },
+    {
+      "title": "Assessment tally / rankings prepped for draft",
+      "weekOfFY": 22,
+      "kind": "due",
+      "description": "Compile and adjust assessment tallies and player rankings for the board and player agent ahead of the drafts."
+    },
+    {
+      "title": "Photo Day scheduling with photographer",
+      "weekOfFY": 27,
+      "kind": "due",
+      "description": "Coordinate picture/photo day dates with the photographer, tied to uniform delivery, and set makeup/backup dates."
+    },
+    {
+      "title": "Final registration / total player counts reported",
+      "weekOfFY": 27,
+      "kind": "meeting",
+      "description": "Report final registration numbers and total player counts by division to the board once rosters are set."
+    },
+    {
+      "title": "Team photo scheduling for remaining teams",
+      "weekOfFY": 31,
+      "kind": "reminder",
+      "description": "Work with the photographer to set up photo opportunities for any teams that still need photos during their remaining games."
+    },
+    {
+      "title": "Photo packet pickup / online order reminder",
+      "weekOfFY": 38,
+      "kind": "reminder",
+      "description": "Remind families that photo packets are available for pickup and that photos are ordered directly through the online portal by the order deadline."
+    },
+    {
+      "title": "Fenway / Hadlock family experience outings",
+      "weekOfFY": 46,
+      "kind": "reminder",
+      "description": "Organize and announce the Red Sox (Fenway) and Sea Dogs (Hadlock) family experience outings for league families."
+    },
+    {
+      "title": "Merch / fanwear store open announcement",
+      "weekOfFY": 46,
+      "kind": "reminder",
+      "description": "Announce the online merch store link for browsing/ordering, noting pickup-only/pre-order lead-time details."
+    },
+    {
+      "title": "Hat orders / merch site wind-down and refunds",
+      "weekOfFY": 46,
+      "kind": "due",
+      "description": "Wind down the merch/hat store for the year and process any pending order refunds."
+    },
+    {
+      "title": "Post-season survey results review by division",
+      "weekOfFY": 51,
+      "kind": "meeting",
+      "description": "Present post-season survey results and season discussion broken out by division at the end-of-year board meeting."
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Compile end-of-season survey for board retrospective",
+      "dueWeekOfFY": 2,
+      "description": "Build and distribute the post-season survey, then compile results (positives, negatives, complaints) for the board's season retrospective."
+    },
+    {
+      "title": "Present season recap and survey feedback",
+      "dueWeekOfFY": 7,
+      "description": "Summarize end-of-season survey feedback and the season recap for the board during fall planning."
+    },
+    {
+      "title": "Coordinate sponsor / donor recognition materials",
+      "dueWeekOfFY": 9,
+      "description": "Support sponsor thank-you and donor management (plaques, banners, framed jerseys) with the president and sponsorship coordinator."
+    },
+    {
+      "title": "Send registration-open blast and run signup nights",
+      "dueWeekOfFY": 14,
+      "description": "Email the season-open registration announcement to the full league and run/promote open registration nights; start tracking division signup counts."
+    },
+    {
+      "title": "Publish finalized season calendar and key dates",
+      "dueWeekOfFY": 14,
+      "description": "Post the finalized season calendar (registration, clinics, assessments, draft, season start, photos, playoffs, All-Stars) to the website and email."
+    },
+    {
+      "title": "Update information website and registration portal",
+      "dueWeekOfFY": 14,
+      "description": "Refresh division info pages, calendar, URLs, and registration-portal links on the information website for the new season."
+    },
+    {
+      "title": "Send Certified Volunteer Process email to all users",
+      "dueWeekOfFY": 19,
+      "description": "Blast all registered users the annual certified-volunteer process (register, background check, Abuse Awareness Training) with badge pickup instructions."
+    },
+    {
+      "title": "Report division signup counts to board",
+      "dueWeekOfFY": 21,
+      "description": "Prepare and present division-by-division registration counts as registration nears close."
+    },
+    {
+      "title": "Prepare assessment tally and rankings for draft",
+      "dueWeekOfFY": 22,
+      "description": "Compile assessment results and adjust rankings for the player agent and president ahead of the drafts."
+    },
+    {
+      "title": "Schedule Photo Day with photographer",
+      "dueWeekOfFY": 27,
+      "description": "Lock picture/photo day dates with the photographer, tied to uniform delivery, and set makeup/backup dates."
+    },
+    {
+      "title": "Report final registration and player counts",
+      "dueWeekOfFY": 27,
+      "description": "Deliver final total player counts by division to the board once rosters are finalized."
+    },
+    {
+      "title": "Coordinate makeup team photos",
+      "dueWeekOfFY": 31,
+      "description": "Work with the photographer to schedule photo sessions for teams that still need photos during their remaining games."
+    },
+    {
+      "title": "Send photo packet pickup / order reminder",
+      "dueWeekOfFY": 38,
+      "description": "Remind families of photo packet pickup locations and the online order deadline for the season's photos."
+    },
+    {
+      "title": "Announce merch / fanwear store opening",
+      "dueWeekOfFY": 46,
+      "description": "Send the merch/fanwear store-open announcement with the store link and pickup/pre-order lead-time notes."
+    },
+    {
+      "title": "Organize Fenway / Hadlock family outings",
+      "dueWeekOfFY": 46,
+      "description": "Plan and announce the Red Sox and Sea Dogs family experience outings for league families."
+    },
+    {
+      "title": "Wind down merch site and process refunds",
+      "dueWeekOfFY": 46,
+      "description": "Close out the merch/hat store for the year and process any pending refunds."
+    },
+    {
+      "title": "Present post-season survey results by division",
+      "dueWeekOfFY": 51,
+      "description": "Compile and present post-season survey results and season discussion by division at year-end."
+    }
+  ]
+}

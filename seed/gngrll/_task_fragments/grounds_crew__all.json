@@ -1,0 +1,236 @@
+[
+  {
+    "title": "Compile end-of-season field cleanup priority list",
+    "dueWeekOfFY": 1,
+    "details": "As the season winds down, the grounds crew walks every GNGRLL field to inventory the fall work each one needs, since fall is the best window for major field work (spring is rainy and often frozen). This priority list feeds the board's fall maintenance planning, equipment budgeting, and volunteer work-day scheduling. It should capture fencing, base paths, mounds, dugouts, dragging, and turf care (aerate/fertilize) field by field.",
+    "steps": [
+      "Walk each field in turn: Douglas, Penney, Pennell, Newbegin, Intervale, Russell, and the Raymond fields.",
+      "At each field, note needed work in categories: fencing, base paths/infield mix, mounds and batter's boxes, dugouts, dragging, and aerate/fertilize.",
+      "Flag capital-scale items separately (e.g. Douglas batting cage rebuild, Intervale fencing/dugouts, field strips) so the board can scope them as projects.",
+      "Note which fields are shared or town/school-owned (Pennell, Newbegin, Memorial, St. Gregory's, Raymond) so access and owner coordination can be arranged.",
+      "Rank items by safety and playability impact (base paths clear of weeds, rocks, and large holes first) versus cosmetic work.",
+      "Compile the list into a single field-by-field summary and bring it to the fall board meeting for the Fields (Fall Maintenance & Planning) discussion."
+    ],
+    "links": [
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org", "label": "GNGRLL Field Directory / Info Site" }
+    ]
+  },
+  {
+    "title": "Scope fall field improvement projects and costs",
+    "dueWeekOfFY": 3,
+    "details": "The grounds crew turns the fall priority list into scoped projects with rough budgets so the board can decide what to fund and authorize by motion. Historically this has covered Intervale, Bennett Rd, Douglas, lights, batting cages, and 50/70 conversions. Each project needs a rough cost and materials plan because field, equipment, and capital spending is approved by board motion, second, and vote.",
+    "steps": [
+      "Draft a short scope for each candidate project: Intervale, Bennett Rd, Douglas, lights, batting cages, and 50/70 conversions.",
+      "Gather rough budgets and quotes (e.g. batting cage net ~$700, metal shed ~$550, mowers ~$1,900 each, fencing materials, infield mix) from suppliers and contractors.",
+      "Note funding sources for capital items: grants (RRCT, SK/Stephen King grant, Alfond), banner/fence-screen sponsorships, and GoFundMe.",
+      "Identify which items are routine (fertilizer, dragging) versus capital actions needing a specific dollar-cap motion (e.g. $1,500 to convert Penney to 50/70).",
+      "Package the scope and budgets into a board discussion document and present at a fall meeting for motions authorizing spend."
+    ],
+    "links": [
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" }
+    ]
+  },
+  {
+    "title": "Order fall fertilizer and schedule aeration",
+    "dueWeekOfFY": 4,
+    "details": "Fall is the right time to feed and aerate the turf at the league's primary fields, Douglas and Penney, before the ground freezes. Fertilizer spend is a routine field expense approved by board motion (historically up to ~$300 for Douglas/Penney). Getting the fertilizer down and the fields aerated in fall sets up healthier grass and better drainage for the following season.",
+    "steps": [
+      "Confirm the board has approved the fertilizer purchase (typically a motion for up to ~$300 for Douglas and Penney).",
+      "Order fall fertilizer for Douglas and Penney and coordinate pickup/supply (historically via a local supplier such as Bark Bros).",
+      "Schedule aeration for both fields before the ground freezes, arranging equipment or a contractor.",
+      "Apply fertilizer and complete aeration together where possible so nutrients reach the root zone.",
+      "Record the spend and completion so it can be reported at the next board meeting under fall field maintenance."
+    ],
+    "links": [
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" }
+    ]
+  },
+  {
+    "title": "Service and winterize grounds equipment",
+    "dueWeekOfFY": 6,
+    "details": "Before winter, the grounds crew services and stores the league's mowers, tractors, drags, and sheds so equipment is ready and protected through the off-season. GNGRLL keeps lawn tractors, trimmers, and sheds on site at each field, and has purchased multiple mowers and tractors (including three tractors bought with Intervale grant funds), so this is real fleet upkeep. Secure storage also matters because the league has repeatedly experienced theft at Douglas.",
+    "steps": [
+      "Inventory the fleet: lawn tractors/mowers (including the grant-funded tractors), drags, trimmers, and hand tools at each field.",
+      "Service each mower and tractor (oil, blades, fuel stabilizer, batteries) and repair or note drags and trailers needing work.",
+      "Clean and stow drags, rakes, and trimmers in the on-site sheds/bins.",
+      "Confirm sheds and equipment bins are locked and secure for winter; relocate at-risk gear (e.g. balls from Douglas) into a snack shack or off-site if theft has been a problem.",
+      "Flag any equipment needing replacement so it can be budgeted in the fall equipment discussion."
+    ],
+    "links": [
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" }
+    ]
+  },
+  {
+    "title": "Advance Douglass batting cage / infield mix plan",
+    "dueWeekOfFY": 9,
+    "details": "The Douglas batting cage was slated for a full rebuild (new net, poles, structure, turf) and the infield needs substantial mix and top-dressing. This task gathers quotes and a materials plan so the board can authorize the project by motion. Historically the board authorized a contractor (Ruddley Emerson) to proceed at a cost not to exceed $6,500 with a named point person, so a solid scope and quote are prerequisites.",
+    "steps": [
+      "Get a quote for the batting cage rebuild covering net, poles/structure, turf, and gravel/sand (historically ~55x12x12 net, later 15' wide x 65' long turf).",
+      "Call Dig Safe before any post excavation and check on bringing power to the cage.",
+      "Price and plan the infield mix needed to top-dress the Douglas infield.",
+      "Compare options (e.g. reuse of an available donated net, used turf) to reduce cost.",
+      "Assign a point person and bring the quote to the board for a motion authorizing a not-to-exceed amount (e.g. $6,500)."
+    ],
+    "links": [
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" }
+    ]
+  },
+  {
+    "title": "Take down banners, cages, and complete fall cleanup",
+    "dueWeekOfFY": 10,
+    "details": "At the true end of the season the grounds crew retrieves the outfield sponsor banners and takes down the batting cage nets (Penney and Pennell) so they don't weather over winter, and finishes end-of-season field cleanup. This protects league assets (banners and nets are paid sponsorship/equipment items) and closes out the fields. It typically runs alongside equipment inventory and fall turf work.",
+    "steps": [
+      "Retrieve all outfield/fence sponsor banners and store them dry for reuse next season.",
+      "Take down batting cage nets at Penney and Pennell (and any others) and store them out of the weather.",
+      "Do a final leaf, trash, and debris cleanup pass on each field.",
+      "Coordinate takedown with the batting cage crew (e.g. Pennell cage takedown historically scheduled around 11am on a set date).",
+      "Confirm bins and sheds are locked, and note any missing or damaged nets/banners for the equipment inventory."
+    ],
+    "links": [
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "template", "ref": "fields_facilities__field-workday", "label": "Field Work Day email template" }
+    ]
+  },
+  {
+    "title": "Order infield mix, fertilizer, and cage materials for spring",
+    "dueWeekOfFY": 18,
+    "details": "In late winter the grounds crew lines up the consumables and materials needed for spring field prep so nothing holds up opening the fields. This includes infield mix, fertilizer, and cage/net supplies, plus confirming the mowers and drags are ready to run. Ordering early matters because spring is short and rainy, and materials deliveries (e.g. infield mix drops at Douglas) drive short-notice work days.",
+    "steps": [
+      "Compile the spring materials list: infield mix (Douglas/Russell especially), fertilizer, and cage/net supplies.",
+      "Place orders and schedule delivery timing so mix arrives when volunteer crews can spread it.",
+      "Confirm mowers, tractors, and drags are serviced and ready after winter storage.",
+      "Verify batting cage materials (net, poles, turf) are on hand or ordered for spring installation.",
+      "Coordinate with the board/treasurer so any spend is within approved motions before ordering."
+    ],
+    "links": [
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" }
+    ]
+  },
+  {
+    "title": "Schedule and staff spring field cleanup days",
+    "dueWeekOfFY": 24,
+    "details": "This is the flagship spring field cleanup effort that gets every field playable before the season opens, typically the weekend before games start with a rain-date backup (e.g. Field Cleanup 4/12 with a 4/26 rain date in 2026). The crew sets dates by town/field, recruits volunteers, and sends a work-day notice with tool and task lists. Cleanup focuses on raking leaves, clearing trash, and working infield surfaces so base paths are clear of weeds, rocks, and large holes.",
+    "steps": [
+      "Set the primary cleanup day and a rain date, and assign specific fields by town (Gray, New Gloucester, Raymond).",
+      "List each field's tasks and tools: leaf/steel rakes, shovels, edgers, weed whackers, leaf blowers, pruning shears for bittersweet, and drags for the infield.",
+      "Assign teams to fields and communicate assignments (historically teams were told their field a few days ahead, e.g. by the Thursday before).",
+      "Send the Field Work Day notice with date, time (e.g. 12-2pm), field addresses, task list, and what to bring; note you go rain or shine.",
+      "Include division-specific fields (Douglas, Russell, Pennell, Memorial, St. Gregory's Tee Ball, Intervale) and note that players are encouraged to help.",
+      "Post a follow-up if any cleanups are postponed to the rain date."
+    ],
+    "links": [
+      { "type": "template", "ref": "fields_facilities__field-workday", "label": "Field Work Day email template" },
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" }
+    ]
+  },
+  {
+    "title": "Install field locks and begin in-season mowing rotation",
+    "dueWeekOfFY": 27,
+    "details": "As opening week arrives, the crew stocks and secures the field equipment bins, distributes lock combinations to adults only, and starts the recurring mowing and dragging rotation. Bin combinations must not be shared because the league has had theft in prior years. The crew also reminds coaches to drag fields and rake mounds and batter's boxes after every use to keep fields playable all season.",
+    "steps": [
+      "Assemble and stock the gear bins for each field before opening week (historically a 3-4 volunteer setup at Douglas the weekend before).",
+      "Install/verify locks on bins, sheds, and gates, and distribute combinations to assigned adults only, reminding them not to share due to past theft.",
+      "Note shared-field arrangements (e.g. St. Gregory's third field shares gear; lock the porta potty at night).",
+      "Set the mowing and dragging schedule across fields for the season.",
+      "Send the field maintenance reminder to coaches: drag the field, rake and level the batter's boxes, and smooth the mound after each game or practice."
+    ],
+    "links": [
+      { "type": "template", "ref": "practice__field-maintenance-reminder", "label": "Field Maintenance Reminder template" },
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" }
+    ]
+  },
+  {
+    "title": "Progress field conversion/improvement projects",
+    "dueWeekOfFY": 30,
+    "details": "During the season the crew advances active capital and improvement projects as weather and materials allow: the Fenway/Green Monster wall at Penney/Morrison Field, Intervale, batting cages, and field strips. Some of this is short-notice work driven by material deliveries, using volunteer crews with lawn tractors, trailers, shovels, and rakes. Getting fields tip-top before playoffs is a common driver.",
+    "steps": [
+      "Track the status of each in-season project: Fenway wall (Penney/Morrison), Intervale, batting cages, and field strips.",
+      "When materials arrive (e.g. infield mix delivered to Douglas), organize a short-notice work crew with a start time and a text chain to coordinate.",
+      "Bring the right tools: lawn tractor with trailer, tractor with turf tires if available, shovels, and rakes.",
+      "Re-cut infield lines and spread infield mix (Douglas and Russell have been done this way before playoffs).",
+      "Work around the game/practice schedule at each field and continue on additional days as windows allow."
+    ],
+    "links": [
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "template", "ref": "fields_facilities__field-workday", "label": "Field Work Day email template" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" }
+    ]
+  },
+  {
+    "title": "Coordinate summer field maintenance staffing",
+    "dueWeekOfFY": 35,
+    "details": "Mid-summer the crew confirms the volunteers who keep fields mowed and dragged through the back half of the season and into all-stars, and recognizes the people doing the work. Ongoing maintenance is largely volunteer-driven: after every game and practice fields should be dragged, and the home team is responsible for field maintenance. Keeping a reliable crew ensures fields stay playable and setup time stays short.",
+    "steps": [
+      "Confirm the roster of ground crew volunteers for ongoing summer mowing and dragging across the fields.",
+      "Fill any gaps by recruiting parents, reminding them that any fan, parent, or player can grab a rake or drag.",
+      "Reinforce that the home team drags and maintains the field at every game, with visiting teams welcome to help.",
+      "Keep mowing and dragging on a regular rotation so weeds stay out of the infields.",
+      "Publicly thank and recognize the ground crew volunteers for their work."
+    ],
+    "links": [
+      { "type": "template", "ref": "practice__field-maintenance-reminder", "label": "Field Maintenance Reminder template" },
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" }
+    ]
+  },
+  {
+    "title": "Plan fall cleanup and grounds equipment needs",
+    "dueWeekOfFY": 42,
+    "details": "As the season closes, the grounds coordinator assesses the state of mowers, sheds, bleachers, and drag/trailer needs and sets the fall cleanup schedule. This assessment feeds the fall equipment discussion and budget at the board meeting and lines up the end-of-season work days. It's the planning counterpart to the actual fall cleanup and winterizing that follow.",
+    "steps": [
+      "Assess the condition of mowers/tractors, sheds, bleachers, and drags/trailers across all fields.",
+      "Note replacement or repair needs (e.g. additional shed, new drag or trailer) with rough costs for the equipment discussion.",
+      "Set the fall cleanup schedule and identify which fields need the most work.",
+      "Coordinate a fall equipment inventory day (historically ~11am-2pm at Douglas) with volunteers.",
+      "Bring the equipment needs and cleanup plan to the fall board meeting for discussion and any spending motions."
+    ],
+    "links": [
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" }
+    ]
+  },
+  {
+    "title": "Close out and pay for Douglass batting cage project",
+    "dueWeekOfFY": 46,
+    "details": "Once the Douglas batting cage is complete, the crew verifies the finished work against the authorized scope and processes the final contractor payout. The board authorized the installation at a not-to-exceed amount with a named point person, so closeout confirms the work is done before the treasurer pays. This closes the multi-year cage rebuild (posts, net, turf, gravel/sand).",
+    "steps": [
+      "Verify the batting cage is complete at Douglas: posts set, net hung, turf, gravel/sand, and structure finished.",
+      "Confirm the final cost is within the board's authorized not-to-exceed amount and matches the contractor's invoice.",
+      "Reconcile any league-purchased materials (pipes/turf ordered separately, stored to avoid theft) against the total.",
+      "Have the point person sign off, then coordinate with the treasurer to process the final payout.",
+      "Report completion and final cost to the board and update the project status."
+    ],
+    "links": [
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" }
+    ]
+  },
+  {
+    "title": "Report Intervale and Douglass capital project status",
+    "dueWeekOfFY": 51,
+    "details": "At the fall/winter board meetings the grounds coordinator reports on the league's two major capital efforts: Intervale (dugouts, benches, fencing, and the associated grant funding) and the Douglas cage (net, turf, gravel, cement). These updates keep the board informed on progress, spending, and grant reconciliation so it can plan the next phase. Intervale funding has combined the SK/Stephen King grant ($35K), GoFundMe, and RRCT contributions (including a final RRCT payment of $13,959).",
+    "steps": [
+      "Compile Intervale status: dugout pads/concrete, benches, fencing (black vinyl-coated), old fencing removed, and containers on site.",
+      "Summarize Intervale funding and grant reconciliation (SK/King grant, GoFundMe, RRCT budget and the final $13,959 payment).",
+      "Compile Douglas cage status: net, turf, gravel, cement/posts, and remaining spring work.",
+      "Note outstanding work and next-phase needs (e.g. infield dragging at Intervale, top-dressing at Douglas).",
+      "Present the combined capital update at the board meeting for discussion and any authorizations."
+    ],
+    "links": [
+      { "type": "policy", "ref": "fields_capital", "label": "Fields & Capital Projects policy" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" }
+    ]
+  }
+]

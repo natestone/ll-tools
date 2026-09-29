@@ -1,0 +1,333 @@
+[
+  {
+    "title": "Facilitate fall organizational meeting and confirm officer slate",
+    "dueWeekOfFY": null,
+    "details": "The fall organizational meeting kicks off the league year, resetting the Board of Directors and confirming who holds each voting officer and non-voting staff role for the coming season. It matters because officers must be in place before offseason planning (calendar, budget, sponsorship) can proceed, and because the elected slate is recorded in the minutes that the league keeps on file. Held in late September/early October (e.g., the 9/29 kickoff meeting), it is the first meeting after the season wraps.",
+    "steps": [
+      "Before the meeting, survey members on which roles they will not continue in so open seats (e.g., Treasurer, Player Agents, VP Softball) can be listed and recruited.",
+      "Designate a facilitator and recorder (the President typically serves both) and open the meeting by taking attendance and confirming a quorum.",
+      "Walk the full positions list, noting which roles are retained and which are marked open or '??'.",
+      "For each seat to be filled, take a named motion and second, then record the vote outcome ('carried unanimously/unopposed') in the minutes.",
+      "Create any new positions needed (e.g., VP Sandlot, VP Challenger) by separate motion, then elect a person to fill them.",
+      "Publish the confirmed slate and note remaining open seats to carry into recruiting at the next meeting."
+    ],
+    "links": [
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" },
+      { "type": "template", "ref": "board_meeting__announcement", "label": "Board Meeting Announcement" },
+      { "type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes" }
+    ]
+  },
+  {
+    "title": "Establish offseason board meeting schedule",
+    "dueWeekOfFY": null,
+    "details": "Setting the fall/winter meeting cadence gives the Board a predictable rhythm for offseason planning, which shifts to roughly every two weeks during the busy pre-season period and monthly in quieter stretches. It matters because registration, clinics, assessments, and calendar decisions all depend on a reliable sequence of meetings. This is settled at or immediately after the fall organizational meeting.",
+    "steps": [
+      "Decide the appropriate cadence for the period (bi-weekly through pre-season, monthly otherwise) to maximize program quality.",
+      "Poll board members for dates/times that work best rather than dictating them.",
+      "Lock the fall/winter meeting dates (e.g., the recurring bi-weekly Monday evening pattern seen Oct through Dec).",
+      "Circulate the confirmed schedule to the full board and add it to the shared calendar.",
+      "Note the standard join method (in-person location or video/dial-in) so it can be reused in each meeting announcement."
+    ],
+    "links": [
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" },
+      { "type": "template", "ref": "board_meeting__announcement", "label": "Board Meeting Announcement" }
+    ]
+  },
+  {
+    "title": "Lead annual policy and division rules review",
+    "dueWeekOfFY": null,
+    "details": "Each fall/winter the Board reviews and adopts the season's governing documents: division rules, the managers/coaches contract, the volunteer application, and the Constitution & By-laws. This matters because the bylaws must be reviewed, updated, and uploaded to Little League International as a recurring charter obligation, and division rules (age structure, play-up, farm/coach-pitch changes) shape the whole season. The review runs across the fall meetings before registration opens.",
+    "steps": [
+      "Put policy review on the agenda: division rules, managers/coaches contract, volunteer application, and bylaws.",
+      "Review and adopt division age/level structure and any interleague rule changes by division, poll the league where needed.",
+      "Confirm with the Secretary that the Constitution & By-laws are current and uploaded to Little League International.",
+      "Adopt each change by motion and second, recording the outcome in the minutes.",
+      "Confirm Abuse Awareness Training (resets October 1) is required of all board members and track completion.",
+      "Publish the finalized rules/documents to the website and Policies & Procedures page."
+    ],
+    "links": [
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Kick off next-season planning",
+    "dueWeekOfFY": null,
+    "details": "This task drafts the skeleton of the coming season -- registration timing, winter clinics, assessments, the full calendar, and coaches trainings -- for board input and refinement. It matters because these anchor dates drive every downstream officer's work, from uniform orders to field scheduling. It happens in the fall (late October/November) so the calendar can be finalized before registration opens in January.",
+    "steps": [
+      "Draft proposed dates for registration open, winter clinics, assessments, coaches clinics, drafts, and first games.",
+      "Assemble prospective clinic costs and instructors and confirm facility availability with contacts.",
+      "Present the draft calendar to the board for discussion and adjust based on school-calendar conflicts and facility bookings.",
+      "Fold in coaches-training plans (e.g., the PCA coach/parent/athlete workshop series) and safety-meeting requirements.",
+      "Circulate the revised draft calendar ahead of the next meeting for a final review."
+    ],
+    "links": [
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes" }
+    ]
+  },
+  {
+    "title": "Coordinate sponsor thank-yous and fundraising follow-up",
+    "dueWeekOfFY": null,
+    "details": "After the season the league recognizes sponsors by donation tier -- banners, signed/dye-sub jerseys, and donation letters -- and follows up on any outstanding fundraising commitments. It matters for sponsor retention and for closing out the season's revenue, since sponsorships fund uniforms, equipment, and field work. Thank-you acknowledgements are driven from the Annual Sponsorship Log in the offseason (seen in January/February).",
+    "steps": [
+      "Pull the Annual Sponsorship Log and reconcile sponsors and amounts across channels (checks, PayPal, Venmo, GoFundMe).",
+      "Group sponsors by donation tier, highlighting larger donors (e.g., $250+ and $500+) for extra recognition.",
+      "Prepare tier-appropriate thank-yous: banners, signed/dye-sub jerseys, and tax-deductible donation letters.",
+      "Coordinate with the Sponsorship Coordinator and Treasurer to send acknowledgements and complete any corporate donation forms.",
+      "Follow up on outstanding pledges or unpaid team sponsorships before the uniform-order cutoff.",
+      "Update the website sponsor list and note rollovers/refunds for any unfulfilled sponsorships."
+    ],
+    "links": [
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship Policies" },
+      { "type": "template", "ref": "sponsorship__inquiry-response", "label": "Sponsorship Inquiry Response" },
+      { "type": "template", "ref": "photos__request-team-photos-for-plaques", "label": "Team Photos for Sponsor Plaques" }
+    ]
+  },
+  {
+    "title": "Set registration fees and open date",
+    "dueWeekOfFY": null,
+    "details": "The Board sets per-division registration fees and the registration open date, which together drive the league's primary revenue and the start of the season pipeline. It matters because fees fund uniforms and field repairs and any change must be adopted by motion; the open date anchors the whole calendar. This is decided in the fall/winter (fees set by December motion; open dates targeted for mid-January).",
+    "steps": [
+      "Review current-year costs and prior fees by division (e.g., 2025 moved everything AAA and above to $140).",
+      "Recommend per-division fees and earmark any increase (e.g., toward field repairs) for board consideration.",
+      "Adopt the fee schedule by motion and second, recording the outcome.",
+      "Confirm the registration open date (e.g., mid-January for regular season, early January for winter clinics).",
+      "Hand the confirmed fees and dates to the Information Officer to configure in the registration system."
+    ],
+    "links": [
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship Policies" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "template", "ref": "registration__season-open", "label": "Registration Open Announcement" }
+    ]
+  },
+  {
+    "title": "Send fall board meeting announcement with agenda",
+    "dueWeekOfFY": null,
+    "details": "This announces each fall board meeting to the board with the agenda, followed by a reminder that includes the join link or dial-in. It matters because consistent, agenda-forward announcements keep quorum and let officers prepare their updates. It recurs on the offseason cadence (roughly every two weeks through fall/winter).",
+    "steps": [
+      "Draft the agenda from carryover action items and the standing offseason topics (positions, planning, fields, calendar).",
+      "Send the meeting announcement to the board with the date/time and agenda attached or linked.",
+      "A day or two before, send a reminder reply on the same thread including the video join link and dial-in number.",
+      "Confirm the recorder for the meeting so minutes are captured.",
+      "After the meeting, ensure minutes and updated action items are circulated."
+    ],
+    "links": [
+      { "type": "template", "ref": "board_meeting__announcement", "label": "Board Meeting Announcement" },
+      { "type": "template", "ref": "board_meeting__reminder", "label": "Board Meeting Reminder" },
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" }
+    ]
+  },
+  {
+    "title": "Plan winter clinics",
+    "dueWeekOfFY": null,
+    "details": "Winter clinics give players ages 7+ a chance to get work in before spring assessments, and the league must lock dates, gym space, age-group time slots, instructors, budget, and session fees. It matters because clinics are optional paid programming that requires facility booking and a registration listing well ahead of time. Dates are set in the fall and clinics run on winter weekends (e.g., three January/February Sunday sessions).",
+    "steps": [
+      "Assemble prospective clinic costs and instructor availability and include facility costs in the budget.",
+      "Lock clinic dates and reserve the middle-school gym, tasking a board member with checking the school calendar to book spaces.",
+      "Build the age-group time-slot grid (e.g., AA / AAA / Majors baseball and softball blocks plus an all-ages pitching clinic).",
+      "Set session fees (e.g., a per-session or all-sessions bundle price) for board approval.",
+      "Coordinate with the Information Officer to open clinic registration alongside the season (early January).",
+      "Announce clinics to families with dates, slots, and the registration link."
+    ],
+    "links": [
+      { "type": "template", "ref": "practice__winter-clinics", "label": "Winter Clinics Announcement" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Set assessment dates and structure",
+    "dueWeekOfFY": null,
+    "details": "The Board establishes spring assessment dates, the station-based structure, judges/assessors, and a snow/rain make-up date so teams can be formed by the draft. It matters because assessments are required for all players League Age 7+ and feed the coaches' draft; separate baseball and softball days and a reserved make-up date protect against weather closures. Dates are set in the fall/winter (e.g., baseball 2/23, softball 2/25, make-up 2/27).",
+    "steps": [
+      "Set separate baseball and softball assessment dates plus a reserved snow/rain make-up date.",
+      "Reserve the gym for the evening blocks (e.g., 4:30-9:00pm) and confirm space against the school calendar.",
+      "Define the station structure (ground balls, fly/pop, tee, soft toss, throwing) each staffed by a coach and an assessor.",
+      "Build the time-block grid by division/age (e.g., AA 5:30, AAA 6:30, Majors 7:30).",
+      "Recruit assessors/judges and high-school player volunteers to run stations.",
+      "Confirm the draft date a few days after assessments so ratings are ready."
+    ],
+    "links": [
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "template", "ref": "tryouts_assessments__assessment-schedule-reminder", "label": "Assessment Schedule Reminder" },
+      { "type": "template", "ref": "tryouts_assessments__volunteer-recruitment", "label": "Assessment Volunteer Recruitment" }
+    ]
+  },
+  {
+    "title": "Recruit and confirm open board positions",
+    "dueWeekOfFY": null,
+    "details": "Ahead of spring the President confirms which roles are retained, fills open seats, and recruits volunteers for both voting and non-voting positions. It matters because operational roles (Treasurer, Player Agents, VP Softball, Concessions, uniform/photo staff) must be staffed before the season ramps up. Recruiting runs across the fall/winter meetings, with vacancies filled at the next board meeting.",
+    "steps": [
+      "Review the positions list and mark each seat as retained, open, or newly created.",
+      "Announce the open positions to the board and the wider league and invite volunteers.",
+      "For key long-term seats (e.g., Treasurer), state that the holder must be a board member and set an announcement window.",
+      "Bring each candidate to a vote by motion and second at the next board meeting and record the result.",
+      "Update the published board roster and note any still-open seats to keep recruiting."
+    ],
+    "links": [
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" },
+      { "type": "template", "ref": "board_meeting__announcement", "label": "Board Meeting Announcement" }
+    ]
+  },
+  {
+    "title": "Broadcast registration-open announcement",
+    "dueWeekOfFY": null,
+    "details": "This is the league-wide broadcast to all families that registration is open, covering tee ball/coach pitch details, winter clinics, and the custom-uniform sign-up deadline. It matters because it drives enrollment across every division and sets expectations on age determination, clinics, Sandlot/Challenger, and the firm jersey deadline. It goes out when registration opens in mid-January (e.g., January 17 for 2026).",
+    "steps": [
+      "Confirm the open date and per-division details, then draft the broadcast covering Tee Ball through Seniors.",
+      "Include age-determination guidance (Aug 31 baseball, Jan 1 softball) and a link to the Little League age charts.",
+      "Highlight winter clinics, Sandlot, and Challenger sign-ups and the online registration link.",
+      "State the firm custom-jersey registration deadline (e.g., 3/14, no exceptions) prominently.",
+      "Coordinate with the Information Officer to send to all families and post on the website/social channels."
+    ],
+    "links": [
+      { "type": "template", "ref": "registration__season-open", "label": "Registration Open Announcement" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Plan player assessments logistics",
+    "dueWeekOfFY": null,
+    "details": "Beyond setting dates, this organizes the on-the-ground logistics: stations, assessors/judges, equipment per station, check-in flow, and a snow/rain backup. It matters because a smooth, well-staffed assessment produces reliable ratings for the draft and keeps parents informed. It is finalized in the weeks before assessments (late February).",
+    "steps": [
+      "Lay out each station (ground balls, fly/pop, tee, soft toss, throwing) with the equipment it needs.",
+      "Assign a coach plus an assessor to each station and line up high-school player volunteers.",
+      "Design a check-in flow and time-block schedule so divisions rotate through stations by age group.",
+      "Arrange the concurrent parent meeting space (library or chorus room) for the season presentation.",
+      "Confirm the snow/rain backup date and the communication plan if a session is postponed.",
+      "Provide league helmets/bats on site and remind families to bring a change of shoes and their glove."
+    ],
+    "links": [
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "template", "ref": "tryouts_assessments__volunteer-recruitment", "label": "Assessment Volunteer Recruitment" },
+      { "type": "template", "ref": "tryouts_assessments__assessment-schedule-reminder", "label": "Assessment Schedule Reminder" }
+    ]
+  },
+  {
+    "title": "Secure indoor practice / spring training space",
+    "dueWeekOfFY": null,
+    "details": "This books gym/YMCA time and schedules indoor practices with volunteer setup coverage before fields are usable. It matters because Maine spring weather forces early-season practices indoors, and the limited gym space must be reserved and staffed. Booking happens in the winter and indoor practices run on weekends through March/early April (e.g., Saturdays 3/8-4/12).",
+    "steps": [
+      "Identify available indoor spaces (school gyms, YMCA, The Cages) and check dates against the school calendar.",
+      "Reserve the indoor blocks and build a per-division/age indoor practice schedule.",
+      "Line up volunteer setup coverage for equipment and space turnover between sessions.",
+      "Adopt any safety rules for indoor use (e.g., league bats only, no personal bats, parents out unless helping).",
+      "Announce indoor practice start to families with dates, locations, and weather caveats."
+    ],
+    "links": [
+      { "type": "template", "ref": "practice__indoor-practices-start", "label": "Indoor Practices Start" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety" }
+    ]
+  },
+  {
+    "title": "Lead rules and division review",
+    "dueWeekOfFY": null,
+    "details": "This reviews division rules and interleague rule changes with the board -- farm/coach-pitch structure, age structure, and playing-up requests -- so the season's play framework is settled. It matters because rule and age-structure decisions (e.g., phased Intermediate rules for Majors, steals/no dropped-third-strike at Minors) affect safety, competitiveness, and interleague alignment. This runs through the winter meetings before drafts.",
+    "steps": [
+      "Put the level/age structure and any proposed rule changes on the agenda by division.",
+      "Review interleague rule changes and align with District 6 expectations where applicable.",
+      "Apply the play-up rule case by case, weighing player and peer safety, assessment, and grade level.",
+      "Poll the league where a change is significant (e.g., phased Intermediate rules rollout).",
+      "Adopt each rule/structure decision by motion and second and record it.",
+      "Publish the confirmed division rules to coaches and the website."
+    ],
+    "links": [
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" },
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" }
+    ]
+  },
+  {
+    "title": "Send assessments/registration reminder",
+    "dueWeekOfFY": null,
+    "details": "This reminds families of assessment dates, what to bring, the parent meeting, the medical release form, and the per-division schedule grid. It matters because turnout and preparedness at assessments directly affect the quality of ratings and team formation, and late registrants can still be placed. It goes out in the week or two before assessments (mid-to-late February).",
+    "steps": [
+      "Confirm the assessment dates, division time blocks, and make-up date, then draft the reminder.",
+      "Include what to bring: change of shoes, glove; note helmets/bats are optional since the league provides them.",
+      "Remind families to bring a printed medical release form if not yet submitted.",
+      "Note the concurrent parent meeting and its location and the season presentation.",
+      "Attach or embed the per-division schedule grid and send to all affected families.",
+      "If a session is postponed for weather/closure, follow up promptly with the make-up details."
+    ],
+    "links": [
+      { "type": "template", "ref": "registration__assessments-reminder", "label": "Assessments & Registration Reminder" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "template", "ref": "tryouts_assessments__assessment-schedule-reminder", "label": "Assessment Schedule Reminder" }
+    ]
+  },
+  {
+    "title": "Run coach interviews and vetting vote",
+    "dueWeekOfFY": null,
+    "details": "The President invites prospective coaches to interviews, provides instructions, and conducts the board's ranked-choice vetting vote per division. It matters because coach selection sets the tone for player experience, safety, and conduct, and the ranked vote gives the board a defensible, division-by-division ordering ahead of election. It happens after assessments and before the draft (late February/early March).",
+    "steps": [
+      "Compile the list of coach applicants by division and confirm they have completed required training (e.g., PCA, Abuse Awareness) and background checks.",
+      "Invite prospective coaches to interviews with clear instructions on format and timing.",
+      "Conduct interviews and gather board impressions on conduct, rules knowledge, and technique.",
+      "Run the board's ranked-choice vetting vote per division and tally the ordering.",
+      "Record the results to carry into the coach-election motions.",
+      "Keep applicant information confidential to the board."
+    ],
+    "links": [
+      { "type": "template", "ref": "conduct_safety__coach-interview-invite", "label": "Coach Interview Invite" },
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Elect coaches and set team counts",
+    "dueWeekOfFY": null,
+    "details": "This brings motions to elect coaches and set the number of teams per level, and reviews play-up/move-up requests for safety and balance. It matters because team counts must match registration numbers before the draft, and elected coaches and approved play-ups determine roster composition. It follows the vetting vote and precedes the draft (early March).",
+    "steps": [
+      "Using the ranked vetting results and current registration counts, propose the number of teams per level.",
+      "Bring a motion to set team counts per division; second and record the outcome.",
+      "Bring motions to elect head coaches per division based on the ranked vote.",
+      "Review each play-up/move-up request against safety, assessment, and competency at the target level.",
+      "Approve or decline play-ups by motion, noting any approval may carry to future levels.",
+      "Finalize the coach and team-count list to feed the draft schedule."
+    ],
+    "links": [
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Set draft dates and enforce jersey deadline",
+    "dueWeekOfFY": null,
+    "details": "This schedules the division drafts after the coaches meeting and enforces the final custom-jersey registration deadline (3/14, no exceptions). It matters because the deadline lets the league finalize teams and place the uniform order on time, and the drafts must follow assessments closely so ratings are fresh. Both fall in early-to-mid March.",
+    "steps": [
+      "Schedule each division's draft for the days after the coaches meeting and assessments.",
+      "Confirm ratings are set, including chosen ratings for players who missed assessments.",
+      "Communicate and enforce the 3/14 final custom-jersey registration deadline with no exceptions.",
+      "Confirm teams are finalized by the deadline so the uniform order can proceed.",
+      "Send division draft invites to head/assistant coaches with the meeting link and dial-in.",
+      "Run each division draft (roughly 30-45 minutes) among that division's head coaches."
+    ],
+    "links": [
+      { "type": "template", "ref": "draft__schedule-invite", "label": "Draft Schedule Invite" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety" }
+    ]
+  },
+  {
+    "title": "Finalize season calendar",
+    "dueWeekOfFY": null,
+    "details": "This locks the full season calendar -- clinics, assessments, coaches clinics, draft, field cleanups, first games, and All-Star letters/dates -- into a single authoritative schedule. It matters because every officer, coach, and family relies on these anchor dates, and All-Star letter deadlines and playoff/championship windows must be set early. Finalization happens in the winter/early spring once dates are confirmed (e.g., the 2026 calendar adopted in the fall and refined through February).",
+    "steps": [
+      "Assemble all confirmed dates: winter clinics, assessments (with make-up), coaches clinics, draft, indoor/outdoor practices, field cleanups, and first games.",
+      "Add end-of-season milestones: All-Star letters due date, last regular-season and playoff games, and All-Star dates per division.",
+      "Cross-check for facility and school-calendar conflicts and resolve overlaps.",
+      "Present the consolidated calendar to the board for final approval.",
+      "Publish the finalized calendar to the website and distribute to coaches and families."
+    ],
+    "links": [
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies" },
+      { "type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes" }
+    ]
+  }
+]

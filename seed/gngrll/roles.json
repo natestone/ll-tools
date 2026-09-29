@@ -1,0 +1,52 @@
+[
+  {
+    "key": "equipment_coordinator",
+    "name": "Equipment Coordinator",
+    "description": "The **Equipment Coordinator** manages {{leagueAbbrev}}'s playing equipment inventory and purchasing across the year: bats, baseballs/softballs, catcher's gear, helmets, tees, nets, and the field gear bins, along with storage security. Key responsibilities include the fall and pre-season equipment inventories, purchasing replacement and season-prep gear within board-approved spending caps (e.g. up to $5,000/season, bats not to exceed $2,000, balls $1,400-$2,500, helmets up to $2,000), setting up Tee Ball/Coach Pitch field bins, and recruiting volunteers to assemble gear bins. At end of season the coordinator leads gear collection, sorting, and storage (gear bags/bins, batting cage nets) and the concessions/upstairs cleanout."
+  },
+  {
+    "key": "grounds_crew",
+    "name": "Grounds Coordinator",
+    "description": "The Grounds Coordinator keeps {{leagueAbbrev}}'s fields safe, playable, and improving across the year, covering Douglas, Penney, Pennell, Newbegin, Intervale, Russell, and {{townC}}-area sites. Responsibilities span seasonal cleanups, mowing and dragging, base paths, mounds and batter's boxes, fertilizer and aeration, and grounds equipment (mowers, tractors, drags, sheds). This role also drives capital field projects such as batting cages, 50/70 conversions, dugout/fencing improvements (Intervale), and infield-mix work, often recruiting volunteers for scheduled field work days."
+  },
+  {
+    "key": "information_officer",
+    "name": "Information Officer",
+    "description": "The League Info Officer (LIO) is {{leagueAbbrev}}'s communications and information hub, responsible for reaching the full league population with the right message at the right time. This role runs the mass email blasts (registration pushes, certified-volunteer process, merchandise store, photo logistics), maintains the public information website and registration portal, and reports registration and player-count numbers to the board throughout the season. The LIO also coordinates photo day scheduling with the photographer, manages merch/fanwear ordering announcements, and compiles the end-of-season survey and season retrospective for the board."
+  },
+  {
+    "key": "president",
+    "name": "President",
+    "description": "The President is the chief officer of {{leagueName}}, responsible for the league's overall direction, governance, and family-facing communications. This role facilitates board meetings, owns the season calendar (registration, clinics, assessments, drafts, playoffs, and All-Stars), makes weather/cancellation calls, and represents the league to {{district}}, Little League International, municipal partners, and sponsors. The President coordinates most recurring outbound communications and drives the annual cycle from fall planning and elections through spring startup, in-season operations, and post-season wrap-up."
+  },
+  {
+    "key": "safety_officer",
+    "name": "Safety Officer",
+    "description": "The Safety Officer keeps {{leagueAbbrev}} as safe as possible by owning the league's ASAP (As Safe As Possible) safety plan, maintaining and checking AED devices, and coordinating the required Little League Safety & First Aid training and CPR/Heartsaver clinics for coaches. This role drives volunteer compliance with Abuse Awareness / Safe Sport training (which resets every October 1), ensures certified-volunteer badges and background checks are in place before anyone is on the field, and installs safety bases before games begin. The Safety Officer also handles injury and concussion incident reporting for the league's insurer and enforces return-to-play protocols."
+  },
+  {
+    "key": "secretary",
+    "name": "Secretary",
+    "description": "The Secretary is the recordkeeping and governance backbone of the {{leagueAbbrev}} board. This role records meeting minutes and the elections/positions roster, publishes the agenda and notes to the board after each meeting, and maintains the league's governing documents \u2014 chiefly the annual review, update, and upload of the Constitution & By-laws to Little League International. The Secretary (a role that has historically combined with the League Info Officer) also handles recurring bulk communications such as Opening Day snack shack volunteer recruitment."
+  },
+  {
+    "key": "treasurer",
+    "name": "Treasurer",
+    "description": "The **Treasurer** manages {{leagueAbbrev}}'s finances: maintaining the bank and PayPal/online balances, tracking outstanding invoices and obligations, and delivering a financial/treasury update at each board meeting (bank & online balances, P&L/budget notes). Recurring obligations include paying the Little League charter & insurance fees each fall (~$1,300, authorized up to $2,000), setting registration fees, and supporting equipment/uniform spending motions. During the postseason the Treasurer leads tournament fundraising and family disbursements (per diem, hotel, and mileage reimbursements) and manages donation buckets and donor accounts."
+  },
+  {
+    "key": "uniform_coordinator",
+    "name": "Uniform Coordinator",
+    "description": "The Uniform Coordinator manages {{leagueAbbrev}}'s uniform program end to end: sampling and pricing with vendors ({{uniformVendor}}, Main Street Graphics, {{equipmentVendor}}/Gilbert), collecting sizes, placing jersey and hat orders against the annual budget, and coordinating distribution to coaches and teams. They enforce recurring calendar rules such as the customized-jersey registration deadline and vendor order cutoffs, run the pre-season sizing event, and track delivery so uniforms arrive ahead of picture day and opening games. The role also handles special orders for All-Star, Junior, and Senior teams and maintains uniform vendor/pricing research as an ongoing project."
+  },
+  {
+    "key": "vp_baseball",
+    "name": "VP of Baseball",
+    "description": "The VP of Baseball leads baseball operations across {{leagueAbbrev}}'s player-pitch divisions (AA ages 7-8, AAA Minors ages 9-10, Majors ages 11-12, and Juniors/Seniors ages 13-16), coordinating with the president, coaching coordinator, and scheduler. Responsibilities run year-round: publishing game and practice schedules in GameChanger, running spring indoor/clinic practices, organizing division playoffs with brackets and rules, standing up summer baseball, and managing Junior/Senior commitment letters and rosters. The VP works closely with the softball VP, umpire-in-chief, and safety officer to keep the on-field program balanced, competitive, and fun for kids across all levels."
+  },
+  {
+    "key": "vp_softball",
+    "name": "VP of Softball",
+    "description": "The VP of Softball champions the growth and health of the {{leagueAbbrev}} softball program across all divisions (7-8, 9-10, 11-12, and 12-16). This role drives recruitment, plans softball-specific clinics and team formation, staffs softball program roles (equipment, concessions, media, scheduler), and runs a parent discussion group to build faster pathways for softball success. The VP coordinates interleague and District/high school opportunities, enforces softball safety rules (face masks required for all infield positions), and represents softball interests to the board on scheduling, fields, uniforms, and equipment."
+  }
+]

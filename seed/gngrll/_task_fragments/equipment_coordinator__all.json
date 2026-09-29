@@ -1,0 +1,199 @@
+[
+  {
+    "title": "Coordinate end-of-season gear bag/bin collection",
+    "dueWeekOfFY": 0,
+    "details": "At the close of the playing season the Equipment Manager reclaims all shared league gear so nothing is lost or left to weather over the offseason. This means pulling gear bags and locked bins back from every field, retrieving batting-cage nets and sponsor/field banners, and finishing the concessions and upstairs storage cleanout. Consolidating everything now (typically staged at Douglas) protects the league's investment and sets up the fall inventory.",
+    "steps": [
+      "Notify head coaches of the return deadline and confirm each field's bin combination/key so bins can be opened and emptied.",
+      "Collect gear bags and locked bins from every field, verifying balls are back in the bins and bins are re-locked.",
+      "Take down and roll up batting-cage nets and remove banners before winter weather.",
+      "Complete the concessions/snack-shack and upstairs storage cleanout, clearing out perishables and organizing shelving.",
+      "Transport all gear to the central staging location (e.g. Douglas) and group it by set (Tee Ball, AA/AAA/Majors) for the offseason.",
+      "Note any missing, stolen, or damaged items so they can be added to the replacement list."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "template", "ref": "fields_facilities__field-workday", "label": "Field Work Day email template" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" }
+    ]
+  },
+  {
+    "title": "Order bat/ball/team equipment replacements",
+    "dueWeekOfFY": 1,
+    "details": "After the fall inventory identifies gaps, the Equipment Manager purchases replacement bats, balls, and shared team equipment for the next season within board-approved caps (bats up to $2,000; balls $1,400-$2,500). Ordering in the offseason ensures gear arrives before winter prep and pre-season staging. The league's annual Dick's Sporting Goods sponsorship credit and partner discount code should be applied to stretch the budget.",
+    "steps": [
+      "Build the replacement order from the inventory needs list, splitting practice vs. season baseballs/softballs and bats by division.",
+      "Keep the bat total within the ~$2,000 cap and balls within the $1,400-$2,500 range approved by the board.",
+      "Apply the annual Dick's Sporting Goods sponsorship equipment credit using the league partner discount code.",
+      "Place the order with the league vendor and confirm expected delivery ahead of winter/pre-season prep.",
+      "Submit receipts to the Treasurer for reimbursement or record against the approved spending motion."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" }
+    ]
+  },
+  {
+    "title": "Prepare equipment inventory and needs report",
+    "dueWeekOfFY": 2,
+    "details": "The Equipment Manager compiles a full inventory of bats, baseballs, catcher's gear, mowers/tractors, and bins, assesses how securely gear is stored, and presents the resulting needs to the board. This report drives the season's equipment spending motion and flags recurring problems such as bin theft. It is typically presented at a winter organizational/board meeting alongside registration and uniform planning.",
+    "steps": [
+      "Count on-hand bats, baseballs/softballs, helmets, catcher's gear, mowers/tractors, and bins by division.",
+      "Assess storage security, noting bin theft history and whether gear should move to the snack shack as a contingency.",
+      "Draft the needs list with target quantities (e.g. ~24 helmets tee ball/player pitch, 12 each Majors/Minors, 20 dozen practice + 30 dozen season baseballs, a dozen bats each sport) and cost estimates.",
+      "Prepare a short board report tying quantities to a dollar estimate for the spending motion.",
+      "Present the report at the board meeting and answer questions to support the equipment purchase motion."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes template" }
+    ]
+  },
+  {
+    "title": "Complete fall equipment inventory",
+    "dueWeekOfFY": 7,
+    "details": "The fall inventory establishes the league's true on-hand stock once all gear has been collected from the fields at season's end. Counting everything now produces the baseline replacement list that feeds offseason purchasing and the winter board spending motion. Doing it in the fall gives enough lead time to order and receive gear before the next season.",
+    "steps": [
+      "Gather all collected bins, bags, and gear at the central storage location and open every bin.",
+      "Count and record bats, baseballs/softballs, helmets, catcher's gear, tees, nets, and misc items (bat grips, bownets) by division.",
+      "Flag worn, damaged, or missing items and set them aside from usable stock.",
+      "Compile the replacement list with target on-hand quantities for the coming season.",
+      "Store all usable gear securely in labeled, locked bins for the offseason."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Purchase winter season-prep equipment",
+    "dueWeekOfFY": 9,
+    "details": "During the winter the Equipment Manager places the major season-prep order once the board has approved equipment spending. This covers helmets, catcher's gear, baseballs/softballs, bats, tees, and nets identified as gaps in the fall inventory. Ordering in winter ensures gear is on hand to stage and distribute before games begin in the spring.",
+    "steps": [
+      "Convert the fall inventory needs list into a concrete winter purchase order by division.",
+      "Prioritize lower-level catcher's gear (ages 7-8 and 9-10) and helmet counts, which are recurring shortfalls.",
+      "Order helmets, catcher's gear, baseballs/softballs, bats, tees, and nets within the approved spending amount.",
+      "Apply the Dick's sponsorship credit/discount code and confirm delivery timelines before pre-season prep.",
+      "Log the purchase and submit receipts to the Treasurer against the board-approved motion."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" }
+    ]
+  },
+  {
+    "title": "Run pre-season equipment inventory and purchasing",
+    "dueWeekOfFY": 18,
+    "details": "Just before the season the Equipment Manager re-checks stock against final registration numbers and fills any remaining gaps in helmets, catcher's gear, balls, bats, tees, and nets. This last-mile inventory catches shortfalls the winter order missed once team counts are set, so every field is fully equipped before games. It typically happens in the weeks leading into spring practices and Opening Day.",
+    "steps": [
+      "Reconcile on-hand gear against final registration and team counts by division.",
+      "Identify any remaining shortfalls in helmets, catcher's gear, balls, bats, tees, and nets.",
+      "Place a final gap-filling order with enough lead time to arrive before staging.",
+      "Sort and pre-stage gear into per-field sets (Tee Ball, AA/AAA/Majors) at the central staging location.",
+      "Confirm each field's bin/lock and combination are ready for distribution."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" }
+    ]
+  },
+  {
+    "title": "Prepare equipment spending motion for board",
+    "dueWeekOfFY": 22,
+    "details": "The Equipment Manager works with the president to draft the team/field equipment purchase list and a spending motion (e.g. up to $5,000) for board approval. Formalizing purchasing authority by motion lets gear be bought at the discretion of the president and equipment manager within a set cap. This is presented at a winter board meeting so orders can be placed in time for the season.",
+    "steps": [
+      "Turn the inventory needs report into an itemized purchase list with per-category cost estimates.",
+      "Set a not-to-exceed amount (e.g. $5,000) and draft the motion language granting spending discretion to the president and equipment manager.",
+      "Review the list and motion with the president before the meeting.",
+      "Present the motion at the board meeting and record the second and vote in the minutes.",
+      "Proceed with ordering once the motion carries, tracking spend against the approved cap."
+    ],
+    "links": [
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes template" }
+    ]
+  },
+  {
+    "title": "Set up Tee Ball / Coach Pitch field bins",
+    "dueWeekOfFY": 27,
+    "details": "Before the Tee Ball and Coach Pitch season opens, the equipment team assembles and places gear bins, helmets, and equipment on each of those fields. This is often done at a bin-assembly day at Douglas with pop-up tents used to organize a set per field before distribution. Getting bins staged and delivered ensures every young-division field is ready for the first practices and games.",
+    "steps": [
+      "Assemble the gear bins and sort helmets, bats, tees, balls, and buckets into a set per Tee Ball/Coach Pitch field.",
+      "Use pop-up tents at the staging site (e.g. Douglas behind Subway) to organize each field's set.",
+      "Deliver and place each set at its assigned field, arranging equipment sharing where a field lacks its own gear.",
+      "Set bin lock combinations and record them for coach distribution.",
+      "Confirm with the Tee Ball/Coach Pitch VP that every field is stocked before the first practice."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" },
+      { "type": "template", "ref": "volunteer_certification__equipment-setup-volunteers", "label": "Equipment Setup Volunteers email template" }
+    ]
+  },
+  {
+    "title": "Place ball order and stock season equipment",
+    "dueWeekOfFY": 30,
+    "details": "Early in the season the Equipment Manager places the main baseball/softball order and stocks each field's consumables and shared gear. Each field is set with roughly two buckets of ~48 baseballs plus tees, buckets, helmets, and catcher's gear for in-season use. Keeping balls replenished matters because baseballs are the most frequently lost and stolen item.",
+    "steps": [
+      "Place the season baseball/softball order (practice and game balls) based on the approved quantities.",
+      "Stock each field with roughly two buckets of ~48 baseballs (about 96 total), numbered in groups.",
+      "Distribute tees, buckets, helmets, and catcher's gear to fields by division set.",
+      "Remind coaches to sort and recover balls at the end of each practice and report missing balls for replacement.",
+      "Track ball replacement needs through the season and reorder as buckets run low."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Recruit equipment setup volunteers",
+    "dueWeekOfFY": 30,
+    "details": "The Equipment Manager recruits a small crew (typically 3-4 volunteers) to help assemble gear bins and organize a season setup/bin-assembly day. The work happens at a central field (e.g. Douglas) using pop-up tents to organize a gear set for each field. Recruiting help spreads the workload and gets all fields equipped quickly right before the season.",
+    "steps": [
+      "Set the bin-assembly day date, time, and location (e.g. Douglas, a 12-2 window).",
+      "Send the equipment setup volunteer request asking for 3-4 helpers, noting pop-up tents will organize gear per field.",
+      "Confirm volunteers and share what to bring and where to meet.",
+      "Run the assembly day: build bins, sort gear into per-field sets under the tents, and stage for distribution.",
+      "Thank volunteers and note anyone willing to help again for future setups."
+    ],
+    "links": [
+      { "type": "template", "ref": "volunteer_certification__equipment-setup-volunteers", "label": "Equipment Setup Volunteers email template" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" }
+    ]
+  },
+  {
+    "title": "Collect, sort, and store end-of-season gear",
+    "dueWeekOfFY": 42,
+    "details": "As the season winds down the Equipment Manager gathers gear bags, bins, batting-cage nets, and returned uniforms, then sorts and stores everything securely for the offseason. Consolidating and locking down gear prevents loss and theft, which have been recurring problems with unlocked bins. This collection feeds the subsequent fall inventory.",
+    "steps": [
+      "Notify coaches of the gear return deadline and collect gear bags, bins, and any issued equipment from each field.",
+      "Retrieve batting-cage nets and gather returned uniforms.",
+      "Sort gear into division sets and separate damaged/missing items from usable stock.",
+      "Store all gear in locked bins at the central storage location, keeping baseballs secured given prior theft.",
+      "Record shortfalls and damage to seed the fall inventory and replacement list."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "template", "ref": "uniforms__coach-pickup", "label": "Uniform Pickup for Coaches template" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" }
+    ]
+  },
+  {
+    "title": "Schedule equipment inventory and recruit volunteers",
+    "dueWeekOfFY": 49,
+    "details": "The Equipment Manager sets the offseason inventory date and lines up volunteers to count and organize the collected gear. Scheduling the count and a helper crew ensures the inventory gets done efficiently and produces an accurate on-hand list. This is the lead-in to the fall inventory and replacement planning.",
+    "steps": [
+      "Pick an inventory date once all gear has been collected and staged.",
+      "Send a volunteer request for helpers to count and organize equipment on that date.",
+      "Prepare inventory sheets grouped by division and item type (bats, balls, helmets, catcher's gear, tees, nets, bins).",
+      "Confirm volunteers, location, and access to the storage bins/combinations.",
+      "Run the count, tally usable vs. replacement items, and compile the results for the needs report."
+    ],
+    "links": [
+      { "type": "template", "ref": "volunteer_certification__equipment-setup-volunteers", "label": "Equipment Setup Volunteers email template" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" }
+    ]
+  }
+]

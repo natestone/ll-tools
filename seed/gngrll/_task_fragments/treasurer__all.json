@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Prepare monthly treasury report for board meeting",
+    "dueWeekOfFY": 3,
+    "details": "The Treasurer presents a financial update at each board meeting so the board can make informed spending decisions and vote on motions with current cash position in hand. A typical report covers TD Bank and PayPal balances, outstanding invoices, and known obligations (e.g. Financial Update showing TD ~$31.9K / PayPal $10.1K, MSAD15 $300 rental outstanding, and a pending Fenway wall obligation in the 2023-01-08 agenda). Doing this before every meeting keeps the board's budget-vs-actuals current all season.",
+    "steps": [
+      "Pull current balances from the league's TD Bank account and the PayPal/online donation account (and any Venmo/GoFundMe channels in use).",
+      "List outstanding invoices and receivables (e.g. facility/MSAD15 rentals) and known upcoming obligations still to be paid.",
+      "Summarize month-over-month P&L and note actuals against any approved 'up to $X' spending caps the board has authorized.",
+      "Send figures to the secretary ahead of the meeting so they appear in the agenda/notes doc under a 'Financial Update' section.",
+      "Present balances, outstanding items, and obligations at the meeting and answer questions before any spending motions are voted."
+    ],
+    "links": [
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship - Financial Reporting" },
+      { "type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes doc" },
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" }
+    ]
+  },
+  {
+    "title": "Pay Little League charter & insurance renewal",
+    "dueWeekOfFY": 8,
+    "details": "Each year the league must renew its Little League charter and insurance through the Little League Data Center, ideally by 12/31, to remain a chartered league able to field teams and All-Stars. The board authorizes the spend by motion each fall (e.g. 'Motion to authorize up to $2,000 for LL Charter & Insurance for 2022' in the 2021-12-12 agenda, with the actual cost running ~$1,300). Both general liability and accident insurance fees are built into the charter checkout, so following the prompts sets up coverage automatically.",
+    "steps": [
+      "Confirm the board has authorized the spend by motion (historically up to a $2,000 cap) at a late-fall meeting.",
+      "Log in to the Little League Data Center at https://apps.littleleague.org/dc/account/login before the 12/31 deadline.",
+      "Complete the charter renewal, following the prompts to add general liability and accident insurance rather than declining for external coverage.",
+      "Pay the charter and insurance fees (typically ~$1,300) from the league account.",
+      "Verify coverage via 'Manage Insurance/View Insurance Certificates' and confirm additional insured parties are listed.",
+      "Record the payment in the books and report it at the next board meeting."
+    ],
+    "links": [
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship - Budget Approval & Spending Controls" },
+      { "type": "url", "ref": "https://apps.littleleague.org/dc/account/login", "label": "Little League Data Center" }
+    ]
+  },
+  {
+    "title": "Reconcile registration revenue after open date",
+    "dueWeekOfFY": 15,
+    "details": "Registration is the league's primary revenue source, and fees are set by the board by motion; the Treasurer tracks receipts by division against the approved fee schedule once registration opens (typically 1/1). Reconciling early catches misapplied or missing payments and lets the board see revenue trends before uniform and equipment ordering. Earmarked components (such as an AAA+ increase dedicated to field repairs, or the Sandlot $20 jersey add-on noted in the 2026-01-12 agenda) must be flagged and tracked separately from general funds.",
+    "steps": [
+      "Confirm the approved fee schedule by division (including any non-volunteer fee and earmarked increases) from the board minutes.",
+      "Export registration receipts from the online registration platform and reconcile against PayPal/online deposits after the 1/1 open date.",
+      "Match paid registrations to the fee schedule by division and flag discrepancies, scholarships, or refunds.",
+      "Separate and tag earmarked funds (e.g. AAA+ increase for field repairs, Sandlot jersey add-on) so they are not treated as general revenue.",
+      "Report registration revenue-to-date by division in the monthly treasury report."
+    ],
+    "links": [
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance - Financial Reporting" }
+    ]
+  },
+  {
+    "title": "Track sponsorship payments and donor management",
+    "dueWeekOfFY": 17,
+    "details": "The Treasurer records sponsorship and donation payments across all channels (checks, PayPal, Venmo, GoFundMe) in the Annual Sponsorship Log and coordinates fulfillment of donor recognition. This work supports uniform and banner ordering (sponsorships targeted no later than mid-February) and drives thank-you acknowledgements to larger donors (e.g. $250+ and $500+ highlighted for recognition). Donor records are maintained in Bloomerang (~$1,400/yr subscription), and the league completes corporate donation forms as required.",
+    "steps": [
+      "Log each sponsorship/donation in the Annual Sponsorship Log with channel, amount, tier, and team/player preference from the Sponsorship Coordinator.",
+      "Reconcile incoming payments (checks to PO Box 1236, PayPal, Venmo, GoFundMe) against submitted sponsorship forms.",
+      "Maintain donor records in Bloomerang and complete any corporate donation forms with required naming/branding.",
+      "Flag larger donors ($250+ / $500+) for recognition and coordinate thank-you fulfillment (banners, plaques, jerseys) with the Coordinator.",
+      "Confirm sponsorships are received by mid-February so team and banner counts are final before the uniform order.",
+      "Send payment-request reminders to committed sponsors who have not yet paid."
+    ],
+    "links": [
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship - Sponsorship Program" },
+      { "type": "template", "ref": "sponsorship__payment-request", "label": "Sponsorship Payment Request email" },
+      { "type": "template", "ref": "fundraising__sponsorship-payment-request", "label": "GNGRLL Team Sponsorship payment email" }
+    ]
+  },
+  {
+    "title": "Budget pre-season equipment and uniform spending",
+    "dueWeekOfFY": 20,
+    "details": "Pre-season equipment and uniform purchases are the league's largest controllable spend, so the board approves them by 'up to $X' motions (e.g. up to $5,000 for equipment for the 2023 season, seconded and carried unanimously in the 2022-11-14 / 2023-01-08 agendas; uniforms up to $18,000). The Treasurer supports these motions by bringing cost detail to the board and then tracks actual spending against each approved cap. This keeps purchasing on budget through the winter/early-spring ordering window.",
+    "steps": [
+      "Collect cost detail for the season's equipment and uniform needs (balls, cages, catcher's gear, helmets, jerseys) from equipment and uniform coordinators.",
+      "Present the itemized figures to the board so a member can make an 'up to $X' motion (e.g. up to $5,000 equipment, up to $18,000 uniforms).",
+      "Record the approved caps and the seconded/carried vote in the treasury tracking sheet.",
+      "As purchase orders and invoices come in, log actuals against each approved cap and flag any overrun before it happens.",
+      "Report equipment and uniform spend-to-date against caps in each monthly treasury report."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance - Budget Approval & Spending Controls" }
+    ]
+  },
+  {
+    "title": "Establish tournament fundraising plan and goal",
+    "dueWeekOfFY": 42,
+    "details": "When All-Star teams advance to State and Regional (or World Series) play, travel becomes a major cost, so the league sets a fundraising goal and disbursement/per-diem plan to cover hotels, gas, and meals for advancing families and staff. Funds come from combined channels - donation buckets at partner businesses, GoFundMe, and business donations (e.g. a local PT center offering to 'cut you guys a check' for the 2023 New England Regional run). The plan confirms per-diem rules and any retained amount (e.g. 2024 Juniors: $11,135 raised, $2,520 retained for state-champion rings, remainder paid as $114.87/day per-diem shares).",
+    "steps": [
+      "Estimate travel needs for the advancing team (nights of lodging, number of trips, meals) with the coach and president.",
+      "Set a fundraising goal and open the channels: donation buckets at partner businesses, a GoFundMe page, and direct business-donation outreach.",
+      "Confirm per-diem and disbursement rules for the cycle (per-day rate, shares per player family, any amount retained for rings/keepsakes).",
+      "Track incoming donations by channel toward the goal and keep a running total.",
+      "Report the fundraising total and proposed per-diem plan to the board/families before disbursing."
+    ],
+    "links": [
+      { "type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament - Advancement Costs" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance - Donations & Fundraising" },
+      { "type": "template", "ref": "fundraising__donation-bucket-collection", "label": "Donation Bucket Collection" }
+    ]
+  },
+  {
+    "title": "Collect donation buckets and check mailbox",
+    "dueWeekOfFY": 45,
+    "details": "During a tournament run the league places donation buckets at partner businesses and collects mailed checks at the league PO Box; the Treasurer empties these, logs the proceeds, and deposits them toward the tournament fundraising goal. Regular collection keeps cash secure and gives an accurate running total for the per-diem calculation. Collection assignments are coordinated so every partner location is covered.",
+    "steps": [
+      "Coordinate bucket-collection assignments so each partner business location is emptied on schedule.",
+      "Empty each donation bucket and check the league mailbox (PO Box 1236, Gray, ME 04039) for mailed checks and cash.",
+      "Count and log proceeds by source in the tournament fundraising tracker.",
+      "Deposit cash and checks promptly into the league account and record PayPal/Venmo/GoFundMe totals alongside.",
+      "Update the running fundraising total used for the per-diem disbursement calculation."
+    ],
+    "links": [
+      { "type": "template", "ref": "fundraising__donation-bucket-collection", "label": "Donation Bucket Collection Assignments" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance - Donations & Fundraising" },
+      { "type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament - Advancement Costs" }
+    ]
+  },
+  {
+    "title": "Disburse tournament family reimbursements",
+    "dueWeekOfFY": 46,
+    "details": "Once the fundraising total is set, the Treasurer pays out hotel, per-diem, and gas reimbursements to advancing tournament families and staff per the approved stipend plan. Amounts follow the disbursement rules confirmed for the cycle (e.g. 2024 Juniors Regionals: after retaining $2,520 for rings, the balance paid as $114.87/day for 5 days, $574.33 per share). Families choose to pick up checks (e.g. Sunday evening at the Douglas Snack Shack) or have them mailed.",
+    "steps": [
+      "Finalize the total raised and subtract any board-approved retained amount (e.g. for championship rings).",
+      "Calculate per-share/per-diem amounts using the approved rate and number of eligible player families and staff.",
+      "Collect receipts for hotel and gas where the policy requires documentation before reimbursement.",
+      "Contact each family/staff member for their preferred payout method (pickup at the snack shack or mailed check).",
+      "Issue checks, log each disbursement against the fundraising total, and reconcile the tournament fund to zero (or note the remaining balance)."
+    ],
+    "links": [
+      { "type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament - Advancement Costs" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance - Donations & Fundraising" }
+    ]
+  }
+]

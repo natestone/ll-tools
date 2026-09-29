@@ -1,0 +1,424 @@
+{
+ "policies": [
+  {
+   "slug": "allstars_tournament",
+   "title": "All-Stars & Tournament Policies & Procedures"
+  },
+  {
+   "slug": "equipment-uniforms-safety",
+   "title": "\"Equipment, Uniforms & Safety\""
+  },
+  {
+   "slug": "fields_capital",
+   "title": "Fields & Capital Projects"
+  },
+  {
+   "slug": "finance-sponsorship",
+   "title": "Finance & Sponsorship Policies & Procedures"
+  },
+  {
+   "slug": "governance_roles",
+   "title": "Governance & Board Roles"
+  },
+  {
+   "slug": "registration_assessment",
+   "title": "Registration & Assessment Policies & Procedures"
+  }
+ ],
+ "references": [
+  {
+   "slug": "divisions",
+   "title": "GNGRLL Divisions Reference"
+  },
+  {
+   "slug": "fields",
+   "title": "GNGRLL Fields Reference"
+  }
+ ],
+ "templates": [
+  {
+   "key": "all_stars__coach-voting",
+   "category": "all_stars",
+   "roleKey": "president",
+   "subject": "GNGRLL - {{division}} All Star Voting & Coaches"
+  },
+  {
+   "key": "all_stars__commitment-form",
+   "category": "all_stars",
+   "roleKey": "secretary",
+   "subject": "GNGRLL - All Star Commitment Form - Online Form - Due {{dueDate}}"
+  },
+  {
+   "key": "all_stars__roster-board-approval",
+   "category": "all_stars",
+   "roleKey": "president",
+   "subject": "GNGRLL {{division}} All Stars Team"
+  },
+  {
+   "key": "all_stars__team-not-fielded",
+   "category": "all_stars",
+   "roleKey": "president",
+   "subject": "GNGRLL - {{division}} All Stars"
+  },
+  {
+   "key": "board_meeting__announcement",
+   "category": "board_meeting",
+   "roleKey": "president",
+   "subject": "GNGRLL - Board Meeting {{meetingDate}}"
+  },
+  {
+   "key": "board_meeting__minutes-agenda-doc",
+   "category": "board_meeting",
+   "roleKey": "secretary",
+   "subject": "GNGRLL - Meeting Agenda & Notes"
+  },
+  {
+   "key": "board_meeting__reminder",
+   "category": "board_meeting",
+   "roleKey": "president",
+   "subject": "Re: GNGRLL - Board Meeting {{meetingDate}}"
+  },
+  {
+   "key": "board_meeting__softball-parent-group",
+   "category": "board_meeting",
+   "roleKey": "vp_softball",
+   "subject": "GNGRLL - Softball Board Meeting & Discussion Group"
+  },
+  {
+   "key": "conduct_safety__abuse-awareness-reminder",
+   "category": "conduct_safety",
+   "roleKey": "safety_officer",
+   "subject": "Action Required: Complete Abuse Awareness Training for {{seasonYear}}"
+  },
+  {
+   "key": "conduct_safety__coach-conduct-reminder",
+   "category": "conduct_safety",
+   "roleKey": "president",
+   "subject": "Game Conduct - A Quick Reminder"
+  },
+  {
+   "key": "conduct_safety__coach-interview-invite",
+   "category": "conduct_safety",
+   "roleKey": "president",
+   "subject": "{{leagueAbbrev}} - {{division}} Coach Interviews"
+  },
+  {
+   "key": "conduct_safety__injury-concussion-protocol",
+   "category": "conduct_safety",
+   "roleKey": "safety_officer",
+   "subject": "Re: {{playerName}} - Injury Report and Return-to-Play Protocol"
+  },
+  {
+   "key": "draft__publish-rosters",
+   "category": "draft",
+   "roleKey": "president",
+   "subject": "GNGRLL - {{division}} Draft - Roster Entry"
+  },
+  {
+   "key": "draft__results-and-team-names",
+   "category": "draft",
+   "roleKey": "president",
+   "subject": "GNGRLL - {{division}} Draft Results"
+  },
+  {
+   "key": "draft__schedule-invite",
+   "category": "draft",
+   "roleKey": "president",
+   "subject": "GNGRLL - {{division}} Draft"
+  },
+  {
+   "key": "fields_facilities__field-etiquette-access",
+   "category": "fields_facilities",
+   "roleKey": "president",
+   "subject": "GNGRLL - {{fieldName}} Field Etiquette and Start Times"
+  },
+  {
+   "key": "fields_facilities__field-workday",
+   "category": "fields_facilities",
+   "roleKey": "grounds_crew",
+   "subject": "GNGRLL - Field Work Day: {{workDescription}} on {{date}}"
+  },
+  {
+   "key": "fields_facilities__fields-fundraiser-launch",
+   "category": "fields_facilities",
+   "roleKey": "president",
+   "subject": "GNGRLL - {{projectName}} Fundraiser Launch"
+  },
+  {
+   "key": "fundraising__donation-bucket-collection",
+   "category": "fundraising",
+   "roleKey": "president",
+   "subject": "Donation Bucket Collection Assignments"
+  },
+  {
+   "key": "fundraising__event-volunteer-signup",
+   "category": "fundraising",
+   "roleKey": "president",
+   "subject": "GNGRLL - Help at the {{event_name}}"
+  },
+  {
+   "key": "fundraising__sponsorship-payment-request",
+   "category": "fundraising",
+   "roleKey": "treasurer",
+   "subject": "GNGRLL Team Sponsorship"
+  },
+  {
+   "key": "merchandise__fanwear-catalog-order",
+   "category": "merchandise",
+   "roleKey": "information_officer",
+   "subject": "GNGRLL Fanwear Catalog - Order Now!"
+  },
+  {
+   "key": "merchandise__store-open",
+   "category": "merchandise",
+   "roleKey": "information_officer",
+   "subject": "GNGRLL Merch Store is Open!"
+  },
+  {
+   "key": "opening_day__parade-parking-request",
+   "category": "opening_day",
+   "roleKey": "president",
+   "subject": "GNGRLL Parking Request for Parade"
+  },
+  {
+   "key": "opening_day__snack-shack-volunteers",
+   "category": "opening_day",
+   "roleKey": "secretary",
+   "subject": "GNGRLL - Snack Shack Volunteers Needed - {{division}} Opening Day"
+  },
+  {
+   "key": "photos__action-photo-usage-permission",
+   "category": "photos",
+   "roleKey": "information_officer",
+   "subject": "\"Use of Action Photos for GNGRLL\""
+  },
+  {
+   "key": "photos__packet-pickup-reminder",
+   "category": "photos",
+   "roleKey": "information_officer",
+   "subject": "\"Reminder: Photos - {{divisions}}\""
+  },
+  {
+   "key": "photos__request-team-photos-for-plaques",
+   "category": "photos",
+   "roleKey": "president",
+   "subject": "\"Team Photos for GNGRLL Sponsor Plaques\""
+  },
+  {
+   "key": "photos__schedule-photo-day",
+   "category": "photos",
+   "roleKey": "information_officer",
+   "subject": "\"Team Photo Scheduling\""
+  },
+  {
+   "key": "playoffs_tournament__baseball-playoff-schedule-rules",
+   "category": "playoffs_tournament",
+   "roleKey": "vp_baseball",
+   "subject": "GNGRLL - Baseball Playoff Schedule, Rules, & Brackets"
+  },
+  {
+   "key": "playoffs_tournament__d6-allstar-tournament-info",
+   "category": "playoffs_tournament",
+   "roleKey": "president",
+   "subject": "Maine D6 LL - {{tournament_year}} All Star Tournament Info"
+  },
+  {
+   "key": "playoffs_tournament__softball-championship-day-bbq",
+   "category": "playoffs_tournament",
+   "roleKey": "vp_softball",
+   "subject": "GNGRLL - Softball Championship Day & BBQ"
+  },
+  {
+   "key": "practice__field-maintenance-reminder",
+   "category": "practice",
+   "roleKey": "grounds_crew",
+   "subject": "GNGRLL - Field Maintenance Reminder"
+  },
+  {
+   "key": "practice__indoor-practices-start",
+   "category": "practice",
+   "roleKey": "president",
+   "subject": "GNGRLL - Indoor Practices Start"
+  },
+  {
+   "key": "practice__teeball-coachpitch-clinic",
+   "category": "practice",
+   "roleKey": "president",
+   "subject": "GNGRLL - Tee Ball / Coach Pitch Clinic"
+  },
+  {
+   "key": "practice__winter-clinics",
+   "category": "practice",
+   "roleKey": "president",
+   "subject": "GNGRLL - Winter Clinics"
+  },
+  {
+   "key": "registration__assessments-reminder",
+   "category": "registration",
+   "roleKey": "president",
+   "subject": "GNGRLL - Assessments & Registration Reminder"
+  },
+  {
+   "key": "registration__roster-fill-push",
+   "category": "registration",
+   "roleKey": "president",
+   "subject": "GNGRLL - {{season}} {{sport}} Sign Up"
+  },
+  {
+   "key": "registration__season-open",
+   "category": "registration",
+   "roleKey": "president",
+   "subject": "GNGRLL - Registration Open for the {{season}} Season"
+  },
+  {
+   "key": "schedule__gamechanger-rosters",
+   "category": "schedule",
+   "roleKey": "information_officer",
+   "subject": "GNGRLL - GameChanger for Rosters and Schedule"
+  },
+  {
+   "key": "schedule__interleague-draft-review",
+   "category": "schedule",
+   "roleKey": "president",
+   "subject": "{{season}} Schedules - Preliminary Draft for Review"
+  },
+  {
+   "key": "schedule__optional-practices",
+   "category": "schedule",
+   "roleKey": "president",
+   "subject": "GNGRLL - Optional Practices This Week"
+  },
+  {
+   "key": "schedule__schedules-update",
+   "category": "schedule",
+   "roleKey": "president",
+   "subject": "GNGRLL - Schedules Update"
+  },
+  {
+   "key": "sea_dogs_events__board-ticket-invite",
+   "category": "sea_dogs_events",
+   "roleKey": "president",
+   "subject": "Sea Dogs Event - Board Members Only"
+  },
+  {
+   "key": "sea_dogs_events__league-night-invite",
+   "category": "sea_dogs_events",
+   "roleKey": "president",
+   "subject": "GNGRLL Night at the Sea Dogs"
+  },
+  {
+   "key": "snack_shack__concessions-manager-recruit",
+   "category": "snack_shack",
+   "roleKey": "president",
+   "subject": "GNGRLL - Concessions / Snack Shack Manager"
+  },
+  {
+   "key": "snack_shack__festival-grill-volunteers",
+   "category": "snack_shack",
+   "roleKey": "president",
+   "subject": "{{eventName}} - Snack Shack Volunteers Needed"
+  },
+  {
+   "key": "snack_shack__opening-day-volunteers",
+   "category": "snack_shack",
+   "roleKey": "secretary",
+   "subject": "GNGRLL - Snack Shack Volunteers Needed - {{eventName}}"
+  },
+  {
+   "key": "sponsorship__inquiry-response",
+   "category": "sponsorship",
+   "roleKey": "president",
+   "subject": "Re: {{sponsorshipSubject}}"
+  },
+  {
+   "key": "sponsorship__payment-request",
+   "category": "sponsorship",
+   "roleKey": "treasurer",
+   "subject": "{{leagueName}} Team Sponsorship"
+  },
+  {
+   "key": "tryouts_assessments__assessment-schedule-reminder",
+   "category": "tryouts_assessments",
+   "roleKey": "president",
+   "subject": "GNGRLL - {{division}} Assessments - {{assessmentDate}}"
+  },
+  {
+   "key": "tryouts_assessments__volunteer-recruitment",
+   "category": "tryouts_assessments",
+   "roleKey": "president",
+   "subject": "GNGRLL - Volunteers Needed to Help Run {{division}} Assessments"
+  },
+  {
+   "key": "umpires__missed-game-payment",
+   "category": "umpires",
+   "roleKey": "treasurer",
+   "subject": "Umpire Payment - Missed/Cancelled Games (No Teams at Site)"
+  },
+  {
+   "key": "umpires__season-thank-you",
+   "category": "umpires",
+   "roleKey": "president",
+   "subject": "Thank You - {{season}} Umpiring Season"
+  },
+  {
+   "key": "umpires__volunteer-onboarding",
+   "category": "umpires",
+   "roleKey": "president",
+   "subject": "Re: Umpire - Next Steps to Join the GNGRLL Umpiring Staff"
+  },
+  {
+   "key": "uniforms__coach-pickup",
+   "category": "uniforms",
+   "roleKey": "uniform_coordinator",
+   "subject": "GNGRLL - Uniform Pickup for Coaches"
+  },
+  {
+   "key": "uniforms__hat-sizing-clarification",
+   "category": "uniforms",
+   "roleKey": "uniform_coordinator",
+   "subject": "GNGRLL - Uniform Clarification"
+  },
+  {
+   "key": "uniforms__sizing-event",
+   "category": "uniforms",
+   "roleKey": "uniform_coordinator",
+   "subject": "GNGRLL - Uniform Sizing Event"
+  },
+  {
+   "key": "volunteer_certification__certified-volunteer-process",
+   "category": "volunteer_certification",
+   "roleKey": "information_officer",
+   "subject": "GNGRLL - Certified Volunteer Process - {{season_year}} Season"
+  },
+  {
+   "key": "volunteer_certification__equipment-setup-volunteers",
+   "category": "volunteer_certification",
+   "roleKey": "equipment_coordinator",
+   "subject": "GNGRLL - Equipment Setup Volunteers Needed"
+  },
+  {
+   "key": "volunteer_certification__resend-background-check-invite",
+   "category": "volunteer_certification",
+   "roleKey": "secretary",
+   "subject": "Re: Background Questionnaire"
+  },
+  {
+   "key": "weather_cancellation__games-cancelled",
+   "category": "weather_cancellation",
+   "roleKey": "president",
+   "subject": "GNGRLL - Games Update for {{date}}"
+  },
+  {
+   "key": "weather_cancellation__practice-cancelled",
+   "category": "weather_cancellation",
+   "roleKey": "president",
+   "subject": "GNGRLL - {{division}} Practices Cancelled"
+  },
+  {
+   "key": "weather_cancellation__rain-decision-reply",
+   "category": "weather_cancellation",
+   "roleKey": "president",
+   "subject": "Re: {{date}} Practice"
+  }
+ ]
+}

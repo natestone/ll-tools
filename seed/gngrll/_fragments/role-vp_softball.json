@@ -1,0 +1,90 @@
+{
+  "role": "vp_softball",
+  "description": "The VP of Softball champions the growth and health of the GNGRLL softball program across all divisions (7-8, 9-10, 11-12, and 12-16). This role drives recruitment, plans softball-specific clinics and team formation, staffs softball program roles (equipment, concessions, media, scheduler), and runs a parent discussion group to build faster pathways for softball success. The VP coordinates interleague and District/high school opportunities, enforces softball safety rules (face masks required for all infield positions), and represents softball interests to the board on scheduling, fields, uniforms, and equipment.",
+  "calendar": [
+    {
+      "title": "Softball parent discussion group meeting (bi-weekly)",
+      "weekOfFY": 25,
+      "kind": "meeting",
+      "description": "Recurring softball parent/board discussion group covering officer roles, coming-season scheduling and travel, field improvements, equipment, uniforms, and District/high school game opportunities. Open to all softball parents to build pathways for softball success and equitability."
+    },
+    {
+      "title": "Softball program improvements & recruitment planning",
+      "weekOfFY": 2,
+      "kind": "reminder",
+      "description": "Post-season review of the softball program: identify improvement areas, recruitment strategies to grow enrollment across divisions, and any division mergers with neighboring leagues (e.g., Majors softball with Yarmouth) when counts are low."
+    },
+    {
+      "title": "Softball program planning - recruitment, clinics, team formation",
+      "weekOfFY": 9,
+      "kind": "reminder",
+      "description": "Winter planning for softball: recruitment push, Julie Roy winter softball clinic coordination, and preliminary team formation across softball divisions ahead of assessments."
+    },
+    {
+      "title": "Softball uniform & equipment needs (girl's cut) input",
+      "weekOfFY": 16,
+      "kind": "reminder",
+      "description": "Provide softball-specific input to uniform and equipment coordinators: girl's cut jerseys, softball-sized balls, catcher's gear, and required infield face masks for all softball positions."
+    },
+    {
+      "title": "Memorial Day Parade participation",
+      "weekOfFY": 31,
+      "kind": "reminder",
+      "description": "Organize softball teams' participation in the Memorial Day parade - line up players, coordinate banners and route logistics with the board."
+    },
+    {
+      "title": "Memorial Day parade - softball turnout",
+      "weekOfFY": 34,
+      "kind": "reminder",
+      "description": "Confirm softball division turnout for the parade and coordinate with information officer and grounds for staging."
+    },
+    {
+      "title": "Softball program roles staffing",
+      "weekOfFY": 46,
+      "kind": "due",
+      "description": "Recruit and confirm softball program staff for the coming year: VP Softball, Softball Equipment, Softball Concessions, Media, and Scheduler. Fill open seats ahead of board elections."
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Draft softball program improvement & recruitment plan",
+      "dueWeekOfFY": 2,
+      "description": "Coming off the season, write up softball program improvements and a recruitment plan to grow numbers by division; flag any low-count divisions that may need interleague merger (e.g., Yarmouth softball, Windham Juniors)."
+    },
+    {
+      "title": "Coordinate winter softball clinics (Julie Roy)",
+      "dueWeekOfFY": 9,
+      "description": "Work with the president on scheduling the Julie Roy winter softball clinic - dates, gym space, age-group slots, session fees ($10/session or 4 for $30), and budget (~$2,600-$2,800, expected to break even)."
+    },
+    {
+      "title": "Plan softball team formation & assessments",
+      "dueWeekOfFY": 16,
+      "description": "Coordinate softball assessment stations, judges, and preliminary team formation across the 7-8, 9-10, 11-12, and 12-16 divisions ahead of the spring draft."
+    },
+    {
+      "title": "Submit softball uniform & equipment requirements",
+      "dueWeekOfFY": 18,
+      "description": "Give uniform and equipment coordinators softball specifics: girl's cut jerseys, softball-sized balls, catcher's gear, and league face masks required for all infield positions per the 2017 safety rule."
+    },
+    {
+      "title": "Launch softball parent discussion group",
+      "dueWeekOfFY": 24,
+      "description": "Kick off the bi-weekly softball parent/board discussion group; invite all softball parents, collect agenda items, and set the recurring meeting cadence and platform."
+    },
+    {
+      "title": "Organize Memorial Day parade softball participation",
+      "dueWeekOfFY": 31,
+      "description": "Line up softball teams for the Memorial Day parade - notify families, coordinate banners, and confirm staging/route with the board."
+    },
+    {
+      "title": "Coordinate District / high school softball game opportunities",
+      "dueWeekOfFY": 33,
+      "description": "Pursue interleague, District 6, and high school game/scrimmage opportunities to give softball players competitive reps and visibility."
+    },
+    {
+      "title": "Staff softball program roles for next year",
+      "dueWeekOfFY": 46,
+      "description": "Recruit and confirm VP Softball, Softball Equipment, Softball Concessions, Media, and Scheduler positions; report the slate ahead of board elections."
+    }
+  ]
+}

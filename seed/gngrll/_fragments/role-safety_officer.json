@@ -1,0 +1,159 @@
+{
+  "role": "safety_officer",
+  "description": "The Safety Officer keeps GNGRLL as safe as possible by owning the league's ASAP (As Safe As Possible) safety plan, maintaining and checking AED devices, and coordinating the required Little League Safety & First Aid training and CPR/Heartsaver clinics for coaches. This role drives volunteer compliance with Abuse Awareness / Safe Sport training (which resets every October 1), ensures certified-volunteer badges and background checks are in place before anyone is on the field, and installs safety bases before games begin. The Safety Officer also handles injury and concussion incident reporting for the league's insurer and enforces return-to-play protocols.",
+  "calendar": [
+    {
+      "title": "Abuse Awareness Training resets (Oct 1)",
+      "weekOfFY": 0,
+      "kind": "reminder",
+      "description": "Little League's Abuse Awareness / Safe Sport training resets October 1. All board members and volunteers must re-complete it for the new fiscal year, even if they completed it last year or through another organization."
+    },
+    {
+      "title": "ASAP safety plan and AED device review",
+      "weekOfFY": 1,
+      "kind": "due",
+      "description": "Review and refresh the ASAP (As Safe As Possible) safety plan for the coming year and confirm all AED devices are present, charged, and serviceable. Present findings to the board."
+    },
+    {
+      "title": "Board Abuse Awareness training compliance push",
+      "weekOfFY": 2,
+      "kind": "reminder",
+      "description": "Following the Oct 1 reset, drive all board members to complete Abuse Awareness training and track certificates. A Safe Sport badge is required to work with players."
+    },
+    {
+      "title": "ASAP Plan & AED devices review (winter planning)",
+      "weekOfFY": 7,
+      "kind": "due",
+      "description": "Update the ASAP plan and confirm AED device status as part of winter/pre-season board planning."
+    },
+    {
+      "title": "Coaches clinic & LL-required safety meeting scheduling",
+      "weekOfFY": 18,
+      "kind": "meeting",
+      "description": "Schedule the annual coaches clinic and the Little League-required Safety & First Aid training (now mandatory, tied to the PCA coaching clinic). Coordinate date, venue, and instructor."
+    },
+    {
+      "title": "Abuse Awareness / Safe Sport compliance check",
+      "weekOfFY": 20,
+      "kind": "reminder",
+      "description": "Verify all board members and returning volunteers have current Abuse Awareness / Safe Sport certification and Safe Sport badges before the season ramps up."
+    },
+    {
+      "title": "ASAP Plan & AED devices review (pre-season)",
+      "weekOfFY": 20,
+      "kind": "due",
+      "description": "Final pre-season review of the ASAP plan and AED devices ahead of assessments, drafts, and the start of practices."
+    },
+    {
+      "title": "AED / CPR (Heartsaver) clinic offered; ASAP plan start",
+      "weekOfFY": 22,
+      "kind": "meeting",
+      "description": "Offer and subsidize an AED/CPR (Heartsaver) clinic for coaches and volunteers, kick off the ASAP plan for the season, and continue Abuse Awareness / Safe Sport training tracking."
+    },
+    {
+      "title": "Coaches meeting & LL Safety and First Aid training",
+      "weekOfFY": 23,
+      "kind": "meeting",
+      "description": "Hold the pre-season coaches meeting with the Little League-required Safety & First Aid training so all coaches are certified before games begin."
+    },
+    {
+      "title": "Safety base installation before games begin",
+      "weekOfFY": 27,
+      "kind": "due",
+      "description": "Install break-away safety bases at all fields before the first games of the season. Confirm each field is game-ready."
+    },
+    {
+      "title": "Abuse Awareness compliance for board members (in-season)",
+      "weekOfFY": 30,
+      "kind": "reminder",
+      "description": "Follow up on any outstanding Abuse Awareness training for board members and volunteers so everyone on the field remains a Certified Volunteer."
+    },
+    {
+      "title": "AED devices update & CPR/Heartsaver clinic scheduling",
+      "weekOfFY": 31,
+      "kind": "meeting",
+      "description": "Provide an in-season AED device update and schedule additional CPR / Heartsaver clinics as needed for coaches and volunteers."
+    },
+    {
+      "title": "ASAP / SAFE Plan initiation",
+      "weekOfFY": 32,
+      "kind": "due",
+      "description": "Ensure the ASAP / SAFE plan is fully initiated and copies are carried by all coaches at games and practices, including completed medical release forms."
+    },
+    {
+      "title": "AED devices and CPR / safety clinic updates",
+      "weekOfFY": 34,
+      "kind": "reminder",
+      "description": "Late-season update on AED devices and any remaining CPR/safety clinic sessions ahead of All-Stars and summer ball."
+    },
+    {
+      "title": "ASAP Plan update (post-season / tournament)",
+      "weekOfFY": 45,
+      "kind": "due",
+      "description": "Update the ASAP plan for post-season and tournament play, ensuring All-Star and summer teams have current safety documentation and AED coverage."
+    },
+    {
+      "title": "Abuse Awareness training reset reminder (approaching Oct 1)",
+      "weekOfFY": 51,
+      "kind": "reminder",
+      "description": "Abuse Awareness training resets October 1. Remind all board members and volunteers that they must re-complete the course for the new fiscal year."
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Review ASAP safety plan and audit AED devices",
+      "dueWeekOfFY": 1,
+      "description": "Refresh the ASAP (As Safe As Possible) plan for the new year and inspect every AED device (battery, pads, location). Report status to the board."
+    },
+    {
+      "title": "Track fall Abuse Awareness training completions",
+      "dueWeekOfFY": 3,
+      "description": "After the Oct 1 reset, collect Abuse Awareness certificates from all board members and volunteers and update the certification tracking list."
+    },
+    {
+      "title": "Schedule coaches clinic and LL Safety & First Aid training",
+      "dueWeekOfFY": 18,
+      "description": "Book the venue, date, and instructor for the mandatory Little League Safety & First Aid training and coaches clinic; announce to coaches with a signup goal."
+    },
+    {
+      "title": "Organize subsidized AED/CPR (Heartsaver) clinic",
+      "dueWeekOfFY": 22,
+      "description": "Arrange and subsidize a CPR/AED Heartsaver clinic for coaches and volunteers; confirm instructor, materials, and registration."
+    },
+    {
+      "title": "Verify certified-volunteer badges before practices start",
+      "dueWeekOfFY": 21,
+      "description": "Cross-check background checks and Abuse Awareness completions so every on-field volunteer is a Certified Volunteer with a badge before practices begin."
+    },
+    {
+      "title": "Distribute ASAP plan packets to all coaches",
+      "dueWeekOfFY": 23,
+      "description": "Provide each coach a copy of the ASAP plan plus completed medical release forms for their players to carry to all games and practices."
+    },
+    {
+      "title": "Install safety bases at all fields",
+      "dueWeekOfFY": 27,
+      "description": "Install break-away safety bases at every field before the first games; verify each field is game-ready and note any equipment needs."
+    },
+    {
+      "title": "File injury and concussion incident reports",
+      "dueWeekOfFY": 34,
+      "description": "Complete incident reports for any injuries and especially concussions for the league insurer, and enforce physician-cleared return-to-play protocol with parents and coaches."
+    },
+    {
+      "title": "Confirm AED coverage for All-Star and summer teams",
+      "dueWeekOfFY": 38,
+      "description": "Ensure AED devices, first aid kits, and current safety documentation travel with All-Star and summer/tournament teams."
+    },
+    {
+      "title": "Update ASAP plan for post-season and tournament play",
+      "dueWeekOfFY": 45,
+      "description": "Revise the ASAP/SAFE plan for post-season, All-Star, and tournament activity and confirm all participating teams have current safety compliance."
+    },
+    {
+      "title": "Send Oct 1 Abuse Awareness reset reminder",
+      "dueWeekOfFY": 51,
+      "description": "Notify all board members and volunteers that Abuse Awareness training resets October 1 and must be re-completed for the coming year."
+    }
+  ]
+}

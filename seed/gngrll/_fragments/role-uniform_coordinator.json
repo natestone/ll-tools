@@ -1,0 +1,146 @@
+{
+  "role": "uniform_coordinator",
+  "description": "The Uniform Coordinator manages GNGRLL's uniform program end to end: sampling and pricing with vendors (Boombah, Main Street Graphics, Dick's/Gilbert), collecting sizes, placing jersey and hat orders against the annual budget, and coordinating distribution to coaches and teams. They enforce recurring calendar rules such as the customized-jersey registration deadline and vendor order cutoffs, run the pre-season sizing event, and track delivery so uniforms arrive ahead of picture day and opening games. The role also handles special orders for All-Star, Junior, and Senior teams and maintains uniform vendor/pricing research as an ongoing project.",
+  "calendar": [
+    {
+      "title": "Fall uniform sampling and pricing kickoff",
+      "weekOfFY": 2,
+      "kind": "reminder",
+      "description": "Begin gathering vendor samples and pricing for the coming season (Boombah, Main Street Graphics, Dick's), including girl's-cut softball options, and note jersey ordering deadlines for board discussion."
+    },
+    {
+      "title": "Early-signup jersey deadline planning",
+      "weekOfFY": 6,
+      "kind": "reminder",
+      "description": "Review uniform sampling and pricing and confirm the early-signup custom-uniform incentive and its jersey deadline so registration messaging can promote it."
+    },
+    {
+      "title": "Uniform vendor quotes and jersey layout due",
+      "weekOfFY": 16,
+      "kind": "due",
+      "description": "Finalize vendor quotes, sponsor-on-front jersey layout, girl's-cut softball fit, and the customized-jersey deadline for board review ahead of ordering."
+    },
+    {
+      "title": "Early-signup custom jersey deadline (Feb 15)",
+      "weekOfFY": 20,
+      "kind": "due",
+      "description": "Early-signup incentive cutoff for customized uniforms; players registered by this date qualify for a personalized jersey."
+    },
+    {
+      "title": "Uniform purchase decision at board meeting",
+      "weekOfFY": 22,
+      "kind": "meeting",
+      "description": "Present final vendor pick, team sizes and extras, and per-player budget for a spending motion; confirm the order can hit the vendor deadline."
+    },
+    {
+      "title": "Customized jersey registration deadline (3/14)",
+      "weekOfFY": 24,
+      "kind": "due",
+      "description": "Final registration deadline to receive a customized jersey - no exceptions. Teams finalized by this date; players registering after receive a generic backup jersey."
+    },
+    {
+      "title": "Boombah order deadline",
+      "weekOfFY": 25,
+      "kind": "due",
+      "description": "Submit the AAA-and-above Boombah uniform order plus Gilbert hats by the vendor cutoff (around late March)."
+    },
+    {
+      "title": "Uniform sizing event",
+      "weekOfFY": 27,
+      "kind": "meeting",
+      "description": "Host the pre-order sizing event with jersey and pant samples for players to try on; last chance to correct fit before final order adjustments go in."
+    },
+    {
+      "title": "Uniform delivery tracking begins",
+      "weekOfFY": 28,
+      "kind": "reminder",
+      "description": "Track incoming uniform shipments from vendors and coordinate timing with picture day so teams have uniforms before photos and opening games."
+    },
+    {
+      "title": "Coach uniform pickup window",
+      "weekOfFY": 30,
+      "kind": "due",
+      "description": "Uniforms are ready for coaches or one team representative to collect and distribute; parents do not pick up individually. After-hours access via storage code."
+    },
+    {
+      "title": "All-Star uniform ordering",
+      "weekOfFY": 34,
+      "kind": "due",
+      "description": "Order All-Star team jerseys and uniforms (about $50/player) once rosters are voted, following per-player budget approvals."
+    },
+    {
+      "title": "Junior/Senior summer uniform procurement",
+      "weekOfFY": 35,
+      "kind": "due",
+      "description": "Procure Junior and Senior uniforms for advancing and summer-ball teams as those rosters are set."
+    },
+    {
+      "title": "Uniform vendor/pricing research review",
+      "weekOfFY": 45,
+      "kind": "reminder",
+      "description": "Ongoing project: research uniform vendors and pricing options to inform next season's sampling and ordering decisions."
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Request fall vendor samples and pricing",
+      "dueWeekOfFY": 2,
+      "description": "Reach out to Boombah, Main Street Graphics, and Dick's for current-season samples and price sheets, including girl's-cut softball jerseys, and outline jersey ordering deadlines."
+    },
+    {
+      "title": "Confirm early-signup jersey incentive terms",
+      "dueWeekOfFY": 6,
+      "description": "Set the early-signup custom-uniform incentive and its Feb 15 deadline, and hand the details to registration/LIO for promotion."
+    },
+    {
+      "title": "Compile vendor quotes and jersey layout",
+      "dueWeekOfFY": 15,
+      "description": "Assemble final vendor quotes, sponsor-on-front layout mockups, and per-division pricing (e.g. $28.50/set for TB/CP/AA and $50/player Boombah + Gilbert hats for AAA and up) for board review."
+    },
+    {
+      "title": "Present uniform purchase motion to the board",
+      "dueWeekOfFY": 22,
+      "description": "Bring the recommended vendor, team sizes and extras, and per-player budget to the board for a spending motion so the order can be placed on time."
+    },
+    {
+      "title": "Enforce customized-jersey deadline and finalize order",
+      "dueWeekOfFY": 24,
+      "description": "Lock the 3/14 customized-jersey registration deadline, reconcile personalized vs. generic backup jerseys, and finalize team rosters for the order."
+    },
+    {
+      "title": "Submit Boombah and hat orders",
+      "dueWeekOfFY": 25,
+      "description": "Place the AAA-and-above Boombah order and Gilbert/hat order by the vendor cutoff; confirm coach adult-hat allotment per team."
+    },
+    {
+      "title": "Run the uniform sizing event",
+      "dueWeekOfFY": 27,
+      "description": "Send the sizing-event announcement, bring jersey and pant size samples, collect fit corrections, and submit final order adjustments by the deadline."
+    },
+    {
+      "title": "Track uniform delivery against picture day",
+      "dueWeekOfFY": 28,
+      "description": "Monitor vendor shipments and coordinate delivery timing with information_officer's picture/photo day so uniforms arrive first."
+    },
+    {
+      "title": "Coordinate coach uniform pickup and distribution",
+      "dueWeekOfFY": 30,
+      "description": "Send the coach-pickup notice with day, time, and location; instruct one representative per team (not individual parents); provide storage access code; and send the youth-vs-adult hat clarification with coach adult-hat counts."
+    },
+    {
+      "title": "Order All-Star uniforms",
+      "dueWeekOfFY": 34,
+      "description": "Once All-Star rosters are voted, order team jerseys/uniforms at about $50/player per the approved per-player budget."
+    },
+    {
+      "title": "Procure Junior/Senior summer uniforms",
+      "dueWeekOfFY": 35,
+      "description": "Order uniforms for Junior, Senior, and summer/tournament teams as advancing rosters are confirmed."
+    },
+    {
+      "title": "Update uniform vendor and pricing research",
+      "dueWeekOfFY": 45,
+      "description": "Refresh the running uniform vendor/pricing research notes with this season's results to inform next year's sampling and ordering."
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+[
+  {
+    "title": "Compile end-of-season survey for board retrospective",
+    "dueWeekOfFY": 2,
+    "details": "After the spring season wraps, GNGRLL surveys all families to gather feedback across every division for the season retrospective. The information officer builds the Google Form, blasts it to the full league, and compiles the responses into positives, negatives, and complaints for the board. This feedback drives fall planning decisions on registration timing, division structure, and volunteer needs.",
+    "steps": [
+      "Build or reuse the season survey as a Google Form (forms.gle link) covering all divisions for the April-June spring season.",
+      "Have the board proof the draft survey before it goes out, then send it to the entire league via the registration system email blast (subject like 'GNGRLL - Spring Season League Survey').",
+      "Leave the survey open a couple of weeks and send at least one reminder to boost response counts.",
+      "Export responses and summarize them into positives, negatives, and complaints, broken out by division where possible.",
+      "Package the summary for the board's late-summer retrospective (agenda items like 'End of Season Survey Review' and 'Recap of Positives and Negatives')."
+    ],
+    "links": [
+      {"type": "url", "ref": "https://forms.gle/nXgDZK1f1miSxaYJ8", "label": "Spring Season League Survey (Google Form)"},
+      {"type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles"},
+      {"type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes template"}
+    ]
+  },
+  {
+    "title": "Present season recap and survey feedback",
+    "dueWeekOfFY": 7,
+    "details": "During fall planning, the information officer presents the compiled survey feedback and a recap of the completed season to the board. This turns raw family feedback into actionable decisions ahead of setting the next season's registration date and calendar. It typically feeds a late-fall board meeting where registration timing and volunteer sign-up plans are locked in.",
+    "steps": [
+      "Consolidate the compiled survey results (positives, negatives, complaints) into a concise recap deck or one-pager.",
+      "Pair survey themes with season outcomes (registration counts, division participation, notable issues) to frame recommendations.",
+      "Add the recap to the fall board meeting agenda alongside items like 'Volunteer Opportunities' and 'Registration date'.",
+      "Present at the meeting and capture board decisions on next-season registration open date, calendar, and follow-ups.",
+      "Distribute the finalized recap and decisions to the board via the meeting notes doc."
+    ],
+    "links": [
+      {"type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes template"},
+      {"type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles"}
+    ]
+  },
+  {
+    "title": "Coordinate sponsor / donor recognition materials",
+    "dueWeekOfFY": 9,
+    "details": "GNGRLL recognizes team sponsors and major donors with plaques, field banners, and framed jerseys, coordinated with the president and sponsorship coordinator. The information officer reviews plaque proofs from the photographer, corrects sponsor names, and organizes distribution. This work happens in the off-season so materials are ready to hand out and hang before the next season starts.",
+    "steps": [
+      "Collect the finalized sponsor/team list from the sponsorship coordinator and confirm spellings and business names.",
+      "Request plaque layout proofs from the photographer (Tsukroff Photo) and review each for errors (e.g., correct 'Edson Builders' not 'Ebson').",
+      "Approve corrected proofs and send them into production, following up if the photographer is backed up during school-photo season.",
+      "Coordinate with board volunteers to pass out plaques and hang NG and Gray Little League sponsor banners, ideally all in one week.",
+      "Track which sponsors have received their recognition and flag any missing framed jerseys or banners to the president."
+    ],
+    "links": [
+      {"type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship Policies & Procedures"},
+      {"type": "template", "ref": "photos__request-team-photos-for-plaques", "label": "Team Photos for Sponsor Plaques template"},
+      {"type": "url", "ref": "https://info.gnglittleleague.org/home/become-a-sponsor", "label": "Become a Sponsor page"}
+    ]
+  },
+  {
+    "title": "Send registration-open blast and run signup nights",
+    "dueWeekOfFY": 14,
+    "details": "In early January the information officer emails the full league to announce that spring registration is open for all divisions from Tee Ball (4-6) through Seniors, along with winter clinics, Challenger, and Sandlot options. This kicks off the enrollment window, drives families to the registration portal, and starts division-level signup tracking. Getting the blast out early gives time to fill rosters and plan indoor March practices.",
+    "steps": [
+      "Draft the season-open announcement (subject like 'GNGRLL - Registration Open for the 2026 Spring Season') summarizing divisions, winter clinics, Challenger, and Sandlot.",
+      "Include the registration portal link (https://info.gnglittleleague.org/register-practices-assessments) and the embedded season calendar with assessment dates.",
+      "Send to the full league through the registration system, timed for early January ('Happy New Year' send around 1/15-1/17).",
+      "Promote and staff any in-person open signup nights and answer inbound questions to info@gnglittleleague.org.",
+      "Begin tracking signups by division as registrations come in for later reporting to the board."
+    ],
+    "links": [
+      {"type": "template", "ref": "registration__season-open", "label": "Registration Open template"},
+      {"type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies & Procedures"},
+      {"type": "url", "ref": "https://info.gnglittleleague.org/register-practices-assessments", "label": "Register, Practices & Assessments page"}
+    ]
+  },
+  {
+    "title": "Publish finalized season calendar and key dates",
+    "dueWeekOfFY": 14,
+    "details": "Alongside the registration blast, the information officer publishes the finalized season calendar so families can plan around registration, clinics, assessments, draft, season start, photos, playoffs, and All-Stars. The calendar is embedded in the registration email and posted to the website's calendar page (which syncs to a public Google Calendar). Clear key dates reduce inbound questions and no-shows for assessments.",
+    "steps": [
+      "Assemble the confirmed key dates: registration open, winter clinics, assessments (with gym location and age time slots), draft, season start, picture days, playoffs, and All-Stars.",
+      "Embed the '2026 Calendar' block in the registration-open email with assessment dates and rain dates (e.g., Baseball Mon 2/23, Softball Wed 2/25, rain date Fri 2/27).",
+      "Update the website calendar page (info.gnglittleleague.org/home/calendar) and the subscribable GNGRLL Google Calendar.",
+      "Link the Little League age-chart determination tool so families confirm league age before assessments.",
+      "Re-send or update the 'Important Dates' notice if any date shifts before the season."
+    ],
+    "links": [
+      {"type": "url", "ref": "https://info.gnglittleleague.org/home/calendar", "label": "League Calendar page"},
+      {"type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies & Procedures"},
+      {"type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference"}
+    ]
+  },
+  {
+    "title": "Update information website and registration portal",
+    "dueWeekOfFY": 14,
+    "details": "Before the season opens, the information officer refreshes the info website so division pages, the calendar, URLs, and registration-portal links all reflect the new season. This ensures families reach the correct current-year forms and info from the registration blast. It is a prerequisite for the registration announcement to work cleanly.",
+    "steps": [
+      "Review each division page (Tee Ball through Seniors, plus Challenger and Sandlot) and update descriptions, ages, and season details.",
+      "Refresh the Register, Practices & Assessments pages and confirm new-registration and returning-registration flows point to the current season.",
+      "Update the calendar page and verify all internal URLs and the registration-portal link (info.gnglittleleague.org) resolve correctly.",
+      "Update the certified-volunteer and FAQ pages for the new year, including annual requirements and age charts.",
+      "Do a final click-through of every link that will appear in the registration-open email before sending."
+    ],
+    "links": [
+      {"type": "url", "ref": "https://info.gnglittleleague.org/register-practices-assessments", "label": "Register, Practices & Assessments page"},
+      {"type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference"},
+      {"type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies & Procedures"}
+    ]
+  },
+  {
+    "title": "Send Certified Volunteer Process email to all users",
+    "dueWeekOfFY": 19,
+    "details": "Ahead of March practices, the information officer blasts all registered users the annual certified-volunteer process so every adult on the field or in the snack shack is cleared. The email walks through the three steps (register, background check via JDP, and Abuse Awareness Training tied to Gray New Gloucester LL) and explains league-issued badge pickup. This is a hard safety and insurance requirement, so it must land before practices begin.",
+    "steps": [
+      "Send the certified-volunteer email to all registered users (subject like 'GNGRLL - Certified Volunteer Process - 2026 Season'), timed before the March 10 practice start.",
+      "Lay out the three steps: register through info.gnglittleleague.org, complete the JDP/JD Palatine background check, and take Abuse Awareness Training selecting 'Gray New Gloucester LL'.",
+      "Note the training must be redone yearly even if completed elsewhere, and link the volunteering FAQ.",
+      "Explain badge pickup: badges are issued as completions post on the certification tracker and brought to GNGMS at 5:30 on practice days.",
+      "Send follow-up/badge reminders as practices start and games begin (e.g., pick up badges at the Douglas Field snack shack), directing name-list issues to secretary@gnglittleleague.org."
+    ],
+    "links": [
+      {"type": "template", "ref": "volunteer_certification__certified-volunteer-process", "label": "Certified Volunteer Process template"},
+      {"type": "template", "ref": "conduct_safety__abuse-awareness-reminder", "label": "Abuse Awareness Training reminder template"},
+      {"type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/volunteering", "label": "Volunteering FAQ"}
+    ]
+  },
+  {
+    "title": "Report division signup counts to board",
+    "dueWeekOfFY": 21,
+    "details": "As the registration window nears close, the information officer prepares division-by-division signup counts and presents them to the board. This lets the board gauge roster viability per division, plan drafts and team counts, and push roster-fill emails where numbers are low. It typically lands just before or around assessment week.",
+    "steps": [
+      "Pull current registration counts from the portal, broken out by division and by sport.",
+      "Compare against prior-year counts and minimum team thresholds to flag under-enrolled divisions.",
+      "Summarize the counts for the board meeting or email ahead of the draft.",
+      "Recommend targeted roster-fill pushes or extended registration for any short divisions.",
+      "Note players still needing assessments so the player agent can plan accordingly."
+    ],
+    "links": [
+      {"type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies & Procedures"},
+      {"type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference"},
+      {"type": "template", "ref": "registration__roster-fill-push", "label": "Roster Fill Push template"}
+    ]
+  },
+  {
+    "title": "Prepare assessment tally and rankings for draft",
+    "dueWeekOfFY": 22,
+    "details": "After assessments (held at the GNG Middle School gym for ages 7+ by age band), the information officer compiles the scoring results and adjusts player rankings for the player agent and president ahead of the drafts. Accurate, organized rankings make the draft fair and efficient. This is time-sensitive since assessments and the draft fall within a tight window.",
+    "steps": [
+      "Collect the raw assessment scores from evaluators for each age band (7-8, 9-10, 11-12) for baseball and softball.",
+      "Aggregate scores into a ranking tally per division, accounting for late assessments and rain-date make-ups.",
+      "Reconcile the ranked list against the registered-player roster to catch missing or duplicate entries.",
+      "Adjust rankings for known factors (playing-up requests, siblings) with the player agent and president.",
+      "Deliver the finalized tally and rankings to the player agent and president before draft night."
+    ],
+    "links": [
+      {"type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies & Procedures"},
+      {"type": "template", "ref": "tryouts_assessments__assessment-schedule-reminder", "label": "Assessment Schedule Reminder template"},
+      {"type": "template", "ref": "draft__publish-rosters", "label": "Draft Roster Entry template"}
+    ]
+  },
+  {
+    "title": "Schedule Photo Day with photographer",
+    "dueWeekOfFY": 27,
+    "details": "The information officer locks picture day dates with Tsukroff Photo, coordinated so uniforms have arrived and teams can attend in uniform. GNGRLL typically runs two picture nights to work around games and practices, with per-team time slots and multiple stations. Setting makeup/backup dates up front avoids scrambling for teams that miss.",
+    "steps": [
+      "Confirm uniform delivery timing, then propose picture dates to Tsukroff Photo (e.g., two nights like Mon 5/19 and Tue 5/20).",
+      "Reserve the venue (e.g., Russell Elementary Gym) and plan multiple photo stations to keep 10-15 minute team slots on schedule.",
+      "Build the per-team time-slot schedule spanning divisions and both nights, and set a makeup/backup date.",
+      "Send the picture-night announcement asking players to attend in team uniform and arrive 15 minutes early to fill out order forms.",
+      "Confirm the photographer's order/pricing options (on-site packages or online direct-order portal) and distribution plan through head coaches."
+    ],
+    "links": [
+      {"type": "template", "ref": "photos__schedule-photo-day", "label": "Team Photo Scheduling template"},
+      {"type": "template", "ref": "uniforms__coach-pickup", "label": "Uniform Pickup for Coaches template"},
+      {"type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety"}
+    ]
+  },
+  {
+    "title": "Report final registration and player counts",
+    "dueWeekOfFY": 27,
+    "details": "Once rosters are finalized after the draft, the information officer delivers final total player counts by division to the board. These numbers confirm team sizes, drive uniform and equipment orders, and set the baseline for the season. It is the definitive headcount the board plans the season around.",
+    "steps": [
+      "Pull final rostered-player counts by division and sport from the registration system after the draft.",
+      "Reconcile against draft results and any late adds/drops to ensure totals match team rosters.",
+      "Compute total league player count and per-division breakdown.",
+      "Report the finalized counts to the board and share with uniform and equipment coordinators for ordering.",
+      "Archive the final counts for the season recap and year-over-year comparison."
+    ],
+    "links": [
+      {"type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference"},
+      {"type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies & Procedures"},
+      {"type": "template", "ref": "draft__results-and-team-names", "label": "Draft Results template"}
+    ]
+  },
+  {
+    "title": "Coordinate makeup team photos",
+    "dueWeekOfFY": 31,
+    "details": "For teams that missed the scheduled picture nights, the information officer works with the photographer to fit makeup sessions into their remaining game schedule. This ensures every team gets a team photo for sponsor plaques and family orders. It happens mid-season after the main picture days.",
+    "steps": [
+      "Identify teams and players who missed the scheduled picture nights.",
+      "Coordinate with Tsukroff Photo on available makeup dates/times, tying them to the teams' remaining home games.",
+      "Notify affected coaches and families of the makeup photo date, time, and uniform requirement.",
+      "Confirm the makeup shots include any teams still owed sponsor-plaque photos.",
+      "Track completion so no team is left without a photo for plaques or orders."
+    ],
+    "links": [
+      {"type": "template", "ref": "photos__schedule-photo-day", "label": "Team Photo Scheduling template"},
+      {"type": "template", "ref": "photos__request-team-photos-for-plaques", "label": "Team Photos for Sponsor Plaques template"},
+      {"type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety"}
+    ]
+  },
+  {
+    "title": "Send photo packet pickup / order reminder",
+    "dueWeekOfFY": 38,
+    "details": "Late in the season the information officer reminds families where to pick up their photo packets and the deadline to order online. Packets are sorted by team at the Douglas Field snack shack, and ordering is direct through Tsukroff's online portal with prints shipped to families. A clear last-chance order date prevents missed orders.",
+    "steps": [
+      "Confirm packet pickup location and hours (e.g., Douglass Field snack shack, teams present 5:30-7:30pm) with packets sorted by team.",
+      "Confirm the online order portal link and the final order deadline (e.g., last chance June 20).",
+      "Send the reminder to affected divisions clarifying online direct-order and shipping-to-home process.",
+      "Call out any correction to dates printed on the packets (e.g., 'ignore the June 5th date on the packet').",
+      "Field family questions on missing packets or orders and route to the photographer as needed."
+    ],
+    "links": [
+      {"type": "template", "ref": "photos__packet-pickup-reminder", "label": "Photo Packet Pickup Reminder template"},
+      {"type": "template", "ref": "photos__action-photo-usage-permission", "label": "Action Photo Usage Permission template"}
+    ]
+  },
+  {
+    "title": "Announce merch / fanwear store opening",
+    "dueWeekOfFY": 46,
+    "details": "The information officer announces the merch/fanwear store opening with the store link and pickup or pre-order lead-time notes. Because items are often produced to order, the announcement sets expectations (e.g., pickup-only, 2-3 week pre-order lead time for hats). This drives fanwear sales and supports league fundraising.",
+    "steps": [
+      "Confirm the store is configured correctly (pickup-only where needed) and item availability with the sponsorship/merch coordinators.",
+      "Draft the store-open announcement (subject like 'GNGRLL Merch Store is Open!') with the store link.",
+      "State pickup vs. pre-order terms clearly, including lead time (e.g., 'pre-order, 2-3 weeks until available' for hats).",
+      "Note any additional offerings on hand (e.g., 'Still Just a Team From Maine' shirts) once supply counts are confirmed.",
+      "Send the blast to the league and monitor incoming orders."
+    ],
+    "links": [
+      {"type": "template", "ref": "merchandise__store-open", "label": "Merch Store Open template"},
+      {"type": "template", "ref": "merchandise__fanwear-catalog-order", "label": "Fanwear Catalog Order template"}
+    ]
+  },
+  {
+    "title": "Organize Fenway / Hadlock family outings",
+    "dueWeekOfFY": 46,
+    "details": "The information officer plans and announces the family experience outings to Red Sox (Fenway) and Sea Dogs (Delta Dental / Hadlock field) games. These outings reserve a ticket block for league families and sometimes tie into special on-field recognitions (e.g., honoring a state-champ All-Star team). They build community and are usually promoted in late summer.",
+    "steps": [
+      "Coordinate the reserved ticket block and FEVO/purchase link with the Sea Dogs (Delta Dental's Hadlock field) and/or Red Sox for a chosen game date.",
+      "Confirm any special on-field recognition (e.g., Sea Dogs honoring the state champs) and event sponsor (e.g., Quirk Automobile).",
+      "Draft the announcement with game date/time, ticket link, and the purchase cutoff (e.g., buy before 3:00pm; block expires 3pm).",
+      "Include ticketing terms (nonrefundable, QR/barcode entry via Tickets.com account) so families aren't surprised.",
+      "Send to the league and to board members where a separate board-only block exists, then remind before the deadline."
+    ],
+    "links": [
+      {"type": "template", "ref": "sea_dogs_events__league-night-invite", "label": "GNGRLL Night at the Sea Dogs template"},
+      {"type": "template", "ref": "sea_dogs_events__board-ticket-invite", "label": "Sea Dogs Board Ticket Invite template"}
+    ]
+  },
+  {
+    "title": "Wind down merch site and process refunds",
+    "dueWeekOfFY": 46,
+    "details": "At the end of the merch cycle the information officer closes out the fanwear/hat store for the year and processes any pending refunds. This reconciles orders that couldn't be fulfilled and cleanly ends the season's online sales. It coordinates with the treasurer and sponsorship coordinator on supply counts and payments.",
+    "steps": [
+      "Confirm all pre-orders and pickups are fulfilled and reconcile against store order notifications.",
+      "Identify any unfulfilled or duplicate orders that require refunds.",
+      "Process refunds through the store/payment platform and notify affected families.",
+      "Close/disable the merch and hat store for the year and remove or archive the store link.",
+      "Coordinate final supply counts and reconciliation with the sponsorship coordinator and treasurer."
+    ],
+    "links": [
+      {"type": "template", "ref": "merchandise__store-open", "label": "Merch Store Open template"},
+      {"type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship Policies & Procedures"}
+    ]
+  },
+  {
+    "title": "Present post-season survey results by division",
+    "dueWeekOfFY": 51,
+    "details": "At year-end the information officer compiles and presents the post-season survey results broken out by division, leading a season discussion with the board. Division-level breakdowns surface which programs need attention (e.g., Tee Ball vs. Majors) and inform next-year structure. This closes the feedback loop that began with the survey blast earlier in the cycle.",
+    "steps": [
+      "Segment the compiled survey responses by division and pull out recurring themes per division.",
+      "Summarize positives, negatives, and complaints for each division into a concise board-ready format.",
+      "Add the by-division results to the year-end board meeting agenda for discussion.",
+      "Lead the season discussion, capturing decisions and action items per division.",
+      "Record outcomes in the meeting notes to carry into next season's planning."
+    ],
+    "links": [
+      {"type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes template"},
+      {"type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference"},
+      {"type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles"}
+    ]
+  }
+]

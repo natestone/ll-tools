@@ -1,0 +1,96 @@
+{
+  "role": "treasurer",
+  "description": "The **Treasurer** manages GNGRLL's finances: maintaining the bank and PayPal/online balances, tracking outstanding invoices and obligations, and delivering a financial/treasury update at each board meeting (bank & online balances, P&L/budget notes). Recurring obligations include paying the Little League charter & insurance fees each fall (~$1,300, authorized up to $2,000), setting registration fees, and supporting equipment/uniform spending motions. During the postseason the Treasurer leads tournament fundraising and family disbursements (per diem, hotel, and mileage reimbursements) and manages donation buckets and donor accounts.",
+  "calendar": [
+    {
+      "title": "Financial / Treasury update at board meeting",
+      "weekOfFY": 2,
+      "kind": "reminder",
+      "description": "Present bank and PayPal/online balances, outstanding invoices/obligations, and P&L/budget notes at the board meeting; recurring at each meeting throughout the year."
+    },
+    {
+      "title": "Pay Little League charter & insurance fees (annual renewal)",
+      "weekOfFY": 8,
+      "kind": "due",
+      "description": "Authorize and pay the annual LL charter & insurance renewal (Nov-Dec, ~$1,300; authorized up to $2,000 in recent years)."
+    },
+    {
+      "title": "Registration fees set for coming season",
+      "weekOfFY": 11,
+      "kind": "due",
+      "description": "Confirm registration fee schedule with the board (e.g. Juniors $150, Majors/AAA $140, AA $110, A/CP/TB $80, Sandlot add-on $20) ahead of the 1/1 registration open date."
+    },
+    {
+      "title": "Sponsorship / fundraising drive kickoff",
+      "weekOfFY": 16,
+      "kind": "reminder",
+      "description": "Launch sponsorship letters, banners, plaques, and thank-yous; set team sponsorship level ($375-$475) and manage donor tiers (banner logo $200+, dye-sub jersey $500+, signed jersey $1,000+)."
+    },
+    {
+      "title": "Tournament fundraising launch",
+      "weekOfFY": 42,
+      "kind": "reminder",
+      "description": "Begin fundraising for advancing All-Star teams (hotels, mileage, uniforms, meals); set fundraising goal (e.g. $25,000 for Regionals) and coordinate buckets/GoFundMe/business donations."
+    },
+    {
+      "title": "Donation bucket collection run",
+      "weekOfFY": 45,
+      "kind": "reminder",
+      "description": "Check the mailbox and donation buckets at partner businesses (B&R Dairy, Birchwood, Two Mums, Brickyard Hollow, etc.) and deposit proceeds."
+    },
+    {
+      "title": "Post-tournament family disbursement",
+      "weekOfFY": 46,
+      "kind": "due",
+      "description": "Disburse hotel, per diem, and gas reimbursements to tournament families per policy (per diem $50/day/family, rooms $200/day, mileage at federal charity rate; receipts per applicable year's rule)."
+    },
+    {
+      "title": "Vote on tournament family stipend",
+      "weekOfFY": 46,
+      "kind": "meeting",
+      "description": "Bring the tournament family stipend (e.g. 14 families) to the board for a spending motion and vote."
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Prepare monthly treasury report for board meeting",
+      "dueWeekOfFY": 3,
+      "description": "Compile current bank and PayPal/online balances, outstanding invoices/obligations, and P&L/budget notes to present at each board meeting."
+    },
+    {
+      "title": "Pay Little League charter & insurance renewal",
+      "dueWeekOfFY": 8,
+      "description": "Process the annual LL charter & insurance payment (Nov-Dec, ~$1,300; up to authorized cap of $2,000)."
+    },
+    {
+      "title": "Reconcile registration revenue after open date",
+      "dueWeekOfFY": 15,
+      "description": "Track registration fee receipts by division against the approved fee schedule after registration opens 1/1; flag earmarked funds (e.g. AAA+ increase for field repairs)."
+    },
+    {
+      "title": "Track sponsorship payments and donor management",
+      "dueWeekOfFY": 17,
+      "description": "Record sponsorship payments, manage donor tiers, and coordinate thank-you fulfillment (banners, plaques, signed/dye-sub jerseys); maintain donor records (Bloomerang subscription ~$1,400/yr)."
+    },
+    {
+      "title": "Budget pre-season equipment and uniform spending",
+      "dueWeekOfFY": 20,
+      "description": "Support equipment and uniform spending motions (e.g. up to $5,000 equipment, uniforms up to $18,000) and ensure approved caps are tracked against actuals."
+    },
+    {
+      "title": "Establish tournament fundraising plan and goal",
+      "dueWeekOfFY": 42,
+      "description": "Set the tournament/World Series fundraising goal and disbursement/per-diem plan (buckets, GoFundMe, business donations); confirm receipt and per-diem rules for the current cycle."
+    },
+    {
+      "title": "Collect donation buckets and check mailbox",
+      "dueWeekOfFY": 45,
+      "description": "Empty donation buckets at partner businesses and check the league mailbox; log and deposit fundraising proceeds."
+    },
+    {
+      "title": "Disburse tournament family reimbursements",
+      "dueWeekOfFY": 46,
+      "description": "Pay out hotel, per diem, and gas reimbursements to advancing tournament families per the approved stipend and receipt policy."
+    }
+  ]
+}

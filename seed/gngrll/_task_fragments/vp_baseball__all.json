@@ -1,0 +1,156 @@
+[
+  {
+    "title": "Publish Junior & Senior baseball roster by Nov 1",
+    "dueWeekOfFY": 51,
+    "details": "Junior (13-14) and Senior (13-16) baseball are supplementary summer programs that play District 6 towns after the middle-school/school season, so early commitment lets the league gauge whether it can field its own team or must combine with another town. Sending commitment letters in the fall and publishing a confirmed roster by Nov 1 gives summer-team formation a running start at the top of the fiscal year, well before spring registration crowds it out. Deadlines occasionally slide (e.g., to accommodate high-school showcase schedules), but the goal is a firm player count early.",
+    "steps": [
+      "Draft and send commitment letters to eligible 13-16 baseball families explaining the Junior/Senior summer program, District 6 opponents, and the June-July schedule window.",
+      "Set a firm response deadline (target Nov 30) and note it may extend if showcase or school schedules aren't out yet.",
+      "Track responses as they arrive to sense who is serious and estimate whether the numbers support a standalone team versus combining with a neighboring town.",
+      "Coordinate with the president / District 6 administrator on whether GNGRLL fields its own Junior/Senior team or interleagues.",
+      "Confirm the roster and publish it by Nov 1 so summer-team formation and coach assignments can begin early.",
+      "Point families to the Juniors & Seniors division page for details and sign-up: https://info.gnglittleleague.org/divisions/juniors-seniors"
+    ],
+    "links": [
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/divisions/juniors-seniors", "label": "Juniors & Seniors Division Page" }
+    ]
+  },
+  {
+    "title": "Rules / division review for baseball",
+    "dueWeekOfFY": 19,
+    "details": "Each fall/winter the board reviews baseball division structure - the farm/coach-pitch to player-pitch (AA) progression, age boundaries, and playing-up requests - so rules are locked before assessments and drafts. Setting these early ensures assessments evaluate players against the right division and that draft-eligible pools are correct. The VP Baseball contributes division-specific input (e.g., AA player-pitch pitching distance, strike-count rules, minimum lineup rules) that later flows into the playoff rules summary.",
+    "steps": [
+      "Review last season's division definitions and any feedback on the coach-pitch/player-pitch (AA) transition and age structure.",
+      "Bring proposed baseball rule and division changes to a fall/winter board meeting for discussion (rules should be set before assessments).",
+      "Confirm AA player-pitch specifics that carry into playoffs (e.g., minimum pitching distance, strike counts, 8-player minimum lineup, per-pitcher inning/pitch limits).",
+      "Reconcile decisions with the GNGRLL Divisions reference and any playing-up policy so registration and assessments use the correct division boundaries.",
+      "Document the finalized baseball division rules and share with coaches, the player agent, and the scheduler ahead of assessments and the draft."
+    ],
+    "links": [
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/playing-up", "label": "Playing Up FAQ" }
+    ]
+  },
+  {
+    "title": "Book spring indoor practice time and schedule",
+    "dueWeekOfFY": 23,
+    "details": "Before fields are playable, GNGRLL runs clinic-style indoor sessions for AA/AAA/Majors at the GNG middle school gym and at batting cage facilities (e.g., The Cages in Gray). Securing gym/YMCA time and building the schedule keeps players developing through late winter and early spring, mostly with combined, skill-focused batting and fielding work. This requires coordinating head and assistant coaches plus volunteer setup crews for nets and equipment bins.",
+    "steps": [
+      "Reserve gym/YMCA and cage time slots for AA/AAA/Majors and confirm dates for the indoor block.",
+      "Build a clinic-style schedule (hitting, fielding, drills) noting that most sessions are combined/skill-development rather than single-team.",
+      "Recruit head coaches, assistant coaches, and volunteer setup crews to run stations and set up/tear down nets and bins.",
+      "Communicate what players should bring - indoor shoes (no cleats), helmets, gloves, batting gloves, bats - and the facility locations.",
+      "Send the indoor-practice start announcement to families and post the schedule; roll into unit/team practices once fields open."
+    ],
+    "links": [
+      { "type": "template", "ref": "practice__indoor-practices-start", "label": "Indoor Practices Start email" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" },
+      { "type": "template", "ref": "volunteer_certification__equipment-setup-volunteers", "label": "Equipment Setup Volunteers email" }
+    ]
+  },
+  {
+    "title": "Coordinate post-draft practice/game schedule build",
+    "dueWeekOfFY": 24,
+    "details": "Once the draft and coaches meeting are done, teams exist and the calendar can be built for real. The VP Baseball works with the game/practice scheduler and coaches to finalize practices and games leading into opening day (approximately April 10). Getting this locked early lets coaches plan and lets families see a full schedule before the season starts.",
+    "steps": [
+      "After the draft and coaches meeting, collect coach constraints (field access, blackout dates, preferred practice slots) for each AA/AAA/Majors team.",
+      "Work with the game and practice scheduler to draft the practice and game calendar toward an approx. April 10 opening day.",
+      "Reconcile field assignments against the Fields reference to avoid double-booking and account for shared fields.",
+      "Circulate a preliminary schedule to coaches for review and correct conflicts before publishing.",
+      "Finalize the calendar and hand off to coaches for entry into GameChanger."
+    ],
+    "links": [
+      { "type": "template", "ref": "schedule__schedules-update", "label": "Schedules Update email" },
+      { "type": "template", "ref": "schedule__interleague-draft-review", "label": "Preliminary Schedule Draft for Review email" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" }
+    ]
+  },
+  {
+    "title": "Enter and update baseball schedules in GameChanger",
+    "dueWeekOfFY": 27,
+    "details": "GNGRLL uses the GameChanger app as the single source for team rosters, schedules, and coach-to-family communication about changes and cancellations. The VP Baseball ensures AA/AAA/Majors coaches have entered practices and games with correct start dates, fields, and times, and that league updates reach families. Because GameChanger issues can delay roster/schedule posting, this needs active follow-up early in the season.",
+    "steps": [
+      "Confirm rosters are posted so each AA/AAA/Majors team appears correctly in GameChanger.",
+      "Verify coaches have entered practices and games with accurate start dates, field names, and times.",
+      "Direct families to load their team using the Sports Connect login and the GameChanger how-to FAQ.",
+      "Follow up on any GameChanger sync issues and have families reload their team once fixed.",
+      "Post league-wide schedule updates and keep GameChanger current as games are rescheduled or cancelled."
+    ],
+    "links": [
+      { "type": "template", "ref": "schedule__gamechanger-rosters", "label": "GameChanger for Rosters and Schedule email" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/game-changer", "label": "GameChanger FAQ" }
+    ]
+  },
+  {
+    "title": "Prepare baseball playoff schedule, brackets & rules",
+    "dueWeekOfFY": 33,
+    "details": "AA, AAA, and Majors playoffs run the first two weeks of June (typically starting ~6/3, most levels double elimination). The VP Baseball draws first-round matchups by random draw (placed on the regular schedule as the last set-opponent game), builds the brackets, and assembles the pitch-count and playoff rules summary. This task also includes planning consolation games and coordinating the championship-day BBQ / Home Run Derby with the president.",
+    "steps": [
+      "Set playoff windows per level (AA/AAA/Majors) and decide format (double elimination, with a single-elimination fallback if weather disrupts).",
+      "Draw first-round matchups by random draw and place them on each team's schedule as the last game with a set opponent; add placeholders and consolation games.",
+      "Build complete brackets for online posting and note home-team rules (first round by coin flip; later rounds by playoff winning percentage).",
+      "Assemble the rules summary: mandatory pitch-count recording (including outside/travel pitching), forfeit for violations, AA player-pitch clarifications (pitching distance, strike counts, 8-player minimum, inning/pitch limits), and time limits for AAA/Majors except the championship.",
+      "Coordinate the championship-day BBQ / Home Run Derby date and logistics with the president.",
+      "Publish brackets to the playoffs page (e.g., https://info.gnglittleleague.org/playoffs/playoffs-2026) and update GameChanger schedules."
+    ],
+    "links": [
+      { "type": "template", "ref": "playoffs_tournament__baseball-playoff-schedule-rules", "label": "Baseball Playoff Schedule, Rules & Brackets email" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/playoffs/playoffs-2026", "label": "Playoffs Brackets Page" },
+      { "type": "url", "ref": "https://www.littleleague.org/playing-rules/pitch-count/", "label": "Little League Pitch Count Rules" }
+    ]
+  },
+  {
+    "title": "Send baseball playoff schedule/rules email",
+    "dueWeekOfFY": 34,
+    "details": "This is the league-wide 'Baseball Playoff Schedule, Rules, & Brackets' announcement that goes to all AA/AAA/Majors families once brackets are drawn. It communicates start dates by level, the double-elimination format, the pitch-count requirement and rules link, AA player-pitch clarifications, consolation-game guidance, and championship-day BBQ details. It reinforces the positive-sportsmanship tone the league emphasizes for playoffs.",
+    "steps": [
+      "Fill the playoffs_tournament template placeholders with per-level dates, format, AA pitching distance, and the pitch-count rules link.",
+      "Include the live brackets URL and note first-round matchups are already on schedules as the last set-opponent game.",
+      "Add rainout/flexibility language and the single-elimination fallback in case weather compresses the schedule.",
+      "Include consolation-game guidance (fun, low-stakes games and a medal ceremony for eliminated teams) and the championship-day BBQ / Home Run Derby details.",
+      "Send league-wide to AA/AAA/Majors families and confirm brackets are posted online before sending."
+    ],
+    "links": [
+      { "type": "template", "ref": "playoffs_tournament__baseball-playoff-schedule-rules", "label": "Baseball Playoff Schedule, Rules & Brackets email" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/playoffs/playoffs-2026", "label": "Playoffs Brackets Page" },
+      { "type": "url", "ref": "https://www.littleleague.org/playing-rules/pitch-count/", "label": "Little League Pitch Count Rules" }
+    ]
+  },
+  {
+    "title": "Launch summer baseball registration and season",
+    "dueWeekOfFY": 34,
+    "details": "After the regular season, GNGRLL stands up a summer program for AA/AAA/Majors that plays other District 6 towns (Westbrook, Portland, Scarborough, Cape Elizabeth, Cumberland-North Yarmouth, etc.), typically running mid-July through mid-August with 2-3 games per week. Recent practice starts with an interest poll to see which levels can field teams before opening registration, then forms teams and builds schedules/rosters. Cost has run around $60/player when interest supports teams.",
+    "steps": [
+      "Post an interest poll to gauge which levels (AA/AAA/Majors) have enough players to field summer teams.",
+      "Once interest is confirmed, open summer registration with a firm deadline and set the price (recently ~$60/player).",
+      "Set divisions, team counts, and the season window (recently ~July 13 - Aug 13, 2 games/week weekdays with optional Sunday games).",
+      "Confirm District 6 interleague opponents and coordinate the cross-town schedule with the president/administrator.",
+      "Form rosters, assign coaches, and stand up schedules in GameChanger for the summer program."
+    ],
+    "links": [
+      { "type": "template", "ref": "registration__roster-fill-push", "label": "Season Sign Up email" },
+      { "type": "template", "ref": "registration__season-open", "label": "Registration Open email" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/register-practices-assessments", "label": "Register, Practices & Assessments Page" }
+    ]
+  },
+  {
+    "title": "Baseball season retrospective input",
+    "dueWeekOfFY": 42,
+    "details": "After the season, the board reviews end-of-season survey results and division feedback to decide what to keep and what to change for next year. The VP Baseball summarizes baseball-specific takeaways on structure, scheduling, and rules so improvements can be folded into the fall rules/division review. Capturing this while the season is fresh feeds the next year's planning cycle.",
+    "steps": [
+      "Gather end-of-season survey results and coach/family feedback specific to the baseball divisions.",
+      "Summarize what worked and what to change for structure (division boundaries, playing-up), scheduling (game counts, indoor block, playoffs), and rules.",
+      "Note recurring pain points (e.g., GameChanger issues, weather/rainout impacts, pitch-count enforcement) with suggested fixes.",
+      "Present the baseball retrospective at a post-season/fall board meeting so decisions feed the rules/division review.",
+      "Record agreed changes to carry into next year's baseball planning."
+    ],
+    "links": [
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" },
+      { "type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes doc" }
+    ]
+  }
+]

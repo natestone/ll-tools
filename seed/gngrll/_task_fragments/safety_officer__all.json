@@ -1,0 +1,184 @@
+[
+  {
+    "title": "Review ASAP safety plan and audit AED devices",
+    "dueWeekOfFY": 1,
+    "details": "Refresh GNGRLL's written As Safe As Possible (ASAP) plan for the new charter year and inventory every AED so the league starts the season compliant with Little League's Child Protection and safety requirements. Most years this is a simple update of officer positions, emergency numbers, and field/facility details on the existing plan, plus confirming each donated AED (e.g., the Reliance Matrix units placed at league-owned fields like Pennell/Douglas) is present with a working battery and in-date pads. Doing it early lets the plan be submitted by the District's spring deadline and reported to the board.",
+    "steps": [
+      "Pull last year's ASAP plan (maintained as a shared Google Doc) and update officer names, contact numbers, and field/emergency information.",
+      "Locate each league AED, check the battery and pad expiration, confirm it is at its assigned snack shack/field, and note any that need service or replacement.",
+      "Confirm first aid kits and safety signage are accounted for so gaps can be ordered before games.",
+      "Add a safety/AED status item to the next board meeting agenda and report findings to the board.",
+      "Submit the finalized ASAP plan to Maine District 6 / Little League ahead of the spring deadline (District has historically targeted a late-March due date)."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy (Safety Program / ASAP)" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/coaches-corner/asap-plan-coach-training", "label": "ASAP Plan & Coach Training page" }
+    ]
+  },
+  {
+    "title": "Track fall Abuse Awareness training completions",
+    "dueWeekOfFY": 3,
+    "details": "After Little League's October 1 reset, collect the annual Abuse Awareness Training certificates from all board members and volunteers and update the certification tracking list. Little League International requires the course be re-completed every year (District Administrators had a December 1 deadline, with reminder notices escalating to a final notice), so early tracking prevents last-minute scrambles. Keeping the tracker current feeds directly into who can be badged as a Certified Volunteer in the spring.",
+    "steps": [
+      "Confirm the Abuse Awareness course has reset for the new year and share the Little League University course link with board members and volunteers.",
+      "As certificates arrive, record each completion in the league's certification tracking system.",
+      "Cross-check that board members and returning coaches have re-completed for the current year, since prior-year completions do not carry over.",
+      "Send escalating reminders to anyone outstanding ahead of the December 1 Little League deadline.",
+      "Report completion status to the board and flag anyone who cannot yet be certified."
+    ],
+    "links": [
+      { "type": "template", "ref": "conduct_safety__abuse-awareness-reminder", "label": "Abuse Awareness Training reminder email" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Certified Volunteer requirement" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/certified-volunteer", "label": "Certified Volunteer FAQ" }
+    ]
+  },
+  {
+    "title": "Schedule coaches clinic and LL Safety & First Aid training",
+    "dueWeekOfFY": 18,
+    "details": "Book the venue, date, and instructor for the mandatory Little League Safety & First Aid training and the coaches clinic, then announce to coaches with a signup goal. GNGRLL runs this as a Coaches Safety Meeting & Training Session covering the safety manual, rules, and coaching tips, typically split into an AA/AAA/Majors session and a Tee Ball/Coach Pitch session at the GNG Middle School cafeteria in March. Every team must have at least one coach attend to meet Little League safety requirements, so scheduling before the season and pushing attendance is essential.",
+    "steps": [
+      "Reserve the GNG MS cafeteria and set two evening sessions (one for AA/AAA/Majors, one for Tee Ball/Coach Pitch), historically 6-8pm on weeknights in mid-March.",
+      "Confirm the safety agenda: safety manual/ASAP review, rules discussion, and a coach training Q&A; note Little League also now requires the online Safety Awareness and First Aid Awareness courses.",
+      "Announce dates to all coaches, stressing that each team must have at least one coach attend to meet Little League requirements.",
+      "Track RSVPs against a per-team attendance goal and send a same-day reminder before each session.",
+      "Record attendance and follow up with any team that did not have a coach present."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Safety Program (ASAP) & coaches training" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/coaches-corner", "label": "Coaches Corner (Safety Meeting & Training)" }
+    ]
+  },
+  {
+    "title": "Organize subsidized AED/CPR (Heartsaver) clinic",
+    "dueWeekOfFY": 22,
+    "details": "Arrange and subsidize a CPR/AED Heartsaver clinic for coaches and volunteers, confirming the instructor, materials, and registration. GNGRLL has sponsored a discounted class (covering half of the ~$50 fee, so ~$25 per participant) at the GNG Middle School cafeteria, covering CPR, the Heimlich maneuver, EPI pens/medications, and AED use to pair trained responders with the league's AED devices. Because turnout can be low and sessions sometimes need rescheduling, confirm a viable headcount before committing the instructor.",
+    "steps": [
+      "Confirm the instructor and a spring evening date/time at the GNG MS cafeteria (past sessions ran ~3-4 hours, roughly 5:30-9:30pm).",
+      "Set the subsidized price (league covers about half; participants historically paid ~$25) and open a registration form (Google Form) with a signup link.",
+      "Announce the discounted clinic to parents, coaches, and volunteers and note the curriculum: CPR, Heimlich, EPI pens/medication, and AED devices.",
+      "Verify enrollment is high enough to be worth the instructor's time before finalizing; reschedule as one block if needed.",
+      "Track completions in the certification records and reimburse or pay the instructor promptly after the class."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/coaches-corner/asap-plan-coach-training", "label": "ASAP Plan & Coach Training" }
+    ]
+  },
+  {
+    "title": "Verify certified-volunteer badges before practices start",
+    "dueWeekOfFY": 21,
+    "details": "Cross-check background checks and Abuse Awareness completions so every on-field volunteer is a Certified Volunteer with a league-issued badge before practices begin. GNGRLL requires anyone in the snack shack, on the field when children are present, or at practice facilities to wear their badge; a record is badge-eligible only when it shows \"Passed\" verification status and a \"Y\"/\"M\" for Abuse Awareness completed. Because indoor practices start in March, badges must be ready to hand out at GNGMS (5:30 on practice days) so approved coaches and helpers can run practices.",
+    "steps": [
+      "Confirm each volunteer completed all three steps: registration, JDP background check, and Abuse Awareness (plus the newer Safety and First Aid Awareness courses).",
+      "In the certification tracking system, treat a volunteer as certified only when verification shows \"Passed\" and Abuse Awareness shows \"Y\" or \"M\".",
+      "Print/assemble badges and lanyards for all completed volunteers.",
+      "Bring badges to GNGMS at 5:30 on practice days (and later to a snack shack such as Douglas Field on game days) for pickup and notify volunteers when theirs is ready.",
+      "Follow up with anyone still missing a step so they are cleared before their team's practices begin."
+    ],
+    "links": [
+      { "type": "template", "ref": "volunteer_certification__certified-volunteer-process", "label": "Certified Volunteer Process email" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Certified Volunteer requirement" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/certified-volunteer", "label": "Certified Volunteer FAQ" }
+    ]
+  },
+  {
+    "title": "Distribute ASAP plan packets to all coaches",
+    "dueWeekOfFY": 23,
+    "details": "Provide each coach a copy of the ASAP plan plus completed medical release forms for their players to carry to all games and practices. GNGRLL assembles these as ASAP/medical release binders distributed at the coaches safety meeting or with the season equipment (books, balls, forms), and coaches who did not receive a copy are told to contact info@gnglittleleague.org. A Medical Release Form must be completed annually for every player, so this pairs the safety plan with current player medical info in one packet.",
+    "steps": [
+      "Print current ASAP plan copies and confirm a completed, in-year Medical Release Form exists for every rostered player.",
+      "Assemble per-team binders/packets pairing the ASAP plan with that team's medical release forms.",
+      "Distribute packets at the coaches safety meeting or alongside season equipment distribution (ASAP books, balls, forms).",
+      "Remind coaches they must carry the ASAP plan and medical releases to all games and practices.",
+      "Direct any coach missing a copy to email info@gnglittleleague.org and backfill missing medical releases."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Safety Program (ASAP) policy" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/coaches-corner/asap-plan-coach-training", "label": "ASAP Plan & Coach Training" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/guidelines-documents/annual-requirements", "label": "Annual Requirements (Medical Release)" }
+    ]
+  },
+  {
+    "title": "Install safety bases at all fields",
+    "dueWeekOfFY": 27,
+    "details": "Install break-away safety bases at every field before the first games and verify each field is game-ready, noting any equipment needs. GNGRLL has tracked this as a spring pre-season action (\"Safety Base Install - will install before games begin\") and revisits base condition during end-of-season field work at all fields. Break-away bases reduce sliding injuries, so completing the install before opening games is a safety compliance step tied to field readiness.",
+    "steps": [
+      "Inventory break-away safety base sets for every field and identify any missing or worn bases to reorder.",
+      "Coordinate with the grounds crew to install/anchor safety bases at each field before the first scheduled games.",
+      "Walk each field to confirm bases, anchors, and mounds are game-ready and safe.",
+      "Log any equipment needs or field hazards and route repairs to the appropriate coordinator.",
+      "Confirm completion to the board so opening games are cleared to proceed."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "reference", "ref": "fields", "label": "GNGRLL Fields Reference" },
+      { "type": "template", "ref": "fields_facilities__field-workday", "label": "Field Work Day email" }
+    ]
+  },
+  {
+    "title": "File injury and concussion incident reports",
+    "dueWeekOfFY": 34,
+    "details": "Complete incident reports for any injuries, and especially concussions, for the league insurer, and enforce the physician-cleared return-to-play protocol with parents and coaches. Coaches report incidents (e.g., a player struck by a softball) to the Safety Officer and president, who documents details and follows up on the player's care. The Safety Officer files reports as injuries occur and, for concussions, ensures the player does not return to play until cleared in writing by a physician.",
+    "steps": [
+      "Collect the incident details from the reporting coach: player, date, field, what happened, and any care provided.",
+      "Complete the Little League/insurer injury report and retain a copy in league records.",
+      "For any head injury/concussion, require written physician clearance before the player returns to any practice or game.",
+      "Communicate the return-to-play protocol to the player's parents and the coach and confirm they understand it.",
+      "Follow up on the player's status and close out the report; escalate to the president/District as needed."
+    ],
+    "links": [
+      { "type": "template", "ref": "conduct_safety__injury-concussion-protocol", "label": "Injury Report & Return-to-Play Protocol email" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Safety / injury reporting policy" }
+    ]
+  },
+  {
+    "title": "Confirm AED coverage for All-Star and summer teams",
+    "dueWeekOfFY": 38,
+    "details": "Ensure AED devices, first aid kits, and current safety documentation travel with All-Star and summer/tournament teams, which play away games against other District 6 towns (Westbrook, Portland, Scarborough, Cape Elizabeth, etc.) from mid-July into August. Because these teams frequently play off league-owned fields, portable safety coverage and up-to-date medical releases must go with them. Confirming this before summer play begins keeps the league compliant when kids are away from the home fields' fixed AEDs.",
+    "steps": [
+      "Identify each All-Star and summer team's schedule and which games are away from league-owned fields.",
+      "Assign a portable AED and stocked first aid kit to travel with each team, checking battery/pad dates and restocking kits.",
+      "Confirm each team carries current safety documentation and completed player medical release forms.",
+      "Verify All-Star and summer coaches/volunteers are certified (background check + Abuse Awareness) and badged.",
+      "Confirm coverage to the board/coaches before the summer season opens (typically mid-July)."
+    ],
+    "links": [
+      { "type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies & Procedures" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Safety Program (AED / first aid)" }
+    ]
+  },
+  {
+    "title": "Update ASAP plan for post-season and tournament play",
+    "dueWeekOfFY": 45,
+    "details": "Revise the ASAP/SAFE plan for post-season, All-Star, and tournament activity and confirm all participating teams have current safety compliance. Tournament play adds new venues, later-summer conditions, and District/Little League requirements (including that any player-absence tournament forms be completed by the parent), so the safety plan and volunteer certifications must be re-verified. This keeps GNGRLL's post-season teams compliant with Maine District 6 and Little League tournament rules.",
+    "steps": [
+      "Review the ASAP/SAFE plan and update it for tournament venues, emergency contacts, and summer conditions.",
+      "Re-verify that all tournament coaches and volunteers are certified and badged for the current year.",
+      "Confirm required tournament paperwork is complete, including that any player Tournament Absence forms are filled out by the parent (not a league officer).",
+      "Ensure AEDs, first aid kits, and medical releases are staged for each tournament team.",
+      "Submit/confirm the updated safety documentation with Maine District 6 and report readiness to the board."
+    ],
+    "links": [
+      { "type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies & Procedures" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Safety Program (ASAP) policy" },
+      { "type": "url", "ref": "https://www.mained6littleleague.org/2025-all-stars", "label": "Maine D6 All-Stars (Tournament forms)" }
+    ]
+  },
+  {
+    "title": "Send Oct 1 Abuse Awareness reset reminder",
+    "dueWeekOfFY": 51,
+    "details": "Notify all board members and volunteers that Little League's Abuse Awareness Training resets October 1 and must be re-completed for the coming year. On October 1 the annual nationwide background checks reset for the new season, and District Administrators/volunteers face a December 1 completion deadline with escalating reminders. Sending this reminder promptly kicks off the certification cycle so completions are tracked and badges can be issued in the spring.",
+    "steps": [
+      "After the October 1 reset, send all board members and volunteers the reminder that Abuse Awareness must be re-completed for the new year.",
+      "Include the Little League University course link and instructions to select \"Gray New Gloucester LL\" so completions tie to the league.",
+      "State the December 1 completion deadline and note prior-year completions do not carry over.",
+      "Ask recipients to forward their certificate and begin the JDP background check when invited.",
+      "Log responses in the certification tracker and send follow-up reminders to anyone outstanding."
+    ],
+    "links": [
+      { "type": "template", "ref": "conduct_safety__abuse-awareness-reminder", "label": "Abuse Awareness Training reminder email" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Certified Volunteer requirement" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/frequently-asked-questions/certified-volunteer", "label": "Certified Volunteer FAQ" }
+    ]
+  }
+]

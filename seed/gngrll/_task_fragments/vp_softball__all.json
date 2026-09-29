@@ -1,0 +1,136 @@
+[
+  {
+    "title": "Draft softball program improvement & recruitment plan",
+    "dueWeekOfFY": 2,
+    "details": "Coming off the season, the VP Softball documents what worked and what didn't and lays out a plan to grow softball registrations by division for the next year. This matters because softball counts are thinner than baseball and low-count divisions (e.g., Yarmouth softball, Windham Juniors) may need interleague mergers to field viable teams. The plan sets the direction the softball parent group and board will execute against through the winter and spring.",
+    "steps": [
+      "Pull the prior season's registration and team counts by division (AA/7-8, AAA/9-10, Majors/11-12, Juniors/12-16) and note where numbers are trending down.",
+      "Flag any division that cannot field enough teams and identify interleague partners to merge with (e.g., combine Juniors with Windham/Yarmouth) via District 6 contacts.",
+      "List concrete program improvements from the season debrief - scheduling, field upgrades at Intervale, equipment gaps, high-school game opportunities, and social-media outreach.",
+      "Draft a recruitment plan with targets per division and outreach tactics (returning-player push, sibling sign-ups, scholarships/fee offsets, school flyers).",
+      "Bring the draft to the softball parent discussion group and full board for feedback, then finalize as the working plan for the season."
+    ],
+    "links": [
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "template", "ref": "board_meeting__softball-parent-group", "label": "Softball Board Meeting & Discussion Group email" }
+    ]
+  },
+  {
+    "title": "Coordinate winter softball clinics (Julie Roy)",
+    "dueWeekOfFY": 9,
+    "details": "Working with the president, the VP Softball books the winter softball clinics led by Julie Roy (former D1 pitcher / Colby pitching coach) with skills sessions from Madi Pelletier. Historically run over four Sundays starting mid-January (e.g., 1/19, 1/26, 2/2, 2/9 with a 2/16 weather makeup) at the GNG Middle School gym. Session fees run around $10-15 each (4 for $30-45) with a budget near $2,600-$2,800 expected to break even, and scholarships offered on request.",
+    "steps": [
+      "Confirm coach availability with Julie Roy (ages 9-12 pitching) and Madi Pelletier (all-levels skills) and lock four consecutive Sunday dates in mid-January with a weather-makeup date.",
+      "Reserve GNG Middle School gym space and set age-group time slots (e.g., 1:30 AA ages 7-9, 2:30 AAA/Majors 9-12, 3:30 pitching 9-12).",
+      "Set session fees ($10-15/session, 4 for $30-45) and build a break-even budget (~$2,600-$2,800), noting full/partial scholarship offsets available on request.",
+      "Add clinic registration to the online sign-up alongside season registration and publish dates, times, and what players should bring (glove, bat, helmet, dry shoes).",
+      "Send reminders before each Sunday and post cancellations promptly if weather forces a move to the makeup date."
+    ],
+    "links": [
+      { "type": "template", "ref": "practice__winter-clinics", "label": "Winter Clinics announcement template" },
+      { "type": "url", "ref": "https://info.gnglittleleague.org/register-practices-assessments/softball-winter-clinic-2025", "label": "Softball Winter Clinic page" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship Policies" }
+    ]
+  },
+  {
+    "title": "Plan softball team formation & assessments",
+    "dueWeekOfFY": 16,
+    "details": "Ahead of the spring draft, the VP Softball runs assessment stations and judges to rate players and forms preliminary teams across the 7-8 (AA), 9-10 (AAA), 11-12 (Majors), and 12-16 (Juniors) divisions. Assessments are typically held in late February with the board's registration/assessment process, feeding the draft that determines rosters. Solid team formation keeps divisions balanced and meets the Little League 12-game minimum needed for All-Star eligibility.",
+    "steps": [
+      "Set assessment dates with the president (late February window) and reserve the cages/gym, planning a weather-postponement fallback.",
+      "Recruit volunteer judges and organize skill stations (throwing, fielding, hitting, pitching) with a consistent rating sheet per division.",
+      "Send the assessment schedule and reminders to registered softball families and confirm attendance.",
+      "Compile scores and draft preliminary balanced teams per division, coordinating with coaches and any interim schedulers.",
+      "Feed results into the draft process and hold rosters for board review before publishing."
+    ],
+    "links": [
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment Policies" },
+      { "type": "template", "ref": "tryouts_assessments__assessment-schedule-reminder", "label": "Assessments schedule reminder template" },
+      { "type": "template", "ref": "tryouts_assessments__volunteer-recruitment", "label": "Assessment volunteer recruitment template" }
+    ]
+  },
+  {
+    "title": "Submit softball uniform & equipment requirements",
+    "dueWeekOfFY": 18,
+    "details": "The VP Softball gives the uniform and equipment coordinators the softball-specific requirements so the correct gear is ordered on the tight March deadline. AAA and Majors players receive dye-sublimated custom jerseys with last name and number, so sizing must be confirmed before the order. Softball-sized balls, catcher's gear, and league face masks required for all infield positions per the 2017 safety rule must all be included; uniform orders have historically been due around March 20.",
+    "steps": [
+      "Compile softball specifics for coordinators: girl's-cut jerseys, softball-sized balls, catcher's gear, and infield face masks per the 2017 safety rule.",
+      "Circulate the uniform sizing form (jersey and pants size charts) to AAA/Majors families to confirm sizes and numbers, with a firm due date (e.g., Sunday before the order).",
+      "Fall back to registration selections for any family that does not respond by the deadline.",
+      "Finalize team assignments so jerseys can be personalized, then release the order to the uniform coordinator by the March deadline (~March 20).",
+      "Confirm equipment counts (catcher's gear and masks per team) with the equipment coordinator and note any reorders to avoid costly mistakes."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety Policies" },
+      { "type": "template", "ref": "uniforms__sizing-event", "label": "Uniform Sizing Event template" },
+      { "type": "template", "ref": "uniforms__coach-pickup", "label": "Uniform Pickup for Coaches template" }
+    ]
+  },
+  {
+    "title": "Launch softball parent discussion group",
+    "dueWeekOfFY": 24,
+    "details": "The VP Softball kicks off a bi-weekly softball parent/board discussion group to build a faster, more autonomous pathway for softball decisions instead of routing everything through the full board. The first meetings were held online via Google Meet (e.g., first meeting March 11, second April 1 at 7pm, moving to bi-weekly and later to 8/8:30pm once practices start). It's the engine for recruiting volunteers, planning purchases, and driving softball equitability and growth.",
+    "steps": [
+      "Invite all softball parents and set a recurring bi-weekly cadence and platform (Google Meet), targeting ~1 hour per meeting.",
+      "Collect agenda items by email in advance and circulate an agenda plus notes from the prior meeting.",
+      "Cover standing topics: officer roles and volunteer recruitment, coming-season scheduling/travel, field improvements, equipment, uniforms, and high-school/District 6 opportunities.",
+      "Track volunteer commitments to roles (VP Softball, Equipment, Concessions, Media, etc.) and open discussion items.",
+      "Adjust the meeting time later in the season (e.g., to 8:00-8:30pm) once practices begin, and keep notes for the board."
+    ],
+    "links": [
+      { "type": "template", "ref": "board_meeting__softball-parent-group", "label": "Softball Board Meeting & Discussion Group email" },
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" },
+      { "type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes template" }
+    ]
+  },
+  {
+    "title": "Organize Memorial Day parade softball participation",
+    "dueWeekOfFY": 31,
+    "details": "The VP Softball lines up softball teams and families to march in the Memorial Day parade, giving softball visibility in both Gray and New Gloucester. Historically there are reserved spots and staggered start times (e.g., New Gloucester meet at Memorial School 8:30 / step off 9:00; Gray meet at Russell School 10:30 / step off 11:00), with candy for kids to throw. It's a community-facing event that promotes the league right in the middle of the season.",
+    "steps": [
+      "Confirm reserved parade spots and staging/route for both towns with the board and secure a point person for each parade.",
+      "Notify softball families with meet times and locations and ask players to wear their jerseys.",
+      "Arrange banners and pick up bags of candy for kids to throw.",
+      "Coordinate wrangling volunteers to gather kids into the staging area so families know where to go.",
+      "Send a reminder the week of and confirm any parking arrangements with the board."
+    ],
+    "links": [
+      { "type": "template", "ref": "opening_day__parade-parking-request", "label": "Parade Parking Request template" },
+      { "type": "template", "ref": "fundraising__event-volunteer-signup", "label": "Event Volunteer Signup template" }
+    ]
+  },
+  {
+    "title": "Coordinate District / high school softball game opportunities",
+    "dueWeekOfFY": 33,
+    "details": "The VP Softball pursues interleague, District 6, and high-school game and scrimmage opportunities to give softball players competitive reps and visibility. This includes the District 6 college softball day (e.g., at SMCC) and coordinating with the local high school softball coach. Because other leagues book games early, softball needs VP representation at the district softball scheduling meetings (typically leading up to late March) to lock in the 12-game minimum for All-Star eligibility.",
+    "steps": [
+      "Represent softball at District 6 interleague softball committee meetings (aim for 2-3 sessions before the late-March scheduling meeting) via the d6 contact list.",
+      "Reach out early to neighboring leagues' softball VPs to secure interleague games/scrimmages before slots fill.",
+      "Coordinate with the high-school softball coach on scrimmages, clinics, and field-use opportunities.",
+      "Sign up for the District 6 college softball day (e.g., SMCC) and communicate details to families.",
+      "Confirm each division reaches the 12-game minimum required for All-Star eligibility and share the finalized schedule."
+    ],
+    "links": [
+      { "type": "template", "ref": "schedule__interleague-draft-review", "label": "Interleague Schedule Draft Review template" },
+      { "type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament Policies" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Staff softball program roles for next year",
+    "dueWeekOfFY": 46,
+    "details": "Ahead of board elections, the VP Softball recruits and confirms the softball staff slate - VP Softball, Softball Equipment, Softball Concessions, Media, and Scheduler - so the program isn't dependent on a couple of informal volunteers. This directly addresses the gap where softball had no VP for multiple seasons and most operations ran unofficially. Reporting a confirmed slate lets the board seat officers cleanly during fall elections.",
+    "steps": [
+      "Use the softball parent discussion group to canvass for volunteers and define/right-size each role.",
+      "Confirm commitments for VP Softball, Softball Equipment, Concessions, Media, and Scheduler, noting the effective year for each.",
+      "Fill any remaining gaps (e.g., grounds, purchase, uniform coordinators) and consider creating new roles by board motion if needed.",
+      "Document the slate and report it to the president/board ahead of the fall elections.",
+      "Hand off contacts and current responsibilities so incoming officers can start before the next season ramps up."
+    ],
+    "links": [
+      { "type": "policy", "ref": "governance_roles", "label": "Governance & Board Roles" },
+      { "type": "template", "ref": "board_meeting__softball-parent-group", "label": "Softball Board Meeting & Discussion Group email" }
+    ]
+  }
+]

@@ -1,0 +1,356 @@
+// GNGRLL League Manager — multi-tenant schema (shared-schema, leagueId-scoped).
+// FY-relative content: weekOfFY 0..51 (week 0 = week containing Oct 1).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- Global (non-tenant) ----------
+
+model User {
+  id           Int          @id @default(autoincrement())
+  email        String       @unique
+  passwordHash String
+  displayName  String
+  phone        String?
+  // Platform operator: can create leagues, manage the suppression list, and
+  // promote other super admins. Deliberately a flag on User, not a role — roles
+  // are per-league, and this is above any league.
+  isSuperAdmin Boolean      @default(false)
+  createdAt    DateTime     @default(now())
+  memberships  Membership[]
+  invitesSent  Invite[]     @relation("InviteInviter")
+  passwordResets PasswordReset[]
+}
+
+// People who have opted out of email. Keyed by address, not user id, on purpose:
+// invitees are emailed before they have an account, and an address must stay
+// suppressed even if the account is later deleted and recreated.
+model EmailSuppression {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  reason    String   @default("unsubscribed") // unsubscribed | bounced | complaint
+  createdAt DateTime @default(now())
+}
+
+// Forgot-password tokens. Only the SHA-256 of the emailed token is stored, so a
+// database leak can't be replayed to take over accounts. Single-use + short TTL.
+model PasswordReset {
+  id        Int       @id @default(autoincrement())
+  userId    Int
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
+}
+
+// The template new organizations are cloned from is the league flagged isSeed
+// (see lib/cloneSeed.js) — there are deliberately no separate Default* tables.
+
+// ---------- Tenant (every row carries leagueId) ----------
+
+model League {
+  id           Int       @id @default(autoincrement())
+  name         String
+  slug         String    @unique
+  fyStartMonth Int       @default(10)
+  timezone     String    @default("America/New_York")
+  ownerUserId  Int
+  seedVersion  String    @default("gngrll-2026.1")
+  // Season year = the calendar year the fiscal year began (Oct 1). Displayed "2026–27".
+  activeSeasonYear Int?
+  // The template every new organization is cloned from. Exactly one league carries
+  // this; it has no members and is reachable only by super admins.
+  isSeed       Boolean   @default(false)
+  website      String?
+  contactEmail String?
+  contactPhone String?
+  addressLine1 String?
+  city         String?
+  state        String?
+  postalCode   String?
+  createdAt    DateTime  @default(now())
+
+  memberships     Membership[]
+  roles           Role[]
+  assignments     OfficerAssignment[]
+  emailTemplates  EmailTemplate[]
+  agendaTemplates AgendaTemplate[]
+  calendarItems   CalendarItem[]
+  tasks           Task[]
+  policies        PolicyDocument[]
+  references      ReferenceDoc[]
+  invites         Invite[]
+  seasons         Season[]
+  schedulerStates SchedulerState[]
+  categoryPermissions CategoryPermission[]
+  boardMeetings   BoardMeeting[]
+}
+
+model Membership {
+  id       Int    @id @default(autoincrement())
+  leagueId Int
+  userId   Int
+  status   String @default("active") // active | invited | removed
+  isOwner  Boolean @default(false)
+
+  league      League              @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  user        User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  assignments OfficerAssignment[]
+
+  @@unique([leagueId, userId])
+  @@index([leagueId])
+}
+
+model Role {
+  id          Int     @id @default(autoincrement())
+  leagueId    Int
+  key         String
+  name        String
+  description String  @db.Text
+  isCustom    Boolean @default(false)
+
+  league      League              @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  assignments OfficerAssignment[]
+
+  @@unique([leagueId, key])
+  @@index([leagueId])
+}
+
+model OfficerAssignment {
+  id           Int    @id @default(autoincrement())
+  leagueId     Int
+  membershipId Int
+  roleId       Int
+
+  league     League     @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  membership Membership @relation(fields: [membershipId], references: [id], onDelete: Cascade)
+  role       Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@unique([leagueId, membershipId, roleId])
+  @@index([leagueId])
+}
+
+model EmailTemplate {
+  id           Int      @id @default(autoincrement())
+  leagueId     Int
+  roleKey      String
+  key          String?
+  name         String
+  subject      String   @db.Text
+  bodyMd       String   @db.LongText
+  category     String
+  weekOfFY     Int?
+  seededFromId Int?
+  updatedAt    DateTime @updatedAt
+
+  league League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+
+  @@unique([leagueId, key])
+  @@index([leagueId])
+  @@index([leagueId, roleKey])
+}
+
+model AgendaTemplate {
+  id           Int     @id @default(autoincrement())
+  leagueId     Int
+  slug         String
+  title        String
+  phase        String?
+  weekOfFY     Int?
+  bodyMd       String  @db.LongText
+  seededFromId Int?
+
+  league League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+
+  @@unique([leagueId, slug])
+  @@index([leagueId])
+}
+
+model CalendarItem {
+  id           Int    @id @default(autoincrement())
+  leagueId     Int
+  roleKey      String
+  weekOfFY     Int
+  // Like Task.dueDateOverride: an item sits on the Monday of its week by default,
+  // but a real fixture ("Opening Day") needs an exact day. Required for calendar
+  // feeds, where every event landing on a Monday would be wrong.
+  dateOverride DateTime?
+  kind         String @default("reminder")
+  title        String @db.Text
+  description  String @db.Text
+  seededFromId Int?
+
+  league League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+
+  @@index([leagueId])
+  @@index([leagueId, roleKey])
+}
+
+model Task {
+  id           Int      @id @default(autoincrement())
+  leagueId     Int
+  roleKey      String
+  seasonYear   Int?
+  // Soft delete: archived tasks leave the active list but stay available as
+  // "optional" items that a future season can restore or turn into a step.
+  archivedAt   DateTime?
+  archivedSteps Json?
+  dueWeekOfFY  Int?
+  // A task is due the Monday of dueWeekOfFY by default; this pins it to an exact
+  // day instead. Stored, never derived — the week->date map supplies the default,
+  // so only a deliberate deviation needs a row value. Rollover shifts it to the
+  // same weekday of the same week in the new season.
+  dueDateOverride DateTime?
+  title        String   @db.Text
+  description  String   @db.Text
+  details      String?  @db.LongText
+  steps        Json?
+  links        Json?
+  stepsDone    Json?
+  status       String   @default("open") // open | done | skipped
+  seededFromId Int?
+  updatedAt    DateTime @updatedAt
+
+  league League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+
+  @@index([leagueId])
+  @@index([leagueId, roleKey])
+  @@index([leagueId, seasonYear])
+}
+
+model PolicyDocument {
+  id           Int    @id @default(autoincrement())
+  leagueId     Int
+  slug         String
+  title        String
+  bodyMd       String @db.LongText
+  seededFromId Int?
+
+  league League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+
+  @@unique([leagueId, slug])
+  @@index([leagueId])
+}
+
+model ReferenceDoc {
+  id           Int    @id @default(autoincrement())
+  leagueId     Int
+  slug         String
+  title        String
+  bodyMd       String @db.LongText
+  seededFromId Int?
+
+  league League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+
+  @@unique([leagueId, slug])
+  @@index([leagueId])
+}
+
+model Invite {
+  id              Int       @id @default(autoincrement())
+  leagueId        Int
+  email           String
+  roleKeys        Json
+  tokenHash       String    @unique
+  invitedByUserId Int
+  // Set when a super admin creates a league for someone: redeeming transfers
+  // ownership from the admin who created it to the person invited.
+  isOwnerInvite   Boolean   @default(false)
+  status          String    @default("pending") // pending | accepted | expired
+  expiresAt       DateTime
+  acceptedAt      DateTime?
+  createdAt       DateTime  @default(now())
+
+  league    League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  invitedBy User   @relation("InviteInviter", fields: [invitedByUserId], references: [id])
+
+  @@index([leagueId])
+}
+
+model Season {
+  id         Int      @id @default(autoincrement())
+  leagueId   Int
+  seasonYear Int
+  fyStart    DateTime
+  fyEnd      DateTime
+  createdAt  DateTime @default(now())
+
+  league League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+
+  @@unique([leagueId, seasonYear])
+  @@index([leagueId])
+}
+
+// Owned by express-mysql-session, NOT by the app. It is declared here only so
+// `prisma db push` recognises it and stops dropping it as an unknown table
+// (which used to log out every user on each schema change).
+model Session {
+  session_id String  @id @db.VarChar(128)
+  expires    Int     @db.UnsignedInt
+  data       String? @db.MediumText
+
+  @@map("sessions")
+}
+
+// A board meeting: generated by the Agenda wizard, then edited/checked off live.
+// items = [{ id, text, done, source: 'task-step'|'standing'|'custom', roleKey?, taskId?, stepIndex? }]
+model BoardMeeting {
+  id          Int       @id @default(autoincrement())
+  leagueId    Int
+  title       String    @db.Text
+  meetingDate DateTime?
+  startTime   String?
+  location    String?
+  facilitator String?
+  recorder    String?
+  attendees   String?   @db.Text
+  status      String    @default("draft") // draft | held
+  items       Json?
+  notes       String?   @db.LongText
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  league League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+
+  @@index([leagueId])
+}
+
+// Grants a role edit rights on a content category (e.g. policies, references,
+// agenda_templates). A row = "roleKey may edit category" within the league.
+model CategoryPermission {
+  id       Int    @id @default(autoincrement())
+  leagueId Int
+  category String
+  roleKey  String
+
+  league League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+
+  @@unique([leagueId, category, roleKey])
+  @@index([leagueId])
+}
+
+// Per-user, per-league state for the embedded Baseball Scheduler tool.
+// preferences = form config (auto-saved); schedule = an explicitly saved snapshot.
+model SchedulerState {
+  id          Int      @id @default(autoincrement())
+  leagueId    Int
+  userId      Int
+  preferences Json?
+  schedule    Json?
+  view        String   @default("list")
+  updatedAt   DateTime @updatedAt
+
+  league League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+
+  @@unique([leagueId, userId])
+  @@index([leagueId])
+}

@@ -1,0 +1,203 @@
+[
+  {
+    "title": "Request fall vendor samples and pricing",
+    "dueWeekOfFY": 2,
+    "details": "Kicking off the uniform cycle in the fall, the coordinator gathers current-season samples and price sheets from the league's vendors so the board can compare options and set the coming season's uniform program. GNGRLL has historically sourced Boombah jerseys/hats for AAA and up, Maine Street Graphics for screen-printed shirts, and checked Dick's, using samples as sign-up motivation. Doing this early (around October/November board meetings) leaves time to test fits at assessments and to check lead times before the ordering crunch.",
+    "steps": [
+      "Contact Boombah, Maine Street Graphics, and Dick's for current-season samples and printed price sheets, including a girl's-cut/softball-cut jersey option.",
+      "Ask each vendor about lead times and whether delivery windows change by season, plus minimum quantities for re-orders and the minimum-fee thresholds.",
+      "Request pricing for both dye-sublimated custom jerseys (name/number) and screen-printed shirts, plus hats, so per-division options can be compared.",
+      "Have samples ready to test at assessments/clinics and to use as sign-up motivation.",
+      "Summarize the sample and pricing findings for the board and outline the jersey ordering deadlines the calendar must accommodate."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Confirm early-signup jersey incentive terms",
+    "dueWeekOfFY": 6,
+    "details": "To drive early registration, GNGRLL ties the custom-uniform perk to a hard early-signup deadline: families who register by the cutoff (Feb 15) are guaranteed a customized jersey, using uniforms as motivation for sign-ups. The coordinator finalizes those terms and hands them to registration/LIO so they can be promoted. This matters because earlier team formation makes ordering cheaper and simpler and keeps the season on schedule.",
+    "steps": [
+      "Confirm the early-signup incentive (guaranteed customized jersey) and set the Feb 15 deadline with the board.",
+      "Nail down exactly which divisions/levels the custom-jersey perk applies to and what late registrants receive instead.",
+      "Write up the incentive terms clearly, including the no-exceptions nature of the customization cutoff.",
+      "Hand the finalized details to registration and the information officer/LIO for promotion on the website, email, and Facebook."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "template", "ref": "registration__season-open", "label": "Registration Open announcement" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment policy" }
+    ]
+  },
+  {
+    "title": "Compile vendor quotes and jersey layout",
+    "dueWeekOfFY": 15,
+    "details": "Ahead of the board decision, the coordinator assembles final vendor quotes, sponsor-on-front layout mockups, and per-division pricing into a single package for review. GNGRLL's model has been sponsor names combined with the league logo on the front, player name/number on the back, roughly $28.50/set for screen-printed lower divisions (TB/CP/AA) and about $50/player Boombah plus Gilbert/college hats for AAA and up. Getting this right in late winter drives the spending motion and the timely order.",
+    "steps": [
+      "Collect final written quotes from each vendor (e.g., Maine Street Graphics tiered pricing like 25 @ $28.50, personalization +$5; Boombah shirts/hats).",
+      "Build sponsor-on-front layout mockups: GNGR logo + sponsor on the front, player name and number on the back.",
+      "Assemble per-division pricing (e.g., ~$28.50/set for TB/CP/AA screen-print; ~$50/player Boombah + college/Gilbert hats for AAA and up).",
+      "Confirm extras such as coach matching jerseys and the +5 SB / +3 BB backup jersey counts, plus hat options for AA.",
+      "Package quotes, mockups, and pricing into a board-review document."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Present uniform purchase motion to the board",
+    "dueWeekOfFY": 22,
+    "details": "The coordinator brings the recommended vendor, team sizes, extras, and per-player budget to a board meeting for a formal spending motion so the order can be placed on time. GNGRLL has done this via specific motions (e.g., Boombah for AAA & Majors with GNGR logo, sponsor on front, name/number on back, matching MLB team hats). A recorded, seconded, carried motion authorizes the spend and locks the design before ordering.",
+    "steps": [
+      "Add uniforms to the board meeting agenda with the recommended vendor and finalized design.",
+      "Present team counts per division, extras (backup jerseys, coach jerseys, hats), and the per-player budget.",
+      "Move a specific spending motion covering vendor, design details, and price increases; record the second and vote.",
+      "Capture any board-directed changes (e.g., opt-out pants at certain levels, hat approvals for AA/softball visors) in the minutes.",
+      "Confirm the authorized budget and design so the order can proceed on schedule."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "template", "ref": "board_meeting__minutes-agenda-doc", "label": "Meeting Agenda & Notes" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" }
+    ]
+  },
+  {
+    "title": "Enforce customized-jersey deadline and finalize order",
+    "dueWeekOfFY": 24,
+    "details": "The coordinator locks the firm customized-jersey registration deadline (historically 3/14 / around 3/9), after which no exceptions are made, and reconciles who gets a personalized jersey versus a generic backup. This ties directly to team formation: teams are announced and rosters are finalized right before the order goes out. Getting this locked prevents costly re-orders of incorrect or extra jerseys.",
+    "steps": [
+      "Enforce the firm customized-jersey registration deadline (e.g., 3/14) with no exceptions for late registrants.",
+      "Reconcile personalized jerseys against generic backup jerseys (planning the standard +5 SB / +3 BB extras).",
+      "Coordinate with the player agent/president so teams are finalized before ordering.",
+      "Cross-check each roster's name/number selections against registration data for accuracy.",
+      "Finalize team rosters and quantities so the order can be placed the following Monday."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "policy", "ref": "registration_assessment", "label": "Registration & Assessment policy" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Submit Boombah and hat orders",
+    "dueWeekOfFY": 25,
+    "details": "Once rosters and sizing are locked, the coordinator places the AAA-and-above Boombah jersey order and the Gilbert/college-hat order by the vendor cutoff, typically the Monday after teams are announced. GNGRLL pays a deposit (25%) on the card to submit and confirms the coach adult-hat allotment per team. Hitting the vendor cutoff is what keeps uniforms arriving ahead of picture day and the season start.",
+    "steps": [
+      "Finalize the Boombah order for AAA and Majors (and applicable softball levels) with confirmed names, numbers, and sizes.",
+      "Place the matching hat order (college/Gilbert or MLB-team hats, excluding Red Sox/Yankees) alongside the jerseys.",
+      "Include coach matching jerseys and confirm each team's adult-hat allotment (typically 3-4 per team).",
+      "Submit by the vendor cutoff and pay the required deposit (e.g., 25%) on the league card.",
+      "Note any rush add-ons needed and confirm expected delivery timing."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "template", "ref": "uniforms__hat-sizing-clarification", "label": "Uniform hat/sizing clarification" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  },
+  {
+    "title": "Run the uniform sizing event",
+    "dueWeekOfFY": 27,
+    "details": "The coordinator holds an in-person sizing event (often at the batting cages) so families can try on jersey and pant samples and confirm fits before the order is finalized. GNGRLL also sends a selection form with size charts and notes learned patterns (e.g., girls'/women's styles run small and need to be sized up 1-2). This step exists because re-ordering incorrect uniforms is very expensive, so fit corrections are collected and submitted by a hard deadline.",
+    "steps": [
+      "Send the sizing-event announcement with date, time, and location (e.g., the batting cages).",
+      "Distribute the online uniform selection form with jersey and pant size charts (defaulting to registration selections if not returned).",
+      "Bring jersey and pant size samples for players to try on, including youth/adult and girls'/women's cuts.",
+      "Collect fit corrections and note guidance (e.g., girls'/women's styles typically need +1-2 sizes).",
+      "Follow up with anyone who missed the session and submit final order adjustments by the stated deadline (e.g., Sunday 11:59pm)."
+    ],
+    "links": [
+      { "type": "template", "ref": "uniforms__sizing-event", "label": "Uniform Sizing Event email" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" }
+    ]
+  },
+  {
+    "title": "Track uniform delivery against picture day",
+    "dueWeekOfFY": 28,
+    "details": "The coordinator monitors vendor shipments and coordinates delivery timing with the information officer's picture/photo day so that uniforms arrive before players are photographed. GNGRLL schedules photos around practices and needs teams in uniform (e.g., TB/CP pictures on a set Saturday), so uniforms must land first. Tracking shipments also gives time to place rush add-on orders for any missing or additional players.",
+    "steps": [
+      "Confirm the photo/picture day dates with the information officer and identify which divisions are shooting when.",
+      "Track each vendor shipment's status and expected arrival against those photo dates.",
+      "Flag any at-risk deliveries early and place rush orders for missing or additional players as needed.",
+      "Ensure uniforms are sorted and available to teams before their picture day.",
+      "Communicate delivery timing to VPs/coaches so uniforms are distributed ahead of photos."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "template", "ref": "photos__schedule-photo-day", "label": "Team Photo Scheduling" },
+      { "type": "template", "ref": "photos__packet-pickup-reminder", "label": "Photos packet pickup reminder" }
+    ]
+  },
+  {
+    "title": "Coordinate coach uniform pickup and distribution",
+    "dueWeekOfFY": 30,
+    "details": "Once uniforms are sorted and bagged by team, the coordinator sends the coach-pickup notice with day, time, and location (historically the Douglas Field snack shack) and provides the storage lock code for off-hours pickup. Only one coach or team representative should collect the whole team's bagged, labeled uniforms, not individual parents. A follow-up clarifies youth vs. adult (OSFM) hats and the 3-4 coach adult-hat count per team.",
+    "steps": [
+      "Sort, bag, and label uniforms by team and division (e.g., 'TB' vs 'CP' to avoid repeat team-name mix-ups).",
+      "Send the coach-pickup notice with day, time, and location, instructing one coach/rep per team (not individual parents).",
+      "Provide the snack-shack lock/storage access code for coaches who cannot make the pickup window.",
+      "Send the youth-vs-adult (OSFM) hat clarification, noting each team should have 3-4 adult hats for coaches.",
+      "Follow up with any teams that have not picked up so uniforms are distributed before pictures/first games."
+    ],
+    "links": [
+      { "type": "template", "ref": "uniforms__coach-pickup", "label": "Uniform Pickup for Coaches" },
+      { "type": "template", "ref": "uniforms__hat-sizing-clarification", "label": "Uniform hat clarification" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" }
+    ]
+  },
+  {
+    "title": "Order All-Star uniforms",
+    "dueWeekOfFY": 34,
+    "details": "After All-Star rosters are voted and approved by the board, the coordinator orders team jerseys/uniforms at approximately $50/player per the approved per-player budget (a recurring board motion). This happens in June once managers and rosters are set, and numbers are assigned first-come as sizes are collected. Timely ordering matters so All-Star teams have uniforms before District 6 tournament play.",
+    "steps": [
+      "Wait for the board-approved All-Star rosters and the ~$50/player uniform budget motion.",
+      "Collect player names, sizes, and number preferences (numbers first-come, first-served).",
+      "Place the All-Star jersey/uniform order with the vendor at the approved per-player amount, adding a coach uniform.",
+      "Request a rush and pay the deposit if delivery timing is tight against tournament start.",
+      "Confirm delivery and distribute to the All-Star manager ahead of tournament play."
+    ],
+    "links": [
+      { "type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament policy" },
+      { "type": "template", "ref": "all_stars__roster-board-approval", "label": "All Stars roster board approval" },
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" }
+    ]
+  },
+  {
+    "title": "Procure Junior/Senior summer uniforms",
+    "dueWeekOfFY": 35,
+    "details": "The coordinator orders uniforms for Junior, Senior, and summer/tournament teams as advancing rosters are confirmed, which happens later than the spring order and often in smaller, add-on batches. GNGRLL collects roster info via an editable spreadsheet (name, adult size, number) and places rush orders (paying the deposit on the card) so teams are equipped quickly. Because these rosters firm up late, orders are turned around ASAP once players commit.",
+    "steps": [
+      "Confirm the Junior, Senior, and summer/tournament rosters as advancing players commit.",
+      "Collect name, adult size, and number preferences via an editable roster spreadsheet (numbers first-come).",
+      "Place the uniform order, including any coach uniform, and request a rush if the season is imminent.",
+      "Pay the required deposit on the league card to submit the order.",
+      "Add any additional players in follow-up rush batches as late rosters change."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" },
+      { "type": "policy", "ref": "allstars_tournament", "label": "All-Stars & Tournament policy" }
+    ]
+  },
+  {
+    "title": "Update uniform vendor and pricing research",
+    "dueWeekOfFY": 45,
+    "details": "At season's end the coordinator refreshes the running uniform vendor/pricing research notes with this season's actual results (vendors used, quotes, lead times, minimums, fit lessons) to inform next year's sampling and ordering. GNGRLL maintains this as a carry-forward reference that reappears in successive board agendas. Capturing it while fresh avoids re-discovering the same pricing and lead-time details next fall.",
+    "steps": [
+      "Record this season's final vendors, per-division pricing, and quantities actually ordered.",
+      "Note lead times, re-order minimums/minimum fees, and any delivery timing issues encountered.",
+      "Capture fit lessons learned (e.g., girls'/women's cuts running small, sizing-event adjustments).",
+      "Log which incentives/deadlines worked and any design decisions the board approved.",
+      "Save the updated notes to the shared research reference to seed next year's fall sampling."
+    ],
+    "links": [
+      { "type": "policy", "ref": "equipment-uniforms-safety", "label": "Equipment, Uniforms & Safety policy" },
+      { "type": "policy", "ref": "finance-sponsorship", "label": "Finance & Sponsorship policy" },
+      { "type": "reference", "ref": "divisions", "label": "GNGRLL Divisions Reference" }
+    ]
+  }
+]

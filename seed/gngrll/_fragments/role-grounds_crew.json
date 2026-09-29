@@ -1,0 +1,168 @@
+{
+  "role": "grounds_crew",
+  "description": "The Grounds Coordinator keeps GNGRLL's fields safe, playable, and improving across the year, covering Douglas, Penney, Pennell, Newbegin, Intervale, Russell, and Raymond-area sites. Responsibilities span seasonal cleanups, mowing and dragging, base paths, mounds and batter's boxes, fertilizer and aeration, and grounds equipment (mowers, tractors, drags, sheds). This role also drives capital field projects such as batting cages, 50/70 conversions, dugout/fencing improvements (Intervale), and infield-mix work, often recruiting volunteers for scheduled field work days.",
+  "calendar": [
+    {
+      "title": "End-of-season field cleanup priorities by field",
+      "weekOfFY": 1,
+      "kind": "due",
+      "description": "Set fall cleanup and maintenance priorities per field: fencing, base paths, mounds, dugouts, drag, aerate/fertilize. Review at the fall board meeting."
+    },
+    {
+      "title": "Fall field improvement/planning projects review",
+      "weekOfFY": 3,
+      "kind": "meeting",
+      "description": "Plan fall field improvement projects: Intervale, Bennett Rd, Douglass, lights, batting cages, and 50/70 conversions."
+    },
+    {
+      "title": "Fall fertilizer/aeration purchase",
+      "weekOfFY": 4,
+      "kind": "due",
+      "description": "Purchase fall fertilizer and schedule aeration for fields (recurring fertilizer authorization up to ~$300 for Douglas/Penney)."
+    },
+    {
+      "title": "Fall field maintenance & equipment planning",
+      "weekOfFY": 6,
+      "kind": "reminder",
+      "description": "Review fall maintenance and planning: fertilizer, field conversions, and grounds equipment (mowers, sheds)."
+    },
+    {
+      "title": "Douglass field improvements review",
+      "weekOfFY": 9,
+      "kind": "meeting",
+      "description": "Report on Douglass/Douglas field improvements: batting cage, infield mix, net and poles."
+    },
+    {
+      "title": "End-of-season fields wrap-up: banners/cages, clean fields",
+      "weekOfFY": 10,
+      "kind": "due",
+      "description": "Take down banners and batting cage nets, and complete final field cleanup for the season."
+    },
+    {
+      "title": "Field maintenance/improvement & grounds equipment planning",
+      "weekOfFY": 18,
+      "kind": "meeting",
+      "description": "Pre-season planning for grounds equipment (mowers, drag, sheds, fertilizer, batting cages) and set field cleanup dates."
+    },
+    {
+      "title": "Field cleanup days scheduled and grounds prep",
+      "weekOfFY": 24,
+      "kind": "due",
+      "description": "Schedule spring field cleanup days and grounds prep: dragging, spraying, fertilizer, infield mix, cage and banner work ahead of first games."
+    },
+    {
+      "title": "Field cleanup, locks, drags, and in-season mowing",
+      "weekOfFY": 27,
+      "kind": "reminder",
+      "description": "Field cleanup, lock installation, dragging, and start of in-season mowing rotation as the season begins."
+    },
+    {
+      "title": "Field conversion / improvement projects update",
+      "weekOfFY": 30,
+      "kind": "meeting",
+      "description": "Update on field conversion and improvement projects: Fenway wall, Intervale, batting cages, and field strips."
+    },
+    {
+      "title": "Ground crew team recognition and staffing",
+      "weekOfFY": 35,
+      "kind": "reminder",
+      "description": "Recognize the ground crew volunteers and confirm staffing for continued summer field maintenance."
+    },
+    {
+      "title": "End-of-season field maintenance and equipment planning",
+      "weekOfFY": 42,
+      "kind": "due",
+      "description": "Plan fall cleanup and grounds equipment needs: mowers, sheds, bleachers, drag/trailer."
+    },
+    {
+      "title": "Batting cage project completion and payout",
+      "weekOfFY": 46,
+      "kind": "due",
+      "description": "Complete the Douglass field batting cage project and process the payout."
+    },
+    {
+      "title": "Field improvements / infield mix / batting cage rebuild",
+      "weekOfFY": 49,
+      "kind": "meeting",
+      "description": "Review Douglass field improvements: infield mix and batting cage rebuild."
+    },
+    {
+      "title": "Intervale & Douglass project updates",
+      "weekOfFY": 51,
+      "kind": "meeting",
+      "description": "Update on Intervale project (dugouts, benches, fencing, King grant funded) and Douglass batting cage project (net, turf, gravel, cement)."
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Compile end-of-season field cleanup priority list",
+      "dueWeekOfFY": 1,
+      "description": "Walk each field (Douglas, Penney, Pennell, Newbegin, Intervale, Russell, Raymond) and list needed fall work: fencing, base paths, mounds, dugouts, drag, aerate/fertilize."
+    },
+    {
+      "title": "Scope fall field improvement projects and costs",
+      "dueWeekOfFY": 3,
+      "description": "Draft scope and rough budgets for Intervale, Bennett Rd, Douglass, lights, batting cages, and 50/70 conversions for board discussion."
+    },
+    {
+      "title": "Order fall fertilizer and schedule aeration",
+      "dueWeekOfFY": 4,
+      "description": "Purchase fall fertilizer (up to ~$300 for Douglas/Penney) and arrange aeration before ground freezes."
+    },
+    {
+      "title": "Service and winterize grounds equipment",
+      "dueWeekOfFY": 6,
+      "description": "Service mowers/tractors, drags, and sheds; secure equipment storage for winter."
+    },
+    {
+      "title": "Advance Douglass batting cage / infield mix plan",
+      "dueWeekOfFY": 9,
+      "description": "Get quotes and materials plan for the Douglass batting cage (net, poles) and infield mix work."
+    },
+    {
+      "title": "Take down banners, cages, and complete fall cleanup",
+      "dueWeekOfFY": 10,
+      "description": "Remove field banners and batting cage nets and finish end-of-season field cleanup."
+    },
+    {
+      "title": "Order infield mix, fertilizer, and cage materials for spring",
+      "dueWeekOfFY": 18,
+      "description": "Line up spring materials (infield mix, fertilizer, cage/net supplies) and confirm mower/drag readiness."
+    },
+    {
+      "title": "Schedule and staff spring field cleanup days",
+      "dueWeekOfFY": 24,
+      "description": "Set cleanup day dates by town/field, recruit volunteers, and send the field work day notice with tool/task lists."
+    },
+    {
+      "title": "Install field locks and begin in-season mowing rotation",
+      "dueWeekOfFY": 27,
+      "description": "Install locks, set drag/mowing schedule, and remind coaches to drag fields and rake mounds/batter's boxes after use."
+    },
+    {
+      "title": "Progress field conversion/improvement projects",
+      "dueWeekOfFY": 30,
+      "description": "Advance in-season projects: Fenway wall, Intervale, batting cages, and field strips."
+    },
+    {
+      "title": "Coordinate summer field maintenance staffing",
+      "dueWeekOfFY": 35,
+      "description": "Confirm ground crew volunteers for ongoing summer mowing and dragging and recognize the crew."
+    },
+    {
+      "title": "Plan fall cleanup and grounds equipment needs",
+      "dueWeekOfFY": 42,
+      "description": "Assess mowers, sheds, bleachers, and drag/trailer needs and set the fall cleanup schedule."
+    },
+    {
+      "title": "Close out and pay for Douglass batting cage project",
+      "dueWeekOfFY": 46,
+      "description": "Verify batting cage completion at Douglass and process the final payout."
+    },
+    {
+      "title": "Report Intervale and Douglass capital project status",
+      "dueWeekOfFY": 51,
+      "description": "Prepare update on Intervale (dugouts, benches, fencing, King grant) and Douglass cage (net, turf, gravel, cement) for the board."
+    }
+  ]
+}

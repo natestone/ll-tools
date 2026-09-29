@@ -1,0 +1,645 @@
+/* ===== GNGRLL League Manager — LL PASTS design language ===== */
+:root {
+  --navy: #0b1a3b;
+  --navy-2: #162d5a;
+  --navy-deep: #080f20;
+  --scarlet: #c41e3a;
+  --scarlet-accent: #e23a53;
+  --scarlet-hover: #a8162f;
+  --bg: #f5f5f7;
+  --card: #ffffff;
+  --line: #e5e7eb;
+  --text: #1a1a2e;
+  --muted: #6b7280;
+  --head: 'Oswald', Impact, sans-serif;
+  --body: 'Open Sans', Arial, sans-serif;
+  --shadow: 0 2px 12px rgba(11, 26, 59, 0.07);
+  --shadow-hover: 0 6px 22px rgba(11, 26, 59, 0.12);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--scarlet); text-decoration: none; }
+a:hover { color: var(--scarlet-hover); }
+
+h1, h2, h3 { font-family: var(--head); color: var(--navy); line-height: 1.2; }
+h1 { font-size: 1.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 18px; }
+h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 12px; }
+h3 { font-size: 0.95rem; font-weight: 600; margin: 0 0 6px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--navy-2); }
+
+/* ===== Top bar ===== */
+.topbar {
+  background: linear-gradient(100deg, var(--navy) 0%, var(--navy-2) 100%);
+  color: #fff;
+  padding: 0 22px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 3px solid var(--scarlet);
+}
+.topbar a { color: #fff; opacity: 0.85; }
+.topbar a:hover { color: #fff; opacity: 1; }
+.topbar .brand {
+  font-family: var(--head);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.topbar .spacer { flex: 1; }
+.topbar > span { font-size: 0.95rem; opacity: 0.9; }
+
+/* ===== Layout ===== */
+.layout { display: flex; min-height: calc(100vh - 56px); }
+.sidebar {
+  width: 224px;
+  background: var(--card);
+  border-right: 1px solid var(--line);
+  padding: 18px 14px;
+  flex-shrink: 0;
+}
+.sidebar a {
+  display: block;
+  padding: 9px 12px;
+  border-radius: 7px;
+  color: #3a4256;
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 2px;
+  border-left: 3px solid transparent;
+}
+.sidebar a:hover { background: #f2f4f8; color: var(--navy); }
+.sidebar a.active {
+  background: rgba(196, 30, 58, 0.08);
+  color: var(--scarlet);
+  border-left-color: var(--scarlet);
+}
+.sidebar .muted {
+  font-family: var(--head);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.content { flex: 1; padding: 26px 30px; max-width: 1040px; }
+
+/* ===== Cards ===== */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+}
+a.card { display: block; color: inherit; transition: box-shadow 0.2s, transform 0.2s; border-top: 4px solid var(--scarlet); }
+a.card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+.card.accent { border-top: 4px solid var(--scarlet); }
+.grid { display: grid; gap: 16px; }
+.grid.cols2 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+
+/* ===== Buttons ===== */
+button {
+  background: var(--scarlet);
+  color: #fff;
+  border: 0;
+  padding: 9px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--head);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 12px rgba(196, 30, 58, 0.28);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+button:hover { background: var(--scarlet-hover); transform: translateY(-1px); box-shadow: 0 5px 18px rgba(196, 30, 58, 0.36); }
+button:disabled { opacity: 0.45; cursor: default; box-shadow: none; transform: none; }
+button.secondary {
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+button.secondary:hover { background: #f2f4f8; color: var(--navy); }
+.view-btn, button.view-btn { background: #fff; color: var(--navy); border: 1px solid var(--line); box-shadow: none; }
+.view-btn.active { background: var(--navy); color: #fff; }
+
+/* ===== Forms ===== */
+input, textarea, select {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  color: var(--text);
+  background: #fff;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--navy-2);
+  box-shadow: 0 0 0 3px rgba(22, 45, 90, 0.12);
+}
+label {
+  display: block;
+  font-family: var(--head);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin: 12px 0 5px;
+}
+
+/* ===== Bits ===== */
+.row { display: flex; gap: 10px; align-items: center; }
+.muted { color: var(--muted); font-size: 0.85rem; }
+.badge {
+  display: inline-block;
+  background: rgba(196, 30, 58, 0.1);
+  color: var(--scarlet);
+  border-radius: 20px;
+  padding: 2px 11px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-right: 6px;
+}
+.pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+  /* a pill is a single short label — never break "wk 16 · Feb" across lines */
+  white-space: nowrap;
+  background: #eef1f6;
+  color: var(--navy-2);
+}
+.bignum { font-family: var(--head); font-size: 2.4rem; font-weight: 700; color: var(--scarlet); line-height: 1.05; }
+
+/* ===== Tables ===== */
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 0.9rem; vertical-align: top; }
+th {
+  font-family: var(--head);
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== Auth ===== */
+/* 428 = a 400px content box + 14px side padding, so the card never touches the
+   screen edge on a phone while desktop keeps the same 400px content width. */
+.center { width: 100%; max-width: 428px; margin: 8vh auto; padding: 0 14px; }
+.center .card { border-top: 5px solid var(--scarlet); }
+/* flat `center card` usages (App.jsx, LeagueShell.jsx) have no inner card */
+.center.card { max-width: min(400px, calc(100vw - 28px)); padding: 20px 22px; }
+
+/* ===== Misc ===== */
+.prose { white-space: pre-wrap; line-height: 1.6; font-size: 0.9rem; }
+.taskdone { text-decoration: line-through; color: var(--muted); }
+.progress { background: #eceef2; border-radius: 20px; height: 8px; overflow: hidden; }
+.progress > div { background: linear-gradient(90deg, var(--scarlet-accent), var(--scarlet)); height: 100%; }
+.err { color: var(--scarlet); font-size: 0.85rem; font-weight: 600; }
+
+/* ===== Markdown ===== */
+.md-toolbar { margin-bottom: 12px; gap: 8px; }
+.md-spacer { flex: 1; }
+.seg { display: inline-flex; }
+.seg .view-btn { border-radius: 0; margin: 0; }
+.seg .view-btn:first-child { border-radius: 6px 0 0 6px; }
+.seg .view-btn:last-child { border-radius: 0 6px 6px 0; border-left: 0; }
+.md { font-size: 0.92rem; line-height: 1.65; color: var(--text); }
+.md h1, .md h2, .md h3, .md h4 { font-family: var(--head); color: var(--navy); margin: 1.1em 0 0.4em; line-height: 1.25; }
+.md h1 { font-size: 1.5rem; text-transform: none; letter-spacing: 0; border-bottom: 2px solid var(--line); padding-bottom: 0.2em; }
+.md h2 { font-size: 1.2rem; }
+.md h3 { font-size: 1rem; text-transform: none; letter-spacing: 0; }
+.md p { margin: 0.6em 0; }
+.md ul, .md ol { margin: 0.5em 0 0.8em; padding-left: 1.4em; }
+.md li { margin: 0.25em 0; }
+.md a { color: var(--scarlet); }
+.md code { background: #f2f4f8; padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+.md pre { background: var(--navy); color: #eaeef6; padding: 12px 14px; border-radius: 8px; overflow-x: auto; }
+.md pre code { background: none; color: inherit; padding: 0; }
+.md blockquote { margin: 0.8em 0; padding: 6px 14px; border-left: 3px solid var(--scarlet); background: #faf6f7; color: #555; }
+.md table { margin: 0.8em 0; border: 1px solid var(--line); }
+.md th { background: var(--navy); color: #fff; }
+.md hr { border: 0; border-top: 1px solid var(--line); margin: 1.2em 0; }
+.md strong { color: var(--navy); }
+
+/* ===== Task playbooks ===== */
+.taskitem { border-bottom: 1px solid var(--line); }
+.taskitem.open { background: #fafbfc; border-radius: 8px; border: 1px solid var(--line); margin: 6px 0; }
+.taskitem-head { display: flex; align-items: center; gap: 10px; padding: 9px 8px; }
+.taskitem.open .taskitem-head { border-bottom: 1px solid var(--line); }
+.taskitem-head:hover { background: #f6f7f9; }
+.expander { width: 14px; color: var(--scarlet); font-size: 0.8rem; flex-shrink: 0; text-align: center; }
+.task-check { width: auto !important; flex-shrink: 0; }
+.taskitem-title { flex: 1; font-size: 0.92rem; }
+
+/* ===== Task row: share one centreline with the title's FIRST line =====
+   The title can wrap to 2–3 lines. With `align-items: center` the arrow,
+   checkbox and pencil centre against the whole wrapped block, so they drift
+   below the text they belong to. Instead every control gets a box exactly one
+   title-line tall and the row aligns to the top, putting them all on line 1's
+   centreline. --task-line = the title's own line box (0.92rem × 1.6). */
+.taskitem-head { --task-line: calc(0.92rem * 1.6); align-items: flex-start; }
+.taskitem-head > .expander {
+  height: var(--task-line);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+/* a checkbox is a replaced element — setting its height would resize the control,
+   so pin a predictable size and nudge it onto the centreline instead */
+.taskitem-head > .task-check {
+  width: 16px !important; height: 16px;
+  margin: calc((var(--task-line) - 16px) / 2) 0 0 0;
+}
+.taskitem-head > .pill { display: inline-flex; align-items: center; min-height: var(--task-line); }
+.taskitem-head .edit-title-wrap { align-items: flex-start; }
+.taskitem-head .edit-title-wrap > .icon-btn {
+  height: var(--task-line); padding-top: 0; padding-bottom: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.pill.step-count { background: rgba(196,30,58,0.1); color: var(--scarlet); }
+/* a date pinned to an exact day, rather than derived from its week */
+.pill.pill-pinned { background: rgba(11,26,59,0.09); color: var(--navy); font-weight: 700; }
+.taskitem-body { padding: 12px 16px 16px 34px; }
+.task-desc { margin: 0 0 10px; color: var(--muted); font-size: 0.9rem; }
+.checklist { margin: 12px 0; }
+.checklist-head { font-family: var(--head); text-transform: uppercase; letter-spacing: 1px; font-size: 0.72rem; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+.checkstep { display: flex; align-items: flex-start; gap: 9px; padding: 5px 0; font-size: 0.9rem; cursor: pointer; margin: 0; }
+.checkstep input { width: auto; margin-top: 3px; flex-shrink: 0; }
+.checkstep.done span { text-decoration: line-through; color: var(--muted); }
+.task-links { margin-top: 12px; }
+.linkchip { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600;
+  padding: 4px 11px; border-radius: 20px; margin: 0 6px 6px 0; border: 1px solid var(--line); background: #fff; color: var(--navy); }
+.linkchip:hover { border-color: var(--navy-2); background: #f2f4f8; }
+.linkchip.policy { border-color: rgba(196,30,58,0.35); color: var(--scarlet); }
+.linkchip.template { border-color: rgba(11,26,59,0.3); color: var(--navy); }
+.linkchip-ic { font-weight: 700; }
+.linkchip-body { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; }
+.linkchip-x { background: none; border: 0; box-shadow: none; color: var(--muted); cursor: pointer;
+  font-size: 0.95rem; line-height: 1; padding: 0 0 0 4px; text-transform: none; letter-spacing: 0; }
+.linkchip-x:hover { color: var(--scarlet); background: none; transform: none; box-shadow: none; }
+
+/* ===== Section headers with a + ===== */
+/* flex-wrap so an h2 next to a multi-button cluster drops the cluster to its own
+   line instead of overflowing the card */
+.section-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+
+/* ===== Inline editing ===== */
+.editable { cursor: text; border-radius: 4px; padding: 1px 3px; margin: -1px -3px; display: inline-block; }
+.editable:hover { background: #eef1f6; box-shadow: inset 0 0 0 1px var(--line); }
+.editable-empty { color: var(--muted); font-style: italic; }
+.editable-input { font-family: inherit; font-size: inherit; line-height: inherit; padding: 4px 7px; }
+textarea.editable-input { width: 100%; resize: vertical; }
+.md-editable { display: block; }
+.edit-title-wrap { display: inline-flex; align-items: center; gap: 6px; flex: 1; min-width: 0; }
+.edit-title-wrap .editable-input { flex: 1; min-width: 120px; }
+.taskitem-title-cell { flex: 1; min-width: 0; display: flex; }
+.icon-btn { background: none; border: 1px solid transparent; box-shadow: none; color: var(--muted);
+  cursor: pointer; font-family: var(--body); font-size: 0.8rem; font-weight: 600; line-height: 1;
+  padding: 3px 7px; border-radius: 5px; text-transform: none; letter-spacing: 0; }
+.icon-btn:hover { background: #eef1f6; color: var(--navy); transform: none; box-shadow: none; }
+.icon-btn.pencil { opacity: 0; }
+.taskitem-head:hover .icon-btn.pencil, .edit-title-wrap:hover .icon-btn.pencil { opacity: 1; }
+.icon-btn.ok { color: #fff; background: var(--scarlet); }
+.icon-btn.ok:hover { background: var(--scarlet-hover); color: #fff; }
+.icon-btn.add { border-color: var(--line); color: var(--scarlet); font-size: 1rem; padding: 1px 9px; }
+.icon-btn.danger:hover { background: rgba(196,30,58,0.1); color: var(--scarlet); }
+.pill-btn { cursor: pointer; }
+.pill-btn:hover { background: var(--navy-2); color: #fff; }
+.checkstep-text { flex: 1; min-width: 0; }
+.checkstep-actions { display: flex; gap: 2px; opacity: 0; flex-shrink: 0; }
+.checkstep:hover .checkstep-actions { opacity: 1; }
+.agenda-msg { margin-left: 10px; color: var(--scarlet); font-weight: 600; text-transform: none; letter-spacing: 0; }
+
+/* ===== Modal ===== */
+.modal-backdrop { position: fixed; inset: 0; background: rgba(11,26,59,0.45); display: flex;
+  align-items: flex-start; justify-content: center; padding: 6vh 16px; z-index: 50; overflow-y: auto; }
+.modal { background: var(--card); border-radius: 10px; box-shadow: 0 18px 50px rgba(11,26,59,0.3);
+  width: 100%; max-width: 480px; border-top: 4px solid var(--scarlet); }
+.modal.wide { max-width: 720px; }
+.modal-head { display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 14px 18px; border-bottom: 1px solid var(--line); }
+.modal-head h2 { margin: 0; }
+.modal-x { background: none; border: 0; box-shadow: none; color: var(--muted); font-size: 1.4rem;
+  line-height: 1; cursor: pointer; padding: 0 4px; }
+.modal-x:hover { color: var(--scarlet); background: none; transform: none; box-shadow: none; }
+.modal-body { padding: 16px 18px; max-height: 62vh; overflow-y: auto; }
+.modal-foot { padding: 12px 18px; border-top: 1px solid var(--line); display: flex; align-items: center; }
+
+/* week picker */
+.week-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: 6px; }
+.week-cell { display: flex; flex-direction: column; align-items: center; gap: 1px; background: #fff;
+  border: 1px solid var(--line); color: var(--navy); box-shadow: none; padding: 6px 4px;
+  text-transform: none; letter-spacing: 0; font-family: var(--body); font-size: 0.78rem; }
+.week-cell:hover { background: #eef1f6; color: var(--navy); transform: none; box-shadow: none; }
+.week-cell.active { background: var(--scarlet); color: #fff; border-color: var(--scarlet); }
+.week-cell .wk { font-weight: 700; }
+.week-cell .mo { opacity: 0.7; font-size: 0.72rem; }
+
+/* link picker + wizard */
+.pick-list { max-height: 320px; overflow-y: auto; border: 1px solid var(--line); border-radius: 8px; }
+.pick-row { padding: 8px 11px; border-bottom: 1px solid var(--line); cursor: pointer; display: flex;
+  justify-content: space-between; gap: 10px; align-items: baseline; }
+.pick-row:last-child { border-bottom: 0; }
+.pick-row:hover { background: #eef1f6; }
+.pick-label { font-weight: 600; font-size: 0.9rem; }
+.pick-ref { font-size: 0.75rem; }
+.cand-list { max-height: 260px; overflow-y: auto; }
+.cand-task { border-left: 3px solid var(--line); padding-left: 10px; margin-bottom: 10px; }
+.cand-task-head { font-weight: 600; font-size: 0.88rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.review-list { margin: 0; padding-left: 20px; font-size: 0.9rem; }
+.review-list li { margin: 4px 0; }
+
+/* editable affordances */
+.editable { border-bottom: 1px dashed transparent; }
+.editable:hover { background: #eef1f6; box-shadow: inset 0 0 0 1px var(--line); border-bottom-color: var(--muted); }
+.editable-wrap { display: inline-flex; align-items: flex-start; gap: 4px; }
+.editable-wrap > .editable { flex: 1; min-width: 0; }
+.editable-wrap .icon-btn.pencil { flex-shrink: 0; }
+/* status line beside the Label field while a pasted URL's title is fetched */
+.unfurl-note { font-size: 0.72rem; font-style: italic; }
+
+.details-wrap { position: relative; }
+.details-wrap:hover .details-pencil { opacity: 1; }
+.details-pencil { position: absolute; top: 0; right: 0; }
+/* the pencil is absolutely positioned, so it sits ON TOP of the first line of
+   the details text unless the content reserves a gutter for it */
+.details-wrap > .md, .details-wrap > .editable, .details-wrap > .prose { padding-right: 34px; }
+/* faint at rest so editing is discoverable, full strength on hover */
+td .editable-wrap .icon-btn.pencil,
+.checkstep .editable-wrap .icon-btn.pencil,
+.task-desc .editable-wrap .icon-btn.pencil { opacity: 0.3; }
+td:hover .editable-wrap .icon-btn.pencil,
+.checkstep:hover .editable-wrap .icon-btn.pencil,
+.task-desc:hover .editable-wrap .icon-btn.pencil { opacity: 1; }
+.details-pencil { opacity: 0.3; }
+
+/* ===== Agenda items (live minutes) ===== */
+.agenda-item { border-bottom: 1px solid var(--line); }
+.agenda-item.open { background: #fafbfc; border: 1px solid var(--line); border-radius: 8px; margin: 6px 0; }
+.agenda-item.dragover { box-shadow: inset 0 3px 0 var(--scarlet); }
+.agenda-row { display: flex; align-items: flex-start; gap: 8px; padding: 8px 6px; }
+.agenda-row input[type=checkbox] { width: auto; margin-top: 3px; flex-shrink: 0; }
+.agenda-row .checkstep-text { flex: 1; min-width: 0; font-size: 0.92rem; }
+.agenda-row .editable-wrap .icon-btn.pencil { opacity: 0.3; }
+.agenda-row:hover .editable-wrap .icon-btn.pencil { opacity: 1; }
+.drag-handle { cursor: grab; color: var(--muted); user-select: none; flex-shrink: 0; padding: 0 2px; line-height: 1.6; }
+.drag-handle:active { cursor: grabbing; }
+.agenda-exp { cursor: pointer; flex-shrink: 0; }
+.agenda-minutes { padding: 4px 16px 14px 46px; }
+.agenda-minutes textarea { width: 100%; resize: vertical; }
+.badge.motion-carried { background: rgba(22,120,60,0.12); color: #16783c; }
+.badge.motion-failed { background: rgba(196,30,58,0.12); color: var(--scarlet); }
+.badge.motion-tabled { background: #eef1f6; color: var(--navy-2); }
+
+/* ===== Season switcher / hamburger ===== */
+.hamburger { display: none; background: none; border: 0; box-shadow: none; color: #fff;
+  font-size: 1.25rem; line-height: 1; padding: 4px 8px; margin-left: -6px; }
+.hamburger:hover { background: rgba(255,255,255,0.12); color: #fff; transform: none; box-shadow: none; }
+.topbar-league { font-size: 0.95rem; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.season-select { width: auto; padding: 3px 8px; font-size: 0.8rem; font-weight: 600;
+  background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.25); }
+.season-select option { color: var(--text); }
+.rollover-btn { width: 100%; margin-top: 14px; font-size: 0.72rem; }
+.nav-backdrop { display: none; }
+
+/* ===== Split layout: list sidebar + detail pane (Templates, Policies, …) =====
+   Use <div class="split"><div class="split-side">…</div><div class="split-main">…</div></div>
+   It collapses to a single column below 900px (where the nav drawer takes over). */
+/* Two-select picker that replaces a long list sidebar once .split stacks.
+   Hidden on desktop, where the sidebar itself is the better navigation. */
+.tpl-picker { display: none; padding: 14px 16px; }
+.tpl-picker label:first-child { margin-top: 0; }
+
+.split { display: flex; gap: 18px; align-items: flex-start; }
+.split-side { width: 320px; flex-shrink: 0; }
+.split-main { flex: 1; min-width: 0; }
+
+/* Calendar / template list rows that wrap instead of overflowing */
+.cal-row { display: flex; align-items: baseline; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.cal-week { min-width: 92px; text-align: center; }
+.cal-title { flex: 1 1 220px; min-width: 0; font-size: 0.9rem; overflow-wrap: anywhere; }
+.tpl-row { padding: 6px 0; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+/* meeting list date pill keeps the same aligned column as .cal-week */
+.meeting-date { min-width: 92px; text-align: center; margin-left: 0; }
+
+/* ===== Badge clouds (role toggles in Members, the invite form, Permissions) ===== */
+.role-toggles { display: flex; flex-wrap: wrap; gap: 6px; }
+.role-toggles .badge { margin-right: 0; margin-bottom: 0; }
+.badge.role-toggle { cursor: pointer; }
+.badge.role-toggle:focus-visible { outline: 2px solid var(--navy-2); outline-offset: 1px; }
+
+/* Column widths that used to be inline (media queries can't override inline styles) */
+.kv-label { width: 170px; }
+.col-progress { width: 160px; }
+.perm-cat { white-space: nowrap; }
+
+/* A genuine multi-column data table scrolls inside this instead of stacking
+   label-less (thead is hidden by the phone stacking rule). */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* ===== Optional / archived pool ===== */
+.optional-pool { margin-top: 14px; border-top: 1px dashed var(--line); padding-top: 10px; }
+.optional-pool h3 { text-transform: none; letter-spacing: 0; color: var(--muted); }
+.pool-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.pool-kind { font-family: var(--head); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;
+  padding: 2px 7px; border-radius: 4px; background: rgba(196,30,58,0.1); color: var(--scarlet); flex-shrink: 0; }
+.pool-kind.step { background: #eef1f6; color: var(--navy-2); }
+.pool-text { flex: 1; min-width: 180px; font-size: 0.88rem; }
+.pool-actions { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.pool-actions button { font-size: 0.7rem; padding: 4px 10px; }
+.pool-select { width: auto; max-width: 190px; font-size: 0.78rem; padding: 4px 7px; }
+
+/* ================= RESPONSIVE ================= */
+
+/* Touch devices can't hover — reveal every hover-only affordance permanently. */
+@media (hover: none), (pointer: coarse) {
+  .icon-btn.pencil,
+  .details-pencil,
+  .checkstep-actions,
+  .checkstep .editable-wrap .icon-btn.pencil,
+  .agenda-row .editable-wrap .icon-btn.pencil,
+  td .editable-wrap .icon-btn.pencil,
+  .task-desc .editable-wrap .icon-btn.pencil { opacity: 1 !important; }
+  .editable { background: #f7f8fa; box-shadow: inset 0 0 0 1px var(--line); }
+}
+
+/* Tablet and below: sidebar becomes an off-canvas drawer */
+@media (max-width: 900px) {
+  .hamburger { display: block; }
+  .layout { display: block; }
+  .sidebar {
+    position: fixed; top: 56px; left: 0; bottom: 0; width: 250px; z-index: 40;
+    transform: translateX(-100%); transition: transform 0.22s ease;
+    overflow-y: auto; box-shadow: 4px 0 18px rgba(11,26,59,0.18);
+  }
+  .sidebar.open { transform: translateX(0); }
+  .nav-backdrop { display: block; position: fixed; inset: 56px 0 0 0; background: rgba(11,26,59,0.4); z-index: 35; }
+  .content { max-width: none; padding: 18px 16px; }
+  .grid.cols2 { grid-template-columns: 1fr; }
+  /* …but a pair of compact stat tiles reads better side-by-side than as two
+     full-height blocks. Scoped to .card.accent so league cards still stack. */
+  .grid.cols2:has(> .card.accent) { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .grid.cols2 > .card.accent { padding: 12px 12px; }
+  .card.accent h3 { font-size: 0.7rem; }
+  .card.accent .bignum { font-size: 1.8rem; }
+  /* list + detail panes stack */
+  .split { flex-direction: column; gap: 14px; }
+  .split-side, .split-main { width: 100%; min-width: 0; }
+  /* …and where a side pane is a long list, swap it for the compact picker */
+  .tpl-picker { display: block; }
+  .tpl-picker ~ .split .split-side { display: none; }
+  /* the phone stacking rules start at 640, so between 641–900 a wide table has to
+     scroll in its own box or it widens the card */
+  .card table { display: block; overflow-x: auto; }
+}
+
+/* Phones */
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 8px; flex-wrap: nowrap; }
+  .topbar .brand { font-size: 0.95rem; letter-spacing: 1px; }
+  .topbar a { white-space: nowrap; font-size: 0.85rem; }
+  .hide-sm { display: none; }
+  .topbar-league { max-width: 26vw; font-size: 0.8rem; }
+  .season-select { font-size: 0.72rem; padding: 3px 4px; }
+  .content { padding: 14px 12px; }
+  h1 { font-size: 1.3rem; }
+  .card { padding: 15px 14px; border-radius: 8px; }
+
+  /* wide content scrolls inside its own box instead of the page */
+  table { display: block; overflow-x: auto; white-space: normal; }
+  .md table, .prose { overflow-x: auto; }
+
+  /* label/value tables stack */
+  .card table tbody tr { display: block; border-bottom: 1px solid var(--line); padding: 6px 0; }
+  .card table tbody th { display: block; width: auto !important; border: 0; padding: 2px 0;
+    font-size: 0.66rem; }
+  .card table tbody td { display: block; border: 0; padding: 2px 0; }
+  .card table thead { display: none; }
+
+  /* thead is hidden, so a stacked cell carries its own label via data-label */
+  .card table tbody td[data-label]::before {
+    content: attr(data-label); display: block;
+    font-family: var(--head); font-size: 0.66rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 2px;
+  }
+  .card table tbody tr:has(td[data-label]) { padding: 10px 0; }
+  /* long emails / URLs break instead of widening a stacked cell */
+  .card table td .editable, .card table td .editable-wrap { max-width: 100%; overflow-wrap: anywhere; }
+  .perm-cat { white-space: normal; }
+  .cal-week, .meeting-date { min-width: 0; }
+
+  /* …but a real multi-column data table keeps its header and scrolls instead */
+  .card table.data-table { display: table; min-width: 480px; }
+  .card table.data-table thead { display: table-header-group; }
+  .card table.data-table tbody tr { display: table-row; padding: 0; }
+  .card table.data-table tbody th,
+  .card table.data-table tbody td { display: table-cell; border-bottom: 1px solid var(--line); padding: 9px 10px; }
+  .card table.data-table tbody td::before { content: none; }
+
+  /* Task/agenda row: arrow + checkbox + title stay on ONE line (the title wraps
+     within it); the meta — counts, week pill, delete — drops to a second line. */
+  .taskitem-head, .agenda-row { flex-wrap: wrap; row-gap: 6px; align-items: flex-start; }
+  .taskitem-head .expander, .taskitem-head .task-check,
+  .agenda-row .drag-handle, .agenda-row input[type=checkbox], .agenda-row .agenda-exp { order: 1; flex-shrink: 0; }
+  /* basis 0 (not auto) so a long title shares the line instead of demanding
+     its full content width and wrapping to the next row */
+  .taskitem-title-cell, .agenda-row .checkstep-text { order: 1; flex: 1 1 0; min-width: 0; }
+  .taskitem-title-cell .edit-title-wrap { flex: 1 1 0; min-width: 0; }
+  .taskitem-title { overflow-wrap: anywhere; }
+  /* flex line-break: everything after this lands on the next row */
+  .taskitem-head::after, .agenda-row::after { content: ''; flex-basis: 100%; height: 0; order: 2; }
+  .taskitem-head .pill, .taskitem-head .icon-btn,
+  .agenda-row .badge, .agenda-row .icon-btn { order: 3; }
+  /* Indent the wrapped meta line so it aligns under the title rather than the
+     checkbox. NOT `:first-of-type` — the first <span> sibling is .expander /
+     .drag-handle, so a pill or badge can never be the first of its type. The
+     first item on the wrapped line is whatever directly follows the title. */
+  .taskitem-head .taskitem-title-cell + .pill,
+  .taskitem-head .taskitem-title-cell + .icon-btn,
+  .agenda-row .checkstep-text + .badge,
+  .agenda-row .checkstep-text + .icon-btn { margin-left: 26px; }
+
+  .taskitem-body { padding: 12px 12px 14px 16px; }
+  .agenda-minutes { padding: 4px 8px 12px 12px; }
+
+  /* Step: checkbox + text on one line, tools on their own line beneath. */
+  .checkstep { flex-wrap: wrap; row-gap: 4px; }
+  .checkstep > input[type=checkbox] { order: 1; }
+  .checkstep-text { order: 1; flex: 1 1 0; min-width: 0; }
+  .checkstep-actions { order: 2; flex-basis: 100%; justify-content: flex-start;
+    padding-left: 26px; gap: 6px; }
+  /* narrow screens are almost always touch — reveal every edit affordance */
+  .checkstep-actions,
+  .icon-btn.pencil,
+  .details-pencil,
+  .checkstep .editable-wrap .icon-btn.pencil,
+  .agenda-row .editable-wrap .icon-btn.pencil,
+  td .editable-wrap .icon-btn.pencil,
+  .task-desc .editable-wrap .icon-btn.pencil { opacity: 1 !important; }
+
+  /* modals go near-full width; week grid gets fewer columns */
+  .modal-backdrop { padding: 0; align-items: flex-end; }
+  .modal, .modal.wide { max-width: 100%; border-radius: 12px 12px 0 0; max-height: 92vh; display: flex; flex-direction: column; }
+  .modal-body { max-height: none; flex: 1; }
+  .week-grid { grid-template-columns: repeat(4, 1fr); }
+  .modal-foot { flex-wrap: wrap; gap: 8px; }
+  /* side-by-side field pairs inside modals/wizards go full width */
+  .modal .row > div { flex: 1 1 100% !important; width: 100%; }
+  .modal .row { gap: 4px 10px; }
+  .pick-list, .cand-list { max-height: 42vh; }
+  .pick-row { flex-wrap: wrap; gap: 2px; }
+  .pick-ref { font-size: 0.7rem; }
+  .modal .view-btn { flex: 1 1 auto; }
+
+  .row { flex-wrap: wrap; }
+  .pool-actions { width: 100%; }
+  .pool-select { max-width: 100%; flex: 1; }
+
+  /* iOS Safari auto-zooms when a focused field is under 16px — keep them at 16px.
+     min-width:0 stops a text input's intrinsic width from pushing a flex row
+     past the viewport. */
+  input, select, textarea { font-size: 16px; min-width: 0; }
+  label { font-size: 0.7rem; }
+
+  /* Oswald + letter-spacing makes buttons very wide on a phone */
+  button { padding: 10px 12px; letter-spacing: 0.5px; }
+  .icon-btn { padding: 4px 8px; letter-spacing: 0; }
+
+  /* motion fields stack, so Result fills its line (inline max-width needs !important) */
+  .motion-fields .motion-result { max-width: none !important; }
+  /* Login's two mode buttons share the width */
+  .auth-tabs button { flex: 1 1 0; }
+}
+
+/* Comfortable tap targets where there is no mouse. Dense icon clusters and the
+   compact pool/step controls are excluded so they don't balloon. */
+@media (hover: none), (pointer: coarse) {
+  .role-toggles { gap: 8px; }
+  .badge.role-toggle { display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; font-size: 0.78rem; }
+  /* :where() keeps this at plain `button` specificity (0,0,1), so the compact
+     overrides below can actually win. A bare :not() chain would score (0,5,1)
+     and silently beat them. */
+  button:not(:where(.icon-btn, .modal-x, .linkchip-x, .week-cell, .hamburger, .sched-btn-small)) { min-height: 42px; }
+  .icon-btn { min-width: 30px; min-height: 30px; }
+  /* intentionally compact clusters */
+  .pool-actions button, .checkstep-actions button { min-height: 0; }
+  /* the 30px tap target is taller than one title line — pull it back up so the
+     ✎ glyph still sits on line 1's centreline while keeping the larger hit area */
+  .taskitem-head .edit-title-wrap > .icon-btn { margin-top: calc((var(--task-line) - 30px) / 2); }
+}
