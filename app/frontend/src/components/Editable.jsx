@@ -113,8 +113,15 @@ export function EditableTitle({ value, onSave, canEdit = true, className = '' })
    A task is due the Monday of its week by default. `dueDate`/`overrideDate` come
    from the server, which owns the week -> date map; this component only shows
    them and sends changes back. */
+const FREQUENCY_LABELS = {
+  weekly: 'Every week',
+  biweekly_1_3: '1st & 3rd week of the month',
+  biweekly_2_4: '2nd & 4th week of the month',
+  monthly: 'Monthly',
+}
+
 export function WeekPicker({ value, onSave, canEdit = true, seasonYear, dueDate, overrideDate,
-  className = '', title = 'When is this due?' }) {
+  className = '', title = 'When is this due?', recurrence = null, onRecurrence = null }) {
   const [open, setOpen] = useState(false)
   const pinned = !!overrideDate
   const label = pinned ? `${fmtDate(dueDate)} (pinned)` : weekLabel(value, seasonYear)
@@ -147,6 +154,23 @@ export function WeekPicker({ value, onSave, canEdit = true, seasonYear, dueDate,
               </button>
             )}
           </div>
+
+          {onRecurrence && (<>
+            <div className="checklist-head" style={{ marginTop: 18 }}>Repeat</div>
+            <div className="row" style={{ gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+              <select style={{ flex: '1 1 220px', minWidth: 0 }}
+                value={recurrence?.frequency || ''}
+                onChange={(e) => { onRecurrence(e.target.value || null); setOpen(false) }}>
+                <option value="">Does not repeat</option>
+                {Object.entries(FREQUENCY_LABELS).map(([k, label]) => (
+                  <option key={k} value={k}>{label}</option>
+                ))}
+              </select>
+            </div>
+            <p className="muted" style={{ fontSize: '0.76rem', marginTop: 6 }}>
+              Occurrences are created from this week through the end of the season.
+            </p>
+          </>)}
 
           <div className="checklist-head" style={{ marginTop: 18 }}>Or pick a week</div>
           <div className="week-grid">

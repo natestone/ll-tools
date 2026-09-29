@@ -17,6 +17,10 @@ export default function Tasks() {
     await api.del(`/leagues/${leagueId}/tasks/${t.id}`)   // archives, doesn't destroy
     setTasks((ts) => ts.filter((x) => x.id !== t.id))
   }
+  const duplicateTask = async (t) => {
+    const copy = await api.post(`/leagues/${leagueId}/tasks/${t.id}/duplicate`)
+    setTasks((ts) => [...ts, copy])
+  }
   const canEditRole = (rk) => !!league?.isOwner || !!league?.myRoles?.some((r) => r.key === rk)
   const addTask = async (rk) => {
     const t = await api.post(`/leagues/${leagueId}/tasks${seasonQS}`, { roleKey: rk, title: 'New task', steps: [''] })
@@ -40,7 +44,8 @@ export default function Tasks() {
             )}
           </div>
           {byRole[rk].map((t) => (
-            <TaskItem key={t.id} task={t} leagueId={leagueId} seasonYear={seasonYear} onChange={update}
+            <TaskItem key={t.id} task={t} leagueId={leagueId} seasonYear={seasonYear}
+            onDuplicate={duplicateTask} onSeriesChanged={load} onChange={update}
               onDelete={remove} canEdit={canEditRole(rk)} />
           ))}
           <OptionalPool leagueId={leagueId} seasonYear={seasonYear} roleKey={rk}

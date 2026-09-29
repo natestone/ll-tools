@@ -53,10 +53,11 @@ function DetailsBlock({ value, onSave, canEdit }) {
 
 // Expandable task "playbook": editable title/week/description/details, an interactive
 // checklist, and resource links. All edits persist via PATCH /tasks/:id.
-export default function TaskItem({ task, leagueId, onChange, onDelete, canEdit = false, seasonYear }) {
+export default function TaskItem({ task, leagueId, onChange, onDelete, onDuplicate, onSeriesChanged, canEdit = false, seasonYear }) {
   const [open, setOpen] = useState(!!task.__isNew)
   const [showLinkPicker, setShowLinkPicker] = useState(false)
   const [agendaMsg, setAgendaMsg] = useState(null)
+  const [seriesMsg, setSeriesMsg] = useState('')
   const nav = useNavigate()
 
   const steps = task.steps || []
@@ -65,7 +66,40 @@ export default function TaskItem({ task, leagueId, onChange, onDelete, canEdit =
   // once editable, always expandable (so empty sections can be filled in)
   const hasBody = canEdit || !!(task.details?.trim() || steps.length || links.length || task.description)
 
-  const save = async (patch) => onChange(await api.patch(`/leagues/${leagueId}/tasks/${task.id}`, patch))
+  /* Shared fields in a recurring series prompt before spreading. Per-occurrence
+     fields (week, done, ticked steps) never travel, so they skip the prompt. */
+  const SHARED_FIELDS = ['title', 'description', 'details', 'steps', 'links']
+  const save = async (patch) => {
+    let body = patch
+    const touchesShared = Object.keys(patch).some((k) => SHARED_FIELDS.includes(k))
+    if (task.seriesId && touchesShared) {
+      body = { ...patch, applyToSeries: window.confirm(
+        'This task repeats.\n\nOK — update every occurrence in the series.\nCancel — change only this one.') }
+    }
+    const r = await api.patch(`/leagues/${leagueId}/tasks/${task.id}`, body)
+    if (r.series) {
+      setSeriesMsg(`Updated ${r.series.updated} of ${r.series.total} occurrences`
+        + (r.series.skipped ? ` — ${r.series.skipped} left alone (edited separately)` : ''))
+      // siblings changed server-side; without this the other occurrences on screen
+      // keep showing their old text until the page is reloaded by hand
+      onSeriesChanged?.()
+    }
+    onChange(r)
+  }
+  // Creating or clearing a series rewrites sibling rows, so the caller reloads.
+  const setRecurrence = async (frequency) => {
+    try {
+      if (!frequency) {
+        const drop = window.confirm('Stop repeating.\n\nOK — also delete the later occurrences nobody has started.\nCancel — keep them as standalone tasks.')
+        await api.del(`/leagues/${leagueId}/tasks/${task.id}/recurrence${drop ? '?future=1' : ''}`)
+      } else {
+        const r = await api.post(`/leagues/${leagueId}/tasks/${task.id}/recurrence`, { frequency })
+        setSeriesMsg(`Repeats — ${r.occurrences} occurrences this season`)
+      }
+      onSeriesChanged?.()
+    } catch (e) { setSeriesMsg(e.message || 'Could not set the repeat') }
+  }
+  const duplicateStep = (i) => save({ steps: [...steps.slice(0, i + 1), steps[i], ...steps.slice(i + 1)] })
 
   async function toggleStatus(e) {
     e.stopPropagation()
@@ -138,7 +172,15 @@ export default function TaskItem({ task, leagueId, onChange, onDelete, canEdit =
         {steps.length > 0 && <span className="pill step-count">{doneSet.size}/{steps.length}</span>}
         <WeekPicker value={task.dueWeekOfFY} canEdit={canEdit} seasonYear={seasonYear}
           dueDate={task.dueDate} overrideDate={task.dueDateOverride}
+          recurrence={task.recurrence} onRecurrence={setRecurrence}
           onSave={(patch) => save(patch)} />
+        {task.seriesId && (
+          <span className="pill series-pill" title="Part of a repeating series">⟳</span>
+        )}
+        {canEdit && onDuplicate && (
+          <button type="button" className="icon-btn" title="Duplicate this task and its steps"
+            onClick={(e) => { e.stopPropagation(); onDuplicate(task) }}>⧉</button>
+        )}
         {canEdit && onDelete && (
           <button type="button" className="icon-btn danger" title="Archive task (kept as an optional item)"
             onClick={(e) => { e.stopPropagation(); if (window.confirm('Archive this task?\n\nIt moves to “Optional / archived” and can be restored in any season.')) onDelete(task) }}>×</button>
@@ -160,6 +202,7 @@ export default function TaskItem({ task, leagueId, onChange, onDelete, canEdit =
               <div className="checklist-head">
                 Steps
                 {canEdit && <button type="button" className="icon-btn add" title="Add a step" onClick={addStep}>+</button>}
+                {seriesMsg && <span className="agenda-msg">{seriesMsg}</span>}
                 {agendaMsg && (
                   <span className="agenda-msg">
                     {agendaMsg.kind === 'err' ? 'Could not add'
@@ -182,6 +225,8 @@ export default function TaskItem({ task, leagueId, onChange, onDelete, canEdit =
                     <span className="checkstep-actions">
                       <button type="button" className="icon-btn" title="Add this step to the board meeting agenda"
                         onClick={() => addToAgenda(s)}>+ agenda</button>
+                      <button type="button" className="icon-btn" title="Duplicate this step"
+                        onClick={() => duplicateStep(i)}>⧉</button>
                       <button type="button" className="icon-btn danger" title="Archive step (kept as an optional item)"
                         onClick={() => deleteStep(i)}>×</button>
                     </span>

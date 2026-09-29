@@ -73,3 +73,48 @@ export function shiftOverrideToSeason(override, weekOfFY, fromYear, toYear) {
   const offset = new Date(override).getTime() - from.getTime()
   return new Date(to.getTime() + offset)
 }
+
+/* ============================================================================
+   Recurring series.
+
+   "Bi-weekly" here means the 1st & 3rd (or 2nd & 4th) occurrence of the weekday
+   in its month — the way boards actually schedule — not every-14-days, which
+   drifts against the calendar. Monthly keeps the anchor's ordinal, so "the 3rd
+   Monday" stays the 3rd Monday.
+   ========================================================================== */
+export const FREQUENCIES = ['weekly', 'biweekly_1_3', 'biweekly_2_4', 'monthly']
+
+export const FREQUENCY_LABELS = {
+  weekly: 'Every week',
+  biweekly_1_3: '1st & 3rd week of the month',
+  biweekly_2_4: '2nd & 4th week of the month',
+  monthly: 'Monthly',
+}
+
+/** Which occurrence of its weekday within the month a date is (1st Monday -> 1). */
+export function ordinalInMonth(date) {
+  return Math.floor((new Date(date).getUTCDate() - 1) / 7) + 1
+}
+
+/**
+ * The fiscal weeks a series occupies, from `anchorWeek` to the end of the season.
+ * Returns 0-based week numbers, always including the anchor itself.
+ */
+export function seriesWeeks(seasonYear, anchorWeek, frequency) {
+  const anchor = Math.max(0, Math.min(51, Number(anchorWeek) || 0))
+  const anchorOrd = ordinalInMonth(weekStartDate(seasonYear, anchor))
+  const out = []
+  for (let w = anchor; w <= 51; w++) {
+    const d = weekStartDate(seasonYear, w)
+    const ord = ordinalInMonth(d)
+    let hit = false
+    if (frequency === 'weekly') hit = true
+    else if (frequency === 'biweekly_1_3') hit = ord === 1 || ord === 3
+    else if (frequency === 'biweekly_2_4') hit = ord === 2 || ord === 4
+    else if (frequency === 'monthly') hit = ord === anchorOrd
+    if (hit) out.push(w)
+  }
+  // the anchor always belongs to its own series even if the rule skips that week
+  if (!out.includes(anchor)) out.unshift(anchor)
+  return out
+}

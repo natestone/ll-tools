@@ -210,6 +210,11 @@ model Task {
   // so only a deliberate deviation needs a row value. Rollover shifts it to the
   // same weekday of the same week in the new season.
   dueDateOverride DateTime?
+  // Recurring series. Every generated occurrence shares seriesId and carries the
+  // same rule, so any member can extend the series or propagate an edit to its
+  // siblings. Null for a one-off task.
+  seriesId     String?
+  recurrence   Json?      // { frequency, anchorWeek }
   title        String   @db.Text
   description  String   @db.Text
   details      String?  @db.LongText
@@ -225,6 +230,7 @@ model Task {
   @@index([leagueId])
   @@index([leagueId, roleKey])
   @@index([leagueId, seasonYear])
+  @@index([leagueId, seriesId])
 }
 
 model PolicyDocument {
