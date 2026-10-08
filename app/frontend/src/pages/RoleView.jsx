@@ -72,8 +72,14 @@ export default function RoleView() {
       </div>
 
       <div className="card">
-        <h2>Calendar</h2>
-        {cal.length === 0 && <p className="muted">No calendar items for this role.</p>}
+        {/* Just the standalone events. This role's tasks are the list above, and
+            they carry their own dates — repeating them here was the duplication
+            that made the calendar look stale. */}
+        <h2>Other dates</h2>
+        <p className="muted" style={{ marginTop: -6 }}>
+          Dates that aren't tasks. This role's tasks appear on the league calendar automatically.
+        </p>
+        {cal.length === 0 && <p className="muted">No other dates for this role.</p>}
         {cal.map((c) => (
           <div key={c.id} className="cal-row">
             <WeekPicker value={c.weekOfFY} canEdit={!!c.canEdit} seasonYear={seasonYear}

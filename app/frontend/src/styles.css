@@ -275,6 +275,12 @@ th {
 .pill.step-count { background: rgba(196,30,58,0.1); color: var(--scarlet); }
 /* a date pinned to an exact day, rather than derived from its week */
 /* marks a task as one occurrence of a repeating series */
+/* calendar entry kinds: a task vs a standalone event */
+.badge.cal-kind-task { background: rgba(196,30,58,0.1); color: var(--scarlet); }
+.badge.cal-kind-done { background: #eef1f6; color: var(--muted); }
+.badge.cal-kind-meeting, .badge.cal-kind-due, .badge.cal-kind-reminder {
+  background: rgba(11,26,59,0.08); color: var(--navy-2); }
+
 .pill.series-pill { background: rgba(11,26,59,0.09); color: var(--navy); padding: 2px 8px; }
 
 .pill.pill-pinned { background: rgba(11,26,59,0.09); color: var(--navy); font-weight: 700; }

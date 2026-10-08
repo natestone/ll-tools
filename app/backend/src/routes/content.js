@@ -88,6 +88,59 @@ const calWithDates = (c, seasonYear, canEdit) => ({
   canEdit,
 })
 
+/* The calendar, assembled rather than stored.
+
+   Tasks ARE the schedule: a calendar built from its own rows drifts the moment a
+   task is deleted, renamed or moved, which is exactly what went wrong before.
+   So task entries are derived live from the task rows, and CalendarItem is left
+   for things that are genuinely events rather than work — dates nobody "does",
+   like a registration deadline or a league night.
+
+   Returns one date-sorted list, each entry tagged so the UI can tell them apart
+   and link a task entry back to its task. */
+contentRouter.get('/calendar/agenda', async (req, res) => {
+  const where = await scopeRoleFilter(req, res); if (!where) return
+  const season = seasonOf(req)
+
+  const [tasks, events] = await Promise.all([
+    withLeague(req.leagueId).task.findMany({
+      where: { ...where, seasonYear: season, archivedAt: null },
+      orderBy: [{ dueWeekOfFY: 'asc' }, { id: 'asc' }],
+    }),
+    withLeague(req.leagueId).calendarItem.findMany({ where, orderBy: [{ weekOfFY: 'asc' }, { id: 'asc' }] }),
+  ])
+
+  const rows = [
+    ...tasks.filter((t) => t.dueWeekOfFY != null).map((t) => ({
+      type: 'task', id: t.id, taskId: t.id, roleKey: t.roleKey, title: t.title,
+      kind: t.status === 'done' ? 'done' : 'task', status: t.status,
+      weekOfFY: t.dueWeekOfFY, date: isoDate(effectiveDate(t, season)),
+      isDateOverridden: !!t.dueDateOverride, seriesId: t.seriesId || null,
+    })),
+    ...events.map((c) => ({
+      type: 'event', id: c.id, roleKey: c.roleKey, title: c.title, kind: c.kind,
+      weekOfFY: c.weekOfFY,
+      date: isoDate(effectiveDate({ weekOfFY: c.weekOfFY, dueDateOverride: c.dateOverride }, season)),
+      isDateOverridden: !!c.dateOverride, description: c.description,
+    })),
+  ].sort((a, b) => (a.date || '').localeCompare(b.date || '') || a.title.localeCompare(b.title))
+
+  res.json({ seasonYear: season, rows, counts: { tasks: rows.filter((r) => r.type === 'task').length,
+    events: rows.filter((r) => r.type === 'event').length } })
+})
+
+// Remove a standalone calendar event. Task entries aren't deletable here — they
+// disappear from the calendar when the task itself is archived or deleted.
+contentRouter.delete('/calendar/:id', async (req, res) => {
+  const id = parseInt(req.params.id, 10)
+  const item = await prisma.calendarItem.findFirst({ where: { id, leagueId: req.leagueId } })
+  if (!item) return res.status(404).json({ error: 'not found' })
+  if (!(await canEditCategory(req.leagueId, req.membership, 'calendar', item.roleKey)))
+    return res.status(403).json({ error: 'not permitted' })
+  await prisma.calendarItem.delete({ where: { id } })
+  res.json({ ok: true })
+})
+
 // Move a calendar item: change its week, or pin it to an exact date.
 contentRouter.patch('/calendar/:id', async (req, res) => {
   const id = parseInt(req.params.id, 10)

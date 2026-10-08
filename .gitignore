@@ -27,3 +27,6 @@ seed/*.backup-*/
 # ---- editor / OS ----
 .DS_Store
 *.swp
+
+# one-off data backups taken before destructive migrations
+backups/
