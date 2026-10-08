@@ -4,7 +4,7 @@ import { requireAuth, loadLeague } from '../middleware/auth.js'
 import { canEditCategory } from '../lib/permissions.js'
 import { currentSeasonYear } from './seasons.js'
 import crypto from 'node:crypto'
-import { effectiveDate, weekStartDate, isoDate, seriesWeeks, FREQUENCIES } from '../lib/fyweeks.js'
+import { effectiveDate, weekStartDate, isoDate, seriesWeeks, FREQUENCIES, phaseOfWeek, phaseStartWeek, PHASES } from '../lib/fyweeks.js'
 
 export const contentRouter = Router({ mergeParams: true })
 contentRouter.use(requireAuth, loadLeague)
@@ -186,6 +186,7 @@ const withDates = (t, seasonYear) => ({
   dueDate: isoDate(effectiveDate(t, seasonYear)),
   weekStartDate: isoDate(weekStartDate(seasonYear, t.dueWeekOfFY)),
   isDateOverridden: !!t.dueDateOverride,
+  phase: t.phase ?? phaseOfWeek(t.dueWeekOfFY),
 })
 
 contentRouter.get('/tasks', async (req, res) => {
@@ -268,6 +269,39 @@ contentRouter.post('/tasks/:id/duplicate', async (req, res) => {
     },
   })
   res.status(201).json(withDates(copy, copy.seasonYear ?? seasonOf(req)))
+})
+
+/* Copy a task into another playing season.
+
+   Each season gets its own row rather than one row flagged for three seasons,
+   so the fall copy can be completed, re-worded or re-dated without touching
+   spring's. The copy lands at the start of the target season; move it from
+   there. Deliberately NOT a recurring series — these are independent. */
+contentRouter.post('/tasks/:id/copy-to-phase', async (req, res) => {
+  const id = parseInt(req.params.id, 10)
+  const t = await prisma.task.findFirst({ where: { id, leagueId: req.leagueId } })
+  if (!t) return res.status(404).json({ error: 'not found' })
+  if (!(await canEditCategory(req.leagueId, req.membership, 'tasks', t.roleKey)))
+    return res.status(403).json({ error: 'not permitted' })
+
+  const phase = String(req.body?.phase || '')
+  if (!PHASES.includes(phase)) return res.status(400).json({ error: 'phase must be fall, spring or summer' })
+  const season = t.seasonYear ?? seasonOf(req)
+
+  const already = await prisma.task.findFirst({
+    where: { leagueId: req.leagueId, seasonYear: season, roleKey: t.roleKey, title: t.title, phase, archivedAt: null },
+  })
+  if (already) return res.status(409).json({ error: `"${t.title}" already exists in ${phase}.`, taskId: already.id })
+
+  const copy = await prisma.task.create({
+    data: {
+      leagueId: req.leagueId, seasonYear: season, roleKey: t.roleKey,
+      title: t.title, details: t.details, steps: t.steps ?? [], links: t.links ?? [],
+      dueWeekOfFY: phaseStartWeek(phase), phase,
+      status: 'open', stepsDone: [], seededFromId: t.seededFromId,
+    },
+  })
+  res.status(201).json(withDates(copy, season))
 })
 
 /* ---- Recurring series ---------------------------------------------------- */
@@ -374,10 +408,14 @@ contentRouter.patch('/tasks/:id', async (req, res) => {
     // Moving the week discards a stale pinned date — an override from the old
     // week would silently keep the task on a date that no longer matches it.
     if (dueDateOverride === undefined) data.dueDateOverride = null
+    // ...and the task now sits in whichever playing season that week belongs to
+    if (req.body?.phase === undefined) data.phase = phaseOfWeek(data.dueWeekOfFY)
   }
   // null clears the pin and falls back to the week's start date
   if (dueDateOverride !== undefined)
     data.dueDateOverride = dueDateOverride ? new Date(dueDateOverride) : null
+  if (req.body?.phase !== undefined)
+    data.phase = PHASES.includes(req.body.phase) ? req.body.phase : null
 
   /* Reassign the task to a different role. Checked against the TARGET role too:
      otherwise anyone who can edit their own role's tasks could push work onto a

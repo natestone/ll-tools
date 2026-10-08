@@ -118,3 +118,39 @@ export function seriesWeeks(seasonYear, anchorWeek, frequency) {
   if (!out.includes(anchor)) out.unshift(anchor)
   return out
 }
+
+/* ============================================================================
+   Playing seasons within the fiscal year.
+
+   GNGRLL runs three: fall ball, spring, and summer (All-Stars / tournaments).
+   The months between are administration — registration, budget, elections —
+   which belongs to no single season, so those tasks carry a null phase.
+
+   Keyed to the WEEK INDEX, not the month: the fiscal year opens in late
+   September and closes in September, so a month-based rule labels week 1 as
+   summer when it is really the start of fall ball.
+   ========================================================================== */
+export const PHASES = ['fall', 'spring', 'summer']
+export const PHASE_LABELS = { fall: 'Fall ball', spring: 'Spring', summer: 'Summer' }
+
+// wk1-10 Sep-Nov | wk11-27 Dec-Mar (admin) | wk28-40 Apr-Jun | wk41-52 Jul-Sep
+const PHASE_RANGES = [
+  ['fall', 0, 9],
+  [null, 10, 26],
+  ['spring', 27, 39],
+  ['summer', 40, 51],
+]
+
+/** The phase a fiscal week falls in, or null for the offseason/admin months. */
+export function phaseOfWeek(weekOfFY) {
+  if (weekOfFY == null) return null
+  const w = Math.max(0, Math.min(51, Number(weekOfFY)))
+  for (const [phase, lo, hi] of PHASE_RANGES) if (w >= lo && w <= hi) return phase
+  return null
+}
+
+/** First week of a phase, used when copying a task into another season. */
+export function phaseStartWeek(phase) {
+  const r = PHASE_RANGES.find(([p]) => p === phase)
+  return r ? r[1] : 0
+}

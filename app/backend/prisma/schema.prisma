@@ -215,6 +215,10 @@ model Task {
   // siblings. Null for a one-off task.
   seriesId     String?
   recurrence   Json?      // { frequency, anchorWeek }
+  // Which playing season this instance belongs to: fall | spring | summer, or
+  // null for year-round administration (elections, charter, budget). Separate
+  // rows per season so each can be completed and edited independently.
+  phase        String?
   title        String   @db.Text
   // The single description field. Markdown, rendered when idle.
   details      String?  @db.LongText
@@ -231,6 +235,7 @@ model Task {
   @@index([leagueId, roleKey])
   @@index([leagueId, seasonYear])
   @@index([leagueId, seriesId])
+  @@index([leagueId, seasonYear, phase])
 }
 
 model PolicyDocument {
