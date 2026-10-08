@@ -182,6 +182,38 @@ leaguesRouter.get('/:leagueId/members', requireAuth, loadLeague, requireOwner, a
   })))
 })
 
+/* ---- Archive / restore a member -----------------------------------------
+   Deliberately not a delete. OfficerAssignment rows are the record of who held
+   which role, and board minutes name people as facilitator, recorder and mover
+   of motions — destroying the membership would leave that history unresolvable.
+   Archiving flips status to "removed", which loadLeague already treats as no
+   access, so it revokes the person immediately while keeping the trail. */
+leaguesRouter.delete('/:leagueId/members/:membershipId', requireAuth, loadLeague, requireOwner, async (req, res) => {
+  const membershipId = parseInt(req.params.membershipId, 10)
+  const target = await prisma.membership.findFirst({
+    where: { id: membershipId, leagueId: req.leagueId }, include: { user: { select: { displayName: true } } },
+  })
+  if (!target) return res.status(404).json({ error: 'not found' })
+  if (target.isOwner)
+    return res.status(400).json({ error: 'The league owner cannot be removed. Transfer ownership first.' })
+  if (target.userId === req.session.userId)
+    return res.status(400).json({ error: "You can't remove yourself from the league." })
+  if (target.status === 'removed') return res.json({ ok: true, alreadyArchived: true })
+
+  const m = await prisma.membership.update({ where: { id: membershipId }, data: { status: 'removed' } })
+  // role assignments are KEPT on purpose — they are the historical record
+  const heldRoles = await prisma.officerAssignment.count({ where: { membershipId } })
+  res.json({ ok: true, archived: true, membershipId: m.id, rolesRetainedForHistory: heldRoles })
+})
+
+leaguesRouter.post('/:leagueId/members/:membershipId/restore', requireAuth, loadLeague, requireOwner, async (req, res) => {
+  const membershipId = parseInt(req.params.membershipId, 10)
+  const target = await prisma.membership.findFirst({ where: { id: membershipId, leagueId: req.leagueId } })
+  if (!target) return res.status(404).json({ error: 'not found' })
+  const m = await prisma.membership.update({ where: { id: membershipId }, data: { status: 'active' } })
+  res.json({ ok: true, membershipId: m.id, status: m.status })
+})
+
 // Edit a member's profile — owner, or the member themselves.
 leaguesRouter.patch('/:leagueId/members/:membershipId', requireAuth, loadLeague, async (req, res) => {
   const membershipId = parseInt(req.params.membershipId, 10)
@@ -240,6 +272,8 @@ leaguesRouter.post('/:leagueId/assignments', requireAuth, loadLeague, requireOwn
   const role = await prisma.role.findFirst({ where: { leagueId: req.leagueId, key: roleKey } })
   const member = await prisma.membership.findFirst({ where: { leagueId: req.leagueId, id: membershipId } })
   if (!role || !member) return res.status(400).json({ error: 'unknown role or member' })
+  if (member.status === 'removed')
+    return res.status(400).json({ error: 'That member has been removed. Restore them before assigning roles.' })
   const created = await prisma.officerAssignment.upsert({
     where: { leagueId_membershipId_roleId: { leagueId: req.leagueId, membershipId, roleId: role.id } },
     update: {}, create: { leagueId: req.leagueId, membershipId, roleId: role.id },

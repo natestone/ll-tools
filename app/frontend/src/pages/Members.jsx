@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 import { api } from '../api.js'
 import { EditableText } from '../components/Editable.jsx'
+import { useAuth } from '../App.jsx'
 
 /* Create and manage the league's roles.
 
@@ -80,6 +81,7 @@ function RolesCard({ leagueId, roles, onChanged }) {
 
 export default function Members() {
   const { leagueId } = useOutletContext()
+  const { user: me } = useAuth()
   const [memberErr, setMemberErr] = useState('')
   const [members, setMembers] = useState([])
   const [roles, setRoles] = useState([])
@@ -94,6 +96,24 @@ export default function Members() {
     api.get(`/leagues/${leagueId}/invites`).then(setInvites),
   ])
   useEffect(() => { load() }, [leagueId])
+
+  const active = members.filter((m) => m.status !== 'removed')
+  const archived = members.filter((m) => m.status === 'removed')
+
+  async function archive(m) {
+    setMemberErr('')
+    if (!window.confirm(
+      `Remove ${m.user.displayName} from the league?\n\n`
+      + 'They lose access immediately. Their role history is kept so past records stay '
+      + 'resolvable, and you can restore them later.')) return
+    try { await api.del(`/leagues/${leagueId}/members/${m.membershipId}`); await load() }
+    catch (e) { setMemberErr(e.message || 'Could not remove') }
+  }
+  async function restore(m) {
+    setMemberErr('')
+    try { await api.post(`/leagues/${leagueId}/members/${m.membershipId}/restore`); await load() }
+    catch (e) { setMemberErr(e.message || 'Could not restore') }
+  }
 
   async function assign(membershipId, roleKey, has) {
     if (has) await api.del(`/leagues/${leagueId}/assignments`, { membershipId, roleKey })
@@ -120,9 +140,9 @@ export default function Members() {
         <h2>Members</h2>
         {memberErr && <p className="err">{memberErr}</p>}
         <table className="members-table">
-          <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Roles (click to toggle)</th></tr></thead>
+          <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Roles (click to toggle)</th><th></th></tr></thead>
           <tbody>
-            {members.map((m) => (
+            {active.map((m) => (
               <tr key={m.membershipId}>
                 <td data-label="Name" className="member-name">
                   <EditableText value={m.user.displayName} pencil
@@ -151,11 +171,37 @@ export default function Members() {
                     })}
                   </div>
                 </td>
+                <td data-label="" className="member-actions">
+                  {!m.isOwner && m.user.id !== me?.id && (
+                    <button type="button" className="icon-btn danger" title="Remove from the league"
+                      onClick={() => archive(m)}>×</button>
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
+        {active.length === 0 && <p className="muted">No active members.</p>}
       </div>
+
+      {archived.length > 0 && (
+        <div className="card">
+          <h2>Removed members</h2>
+          <p className="muted" style={{ marginTop: -4 }}>
+            They have no access to the league. Their past role assignments are kept so older
+            records stay resolvable — restore them to make the account active again.
+          </p>
+          {archived.map((m) => (
+            <div key={m.membershipId} className="row" style={{ padding: '6px 0', borderBottom: '1px solid var(--line)', gap: 10, flexWrap: 'wrap' }}>
+              <span style={{ flex: '1 1 220px', minWidth: 0, overflowWrap: 'anywhere' }}>
+                {m.user.displayName} <span className="muted">{m.user.email}</span>
+              </span>
+              {m.roles.map((r) => <span key={r.key} className="badge" title="Role held previously">{r.name}</span>)}
+              <button type="button" className="secondary" onClick={() => restore(m)}>Restore</button>
+            </div>
+          ))}
+        </div>
+      )}
 
       <RolesCard leagueId={leagueId} roles={roles} onChanged={load} />
 
