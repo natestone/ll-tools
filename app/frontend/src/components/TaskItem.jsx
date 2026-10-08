@@ -58,6 +58,8 @@ export default function TaskItem({ task, leagueId, onChange, onDelete, onDuplica
   const [showLinkPicker, setShowLinkPicker] = useState(false)
   const [agendaMsg, setAgendaMsg] = useState(null)
   const [seriesMsg, setSeriesMsg] = useState('')
+  const dragFrom = useRef(null)
+  const [overStep, setOverStep] = useState(null)
   const nav = useNavigate()
 
   const steps = task.steps || []
@@ -110,6 +112,26 @@ export default function TaskItem({ task, leagueId, onChange, onDelete, onDuplica
     await save({ stepsDone: [...next].sort((a, b) => a - b) })
   }
   const setStep = (i, text) => save({ steps: steps.map((s, k) => (k === i ? text : s)) })
+
+  /* Reorder steps by drag.
+
+     stepsDone holds INDICES, not step text, so a ticked step would appear to
+     move its tick to whatever step took its place unless the indices are
+     remapped alongside the array. */
+  function moveStep(from, to) {
+    dragFrom.current = null
+    setOverStep(null)
+    if (from == null || to == null || from === to) return
+    const next = [...steps]
+    const [moved] = next.splice(from, 1)
+    next.splice(to, 0, moved)
+    const nextDone = [...doneSet].map((o) => {
+      if (o === from) return to
+      if (from < to) return (o > from && o <= to) ? o - 1 : o
+      return (o >= to && o < from) ? o + 1 : o
+    }).sort((a, b) => a - b)
+    return save({ steps: next, stepsDone: nextDone })
+  }
   const addStep = () => save({ steps: [...steps, ''] })
   function deleteStep(i) {
     // Archive rather than destroy: the step joins the optional pool for later
@@ -159,7 +181,7 @@ export default function TaskItem({ task, leagueId, onChange, onDelete, onDuplica
   }
 
   return (
-    <div className={'taskitem' + (open ? ' open' : '')}>
+    <div id={`task-${task.id}`} className={'taskitem' + (open ? ' open' : '')}>
       <div className="taskitem-head" onClick={() => hasBody && setOpen((o) => !o)}>
         <span className="expander">{hasBody ? (open ? '▾' : '▸') : ''}</span>
         <input type="checkbox" className="task-check" checked={task.status === 'done'}
@@ -224,7 +246,16 @@ export default function TaskItem({ task, leagueId, onChange, onDelete, onDuplica
               </div>
               {steps.length === 0 && <p className="muted" style={{ margin: '4px 0' }}>No steps yet — use + to add one.</p>}
               {steps.map((s, i) => (
-                <div key={i} className={'checkstep' + (doneSet.has(i) ? ' done' : '')}>
+                <div key={i}
+                  className={'checkstep' + (doneSet.has(i) ? ' done' : '') + (overStep === i ? ' dragover' : '')}
+                  onDragOver={(e) => { if (canEdit && dragFrom.current != null) { e.preventDefault(); setOverStep(i) } }}
+                  onDragLeave={() => setOverStep((v) => (v === i ? null : v))}
+                  onDrop={(e) => { e.preventDefault(); moveStep(dragFrom.current, i) }}>
+                  {canEdit && (
+                    <span className="drag-handle" title="Drag to reorder" draggable
+                      onDragStart={(e) => { dragFrom.current = i; e.dataTransfer.effectAllowed = 'move' }}
+                      onDragEnd={() => { dragFrom.current = null; setOverStep(null) }}>☰</span>
+                  )}
                   <input type="checkbox" checked={doneSet.has(i)} onChange={() => toggleStep(i)} />
                   <span className="checkstep-text">
                     <EditableText value={s} canEdit={canEdit} multiline pencil

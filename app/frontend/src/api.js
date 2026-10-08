@@ -61,3 +61,22 @@ export const weekLabel = (w, seasonYear) => {
   const d = weekStartDate(seasonYear, w)
   return d ? `wk ${w + 1} (${fmtDate(d)})` : `wk ${w + 1}`
 }
+
+/* ---- Task ordering --------------------------------------------------------
+   Sorted by the date the task actually lands on, so a pinned override orders
+   where it falls rather than where its week starts. */
+export const sortTasks = (list) => [...list].sort((a, b) =>
+  (a.dueDate || '9999').localeCompare(b.dueDate || '9999')
+  || (a.dueWeekOfFY ?? 99) - (b.dueWeekOfFY ?? 99)
+  || String(a.title).localeCompare(String(b.title)))
+
+/* Re-sorting moves the row the user is working in, often off-screen. Scroll it
+   back under the cursor, but only when its position actually changed — doing it
+   on every edit yanks the page around for no reason. */
+export function keepTaskInView(id, prevIndex, nextIndex) {
+  if (prevIndex === nextIndex) return
+  requestAnimationFrame(() => {
+    const el = document.getElementById(`task-${id}`)
+    if (el) el.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  })
+}

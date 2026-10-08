@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useOutletContext, useParams, Link } from 'react-router-dom'
-import { api, weekLabel } from '../api.js'
+import { api, weekLabel, sortTasks, keepTaskInView } from '../api.js'
 import { WeekPicker } from '../components/Editable.jsx'
 import TaskItem from '../components/TaskItem.jsx'
 import OptionalPool from '../components/OptionalPool.jsx'
@@ -29,12 +29,17 @@ export default function RoleView() {
   const load = () => Promise.all([
     api.get(`/leagues/${leagueId}/roles`).then(setRoles).catch(() => setRoles([])),
     api.get(`/leagues/${leagueId}/calendar?roleKey=${roleKey}`).then(setCal),
-    api.get(`/leagues/${leagueId}/tasks?roleKey=${roleKey}${seasonQS}`).then(setTasks),
+    api.get(`/leagues/${leagueId}/tasks?roleKey=${roleKey}${seasonQS}`).then((r) => setTasks(sortTasks(r))),
     api.get(`/leagues/${leagueId}/email-templates?roleKey=${roleKey}`).then(setTemplates),
   ])
   useEffect(() => { load() }, [leagueId, roleKey, seasonYear]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const updateTask = (t) => setTasks((ts) => ts.map((x) => (x.id === t.id ? { ...x, ...t } : x)))
+  const updateTask = (t) => setTasks((ts) => {
+    const merged = ts.map((x) => (x.id === t.id ? { ...x, ...t } : x))
+    const next = sortTasks(merged)
+    keepTaskInView(t.id, ts.findIndex((x) => x.id === t.id), next.findIndex((x) => x.id === t.id))
+    return next
+  })
   const removeTask = async (t) => {
     await api.del(`/leagues/${leagueId}/tasks/${t.id}`)   // archives, doesn't destroy
     setTasks((ts) => ts.filter((x) => x.id !== t.id))

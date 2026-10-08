@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
-import { api } from '../api.js'
+import { api, sortTasks, keepTaskInView } from '../api.js'
 import TaskItem from '../components/TaskItem.jsx'
 import OptionalPool from '../components/OptionalPool.jsx'
 
@@ -11,12 +11,18 @@ export default function Tasks() {
 
   const seasonQS = seasonYear != null ? `?season=${seasonYear}` : ''
   const load = () => Promise.all([
-    api.get(`/leagues/${leagueId}/tasks${seasonQS}`).then(setTasks),
+    api.get(`/leagues/${leagueId}/tasks${seasonQS}`).then((r) => setTasks(sortTasks(r))),
     api.get(`/leagues/${leagueId}/roles`).then(setRoles).catch(() => setRoles([])),
   ])
   useEffect(() => { load() }, [leagueId, seasonYear]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const update = (t) => setTasks((ts) => ts.map((x) => (x.id === t.id ? { ...x, ...t } : x)))
+  const update = (t) => setTasks((ts) => {
+    const merged = ts.map((x) => (x.id === t.id ? { ...x, ...t } : x))
+    const next = sortTasks(merged)
+    const within = (list) => list.filter((x) => x.roleKey === t.roleKey).findIndex((x) => x.id === t.id)
+    keepTaskInView(t.id, within(ts), within(next))
+    return next
+  })
   const remove = async (t) => {
     await api.del(`/leagues/${leagueId}/tasks/${t.id}`)   // archives, doesn't destroy
     setTasks((ts) => ts.filter((x) => x.id !== t.id))
