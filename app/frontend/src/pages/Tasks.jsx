@@ -7,9 +7,13 @@ import OptionalPool from '../components/OptionalPool.jsx'
 export default function Tasks() {
   const { league, leagueId, seasonYear } = useOutletContext()
   const [tasks, setTasks] = useState([])
+  const [roles, setRoles] = useState([])
 
   const seasonQS = seasonYear != null ? `?season=${seasonYear}` : ''
-  const load = () => api.get(`/leagues/${leagueId}/tasks${seasonQS}`).then(setTasks)
+  const load = () => Promise.all([
+    api.get(`/leagues/${leagueId}/tasks${seasonQS}`).then(setTasks),
+    api.get(`/leagues/${leagueId}/roles`).then(setRoles).catch(() => setRoles([])),
+  ])
   useEffect(() => { load() }, [leagueId, seasonYear]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const update = (t) => setTasks((ts) => ts.map((x) => (x.id === t.id ? { ...x, ...t } : x)))
@@ -45,7 +49,7 @@ export default function Tasks() {
           </div>
           {byRole[rk].map((t) => (
             <TaskItem key={t.id} task={t} leagueId={leagueId} seasonYear={seasonYear}
-            onDuplicate={duplicateTask} onSeriesChanged={load} onChange={update}
+            onDuplicate={duplicateTask} onSeriesChanged={load} roles={roles} onChange={update}
               onDelete={remove} canEdit={canEditRole(rk)} />
           ))}
           <OptionalPool leagueId={leagueId} seasonYear={seasonYear} roleKey={rk}

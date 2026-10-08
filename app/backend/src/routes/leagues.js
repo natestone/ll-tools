@@ -84,6 +84,93 @@ leaguesRouter.get('/:leagueId/roles', requireAuth, loadLeague, async (req, res) 
   res.json(await withLeague(req.leagueId).role.findMany({ orderBy: { id: 'asc' } }))
 })
 
+/* ---- Custom roles --------------------------------------------------------
+   Roles are referenced by `key` (a loose string) from tasks, email templates,
+   calendar items and the permission matrix — there is no foreign key. So the key
+   is immutable once created (renaming only changes the display name), and a role
+   can only be deleted once nothing points at it. */
+const roleKeyFrom = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '').slice(0, 40)
+
+async function roleUsage(leagueId, roleKey) {
+  const [tasks, templates, calendar, assignments, permissions] = await Promise.all([
+    prisma.task.count({ where: { leagueId, roleKey } }),
+    prisma.emailTemplate.count({ where: { leagueId, roleKey } }),
+    prisma.calendarItem.count({ where: { leagueId, roleKey } }),
+    prisma.officerAssignment.count({ where: { leagueId, role: { key: roleKey } } }),
+    prisma.categoryPermission.count({ where: { leagueId, roleKey } }),
+  ])
+  return { tasks, templates, calendar, assignments, permissions,
+    total: tasks + templates + calendar + assignments + permissions }
+}
+
+leaguesRouter.post('/:leagueId/roles', requireAuth, loadLeague, requireOwner, async (req, res) => {
+  const name = String(req.body?.name || '').trim()
+  if (!name) return res.status(400).json({ error: 'name required' })
+  let key = roleKeyFrom(name)
+  if (!key) return res.status(400).json({ error: 'name must contain letters or numbers' })
+  if (await prisma.role.findFirst({ where: { leagueId: req.leagueId, key } }))
+    return res.status(409).json({ error: `A role keyed "${key}" already exists.` })
+
+  const role = await prisma.role.create({
+    data: { leagueId: req.leagueId, key, name,
+      description: String(req.body?.description || '').trim(), isCustom: true },
+  })
+  res.status(201).json(role)
+})
+
+// Display name / description only. The key is what everything else references.
+leaguesRouter.patch('/:leagueId/roles/:id', requireAuth, loadLeague, requireOwner, async (req, res) => {
+  const id = parseInt(req.params.id, 10)
+  const role = await prisma.role.findFirst({ where: { id, leagueId: req.leagueId } })
+  if (!role) return res.status(404).json({ error: 'not found' })
+  const data = {}
+  if (req.body?.name !== undefined) {
+    if (!String(req.body.name).trim()) return res.status(400).json({ error: 'name required' })
+    data.name = String(req.body.name).trim()
+  }
+  if (req.body?.description !== undefined) data.description = String(req.body.description)
+  if (!Object.keys(data).length) return res.status(400).json({ error: 'nothing to update' })
+  res.json(await prisma.role.update({ where: { id }, data }))
+})
+
+leaguesRouter.get('/:leagueId/roles/:id/usage', requireAuth, loadLeague, requireOwner, async (req, res) => {
+  const role = await prisma.role.findFirst({ where: { id: parseInt(req.params.id, 10), leagueId: req.leagueId } })
+  if (!role) return res.status(404).json({ error: 'not found' })
+  res.json({ role, usage: await roleUsage(req.leagueId, role.key) })
+})
+
+/* Delete a custom role. Content pointing at it must go somewhere first: pass
+   ?reassignTo=<roleKey> to move it, otherwise the request is refused with the
+   counts so the owner can decide. Seeded roles are never deletable — the seed
+   content assumes they exist. */
+leaguesRouter.delete('/:leagueId/roles/:id', requireAuth, loadLeague, requireOwner, async (req, res) => {
+  const id = parseInt(req.params.id, 10)
+  const role = await prisma.role.findFirst({ where: { id, leagueId: req.leagueId } })
+  if (!role) return res.status(404).json({ error: 'not found' })
+  if (!role.isCustom)
+    return res.status(400).json({ error: 'Built-in roles cannot be deleted. Rename it instead.' })
+
+  const usage = await roleUsage(req.leagueId, role.key)
+  const reassignTo = String(req.query.reassignTo || req.body?.reassignTo || '').trim()
+
+  if (usage.total && !reassignTo)
+    return res.status(409).json({ error: 'That role is still in use.', usage })
+
+  if (reassignTo) {
+    const target = await prisma.role.findFirst({ where: { leagueId: req.leagueId, key: reassignTo } })
+    if (!target) return res.status(400).json({ error: 'unknown role to reassign to' })
+    const where = { leagueId: req.leagueId, roleKey: role.key }
+    await prisma.task.updateMany({ where, data: { roleKey: target.key } })
+    await prisma.emailTemplate.updateMany({ where, data: { roleKey: target.key } })
+    await prisma.calendarItem.updateMany({ where, data: { roleKey: target.key } })
+    // permissions are (category, roleKey)-unique, so a merge could collide
+    await prisma.categoryPermission.deleteMany({ where })
+  }
+  await prisma.officerAssignment.deleteMany({ where: { leagueId: req.leagueId, roleId: role.id } })
+  await prisma.role.delete({ where: { id } })
+  res.json({ ok: true, reassignedTo: reassignTo || null, moved: usage })
+})
+
 leaguesRouter.get('/:leagueId/members', requireAuth, loadLeague, requireOwner, async (req, res) => {
   const members = await prisma.membership.findMany({
     where: { leagueId: req.leagueId },

@@ -301,7 +301,7 @@ contentRouter.patch('/tasks/:id', async (req, res) => {
   if (!task) return res.status(404).json({ error: 'not found' })
   if (!(await canEditCategory(req.leagueId, req.membership, 'tasks', task.roleKey)))
     return res.status(403).json({ error: 'not permitted' })
-  const { status, stepsDone, details, steps, links, title, description, dueWeekOfFY, dueDateOverride, archiveStep } = req.body || {}
+  const { status, stepsDone, details, steps, links, title, description, dueWeekOfFY, dueDateOverride, archiveStep, roleKey } = req.body || {}
   const applyToSeries = req.body?.applyToSeries === true || req.query.applyToSeries === '1'
   const data = {}
   // A removed step is archived (not destroyed) so a later season can pull it back.
@@ -327,6 +327,17 @@ contentRouter.patch('/tasks/:id', async (req, res) => {
   // null clears the pin and falls back to the week's start date
   if (dueDateOverride !== undefined)
     data.dueDateOverride = dueDateOverride ? new Date(dueDateOverride) : null
+
+  /* Reassign the task to a different role. Checked against the TARGET role too:
+     otherwise anyone who can edit their own role's tasks could push work onto a
+     role they have no rights over. */
+  if (roleKey !== undefined && roleKey !== task.roleKey) {
+    const target = await prisma.role.findFirst({ where: { leagueId: req.leagueId, key: String(roleKey) } })
+    if (!target) return res.status(400).json({ error: 'unknown role' })
+    if (!(await canEditCategory(req.leagueId, req.membership, 'tasks', target.key)))
+      return res.status(403).json({ error: `You can't move tasks into ${target.name}.` })
+    data.roleKey = target.key
+  }
   if (Object.keys(data).length === 0) return res.status(400).json({ error: 'nothing to update' })
   const updated = await prisma.task.update({ where: { id }, data })
 

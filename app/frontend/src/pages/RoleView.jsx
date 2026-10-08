@@ -64,7 +64,7 @@ export default function RoleView() {
         {tasks.length === 0 && <p className="muted">No tasks for this role.</p>}
         {tasks.map((t) => (
           <TaskItem key={t.id} task={t} leagueId={leagueId} seasonYear={seasonYear}
-            onDuplicate={duplicateTask} onSeriesChanged={load} onChange={updateTask}
+            onDuplicate={duplicateTask} onSeriesChanged={load} roles={roles} onChange={updateTask}
             onDelete={removeTask} canEdit={canEdit} />
         ))}
         <OptionalPool leagueId={leagueId} seasonYear={seasonYear} roleKey={roleKey}

@@ -53,7 +53,7 @@ function DetailsBlock({ value, onSave, canEdit }) {
 
 // Expandable task "playbook": editable title/week/description/details, an interactive
 // checklist, and resource links. All edits persist via PATCH /tasks/:id.
-export default function TaskItem({ task, leagueId, onChange, onDelete, onDuplicate, onSeriesChanged, canEdit = false, seasonYear }) {
+export default function TaskItem({ task, leagueId, onChange, onDelete, onDuplicate, onSeriesChanged, roles = [], canEdit = false, seasonYear }) {
   const [open, setOpen] = useState(!!task.__isNew)
   const [showLinkPicker, setShowLinkPicker] = useState(false)
   const [agendaMsg, setAgendaMsg] = useState(null)
@@ -196,6 +196,19 @@ export default function TaskItem({ task, leagueId, onChange, onDelete, onDuplica
           </div>
 
           <DetailsBlock value={task.details} canEdit={canEdit} onSave={(details) => save({ details })} />
+
+          {canEdit && roles.length > 0 && (
+            <div className="row task-role-row" style={{ gap: 8, alignItems: 'center', flexWrap: 'wrap', marginBottom: 10 }}>
+              <label style={{ margin: 0 }} htmlFor={`role-${task.id}`}>Role</label>
+              <select id={`role-${task.id}`} value={task.roleKey} style={{ flex: '0 1 240px', minWidth: 0 }}
+                onChange={async (e) => {
+                  await save({ roleKey: e.target.value })
+                  onSeriesChanged?.()   // it may no longer belong in the list being viewed
+                }}>
+                {roles.map((r) => <option key={r.key} value={r.key}>{r.name}</option>)}
+              </select>
+            </div>
+          )}
 
           {(steps.length > 0 || canEdit) && (
             <div className="checklist">
