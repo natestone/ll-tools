@@ -63,7 +63,7 @@ export async function cloneSeed(leagueId, seasonYear = currentSeasonYear()) {
   if (tasks.length) await prisma.task.createMany({
     data: tasks.map((t) => ({
       leagueId, seasonYear, roleKey: t.roleKey, dueWeekOfFY: t.dueWeekOfFY,
-      title: t.title, description: t.description, details: t.details,
+      title: t.title, details: t.details,
       steps: t.steps ?? [], links: t.links ?? [],
       // progress is per-league, never inherited from the template
       status: 'open', stepsDone: [], seededFromId: t.id,

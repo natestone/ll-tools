@@ -68,7 +68,7 @@ seasonsRouter.post('/rollover', requireOwner, async (req, res) => {
   await prisma.task.createMany({
     data: source.map((t) => ({
       leagueId: req.leagueId, seasonYear: to, roleKey: t.roleKey,
-      title: t.title, description: t.description, details: t.details,
+      title: t.title, details: t.details,
       steps: t.steps ?? [], links: t.links ?? [],
       archivedSteps: t.archivedSteps ?? [],
       archivedAt: t.archivedAt,          // optional items stay optional

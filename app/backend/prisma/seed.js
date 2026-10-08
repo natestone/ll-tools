@@ -131,8 +131,7 @@ async function main() {
   if (tasks.length) await prisma.task.createMany({
     data: tasks.map((t) => ({
       leagueId, seasonYear: SEED_SEASON, roleKey: t.roleKey, dueWeekOfFY: t.dueWeekOfFY ?? null,
-      title: (t.title || '').slice(0, 2000), description: t.description || '',
-      details: t.details ?? null, steps: t.steps ?? null, links: t.links ?? null, stepsDone: [],
+      title: (t.title || '').slice(0, 2000), details: t.details ?? null, steps: t.steps ?? null, links: t.links ?? null, stepsDone: [],
     })),
   })
 

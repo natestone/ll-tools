@@ -147,7 +147,7 @@ contentRouter.get('/tasks', async (req, res) => {
 
 // Create a task for a role (the "+" on a role's task list)
 contentRouter.post('/tasks', async (req, res) => {
-  const { roleKey, title, description, dueWeekOfFY, dueDateOverride, details, steps, links } = req.body || {}
+  const { roleKey, title, dueWeekOfFY, dueDateOverride, details, steps, links } = req.body || {}
   if (!roleKey) return res.status(400).json({ error: 'roleKey required' })
   if (!(await canEditCategory(req.leagueId, req.membership, 'tasks', roleKey)))
     return res.status(403).json({ error: 'not permitted' })
@@ -155,7 +155,6 @@ contentRouter.post('/tasks', async (req, res) => {
     data: {
       leagueId: req.leagueId, roleKey, seasonYear: seasonOf(req),
       title: String(title ?? 'New task').slice(0, 2000),
-      description: String(description ?? ''),
       dueWeekOfFY: dueWeekOfFY == null ? null : Math.max(0, Math.min(51, parseInt(dueWeekOfFY, 10) || 0)),
       dueDateOverride: dueDateOverride ? new Date(dueDateOverride) : null,
       details: details ?? null, steps: steps ?? [], links: links ?? [], stepsDone: [], archivedSteps: [],
@@ -209,7 +208,7 @@ contentRouter.post('/tasks/:id/duplicate', async (req, res) => {
   const copy = await prisma.task.create({
     data: {
       leagueId: req.leagueId, seasonYear: t.seasonYear, roleKey: t.roleKey,
-      title: `${t.title} (copy)`, description: t.description, details: t.details,
+      title: `${t.title} (copy)`, details: t.details,
       steps: t.steps ?? [], links: t.links ?? [],
       dueWeekOfFY: t.dueWeekOfFY, dueDateOverride: t.dueDateOverride,
       status: 'open', stepsDone: [], seededFromId: t.seededFromId,
@@ -248,7 +247,7 @@ contentRouter.post('/tasks/:id/recurrence', async (req, res) => {
   if (rest.length) await prisma.task.createMany({
     data: rest.map((w) => ({
       leagueId: req.leagueId, seasonYear: season, roleKey: t.roleKey,
-      title: t.title, description: t.description, details: t.details,
+      title: t.title, details: t.details,
       steps: t.steps ?? [], links: t.links ?? [],
       dueWeekOfFY: w, status: 'open', stepsDone: [],
       seriesId, recurrence, seededFromId: t.seededFromId,
@@ -301,7 +300,7 @@ contentRouter.patch('/tasks/:id', async (req, res) => {
   if (!task) return res.status(404).json({ error: 'not found' })
   if (!(await canEditCategory(req.leagueId, req.membership, 'tasks', task.roleKey)))
     return res.status(403).json({ error: 'not permitted' })
-  const { status, stepsDone, details, steps, links, title, description, dueWeekOfFY, dueDateOverride, archiveStep, roleKey } = req.body || {}
+  const { status, stepsDone, details, steps, links, title, dueWeekOfFY, dueDateOverride, archiveStep, roleKey } = req.body || {}
   const applyToSeries = req.body?.applyToSeries === true || req.query.applyToSeries === '1'
   const data = {}
   // A removed step is archived (not destroyed) so a later season can pull it back.
@@ -317,7 +316,6 @@ contentRouter.patch('/tasks/:id', async (req, res) => {
   if (links !== undefined) data.links = links
   if (req.body?.archivedSteps !== undefined) data.archivedSteps = req.body.archivedSteps || []
   if (title !== undefined) data.title = String(title).slice(0, 2000)
-  if (description !== undefined) data.description = String(description)
   if (dueWeekOfFY !== undefined) {
     data.dueWeekOfFY = dueWeekOfFY === null ? null : Math.max(0, Math.min(51, parseInt(dueWeekOfFY, 10) || 0))
     // Moving the week discards a stale pinned date — an override from the old
@@ -343,7 +341,7 @@ contentRouter.patch('/tasks/:id', async (req, res) => {
 
   /* Propagate to the rest of the series when asked.
 
-     Only shared content travels: title, description, details, steps, links.
+     Only shared content travels: title, details, steps, links.
      Per-occurrence fields (which week it falls on, whether it's done, which
      steps are ticked) stay local — that is the whole point of having separate
      occurrences.
@@ -353,7 +351,7 @@ contentRouter.patch('/tasks/:id', async (req, res) => {
      occurrence would quietly wipe deliberate per-occurrence wording. */
   let series = null
   if (applyToSeries && task.seriesId) {
-    const SHARED = ['title', 'description', 'details', 'steps', 'links']
+    const SHARED = ['title', 'details', 'steps', 'links']
     const shared = Object.fromEntries(Object.entries(data).filter(([k]) => SHARED.includes(k)))
     if (Object.keys(shared).length) {
       const siblings = await prisma.task.findMany({

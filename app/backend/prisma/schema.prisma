@@ -216,7 +216,7 @@ model Task {
   seriesId     String?
   recurrence   Json?      // { frequency, anchorWeek }
   title        String   @db.Text
-  description  String   @db.Text
+  // The single description field. Markdown, rendered when idle.
   details      String?  @db.LongText
   steps        Json?
   links        Json?

@@ -64,7 +64,7 @@ export default function TaskItem({ task, leagueId, onChange, onDelete, onDuplica
   const doneSet = new Set(task.stepsDone || [])
   const links = task.links || []
   // once editable, always expandable (so empty sections can be filled in)
-  const hasBody = canEdit || !!(task.details?.trim() || steps.length || links.length || task.description)
+  const hasBody = canEdit || !!(task.details?.trim() || steps.length || links.length)
 
   /* Shared fields in a recurring series prompt before spreading. Per-occurrence
      fields (week, done, ticked steps) never travel, so they skip the prompt. */
@@ -189,12 +189,8 @@ export default function TaskItem({ task, leagueId, onChange, onDelete, onDuplica
 
       {open && hasBody && (
         <div className="taskitem-body">
-          <div className="task-desc">
-            <EditableText value={task.description} canEdit={canEdit} multiline pencil
-              placeholder="Click to add a short description…"
-              onSave={(description) => save({ description })} />
-          </div>
-
+          {/* One description field. There used to be a short `description` above
+              this as well; the two were merged into `details`. */}
           <DetailsBlock value={task.details} canEdit={canEdit} onSave={(details) => save({ details })} />
 
           {canEdit && roles.length > 0 && (

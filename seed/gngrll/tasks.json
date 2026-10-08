@@ -3,8 +3,7 @@
     "roleKey": "equipment_coordinator",
     "title": "Coordinate end-of-season gear bag/bin collection",
     "dueWeekOfFY": 0,
-    "description": "Collect gear bags and bins from teams, retrieve batting cage nets and banners, and complete concessions/upstairs cleanout.",
-    "details": "At the close of the playing season the Equipment Manager reclaims all shared league gear so nothing is lost or left to weather over the offseason. This means pulling gear bags and locked bins back from every field, retrieving batting-cage nets and sponsor/field banners, and finishing the concessions and upstairs storage cleanout. Consolidating everything now (typically staged at Douglas) protects the league's investment and sets up the fall inventory.",
+    "details": "Collect gear bags and bins from teams, retrieve batting cage nets and banners, and complete concessions/upstairs cleanout.\n\nAt the close of the playing season the Equipment Manager reclaims all shared league gear so nothing is lost or left to weather over the offseason. This means pulling gear bags and locked bins back from every field, retrieving batting-cage nets and sponsor/field banners, and finishing the concessions and upstairs storage cleanout. Consolidating everything now (typically staged at Douglas) protects the league's investment and sets up the fall inventory.",
     "steps": [
       "Notify head coaches of the return deadline and confirm each field's bin combination/key so bins can be opened and emptied.",
       "Collect gear bags and locked bins from every field, verifying balls are back in the bins and bins are re-locked.",
@@ -35,7 +34,6 @@
     "roleKey": "equipment_coordinator",
     "title": "Order bat/ball/team equipment replacements",
     "dueWeekOfFY": 1,
-    "description": "Purchase replacement bats, balls, and team equipment for next season within approved caps (bats <= $2,000; balls $1,400-$2,500).",
     "details": "After the fall inventory identifies gaps, the Equipment Manager purchases replacement bats, balls, and shared team equipment for the next season within board-approved caps (bats up to $2,000; balls $1,400-$2,500). Ordering in the offseason ensures gear arrives before winter prep and pre-season staging. The league's annual {{equipmentVendor}} sponsorship credit and partner discount code should be applied to stretch the budget.",
     "steps": [
       "Build the replacement order from the inventory needs list, splitting practice vs. season baseballs/softballs and bats by division.",
@@ -61,8 +59,7 @@
     "roleKey": "equipment_coordinator",
     "title": "Prepare equipment inventory and needs report",
     "dueWeekOfFY": 2,
-    "description": "Inventory bats, baseballs, catcher's gear, mowers/tractors, and bins; assess storage security and present needs to the board.",
-    "details": "The Equipment Manager compiles a full inventory of bats, baseballs, catcher's gear, mowers/tractors, and bins, assesses how securely gear is stored, and presents the resulting needs to the board. This report drives the season's equipment spending motion and flags recurring problems such as bin theft. It is typically presented at a winter organizational/board meeting alongside registration and uniform planning.",
+    "details": "Inventory bats, baseballs, catcher's gear, mowers/tractors, and bins; assess storage security and present needs to the board.\n\nThe Equipment Manager compiles a full inventory of bats, baseballs, catcher's gear, mowers/tractors, and bins, assesses how securely gear is stored, and presents the resulting needs to the board. This report drives the season's equipment spending motion and flags recurring problems such as bin theft. It is typically presented at a winter organizational/board meeting alongside registration and uniform planning.",
     "steps": [
       "Count on-hand bats, baseballs/softballs, helmets, catcher's gear, mowers/tractors, and bins by division.",
       "Assess storage security, noting bin theft history and whether gear should move to the snack shack as a contingency.",
@@ -87,8 +84,7 @@
     "roleKey": "equipment_coordinator",
     "title": "Complete fall equipment inventory",
     "dueWeekOfFY": 7,
-    "description": "Conduct the fall inventory of all playing equipment to establish on-hand stock and replacement list.",
-    "details": "The fall inventory establishes the league's true on-hand stock once all gear has been collected from the fields at season's end. Counting everything now produces the baseline replacement list that feeds offseason purchasing and the winter board spending motion. Doing it in the fall gives enough lead time to order and receive gear before the next season.",
+    "details": "Conduct the fall inventory of all playing equipment to establish on-hand stock and replacement list.\n\nThe fall inventory establishes the league's true on-hand stock once all gear has been collected from the fields at season's end. Counting everything now produces the baseline replacement list that feeds offseason purchasing and the winter board spending motion. Doing it in the fall gives enough lead time to order and receive gear before the next season.",
     "steps": [
       "Gather all collected bins, bags, and gear at the central storage location and open every bin.",
       "Count and record bats, baseballs/softballs, helmets, catcher's gear, tees, nets, and misc items (bat grips, bownets) by division.",
@@ -113,7 +109,6 @@
     "roleKey": "equipment_coordinator",
     "title": "Purchase winter season-prep equipment",
     "dueWeekOfFY": 9,
-    "description": "Order helmets, catcher's gear, baseballs/softballs, bats, tees, and nets for the coming season.",
     "details": "During the winter the Equipment Manager places the major season-prep order once the board has approved equipment spending. This covers helmets, catcher's gear, baseballs/softballs, bats, tees, and nets identified as gaps in the fall inventory. Ordering in winter ensures gear is on hand to stage and distribute before games begin in the spring.",
     "steps": [
       "Convert the fall inventory needs list into a concrete winter purchase order by division.",
@@ -139,8 +134,7 @@
     "roleKey": "equipment_coordinator",
     "title": "Run pre-season equipment inventory and purchasing",
     "dueWeekOfFY": 18,
-    "description": "Complete pre-season inventory and order helmets, catcher's gear, balls, bats, tees, and nets to fill gaps before games.",
-    "details": "Just before the season the Equipment Manager re-checks stock against final registration numbers and fills any remaining gaps in helmets, catcher's gear, balls, bats, tees, and nets. This last-mile inventory catches shortfalls the winter order missed once team counts are set, so every field is fully equipped before games. It typically happens in the weeks leading into spring practices and Opening Day.",
+    "details": "Complete pre-season inventory and order helmets, catcher's gear, balls, bats, tees, and nets to fill gaps before games.\n\nJust before the season the Equipment Manager re-checks stock against final registration numbers and fills any remaining gaps in helmets, catcher's gear, balls, bats, tees, and nets. This last-mile inventory catches shortfalls the winter order missed once team counts are set, so every field is fully equipped before games. It typically happens in the weeks leading into spring practices and Opening Day.",
     "steps": [
       "Reconcile on-hand gear against final registration and team counts by division.",
       "Identify any remaining shortfalls in helmets, catcher's gear, balls, bats, tees, and nets.",
@@ -165,7 +159,6 @@
     "roleKey": "equipment_coordinator",
     "title": "Prepare equipment spending motion for board",
     "dueWeekOfFY": 22,
-    "description": "Draft the team/field equipment purchase list and spending motion (e.g. up to {{amount}}) for board approval with the president.",
     "details": "The Equipment Manager works with the president to draft the team/field equipment purchase list and a spending motion (e.g. up to {{amount}}) for board approval. Formalizing purchasing authority by motion lets gear be bought at the discretion of the president and equipment manager within a set cap. This is presented at a winter board meeting so orders can be placed in time for the season.",
     "steps": [
       "Turn the inventory needs report into an itemized purchase list with per-category cost estimates.",
@@ -196,8 +189,7 @@
     "roleKey": "equipment_coordinator",
     "title": "Set up Tee Ball / Coach Pitch field bins",
     "dueWeekOfFY": 27,
-    "description": "Assemble and place gear bins, helmets, and equipment on Tee Ball and Coach Pitch fields before the season begins.",
-    "details": "Before the Tee Ball and Coach Pitch season opens, the equipment team assembles and places gear bins, helmets, and equipment on each of those fields. This is often done at a bin-assembly day at Douglas with pop-up tents used to organize a set per field before distribution. Getting bins staged and delivered ensures every young-division field is ready for the first practices and games.",
+    "details": "Assemble and place gear bins, helmets, and equipment on Tee Ball and Coach Pitch fields before the season begins.\n\nBefore the Tee Ball and Coach Pitch season opens, the equipment team assembles and places gear bins, helmets, and equipment on each of those fields. This is often done at a bin-assembly day at Douglas with pop-up tents used to organize a set per field before distribution. Getting bins staged and delivered ensures every young-division field is ready for the first practices and games.",
     "steps": [
       "Assemble the gear bins and sort helmets, bats, tees, balls, and buckets into a set per Tee Ball/Coach Pitch field.",
       "Use pop-up tents at the staging site (e.g. Douglas behind Subway) to organize each field's set.",
@@ -227,8 +219,7 @@
     "roleKey": "equipment_coordinator",
     "title": "Place ball order and stock season equipment",
     "dueWeekOfFY": 30,
-    "description": "Order baseballs/softballs and stock tees, buckets, helmets, and catcher's gear for in-season use.",
-    "details": "Early in the season the Equipment Manager places the main baseball/softball order and stocks each field's consumables and shared gear. Each field is set with roughly two buckets of ~48 baseballs plus tees, buckets, helmets, and catcher's gear for in-season use. Keeping balls replenished matters because baseballs are the most frequently lost and stolen item.",
+    "details": "Order baseballs/softballs and stock tees, buckets, helmets, and catcher's gear for in-season use.\n\nEarly in the season the Equipment Manager places the main baseball/softball order and stocks each field's consumables and shared gear. Each field is set with roughly two buckets of ~48 baseballs plus tees, buckets, helmets, and catcher's gear for in-season use. Keeping balls replenished matters because baseballs are the most frequently lost and stolen item.",
     "steps": [
       "Place the season baseball/softball order (practice and game balls) based on the approved quantities.",
       "Stock each field with roughly two buckets of ~48 baseballs (about 96 total), numbered in groups.",
@@ -253,8 +244,7 @@
     "roleKey": "equipment_coordinator",
     "title": "Recruit equipment setup volunteers",
     "dueWeekOfFY": 30,
-    "description": "Send the equipment setup volunteer request and organize a bin-assembly day with pop-up tents per field.",
-    "details": "The Equipment Manager recruits a small crew (typically 3-4 volunteers) to help assemble gear bins and organize a season setup/bin-assembly day. The work happens at a central field (e.g. Douglas) using pop-up tents to organize a gear set for each field. Recruiting help spreads the workload and gets all fields equipped quickly right before the season.",
+    "details": "Send the equipment setup volunteer request and organize a bin-assembly day with pop-up tents per field.\n\nThe Equipment Manager recruits a small crew (typically 3-4 volunteers) to help assemble gear bins and organize a season setup/bin-assembly day. The work happens at a central field (e.g. Douglas) using pop-up tents to organize a gear set for each field. Recruiting help spreads the workload and gets all fields equipped quickly right before the season.",
     "steps": [
       "Set the bin-assembly day date, time, and location (e.g. Douglas, a 12-2 window).",
       "Send the equipment setup volunteer request asking for 3-4 helpers, noting pop-up tents will organize gear per field.",
@@ -279,8 +269,7 @@
     "roleKey": "equipment_coordinator",
     "title": "Collect, sort, and store end-of-season gear",
     "dueWeekOfFY": 42,
-    "description": "Gather gear bags, bins, cage nets, and uniforms; sort and store securely for the offseason.",
-    "details": "As the season winds down the Equipment Manager gathers gear bags, bins, batting-cage nets, and returned uniforms, then sorts and stores everything securely for the offseason. Consolidating and locking down gear prevents loss and theft, which have been recurring problems with unlocked bins. This collection feeds the subsequent fall inventory.",
+    "details": "Gather gear bags, bins, cage nets, and uniforms; sort and store securely for the offseason.\n\nAs the season winds down the Equipment Manager gathers gear bags, bins, batting-cage nets, and returned uniforms, then sorts and stores everything securely for the offseason. Consolidating and locking down gear prevents loss and theft, which have been recurring problems with unlocked bins. This collection feeds the subsequent fall inventory.",
     "steps": [
       "Notify coaches of the gear return deadline and collect gear bags, bins, and any issued equipment from each field.",
       "Retrieve batting-cage nets and gather returned uniforms.",
@@ -310,8 +299,7 @@
     "roleKey": "equipment_coordinator",
     "title": "Schedule equipment inventory and recruit volunteers",
     "dueWeekOfFY": 49,
-    "description": "Set the next inventory date and line up volunteers to count and organize equipment.",
-    "details": "The Equipment Manager sets the offseason inventory date and lines up volunteers to count and organize the collected gear. Scheduling the count and a helper crew ensures the inventory gets done efficiently and produces an accurate on-hand list. This is the lead-in to the fall inventory and replacement planning.",
+    "details": "Set the next inventory date and line up volunteers to count and organize equipment.\n\nThe Equipment Manager sets the offseason inventory date and lines up volunteers to count and organize the collected gear. Scheduling the count and a helper crew ensures the inventory gets done efficiently and produces an accurate on-hand list. This is the lead-in to the fall inventory and replacement planning.",
     "steps": [
       "Pick an inventory date once all gear has been collected and staged.",
       "Send a volunteer request for helpers to count and organize equipment on that date.",
@@ -336,8 +324,7 @@
     "roleKey": "grounds_crew",
     "title": "Compile end-of-season field cleanup priority list",
     "dueWeekOfFY": 1,
-    "description": "Walk each field (Douglas, Penney, Pennell, Newbegin, Intervale, Russell, {{townC}}) and list needed fall work: fencing, base paths, mounds, dugouts, drag, aerate/fertilize.",
-    "details": "As the season winds down, the grounds crew walks every {{leagueAbbrev}} field to inventory the fall work each one needs, since fall is the best window for major field work (spring is rainy and often frozen). This priority list feeds the board's fall maintenance planning, equipment budgeting, and volunteer work-day scheduling. It should capture fencing, base paths, mounds, dugouts, dragging, and turf care (aerate/fertilize) field by field.",
+    "details": "Walk each field (Douglas, Penney, Pennell, Newbegin, Intervale, Russell, {{townC}}) and list needed fall work: fencing, base paths, mounds, dugouts, drag, aerate/fertilize.\n\nAs the season winds down, the grounds crew walks every {{leagueAbbrev}} field to inventory the fall work each one needs, since fall is the best window for major field work (spring is rainy and often frozen). This priority list feeds the board's fall maintenance planning, equipment budgeting, and volunteer work-day scheduling. It should capture fencing, base paths, mounds, dugouts, dragging, and turf care (aerate/fertilize) field by field.",
     "steps": [
       "Walk each field in turn: Douglas, Penney, Pennell, Newbegin, Intervale, Russell, and the {{townC}} fields.",
       "At each field, note needed work in categories: fencing, base paths/infield mix, mounds and batter's boxes, dugouts, dragging, and aerate/fertilize.",
@@ -368,8 +355,7 @@
     "roleKey": "grounds_crew",
     "title": "Scope fall field improvement projects and costs",
     "dueWeekOfFY": 3,
-    "description": "Draft scope and rough budgets for Intervale, Bennett Rd, Douglass, lights, batting cages, and 50/70 conversions for board discussion.",
-    "details": "The grounds crew turns the fall priority list into scoped projects with rough budgets so the board can decide what to fund and authorize by motion. Historically this has covered Intervale, Bennett Rd, Douglas, lights, batting cages, and 50/70 conversions. Each project needs a rough cost and materials plan because field, equipment, and capital spending is approved by board motion, second, and vote.",
+    "details": "Draft scope and rough budgets for Intervale, Bennett Rd, Douglass, lights, batting cages, and 50/70 conversions for board discussion.\n\nThe grounds crew turns the fall priority list into scoped projects with rough budgets so the board can decide what to fund and authorize by motion. Historically this has covered Intervale, Bennett Rd, Douglas, lights, batting cages, and 50/70 conversions. Each project needs a rough cost and materials plan because field, equipment, and capital spending is approved by board motion, second, and vote.",
     "steps": [
       "Draft a short scope for each candidate project: Intervale, Bennett Rd, Douglas, lights, batting cages, and 50/70 conversions.",
       "Gather rough budgets and quotes (e.g. batting cage net ~$700, metal shed ~$550, mowers ~$1,900 each, fencing materials, infield mix) from suppliers and contractors.",
@@ -399,8 +385,7 @@
     "roleKey": "grounds_crew",
     "title": "Order fall fertilizer and schedule aeration",
     "dueWeekOfFY": 4,
-    "description": "Purchase fall fertilizer (up to ~{{amount}} for Douglas/Penney) and arrange aeration before ground freezes.",
-    "details": "Fall is the right time to feed and aerate the turf at the league's primary fields, Douglas and Penney, before the ground freezes. Fertilizer spend is a routine field expense approved by board motion (historically up to ~{{amount}} for Douglas/Penney). Getting the fertilizer down and the fields aerated in fall sets up healthier grass and better drainage for the following season.",
+    "details": "Purchase fall fertilizer (up to ~{{amount}} for Douglas/Penney) and arrange aeration before ground freezes.\n\nFall is the right time to feed and aerate the turf at the league's primary fields, Douglas and Penney, before the ground freezes. Fertilizer spend is a routine field expense approved by board motion (historically up to ~{{amount}} for Douglas/Penney). Getting the fertilizer down and the fields aerated in fall sets up healthier grass and better drainage for the following season.",
     "steps": [
       "Confirm the board has approved the fertilizer purchase (typically a motion for up to ~{{amount}} for Douglas and Penney).",
       "Order fall fertilizer for Douglas and Penney and coordinate pickup/supply (historically via a local supplier such as Bark Bros).",
@@ -425,8 +410,7 @@
     "roleKey": "grounds_crew",
     "title": "Service and winterize grounds equipment",
     "dueWeekOfFY": 6,
-    "description": "Service mowers/tractors, drags, and sheds; secure equipment storage for winter.",
-    "details": "Before winter, the grounds crew services and stores the league's mowers, tractors, drags, and sheds so equipment is ready and protected through the off-season. {{leagueAbbrev}} keeps lawn tractors, trimmers, and sheds on site at each field, and has purchased multiple mowers and tractors (including three tractors bought with Intervale grant funds), so this is real fleet upkeep. Secure storage also matters because the league has repeatedly experienced theft at Douglas.",
+    "details": "Service mowers/tractors, drags, and sheds; secure equipment storage for winter.\n\nBefore winter, the grounds crew services and stores the league's mowers, tractors, drags, and sheds so equipment is ready and protected through the off-season. {{leagueAbbrev}} keeps lawn tractors, trimmers, and sheds on site at each field, and has purchased multiple mowers and tractors (including three tractors bought with Intervale grant funds), so this is real fleet upkeep. Secure storage also matters because the league has repeatedly experienced theft at Douglas.",
     "steps": [
       "Inventory the fleet: lawn tractors/mowers (including the grant-funded tractors), drags, trimmers, and hand tools at each field.",
       "Service each mower and tractor (oil, blades, fuel stabilizer, batteries) and repair or note drags and trailers needing work.",
@@ -451,8 +435,7 @@
     "roleKey": "grounds_crew",
     "title": "Advance Douglass batting cage / infield mix plan",
     "dueWeekOfFY": 9,
-    "description": "Get quotes and materials plan for the Douglass batting cage (net, poles) and infield mix work.",
-    "details": "The Douglas batting cage was slated for a full rebuild (new net, poles, structure, turf) and the infield needs substantial mix and top-dressing. This task gathers quotes and a materials plan so the board can authorize the project by motion. Historically the board authorized a contractor (Ruddley Emerson) to proceed at a cost not to exceed {{amount}} with a named point person, so a solid scope and quote are prerequisites.",
+    "details": "Get quotes and materials plan for the Douglass batting cage (net, poles) and infield mix work.\n\nThe Douglas batting cage was slated for a full rebuild (new net, poles, structure, turf) and the infield needs substantial mix and top-dressing. This task gathers quotes and a materials plan so the board can authorize the project by motion. Historically the board authorized a contractor (Ruddley Emerson) to proceed at a cost not to exceed {{amount}} with a named point person, so a solid scope and quote are prerequisites.",
     "steps": [
       "Get a quote for the batting cage rebuild covering net, poles/structure, turf, and gravel/sand (historically ~55x12x12 net, later 15' wide x 65' long turf).",
       "Call Dig Safe before any post excavation and check on bringing power to the cage.",
@@ -482,8 +465,7 @@
     "roleKey": "grounds_crew",
     "title": "Take down banners, cages, and complete fall cleanup",
     "dueWeekOfFY": 10,
-    "description": "Remove field banners and batting cage nets and finish end-of-season field cleanup.",
-    "details": "At the true end of the season the grounds crew retrieves the outfield sponsor banners and takes down the batting cage nets (Penney and Pennell) so they don't weather over winter, and finishes end-of-season field cleanup. This protects league assets (banners and nets are paid sponsorship/equipment items) and closes out the fields. It typically runs alongside equipment inventory and fall turf work.",
+    "details": "Remove field banners and batting cage nets and finish end-of-season field cleanup.\n\nAt the true end of the season the grounds crew retrieves the outfield sponsor banners and takes down the batting cage nets (Penney and Pennell) so they don't weather over winter, and finishes end-of-season field cleanup. This protects league assets (banners and nets are paid sponsorship/equipment items) and closes out the fields. It typically runs alongside equipment inventory and fall turf work.",
     "steps": [
       "Retrieve all outfield/fence sponsor banners and store them dry for reuse next season.",
       "Take down batting cage nets at Penney and Pennell (and any others) and store them out of the weather.",
@@ -508,8 +490,7 @@
     "roleKey": "grounds_crew",
     "title": "Order infield mix, fertilizer, and cage materials for spring",
     "dueWeekOfFY": 18,
-    "description": "Line up spring materials (infield mix, fertilizer, cage/net supplies) and confirm mower/drag readiness.",
-    "details": "In late winter the grounds crew lines up the consumables and materials needed for spring field prep so nothing holds up opening the fields. This includes infield mix, fertilizer, and cage/net supplies, plus confirming the mowers and drags are ready to run. Ordering early matters because spring is short and rainy, and materials deliveries (e.g. infield mix drops at Douglas) drive short-notice work days.",
+    "details": "Line up spring materials (infield mix, fertilizer, cage/net supplies) and confirm mower/drag readiness.\n\nIn late winter the grounds crew lines up the consumables and materials needed for spring field prep so nothing holds up opening the fields. This includes infield mix, fertilizer, and cage/net supplies, plus confirming the mowers and drags are ready to run. Ordering early matters because spring is short and rainy, and materials deliveries (e.g. infield mix drops at Douglas) drive short-notice work days.",
     "steps": [
       "Compile the spring materials list: infield mix (Douglas/Russell especially), fertilizer, and cage/net supplies.",
       "Place orders and schedule delivery timing so mix arrives when volunteer crews can spread it.",
@@ -539,8 +520,7 @@
     "roleKey": "grounds_crew",
     "title": "Schedule and staff spring field cleanup days",
     "dueWeekOfFY": 24,
-    "description": "Set cleanup day dates by town/field, recruit volunteers, and send the field work day notice with tool/task lists.",
-    "details": "This is the flagship spring field cleanup effort that gets every field playable before the season opens, typically the weekend before games start with a rain-date backup (e.g. Field Cleanup 4/12 with a 4/26 rain date in 2026). The crew sets dates by town/field, recruits volunteers, and sends a work-day notice with tool and task lists. Cleanup focuses on raking leaves, clearing trash, and working infield surfaces so base paths are clear of weeds, rocks, and large holes.",
+    "details": "Set cleanup day dates by town/field, recruit volunteers, and send the field work day notice with tool/task lists.\n\nThis is the flagship spring field cleanup effort that gets every field playable before the season opens, typically the weekend before games start with a rain-date backup (e.g. Field Cleanup 4/12 with a 4/26 rain date in 2026). The crew sets dates by town/field, recruits volunteers, and sends a work-day notice with tool and task lists. Cleanup focuses on raking leaves, clearing trash, and working infield surfaces so base paths are clear of weeds, rocks, and large holes.",
     "steps": [
       "Set the primary cleanup day and a rain date, and assign specific fields by town ({{townA}}, {{townB}}, {{townC}}).",
       "List each field's tasks and tools: leaf/steel rakes, shovels, edgers, weed whackers, leaf blowers, pruning shears for bittersweet, and drags for the infield.",
@@ -571,8 +551,7 @@
     "roleKey": "grounds_crew",
     "title": "Install field locks and begin in-season mowing rotation",
     "dueWeekOfFY": 27,
-    "description": "Install locks, set drag/mowing schedule, and remind coaches to drag fields and rake mounds/batter's boxes after use.",
-    "details": "As opening week arrives, the crew stocks and secures the field equipment bins, distributes lock combinations to adults only, and starts the recurring mowing and dragging rotation. Bin combinations must not be shared because the league has had theft in prior years. The crew also reminds coaches to drag fields and rake mounds and batter's boxes after every use to keep fields playable all season.",
+    "details": "Install locks, set drag/mowing schedule, and remind coaches to drag fields and rake mounds/batter's boxes after use.\n\nAs opening week arrives, the crew stocks and secures the field equipment bins, distributes lock combinations to adults only, and starts the recurring mowing and dragging rotation. Bin combinations must not be shared because the league has had theft in prior years. The crew also reminds coaches to drag fields and rake mounds and batter's boxes after every use to keep fields playable all season.",
     "steps": [
       "Assemble and stock the gear bins for each field before opening week (historically a 3-4 volunteer setup at Douglas the weekend before).",
       "Install/verify locks on bins, sheds, and gates, and distribute combinations to assigned adults only, reminding them not to share due to past theft.",
@@ -602,7 +581,6 @@
     "roleKey": "grounds_crew",
     "title": "Progress field conversion/improvement projects",
     "dueWeekOfFY": 30,
-    "description": "Advance in-season projects: Fenway wall, Intervale, batting cages, and field strips.",
     "details": "During the season the crew advances active capital and improvement projects as weather and materials allow: the Fenway/Green Monster wall at Penney/Morrison Field, Intervale, batting cages, and field strips. Some of this is short-notice work driven by material deliveries, using volunteer crews with lawn tractors, trailers, shovels, and rakes. Getting fields tip-top before playoffs is a common driver.",
     "steps": [
       "Track the status of each in-season project: Fenway wall (Penney/Morrison), Intervale, batting cages, and field strips.",
@@ -633,8 +611,7 @@
     "roleKey": "grounds_crew",
     "title": "Coordinate summer field maintenance staffing",
     "dueWeekOfFY": 35,
-    "description": "Confirm ground crew volunteers for ongoing summer mowing and dragging and recognize the crew.",
-    "details": "Mid-summer the crew confirms the volunteers who keep fields mowed and dragged through the back half of the season and into all-stars, and recognizes the people doing the work. Ongoing maintenance is largely volunteer-driven: after every game and practice fields should be dragged, and the home team is responsible for field maintenance. Keeping a reliable crew ensures fields stay playable and setup time stays short.",
+    "details": "Confirm ground crew volunteers for ongoing summer mowing and dragging and recognize the crew.\n\nMid-summer the crew confirms the volunteers who keep fields mowed and dragged through the back half of the season and into all-stars, and recognizes the people doing the work. Ongoing maintenance is largely volunteer-driven: after every game and practice fields should be dragged, and the home team is responsible for field maintenance. Keeping a reliable crew ensures fields stay playable and setup time stays short.",
     "steps": [
       "Confirm the roster of ground crew volunteers for ongoing summer mowing and dragging across the fields.",
       "Fill any gaps by recruiting parents, reminding them that any fan, parent, or player can grab a rake or drag.",
@@ -659,7 +636,6 @@
     "roleKey": "grounds_crew",
     "title": "Plan fall cleanup and grounds equipment needs",
     "dueWeekOfFY": 42,
-    "description": "Assess mowers, sheds, bleachers, and drag/trailer needs and set the fall cleanup schedule.",
     "details": "As the season closes, the grounds coordinator assesses the state of mowers, sheds, bleachers, and drag/trailer needs and sets the fall cleanup schedule. This assessment feeds the fall equipment discussion and budget at the board meeting and lines up the end-of-season work days. It's the planning counterpart to the actual fall cleanup and winterizing that follow.",
     "steps": [
       "Assess the condition of mowers/tractors, sheds, bleachers, and drags/trailers across all fields.",
@@ -685,8 +661,7 @@
     "roleKey": "grounds_crew",
     "title": "Close out and pay for Douglass batting cage project",
     "dueWeekOfFY": 46,
-    "description": "Verify batting cage completion at Douglass and process the final payout.",
-    "details": "Once the Douglas batting cage is complete, the crew verifies the finished work against the authorized scope and processes the final contractor payout. The board authorized the installation at a not-to-exceed amount with a named point person, so closeout confirms the work is done before the treasurer pays. This closes the multi-year cage rebuild (posts, net, turf, gravel/sand).",
+    "details": "Verify batting cage completion at Douglass and process the final payout.\n\nOnce the Douglas batting cage is complete, the crew verifies the finished work against the authorized scope and processes the final contractor payout. The board authorized the installation at a not-to-exceed amount with a named point person, so closeout confirms the work is done before the treasurer pays. This closes the multi-year cage rebuild (posts, net, turf, gravel/sand).",
     "steps": [
       "Verify the batting cage is complete at Douglas: posts set, net hung, turf, gravel/sand, and structure finished.",
       "Confirm the final cost is within the board's authorized not-to-exceed amount and matches the contractor's invoice.",
@@ -711,8 +686,7 @@
     "roleKey": "grounds_crew",
     "title": "Report Intervale and Douglass capital project status",
     "dueWeekOfFY": 51,
-    "description": "Prepare update on Intervale (dugouts, benches, fencing, King grant) and Douglass cage (net, turf, gravel, cement) for the board.",
-    "details": "At the fall/winter board meetings the grounds coordinator reports on the league's two major capital efforts: Intervale (dugouts, benches, fencing, and the associated grant funding) and the Douglas cage (net, turf, gravel, cement). These updates keep the board informed on progress, spending, and grant reconciliation so it can plan the next phase. Intervale funding has combined the SK/Stephen King grant ($35K), GoFundMe, and {{landTrust}} contributions (including a final {{landTrust}} payment of $13,959).",
+    "details": "Prepare update on Intervale (dugouts, benches, fencing, King grant) and Douglass cage (net, turf, gravel, cement) for the board.\n\nAt the fall/winter board meetings the grounds coordinator reports on the league's two major capital efforts: Intervale (dugouts, benches, fencing, and the associated grant funding) and the Douglas cage (net, turf, gravel, cement). These updates keep the board informed on progress, spending, and grant reconciliation so it can plan the next phase. Intervale funding has combined the SK/Stephen King grant ($35K), GoFundMe, and {{landTrust}} contributions (including a final {{landTrust}} payment of $13,959).",
     "steps": [
       "Compile Intervale status: dugout pads/concrete, benches, fencing (black vinyl-coated), old fencing removed, and containers on site.",
       "Summarize Intervale funding and grant reconciliation (SK/King grant, GoFundMe, {{landTrust}} budget and the final {{amount}} payment).",
@@ -742,8 +716,7 @@
     "roleKey": "information_officer",
     "title": "Compile end-of-season survey for board retrospective",
     "dueWeekOfFY": 2,
-    "description": "Build and distribute the post-season survey, then compile results (positives, negatives, complaints) for the board's season retrospective.",
-    "details": "After the spring season wraps, {{leagueAbbrev}} surveys all families to gather feedback across every division for the season retrospective. The information officer builds the Google Form, blasts it to the full league, and compiles the responses into positives, negatives, and complaints for the board. This feedback drives fall planning decisions on registration timing, division structure, and volunteer needs.",
+    "details": "Build and distribute the post-season survey, then compile results (positives, negatives, complaints) for the board's season retrospective.\n\nAfter the spring season wraps, {{leagueAbbrev}} surveys all families to gather feedback across every division for the season retrospective. The information officer builds the Google Form, blasts it to the full league, and compiles the responses into positives, negatives, and complaints for the board. This feedback drives fall planning decisions on registration timing, division structure, and volunteer needs.",
     "steps": [
       "Build or reuse the season survey as a Google Form (forms.gle link) covering all divisions for the April-June spring season.",
       "Have the board proof the draft survey before it goes out, then send it to the entire league via the registration system email blast (subject like '{{leagueAbbrev}} - Spring Season League Survey').",
@@ -773,8 +746,7 @@
     "roleKey": "information_officer",
     "title": "Present season recap and survey feedback",
     "dueWeekOfFY": 7,
-    "description": "Summarize end-of-season survey feedback and the season recap for the board during fall planning.",
-    "details": "During fall planning, the information officer presents the compiled survey feedback and a recap of the completed season to the board. This turns raw family feedback into actionable decisions ahead of setting the next season's registration date and calendar. It typically feeds a late-fall board meeting where registration timing and volunteer sign-up plans are locked in.",
+    "details": "Summarize end-of-season survey feedback and the season recap for the board during fall planning.\n\nDuring fall planning, the information officer presents the compiled survey feedback and a recap of the completed season to the board. This turns raw family feedback into actionable decisions ahead of setting the next season's registration date and calendar. It typically feeds a late-fall board meeting where registration timing and volunteer sign-up plans are locked in.",
     "steps": [
       "Consolidate the compiled survey results (positives, negatives, complaints) into a concise recap deck or one-pager.",
       "Pair survey themes with season outcomes (registration counts, division participation, notable issues) to frame recommendations.",
@@ -799,8 +771,7 @@
     "roleKey": "information_officer",
     "title": "Coordinate sponsor / donor recognition materials",
     "dueWeekOfFY": 9,
-    "description": "Support sponsor thank-you and donor management (plaques, banners, framed jerseys) with the president and sponsorship coordinator.",
-    "details": "{{leagueAbbrev}} recognizes team sponsors and major donors with plaques, field banners, and framed jerseys, coordinated with the president and sponsorship coordinator. The information officer reviews plaque proofs from the photographer, corrects sponsor names, and organizes distribution. This work happens in the off-season so materials are ready to hand out and hang before the next season starts.",
+    "details": "Support sponsor thank-you and donor management (plaques, banners, framed jerseys) with the president and sponsorship coordinator.\n\n{{leagueAbbrev}} recognizes team sponsors and major donors with plaques, field banners, and framed jerseys, coordinated with the president and sponsorship coordinator. The information officer reviews plaque proofs from the photographer, corrects sponsor names, and organizes distribution. This work happens in the off-season so materials are ready to hand out and hang before the next season starts.",
     "steps": [
       "Collect the finalized sponsor/team list from the sponsorship coordinator and confirm spellings and business names.",
       "Request plaque layout proofs from the photographer (Tsukroff Photo) and review each for errors (e.g., correct 'Edson Builders' not 'Ebson').",
@@ -830,8 +801,7 @@
     "roleKey": "information_officer",
     "title": "Send registration-open blast and run signup nights",
     "dueWeekOfFY": 14,
-    "description": "Email the season-open registration announcement to the full league and run/promote open registration nights; start tracking division signup counts.",
-    "details": "In early January the information officer emails the full league to announce that spring registration is open for all divisions from Tee Ball (4-6) through Seniors, along with winter clinics, Challenger, and Sandlot options. This kicks off the enrollment window, drives families to the registration portal, and starts division-level signup tracking. Getting the blast out early gives time to fill rosters and plan indoor March practices.",
+    "details": "Email the season-open registration announcement to the full league and run/promote open registration nights; start tracking division signup counts.\n\nIn early January the information officer emails the full league to announce that spring registration is open for all divisions from Tee Ball (4-6) through Seniors, along with winter clinics, Challenger, and Sandlot options. This kicks off the enrollment window, drives families to the registration portal, and starts division-level signup tracking. Getting the blast out early gives time to fill rosters and plan indoor March practices.",
     "steps": [
       "Draft the season-open announcement (subject like '{{leagueAbbrev}} - Registration Open for the 2026 Spring Season') summarizing divisions, winter clinics, Challenger, and Sandlot.",
       "Include the registration portal link ({{infoWebsite}}/register-practices-assessments) and the embedded season calendar with assessment dates.",
@@ -861,7 +831,6 @@
     "roleKey": "information_officer",
     "title": "Publish finalized season calendar and key dates",
     "dueWeekOfFY": 14,
-    "description": "Post the finalized season calendar (registration, clinics, assessments, draft, season start, photos, playoffs, All-Stars) to the website and email.",
     "details": "Alongside the registration blast, the information officer publishes the finalized season calendar so families can plan around registration, clinics, assessments, draft, season start, photos, playoffs, and All-Stars. The calendar is embedded in the registration email and posted to the website's calendar page (which syncs to a public Google Calendar). Clear key dates reduce inbound questions and no-shows for assessments.",
     "steps": [
       "Assemble the confirmed key dates: registration open, winter clinics, assessments (with gym location and age time slots), draft, season start, picture days, playoffs, and All-Stars.",
@@ -892,7 +861,6 @@
     "roleKey": "information_officer",
     "title": "Update information website and registration portal",
     "dueWeekOfFY": 14,
-    "description": "Refresh division info pages, calendar, URLs, and registration-portal links on the information website for the new season.",
     "details": "Before the season opens, the information officer refreshes the info website so division pages, the calendar, URLs, and registration-portal links all reflect the new season. This ensures families reach the correct current-year forms and info from the registration blast. It is a prerequisite for the registration announcement to work cleanly.",
     "steps": [
       "Review each division page (Tee Ball through Seniors, plus Challenger and Sandlot) and update descriptions, ages, and season details.",
@@ -923,8 +891,7 @@
     "roleKey": "information_officer",
     "title": "Send Certified Volunteer Process email to all users",
     "dueWeekOfFY": 19,
-    "description": "Blast all registered users the annual certified-volunteer process (register, background check, Abuse Awareness Training) with badge pickup instructions.",
-    "details": "Ahead of March practices, the information officer blasts all registered users the annual certified-volunteer process so every adult on the field or in the snack shack is cleared. The email walks through the three steps (register, background check via JDP, and Abuse Awareness Training tied to {{communities}} LL) and explains league-issued badge pickup. This is a hard safety and insurance requirement, so it must land before practices begin.",
+    "details": "Blast all registered users the annual certified-volunteer process (register, background check, Abuse Awareness Training) with badge pickup instructions.\n\nAhead of March practices, the information officer blasts all registered users the annual certified-volunteer process so every adult on the field or in the snack shack is cleared. The email walks through the three steps (register, background check via JDP, and Abuse Awareness Training tied to {{communities}} LL) and explains league-issued badge pickup. This is a hard safety and insurance requirement, so it must land before practices begin.",
     "steps": [
       "Send the certified-volunteer email to all registered users (subject like '{{leagueAbbrev}} - Certified Volunteer Process - 2026 Season'), timed before the March 10 practice start.",
       "Lay out the three steps: register through {{infoWebsite}}, complete the JDP/JD Palatine background check, and take Abuse Awareness Training selecting '{{communities}} LL'.",
@@ -954,8 +921,7 @@
     "roleKey": "information_officer",
     "title": "Report division signup counts to board",
     "dueWeekOfFY": 21,
-    "description": "Prepare and present division-by-division registration counts as registration nears close.",
-    "details": "As the registration window nears close, the information officer prepares division-by-division signup counts and presents them to the board. This lets the board gauge roster viability per division, plan drafts and team counts, and push roster-fill emails where numbers are low. It typically lands just before or around assessment week.",
+    "details": "Prepare and present division-by-division registration counts as registration nears close.\n\nAs the registration window nears close, the information officer prepares division-by-division signup counts and presents them to the board. This lets the board gauge roster viability per division, plan drafts and team counts, and push roster-fill emails where numbers are low. It typically lands just before or around assessment week.",
     "steps": [
       "Pull current registration counts from the portal, broken out by division and by sport.",
       "Compare against prior-year counts and minimum team thresholds to flag under-enrolled divisions.",
@@ -985,8 +951,7 @@
     "roleKey": "information_officer",
     "title": "Prepare assessment tally and rankings for draft",
     "dueWeekOfFY": 22,
-    "description": "Compile assessment results and adjust rankings for the player agent and president ahead of the drafts.",
-    "details": "After assessments (held at the {{indoorVenue}} gym for ages 7+ by age band), the information officer compiles the scoring results and adjusts player rankings for the player agent and president ahead of the drafts. Accurate, organized rankings make the draft fair and efficient. This is time-sensitive since assessments and the draft fall within a tight window.",
+    "details": "Compile assessment results and adjust rankings for the player agent and president ahead of the drafts.\n\nAfter assessments (held at the {{indoorVenue}} gym for ages 7+ by age band), the information officer compiles the scoring results and adjusts player rankings for the player agent and president ahead of the drafts. Accurate, organized rankings make the draft fair and efficient. This is time-sensitive since assessments and the draft fall within a tight window.",
     "steps": [
       "Collect the raw assessment scores from evaluators for each age band (7-8, 9-10, 11-12) for baseball and softball.",
       "Aggregate scores into a ranking tally per division, accounting for late assessments and rain-date make-ups.",
@@ -1016,8 +981,7 @@
     "roleKey": "information_officer",
     "title": "Schedule Photo Day with photographer",
     "dueWeekOfFY": 27,
-    "description": "Lock picture/photo day dates with the photographer, tied to uniform delivery, and set makeup/backup dates.",
-    "details": "The information officer locks picture day dates with Tsukroff Photo, coordinated so uniforms have arrived and teams can attend in uniform. {{leagueAbbrev}} typically runs two picture nights to work around games and practices, with per-team time slots and multiple stations. Setting makeup/backup dates up front avoids scrambling for teams that miss.",
+    "details": "Lock picture/photo day dates with the photographer, tied to uniform delivery, and set makeup/backup dates.\n\nThe information officer locks picture day dates with Tsukroff Photo, coordinated so uniforms have arrived and teams can attend in uniform. {{leagueAbbrev}} typically runs two picture nights to work around games and practices, with per-team time slots and multiple stations. Setting makeup/backup dates up front avoids scrambling for teams that miss.",
     "steps": [
       "Confirm uniform delivery timing, then propose picture dates to Tsukroff Photo (e.g., two nights like Mon 5/19 and Tue 5/20).",
       "Reserve the venue (e.g., Russell Elementary Gym) and plan multiple photo stations to keep 10-15 minute team slots on schedule.",
@@ -1047,7 +1011,6 @@
     "roleKey": "information_officer",
     "title": "Report final registration and player counts",
     "dueWeekOfFY": 27,
-    "description": "Deliver final total player counts by division to the board once rosters are finalized.",
     "details": "Once rosters are finalized after the draft, the information officer delivers final total player counts by division to the board. These numbers confirm team sizes, drive uniform and equipment orders, and set the baseline for the season. It is the definitive headcount the board plans the season around.",
     "steps": [
       "Pull final rostered-player counts by division and sport from the registration system after the draft.",
@@ -1078,8 +1041,7 @@
     "roleKey": "information_officer",
     "title": "Coordinate makeup team photos",
     "dueWeekOfFY": 31,
-    "description": "Work with the photographer to schedule photo sessions for teams that still need photos during their remaining games.",
-    "details": "For teams that missed the scheduled picture nights, the information officer works with the photographer to fit makeup sessions into their remaining game schedule. This ensures every team gets a team photo for sponsor plaques and family orders. It happens mid-season after the main picture days.",
+    "details": "Work with the photographer to schedule photo sessions for teams that still need photos during their remaining games.\n\nFor teams that missed the scheduled picture nights, the information officer works with the photographer to fit makeup sessions into their remaining game schedule. This ensures every team gets a team photo for sponsor plaques and family orders. It happens mid-season after the main picture days.",
     "steps": [
       "Identify teams and players who missed the scheduled picture nights.",
       "Coordinate with Tsukroff Photo on available makeup dates/times, tying them to the teams' remaining home games.",
@@ -1109,8 +1071,7 @@
     "roleKey": "information_officer",
     "title": "Send photo packet pickup / order reminder",
     "dueWeekOfFY": 38,
-    "description": "Remind families of photo packet pickup locations and the online order deadline for the season's photos.",
-    "details": "Late in the season the information officer reminds families where to pick up their photo packets and the deadline to order online. Packets are sorted by team at the Douglas Field snack shack, and ordering is direct through Tsukroff's online portal with prints shipped to families. A clear last-chance order date prevents missed orders.",
+    "details": "Remind families of photo packet pickup locations and the online order deadline for the season's photos.\n\nLate in the season the information officer reminds families where to pick up their photo packets and the deadline to order online. Packets are sorted by team at the Douglas Field snack shack, and ordering is direct through Tsukroff's online portal with prints shipped to families. A clear last-chance order date prevents missed orders.",
     "steps": [
       "Confirm packet pickup location and hours (e.g., Douglass Field snack shack, teams present 5:30-7:30pm) with packets sorted by team.",
       "Confirm the online order portal link and the final order deadline (e.g., last chance June 20).",
@@ -1135,8 +1096,7 @@
     "roleKey": "information_officer",
     "title": "Announce merch / fanwear store opening",
     "dueWeekOfFY": 46,
-    "description": "Send the merch/fanwear store-open announcement with the store link and pickup/pre-order lead-time notes.",
-    "details": "The information officer announces the merch/fanwear store opening with the store link and pickup or pre-order lead-time notes. Because items are often produced to order, the announcement sets expectations (e.g., pickup-only, 2-3 week pre-order lead time for hats). This drives fanwear sales and supports league fundraising.",
+    "details": "Send the merch/fanwear store-open announcement with the store link and pickup/pre-order lead-time notes.\n\nThe information officer announces the merch/fanwear store opening with the store link and pickup or pre-order lead-time notes. Because items are often produced to order, the announcement sets expectations (e.g., pickup-only, 2-3 week pre-order lead time for hats). This drives fanwear sales and supports league fundraising.",
     "steps": [
       "Confirm the store is configured correctly (pickup-only where needed) and item availability with the sponsorship/merch coordinators.",
       "Draft the store-open announcement (subject like '{{leagueAbbrev}} Merch Store is Open!') with the store link.",
@@ -1161,8 +1121,7 @@
     "roleKey": "information_officer",
     "title": "Organize ballpark family outings",
     "dueWeekOfFY": 46,
-    "description": "Plan and announce major- and minor-league ballpark family outings for league families.",
-    "details": "The information officer plans and announces family experience outings to major- and minor-league ballpark games. These outings reserve a ticket block for league families, usually return a share of each ticket to the league, and sometimes tie into special on-field recognitions (e.g., honoring a state-champ All-Star team). They build community and are typically promoted in late summer.",
+    "details": "Plan and announce major- and minor-league ballpark family outings for league families.\n\nThe information officer plans and announces family experience outings to major- and minor-league ballpark games. These outings reserve a ticket block for league families, usually return a share of each ticket to the league, and sometimes tie into special on-field recognitions (e.g., honoring a state-champ All-Star team). They build community and are typically promoted in late summer.",
     "steps": [
       "Contact the ballpark group-sales office to reserve a ticket block and group purchase link for a chosen game date.",
       "Confirm any special on-field recognition (e.g., honoring a state-champ All-Star team) and any event sponsor.",
@@ -1187,8 +1146,7 @@
     "roleKey": "information_officer",
     "title": "Wind down merch site and process refunds",
     "dueWeekOfFY": 46,
-    "description": "Close out the merch/hat store for the year and process any pending refunds.",
-    "details": "At the end of the merch cycle the information officer closes out the fanwear/hat store for the year and processes any pending refunds. This reconciles orders that couldn't be fulfilled and cleanly ends the season's online sales. It coordinates with the treasurer and sponsorship coordinator on supply counts and payments.",
+    "details": "Close out the merch/hat store for the year and process any pending refunds.\n\nAt the end of the merch cycle the information officer closes out the fanwear/hat store for the year and processes any pending refunds. This reconciles orders that couldn't be fulfilled and cleanly ends the season's online sales. It coordinates with the treasurer and sponsorship coordinator on supply counts and payments.",
     "steps": [
       "Confirm all pre-orders and pickups are fulfilled and reconcile against store order notifications.",
       "Identify any unfulfilled or duplicate orders that require refunds.",
@@ -1213,8 +1171,7 @@
     "roleKey": "information_officer",
     "title": "Present post-season survey results by division",
     "dueWeekOfFY": 51,
-    "description": "Compile and present post-season survey results and season discussion by division at year-end.",
-    "details": "At year-end the information officer compiles and presents the post-season survey results broken out by division, leading a season discussion with the board. Division-level breakdowns surface which programs need attention (e.g., Tee Ball vs. Majors) and inform next-year structure. This closes the feedback loop that began with the survey blast earlier in the cycle.",
+    "details": "Compile and present post-season survey results and season discussion by division at year-end.\n\nAt year-end the information officer compiles and presents the post-season survey results broken out by division, leading a season discussion with the board. Division-level breakdowns surface which programs need attention (e.g., Tee Ball vs. Majors) and inform next-year structure. This closes the feedback loop that began with the survey blast earlier in the cycle.",
     "steps": [
       "Segment the compiled survey responses by division and pull out recurring themes per division.",
       "Summarize positives, negatives, and complaints for each division into a concise board-ready format.",
@@ -1244,8 +1201,7 @@
     "roleKey": "president",
     "title": "Facilitate fall organizational meeting and confirm officer slate",
     "dueWeekOfFY": 0,
-    "description": "Run the fall organizational board meeting, designate facilitator/recorder, take attendance/quorum, and carry the motion to fill and approve the officer slate for the coming year.",
-    "details": "The fall organizational meeting kicks off the league year, resetting the Board of Directors and confirming who holds each voting officer and non-voting staff role for the coming season. It matters because officers must be in place before offseason planning (calendar, budget, sponsorship) can proceed, and because the elected slate is recorded in the minutes that the league keeps on file. Held in late September/early October (e.g., the 9/29 kickoff meeting), it is the first meeting after the season wraps.",
+    "details": "Run the fall organizational board meeting, designate facilitator/recorder, take attendance/quorum, and carry the motion to fill and approve the officer slate for the coming year.\n\nThe fall organizational meeting kicks off the league year, resetting the Board of Directors and confirming who holds each voting officer and non-voting staff role for the coming season. It matters because officers must be in place before offseason planning (calendar, budget, sponsorship) can proceed, and because the elected slate is recorded in the minutes that the league keeps on file. Held in late September/early October (e.g., the 9/29 kickoff meeting), it is the first meeting after the season wraps.",
     "steps": [
       "Before the meeting, survey members on which roles they will not continue in so open seats (e.g., Treasurer, Player Agents, VP Softball) can be listed and recruited.",
       "Designate a facilitator and recorder (the President typically serves both) and open the meeting by taking attendance and confirming a quorum.",
@@ -1276,8 +1232,7 @@
     "roleKey": "president",
     "title": "Establish offseason board meeting schedule",
     "dueWeekOfFY": 1,
-    "description": "Set the fall/winter meeting cadence (monthly or bi-weekly) and circulate the schedule to the board.",
-    "details": "Setting the fall/winter meeting cadence gives the Board a predictable rhythm for offseason planning, which shifts to roughly every two weeks during the busy pre-season period and monthly in quieter stretches. It matters because registration, clinics, assessments, and calendar decisions all depend on a reliable sequence of meetings. This is settled at or immediately after the fall organizational meeting.",
+    "details": "Set the fall/winter meeting cadence (monthly or bi-weekly) and circulate the schedule to the board.\n\nSetting the fall/winter meeting cadence gives the Board a predictable rhythm for offseason planning, which shifts to roughly every two weeks during the busy pre-season period and monthly in quieter stretches. It matters because registration, clinics, assessments, and calendar decisions all depend on a reliable sequence of meetings. This is settled at or immediately after the fall organizational meeting.",
     "steps": [
       "Decide the appropriate cadence for the period (bi-weekly through pre-season, monthly otherwise) to maximize program quality.",
       "Poll board members for dates/times that work best rather than dictating them.",
@@ -1302,8 +1257,7 @@
     "roleKey": "president",
     "title": "Lead annual policy and division rules review",
     "dueWeekOfFY": 1,
-    "description": "Review and adopt division rules, the managers/coaches contract, and the volunteer application; confirm bylaws obligations with the secretary.",
-    "details": "Each fall/winter the Board reviews and adopts the season's governing documents: division rules, the managers/coaches contract, the volunteer application, and the Constitution & By-laws. This matters because the bylaws must be reviewed, updated, and uploaded to Little League International as a recurring charter obligation, and division rules (age structure, play-up, farm/coach-pitch changes) shape the whole season. The review runs across the fall meetings before registration opens.",
+    "details": "Review and adopt division rules, the managers/coaches contract, and the volunteer application; confirm bylaws obligations with the secretary.\n\nEach fall/winter the Board reviews and adopts the season's governing documents: division rules, the managers/coaches contract, the volunteer application, and the Constitution & By-laws. This matters because the bylaws must be reviewed, updated, and uploaded to Little League International as a recurring charter obligation, and division rules (age structure, play-up, farm/coach-pitch changes) shape the whole season. The review runs across the fall meetings before registration opens.",
     "steps": [
       "Put policy review on the agenda: division rules, managers/coaches contract, volunteer application, and bylaws.",
       "Review and adopt division age/level structure and any interleague rule changes by division, poll the league where needed.",
@@ -1334,7 +1288,6 @@
     "roleKey": "president",
     "title": "Kick off next-season planning",
     "dueWeekOfFY": 3,
-    "description": "Draft the coming season's registration timing, clinics, assessments, calendar, and coaches trainings for board input.",
     "details": "This task drafts the skeleton of the coming season -- registration timing, winter clinics, assessments, the full calendar, and coaches trainings -- for board input and refinement. It matters because these anchor dates drive every downstream officer's work, from uniform orders to field scheduling. It happens in the fall (late October/November) so the calendar can be finalized before registration opens in January.",
     "steps": [
       "Draft proposed dates for registration open, winter clinics, assessments, coaches clinics, drafts, and first games.",
@@ -1360,8 +1313,7 @@
     "roleKey": "president",
     "title": "Coordinate sponsor thank-yous and fundraising follow-up",
     "dueWeekOfFY": 4,
-    "description": "Organize sponsor thank-yous (banners, signed/dye-sub jerseys, donation letters) by donation tier and follow up on outstanding fundraising.",
-    "details": "After the season the league recognizes sponsors by donation tier -- banners, signed/dye-sub jerseys, and donation letters -- and follows up on any outstanding fundraising commitments. It matters for sponsor retention and for closing out the season's revenue, since sponsorships fund uniforms, equipment, and field work. Thank-you acknowledgements are driven from the Annual Sponsorship Log in the offseason (seen in January/February).",
+    "details": "Organize sponsor thank-yous (banners, signed/dye-sub jerseys, donation letters) by donation tier and follow up on outstanding fundraising.\n\nAfter the season the league recognizes sponsors by donation tier -- banners, signed/dye-sub jerseys, and donation letters -- and follows up on any outstanding fundraising commitments. It matters for sponsor retention and for closing out the season's revenue, since sponsorships fund uniforms, equipment, and field work. Thank-you acknowledgements are driven from the Annual Sponsorship Log in the offseason (seen in January/February).",
     "steps": [
       "Pull the Annual Sponsorship Log and reconcile sponsors and amounts across channels (checks, PayPal, Venmo, GoFundMe).",
       "Group sponsors by donation tier, highlighting larger donors (e.g., $250+ and $500+) for extra recognition.",
@@ -1392,8 +1344,7 @@
     "roleKey": "president",
     "title": "Set registration fees and open date",
     "dueWeekOfFY": 6,
-    "description": "Recommend and confirm registration fees by division and the registration open date with the board.",
-    "details": "The Board sets per-division registration fees and the registration open date, which together drive the league's primary revenue and the start of the season pipeline. It matters because fees fund uniforms and field repairs and any change must be adopted by motion; the open date anchors the whole calendar. This is decided in the fall/winter (fees set by December motion; open dates targeted for mid-January).",
+    "details": "Recommend and confirm registration fees by division and the registration open date with the board.\n\nThe Board sets per-division registration fees and the registration open date, which together drive the league's primary revenue and the start of the season pipeline. It matters because fees fund uniforms and field repairs and any change must be adopted by motion; the open date anchors the whole calendar. This is decided in the fall/winter (fees set by December motion; open dates targeted for mid-January).",
     "steps": [
       "Review current-year costs and prior fees by division (e.g., 2025 moved everything AAA and above to {{amount}}).",
       "Recommend per-division fees and earmark any increase (e.g., toward field repairs) for board consideration.",
@@ -1423,8 +1374,7 @@
     "roleKey": "president",
     "title": "Send fall board meeting announcement with agenda",
     "dueWeekOfFY": 8,
-    "description": "Announce the fall board meeting to the board with agenda; follow up with a reminder including the join link/dial-in.",
-    "details": "This announces each fall board meeting to the board with the agenda, followed by a reminder that includes the join link or dial-in. It matters because consistent, agenda-forward announcements keep quorum and let officers prepare their updates. It recurs on the offseason cadence (roughly every two weeks through fall/winter).",
+    "details": "Announce the fall board meeting to the board with agenda; follow up with a reminder including the join link/dial-in.\n\nThis announces each fall board meeting to the board with the agenda, followed by a reminder that includes the join link or dial-in. It matters because consistent, agenda-forward announcements keep quorum and let officers prepare their updates. It recurs on the offseason cadence (roughly every two weeks through fall/winter).",
     "steps": [
       "Draft the agenda from carryover action items and the standing offseason topics (positions, planning, fields, calendar).",
       "Send the meeting announcement to the board with the date/time and agenda attached or linked.",
@@ -1454,7 +1404,6 @@
     "roleKey": "president",
     "title": "Plan winter clinics",
     "dueWeekOfFY": 9,
-    "description": "Lock dates, gym space, age-group time slots, coaches, budget, and session fees for January winter clinics.",
     "details": "Winter clinics give players ages 7+ a chance to get work in before spring assessments, and the league must lock dates, gym space, age-group time slots, instructors, budget, and session fees. It matters because clinics are optional paid programming that requires facility booking and a registration listing well ahead of time. Dates are set in the fall and clinics run on winter weekends (e.g., three January/February Sunday sessions).",
     "steps": [
       "Assemble prospective clinic costs and instructor availability and include facility costs in the budget.",
@@ -1486,8 +1435,7 @@
     "roleKey": "president",
     "title": "Set assessment dates and structure",
     "dueWeekOfFY": 9,
-    "description": "Establish spring assessment dates, station structure, judges, and snow/rain dates.",
-    "details": "The Board establishes spring assessment dates, the station-based structure, judges/assessors, and a snow/rain make-up date so teams can be formed by the draft. It matters because assessments are required for all players League Age 7+ and feed the coaches' draft; separate baseball and softball days and a reserved make-up date protect against weather closures. Dates are set in the fall/winter (e.g., baseball 2/23, softball 2/25, make-up 2/27).",
+    "details": "Establish spring assessment dates, station structure, judges, and snow/rain dates.\n\nThe Board establishes spring assessment dates, the station-based structure, judges/assessors, and a snow/rain make-up date so teams can be formed by the draft. It matters because assessments are required for all players League Age 7+ and feed the coaches' draft; separate baseball and softball days and a reserved make-up date protect against weather closures. Dates are set in the fall/winter (e.g., baseball 2/23, softball 2/25, make-up 2/27).",
     "steps": [
       "Set separate baseball and softball assessment dates plus a reserved snow/rain make-up date.",
       "Reserve the gym for the evening blocks (e.g., 4:30-9:00pm) and confirm space against the school calendar.",
@@ -1518,8 +1466,7 @@
     "roleKey": "president",
     "title": "Recruit and confirm open board positions",
     "dueWeekOfFY": 14,
-    "description": "Confirm/retain roles, fill open seats, and recruit volunteers ahead of the spring season.",
-    "details": "Ahead of spring the President confirms which roles are retained, fills open seats, and recruits volunteers for both voting and non-voting positions. It matters because operational roles (Treasurer, Player Agents, VP Softball, Concessions, uniform/photo staff) must be staffed before the season ramps up. Recruiting runs across the fall/winter meetings, with vacancies filled at the next board meeting.",
+    "details": "Confirm/retain roles, fill open seats, and recruit volunteers ahead of the spring season.\n\nAhead of spring the President confirms which roles are retained, fills open seats, and recruits volunteers for both voting and non-voting positions. It matters because operational roles (Treasurer, Player Agents, VP Softball, Concessions, uniform/photo staff) must be staffed before the season ramps up. Recruiting runs across the fall/winter meetings, with vacancies filled at the next board meeting.",
     "steps": [
       "Review the positions list and mark each seat as retained, open, or newly created.",
       "Announce the open positions to the board and the wider league and invite volunteers.",
@@ -1544,8 +1491,7 @@
     "roleKey": "president",
     "title": "Broadcast registration-open announcement",
     "dueWeekOfFY": 15,
-    "description": "Send the registration-open broadcast to all families with tee ball/coach pitch details, winter clinics, and the custom-uniform sign-up deadline.",
-    "details": "This is the league-wide broadcast to all families that registration is open, covering tee ball/coach pitch details, winter clinics, and the custom-uniform sign-up deadline. It matters because it drives enrollment across every division and sets expectations on age determination, clinics, Sandlot/Challenger, and the firm jersey deadline. It goes out when registration opens in mid-January (e.g., January 17 for 2026).",
+    "details": "Send the registration-open broadcast to all families with tee ball/coach pitch details, winter clinics, and the custom-uniform sign-up deadline.\n\nThis is the league-wide broadcast to all families that registration is open, covering tee ball/coach pitch details, winter clinics, and the custom-uniform sign-up deadline. It matters because it drives enrollment across every division and sets expectations on age determination, clinics, Sandlot/Challenger, and the firm jersey deadline. It goes out when registration opens in mid-January (e.g., January 17 for 2026).",
     "steps": [
       "Confirm the open date and per-division details, then draft the broadcast covering Tee Ball through Seniors.",
       "Include age-determination guidance (Aug 31 baseball, Jan 1 softball) and a link to the Little League age charts.",
@@ -1575,8 +1521,7 @@
     "roleKey": "president",
     "title": "Plan player assessments logistics",
     "dueWeekOfFY": 16,
-    "description": "Organize assessment dates, stations, assessors/judges, equipment per station, check-in flow, and a snow/rain backup date.",
-    "details": "Beyond setting dates, this organizes the on-the-ground logistics: stations, assessors/judges, equipment per station, check-in flow, and a snow/rain backup. It matters because a smooth, well-staffed assessment produces reliable ratings for the draft and keeps parents informed. It is finalized in the weeks before assessments (late February).",
+    "details": "Organize assessment dates, stations, assessors/judges, equipment per station, check-in flow, and a snow/rain backup date.\n\nBeyond setting dates, this organizes the on-the-ground logistics: stations, assessors/judges, equipment per station, check-in flow, and a snow/rain backup. It matters because a smooth, well-staffed assessment produces reliable ratings for the draft and keeps parents informed. It is finalized in the weeks before assessments (late February).",
     "steps": [
       "Lay out each station (ground balls, fly/pop, tee, soft toss, throwing) with the equipment it needs.",
       "Assign a coach plus an assessor to each station and line up high-school player volunteers.",
@@ -1607,8 +1552,7 @@
     "roleKey": "president",
     "title": "Secure indoor practice / spring training space",
     "dueWeekOfFY": 16,
-    "description": "Book gym/YMCA time and schedule indoor practices with volunteer setup coverage.",
-    "details": "This books gym/YMCA time and schedules indoor practices with volunteer setup coverage before fields are usable. It matters because {{state}} spring weather forces early-season practices indoors, and the limited gym space must be reserved and staffed. Booking happens in the winter and indoor practices run on weekends through March/early April (e.g., Saturdays 3/8-4/12).",
+    "details": "Book gym/YMCA time and schedule indoor practices with volunteer setup coverage.\n\nThis books gym/YMCA time and schedules indoor practices with volunteer setup coverage before fields are usable. It matters because {{state}} spring weather forces early-season practices indoors, and the limited gym space must be reserved and staffed. Booking happens in the winter and indoor practices run on weekends through March/early April (e.g., Saturdays 3/8-4/12).",
     "steps": [
       "Identify available indoor spaces (school gyms, YMCA, The Cages) and check dates against the school calendar.",
       "Reserve the indoor blocks and build a per-division/age indoor practice schedule.",
@@ -1638,8 +1582,7 @@
     "roleKey": "president",
     "title": "Lead rules and division review",
     "dueWeekOfFY": 19,
-    "description": "Review division rules and interleague rule changes (farm system, coach pitch, age structure, playing-up) with the board.",
-    "details": "This reviews division rules and interleague rule changes with the board -- farm/coach-pitch structure, age structure, and playing-up requests -- so the season's play framework is settled. It matters because rule and age-structure decisions (e.g., phased Intermediate rules for Majors, steals/no dropped-third-strike at Minors) affect safety, competitiveness, and interleague alignment. This runs through the winter meetings before drafts.",
+    "details": "Review division rules and interleague rule changes (farm system, coach pitch, age structure, playing-up) with the board.\n\nThis reviews division rules and interleague rule changes with the board -- farm/coach-pitch structure, age structure, and playing-up requests -- so the season's play framework is settled. It matters because rule and age-structure decisions (e.g., phased Intermediate rules for Majors, steals/no dropped-third-strike at Minors) affect safety, competitiveness, and interleague alignment. This runs through the winter meetings before drafts.",
     "steps": [
       "Put the level/age structure and any proposed rule changes on the agenda by division.",
       "Review interleague rule changes and align with {{district}} expectations where applicable.",
@@ -1670,7 +1613,6 @@
     "roleKey": "president",
     "title": "Send assessments/registration reminder",
     "dueWeekOfFY": 20,
-    "description": "Remind families of assessment dates, what to bring, the parent meeting, medical release form, and the per-division schedule grid.",
     "details": "This reminds families of assessment dates, what to bring, the parent meeting, the medical release form, and the per-division schedule grid. It matters because turnout and preparedness at assessments directly affect the quality of ratings and team formation, and late registrants can still be placed. It goes out in the week or two before assessments (mid-to-late February).",
     "steps": [
       "Confirm the assessment dates, division time blocks, and make-up date, then draft the reminder.",
@@ -1702,8 +1644,7 @@
     "roleKey": "president",
     "title": "Run coach interviews and vetting vote",
     "dueWeekOfFY": 22,
-    "description": "Invite coaches to interviews, provide instructions, and conduct the board's ranked-choice vetting vote per division.",
-    "details": "The President invites prospective coaches to interviews, provides instructions, and conducts the board's ranked-choice vetting vote per division. It matters because coach selection sets the tone for player experience, safety, and conduct, and the ranked vote gives the board a defensible, division-by-division ordering ahead of election. It happens after assessments and before the draft (late February/early March).",
+    "details": "Invite coaches to interviews, provide instructions, and conduct the board's ranked-choice vetting vote per division.\n\nThe President invites prospective coaches to interviews, provides instructions, and conducts the board's ranked-choice vetting vote per division. It matters because coach selection sets the tone for player experience, safety, and conduct, and the ranked vote gives the board a defensible, division-by-division ordering ahead of election. It happens after assessments and before the draft (late February/early March).",
     "steps": [
       "Compile the list of coach applicants by division and confirm they have completed required training (e.g., PCA, Abuse Awareness) and background checks.",
       "Invite prospective coaches to interviews with clear instructions on format and timing.",
@@ -1734,8 +1675,7 @@
     "roleKey": "president",
     "title": "Elect coaches and set team counts",
     "dueWeekOfFY": 22,
-    "description": "Bring motions to elect coaches and set the number of teams per level; review play-up/move-up requests for safety and balance.",
-    "details": "This brings motions to elect coaches and set the number of teams per level, and reviews play-up/move-up requests for safety and balance. It matters because team counts must match registration numbers before the draft, and elected coaches and approved play-ups determine roster composition. It follows the vetting vote and precedes the draft (early March).",
+    "details": "Bring motions to elect coaches and set the number of teams per level; review play-up/move-up requests for safety and balance.\n\nThis brings motions to elect coaches and set the number of teams per level, and reviews play-up/move-up requests for safety and balance. It matters because team counts must match registration numbers before the draft, and elected coaches and approved play-ups determine roster composition. It follows the vetting vote and precedes the draft (early March).",
     "steps": [
       "Using the ranked vetting results and current registration counts, propose the number of teams per level.",
       "Bring a motion to set team counts per division; second and record the outcome.",
@@ -1766,8 +1706,7 @@
     "roleKey": "president",
     "title": "Set draft dates and enforce jersey deadline",
     "dueWeekOfFY": 23,
-    "description": "Schedule drafts after the coaches meeting and enforce the 3/14 final custom-jersey registration deadline (no exceptions).",
-    "details": "This schedules the division drafts after the coaches meeting and enforces the final custom-jersey registration deadline (3/14, no exceptions). It matters because the deadline lets the league finalize teams and place the uniform order on time, and the drafts must follow assessments closely so ratings are fresh. Both fall in early-to-mid March.",
+    "details": "Schedule drafts after the coaches meeting and enforce the 3/14 final custom-jersey registration deadline (no exceptions).\n\nThis schedules the division drafts after the coaches meeting and enforces the final custom-jersey registration deadline (3/14, no exceptions). It matters because the deadline lets the league finalize teams and place the uniform order on time, and the drafts must follow assessments closely so ratings are fresh. Both fall in early-to-mid March.",
     "steps": [
       "Schedule each division's draft for the days after the coaches meeting and assessments.",
       "Confirm ratings are set, including chosen ratings for players who missed assessments.",
@@ -1798,8 +1737,7 @@
     "roleKey": "president",
     "title": "Finalize season calendar",
     "dueWeekOfFY": 24,
-    "description": "Finalize clinics, assessments, coaches clinics, draft, field cleanups, first games, and All-Star letters/dates.",
-    "details": "Lock down the full season calendar so every downstream activity has a firm date to build against. This consolidates clinics, assessments, coaches clinics, drafts, field cleanups, first-game dates, and the All-Star letter/deadline dates into one authoritative reference. It matters because uniform ordering, scheduling, and family communications all key off these dates, and drafts in particular must land before uniform-order cutoffs.",
+    "details": "Finalize clinics, assessments, coaches clinics, draft, field cleanups, first games, and All-Star letters/dates.\n\nLock down the full season calendar so every downstream activity has a firm date to build against. This consolidates clinics, assessments, coaches clinics, drafts, field cleanups, first-game dates, and the All-Star letter/deadline dates into one authoritative reference. It matters because uniform ordering, scheduling, and family communications all key off these dates, and drafts in particular must land before uniform-order cutoffs.",
     "steps": [
       "Gather draft dates from the prior year's calendar and confirm gym/field availability and any Little League deadlines.",
       "Sequence winter clinics, assessments, and coaches clinics ahead of the drafts for each division.",
@@ -1830,8 +1768,7 @@
     "roleKey": "president",
     "title": "Send division draft invites",
     "dueWeekOfFY": 24,
-    "description": "Invite head/assistant coaches to each division draft, propose evenings, share coach lists, and include the online meeting link and dial-in.",
-    "details": "Invite each division's head and assistant coaches to their draft and set the meeting. This kicks off team formation for the season and must be timed so all divisions draft before the uniform-order cutoff. The invite establishes the roster of participating coaches, proposes evenings, and shares the online meeting details so remote coaches can attend.",
+    "details": "Invite head/assistant coaches to each division draft, propose evenings, share coach lists, and include the online meeting link and dial-in.\n\nInvite each division's head and assistant coaches to their draft and set the meeting. This kicks off team formation for the season and must be timed so all divisions draft before the uniform-order cutoff. The invite establishes the roster of participating coaches, proposes evenings, and shares the online meeting details so remote coaches can attend.",
     "steps": [
       "Email the confirmed head/assistant coach list for the division and note any coaches still needed (e.g., aiming for 6 teams at AAA for scheduling and playing time).",
       "Propose evening dates and confirm the final date, allowing slack to recruit an additional coach if a division is short.",
@@ -1862,7 +1799,6 @@
     "roleKey": "president",
     "title": "Release draft results and collect team names",
     "dueWeekOfFY": 25,
-    "description": "Release per-team rosters and practice schedules, then collect ranked team-name choices with a coin-flip tiebreaker.",
     "details": "After each division drafts, publish the per-team rosters and practice schedules to coaches, then collect each team's ranked team-name choices. This lets coaches introduce themselves and begin scheduling, and the ranked choices with a coin-flip tiebreaker prevent duplicate team names across the division. It occurs immediately after the draft and before rosters are entered into GameChanger.",
     "steps": [
       "Evaluate drafted teams for age, average-score, and overall balance and process any equitable trades before finalizing.",
@@ -1893,8 +1829,7 @@
     "roleKey": "president",
     "title": "Ensure rosters published to GameChanger",
     "dueWeekOfFY": 26,
-    "description": "Direct the secretary to enter drafted teams into GameChanger and post rosters.",
-    "details": "Direct the secretary to enter each drafted team into GameChanger and confirm the rosters are posted so families and coaches can view teams and schedules. GameChanger is the league's official app for rosters, schedules, and coach-family communication, so this is a prerequisite for practices and games. Import issues are common, so plan for follow-up and re-posting.",
+    "details": "Direct the secretary to enter drafted teams into GameChanger and post rosters.\n\nDirect the secretary to enter each drafted team into GameChanger and confirm the rosters are posted so families and coaches can view teams and schedules. GameChanger is the league's official app for rosters, schedules, and coach-family communication, so this is a prerequisite for practices and games. Import issues are common, so plan for follow-up and re-posting.",
     "steps": [
       "Direct the secretary to enter each finalized team and roster into GameChanger.",
       "Confirm each team imports correctly, retrying if teams fail to import or spin during setup.",
@@ -1924,8 +1859,7 @@
     "roleKey": "president",
     "title": "Announce optional pre-season practices",
     "dueWeekOfFY": 27,
-    "description": "Announce optional pre-season/outdoor practices to families with the GameChanger app link, FAQ, and weather caveats.",
-    "details": "Announce optional outdoor pre-season practices to families so teams can get on the field before games begin without losing good-weather days. Coaches post specific times and fields to GameChanger, so the announcement points families there and sets weather expectations. It runs in the weeks after drafts and before the regular season opens.",
+    "details": "Announce optional pre-season/outdoor practices to families with the GameChanger app link, FAQ, and weather caveats.\n\nAnnounce optional outdoor pre-season practices to families so teams can get on the field before games begin without losing good-weather days. Coaches post specific times and fields to GameChanger, so the announcement points families there and sets weather expectations. It runs in the weeks after drafts and before the regular season opens.",
     "steps": [
       "Confirm which divisions will hold optional outdoor practices and which fields are available.",
       "Tell families coaches will add practice times and fields to GameChanger and to check there for assignments.",
@@ -1955,7 +1889,6 @@
     "roleKey": "president",
     "title": "Distribute {{district}} and All-Star tournament info",
     "dueWeekOfFY": 27,
-    "description": "Share {{district}} updates, interleague forms, and All-Star tournament dates with the board and coaches.",
     "details": "Share {{district}} updates, interleague forms, and All-Star tournament dates with the board and coaches so the league can plan for tournament and interleague play. This keeps the board aligned on district deadlines and gives coaches early visibility into the All-Star timeline. It happens in-season as {{district}} finalizes schedules and affidavit/eligibility requirements.",
     "steps": [
       "Collect current {{district}} updates, interleague forms, and All-Star tournament dates from the district administrator.",
@@ -1986,7 +1919,6 @@
     "roleKey": "president",
     "title": "Broadcast season schedules update",
     "dueWeekOfFY": 28,
-    "description": "Send the season-opening schedule status per division to all families, directing them to GameChanger.",
     "details": "Send families a season-opening schedule status by division, directing them to GameChanger for the authoritative schedule. This manages expectations when the scheduling system is still being finalized and tells each division when practices and games start. It is sent as the regular season opens, often while the scheduling provider is still resolving sync issues.",
     "steps": [
       "Confirm the current status of the scheduling system and each division's practice/game start dates.",
@@ -2017,7 +1949,6 @@
     "roleKey": "president",
     "title": "Coordinate Snack Shack setup and staffing",
     "dueWeekOfFY": 31,
-    "description": "Coordinate Snack Shack setup and volunteer staffing (including softball) for the start of games.",
     "details": "Coordinate opening the Snack Shack and recruiting volunteer staffing (baseball and softball) so concessions are ready when games start. Concessions are a key league fundraiser and require setup plus a steady rotation of volunteers. This is done right before the season's first games and repeated for softball opening day.",
     "steps": [
       "Confirm the Snack Shack is stocked, cleaned, and set up ahead of the first games.",
@@ -2048,7 +1979,6 @@
     "roleKey": "president",
     "title": "Broadcast field etiquette and start times",
     "dueWeekOfFY": 31,
-    "description": "Send field rules, start times, arrival windows, and neighbor-respect reminders to families.",
     "details": "Send families field rules, start times, arrival windows, and neighbor-respect reminders to keep events safe and on good terms with shared facilities. This became critical when weekday events at fields overlapped with other town programs and a safety incident occurred in a pickup line. It is sent early in the game season and reissued whenever start times or arrival windows change.",
     "steps": [
       "Identify overlaps between league events and other programs at shared fields (e.g., town rec pickup lines).",
@@ -2079,8 +2009,7 @@
     "roleKey": "president",
     "title": "Manage All-Star commitment intake",
     "dueWeekOfFY": 32,
-    "description": "Collect All-Star commitment forms by the deadline; require a full 14-player slate for a nomination to be accepted.",
-    "details": "Collect All-Star commitment (Letter of Intent) forms by the deadline and verify each division has a full 14-player slate before accepting a nomination. Without a submitted form a player cannot be considered for tournament play, so intake determines which teams can even be fielded. The deadline runs early-to-mid May, historically due by 11:59pm on a set date.",
+    "details": "Collect All-Star commitment forms by the deadline; require a full 14-player slate for a nomination to be accepted.\n\nCollect All-Star commitment (Letter of Intent) forms by the deadline and verify each division has a full 14-player slate before accepting a nomination. Without a submitted form a player cannot be considered for tournament play, so intake determines which teams can even be fielded. The deadline runs early-to-mid May, historically due by 11:59pm on a set date.",
     "steps": [
       "Publish the online Letter-of-Intent/commitment form with the deadline (recent seasons due ~May 18-19 at 11:59pm).",
       "Direct families to the All-Stars FAQ for eligibility and to route questions to their manager or the secretary.",
@@ -2111,7 +2040,6 @@
     "roleKey": "president",
     "title": "Schedule playoffs and end-of-season events",
     "dueWeekOfFY": 33,
-    "description": "Build playoff brackets and plan the end-of-season BBQ and Home Run Derby with volunteers.",
     "details": "Build the playoff brackets and plan the end-of-season celebration (championship-day BBQ and Home Run Derby) with volunteers. Playoffs run the first two weeks of June with double-elimination brackets and consolation games, and championship day features a free BBQ. This work sets the competitive close of the season and the community celebration around it.",
     "steps": [
       "Draw first-round matchups by random draw and update schedules so the last set-opponent game is the first playoff game.",
@@ -2143,7 +2071,6 @@
     "roleKey": "president",
     "title": "Run All-Star team and coach selection",
     "dueWeekOfFY": 34,
-    "description": "Conduct All-Star roster votes by division/level and elect head/assistant coaches pending background checks.",
     "details": "Conduct the All-Star roster votes by division/level and elect head and assistant coaches, pending background checks. This determines which players and coaches represent the league in tournament play and must follow the league's voting and eligibility rules. It runs after commitment intake closes and full slates are confirmed.",
     "steps": [
       "Confirm the eligible player pool per division/level from committed Letters of Intent.",
@@ -2175,7 +2102,6 @@
     "roleKey": "president",
     "title": "Obtain board approval of All-Star rosters",
     "dueWeekOfFY": 35,
-    "description": "Present finalized All-Star team rosters per division for board approval and notify coaches.",
     "details": "Present the finalized All-Star rosters per division for formal board approval, then notify coaches. Board approval is the governance checkpoint that authorizes the teams to represent the league in tournament play. It follows selection and precedes setting up teams in GameChanger and scheduling practices.",
     "steps": [
       "Compile the finalized roster for each division/level from the completed selection votes.",
@@ -2206,7 +2132,6 @@
     "roleKey": "president",
     "title": "Send team-not-fielded notices",
     "dueWeekOfFY": 38,
-    "description": "Notify affected families when a division lacks enough commitments to field an All-Star team.",
     "details": "Notify affected families when a division lacks enough commitments to field an All-Star team. A full 14-player slate is required, and when a division falls short the league cannot nominate a team, so families need a clear, timely explanation. This is sent once commitment tallies confirm a shortfall.",
     "steps": [
       "Confirm the division's committed count is below the required 14-player slate.",
@@ -2237,7 +2162,6 @@
     "roleKey": "president",
     "title": "Send coach conduct reminders",
     "dueWeekOfFY": 42,
-    "description": "Send game-conduct reminders to coaches during summer ball, following up promptly on any parent complaint.",
     "details": "Send game-conduct reminders to coaches during summer/All-Star ball and follow up promptly on any parent complaint. Maintaining positive sideline and dugout behavior protects players, volunteers, and the league's standing, especially in higher-stakes tournament play. This runs through the summer season and is triggered again whenever a conduct concern is reported.",
     "steps": [
       "Send a periodic game-conduct reminder to coaches emphasizing positivity toward kids, umpires, and volunteers.",
@@ -2268,7 +2192,6 @@
     "roleKey": "president",
     "title": "Facilitate post-season business meeting",
     "dueWeekOfFY": 46,
-    "description": "Run the post-season board meeting: survey review, fall ball counts, banquet/parade planning, awards/rings, and board elections scheduling.",
     "details": "Run the post-season board meeting to review the season survey, confirm fall ball counts, plan the banquet/parade and awards/rings, and schedule board elections. This is the league's transition meeting from the current season into the offseason and next-year planning. It sets the agenda for wrap-up work and leadership continuity.",
     "steps": [
       "Announce the meeting date and circulate an agenda covering survey review, fall ball, banquet/parade, awards/rings, and elections.",
@@ -2300,7 +2223,6 @@
     "roleKey": "president",
     "title": "Draft following-year calendar",
     "dueWeekOfFY": 51,
-    "description": "Draft the following year's calendar (registration, clinics, assessments, coaches clinics, season dates, All-Stars) for board review.",
     "details": "Draft the following year's calendar (registration, clinics, assessments, coaches clinics, season dates, and All-Stars) for board review. Building the calendar in the offseason gives the board time to align on dates before registration opens and lets all downstream planning key off firm dates. This is a year-end planning task that seeds the next season's operations.",
     "steps": [
       "Start from the current year's calendar and note what worked or needs to shift.",
@@ -2332,8 +2254,7 @@
     "roleKey": "safety_officer",
     "title": "Review ASAP safety plan and audit AED devices",
     "dueWeekOfFY": 1,
-    "description": "Refresh the ASAP (As Safe As Possible) plan for the new year and inspect every AED device (battery, pads, location). Report status to the board.",
-    "details": "Refresh {{leagueAbbrev}}'s written As Safe As Possible (ASAP) plan for the new charter year and inventory every AED so the league starts the season compliant with Little League's Child Protection and safety requirements. Most years this is a simple update of officer positions, emergency numbers, and field/facility details on the existing plan, plus confirming each donated AED (e.g., the Reliance Matrix units placed at league-owned fields like Pennell/Douglas) is present with a working battery and in-date pads. Doing it early lets the plan be submitted by the District's spring deadline and reported to the board.",
+    "details": "Refresh the ASAP (As Safe As Possible) plan for the new year and inspect every AED device (battery, pads, location). Report status to the board.\n\nRefresh {{leagueAbbrev}}'s written As Safe As Possible (ASAP) plan for the new charter year and inventory every AED so the league starts the season compliant with Little League's Child Protection and safety requirements. Most years this is a simple update of officer positions, emergency numbers, and field/facility details on the existing plan, plus confirming each donated AED (e.g., the Reliance Matrix units placed at league-owned fields like Pennell/Douglas) is present with a working battery and in-date pads. Doing it early lets the plan be submitted by the District's spring deadline and reported to the board.",
     "steps": [
       "Pull last year's ASAP plan (maintained as a shared Google Doc) and update officer names, contact numbers, and field/emergency information.",
       "Locate each league AED, check the battery and pad expiration, confirm it is at its assigned snack shack/field, and note any that need service or replacement.",
@@ -2358,7 +2279,6 @@
     "roleKey": "safety_officer",
     "title": "Track fall Abuse Awareness training completions",
     "dueWeekOfFY": 3,
-    "description": "After the Oct 1 reset, collect Abuse Awareness certificates from all board members and volunteers and update the certification tracking list.",
     "details": "After Little League's October 1 reset, collect the annual Abuse Awareness Training certificates from all board members and volunteers and update the certification tracking list. Little League International requires the course be re-completed every year (District Administrators had a December 1 deadline, with reminder notices escalating to a final notice), so early tracking prevents last-minute scrambles. Keeping the tracker current feeds directly into who can be badged as a Certified Volunteer in the spring.",
     "steps": [
       "Confirm the Abuse Awareness course has reset for the new year and share the Little League University course link with board members and volunteers.",
@@ -2389,7 +2309,6 @@
     "roleKey": "safety_officer",
     "title": "Schedule coaches clinic and LL Safety & First Aid training",
     "dueWeekOfFY": 18,
-    "description": "Book the venue, date, and instructor for the mandatory Little League Safety & First Aid training and coaches clinic; announce to coaches with a signup goal.",
     "details": "Book the venue, date, and instructor for the mandatory Little League Safety & First Aid training and the coaches clinic, then announce to coaches with a signup goal. {{leagueAbbrev}} runs this as a Coaches Safety Meeting & Training Session covering the safety manual, rules, and coaching tips, typically split into an AA/AAA/Majors session and a Tee Ball/Coach Pitch session at the {{indoorVenue}} cafeteria in March. Every team must have at least one coach attend to meet Little League safety requirements, so scheduling before the season and pushing attendance is essential.",
     "steps": [
       "Reserve the {{indoorVenue}} cafeteria and set two evening sessions (one for AA/AAA/Majors, one for Tee Ball/Coach Pitch), historically 6-8pm on weeknights in mid-March.",
@@ -2415,7 +2334,6 @@
     "roleKey": "safety_officer",
     "title": "Organize subsidized AED/CPR (Heartsaver) clinic",
     "dueWeekOfFY": 22,
-    "description": "Arrange and subsidize a CPR/AED Heartsaver clinic for coaches and volunteers; confirm instructor, materials, and registration.",
     "details": "Arrange and subsidize a CPR/AED Heartsaver clinic for coaches and volunteers, confirming the instructor, materials, and registration. {{leagueAbbrev}} has sponsored a discounted class (covering half of the ~$50 fee, so ~$25 per participant) at the {{indoorVenue}} cafeteria, covering CPR, the Heimlich maneuver, EPI pens/medications, and AED use to pair trained responders with the league's AED devices. Because turnout can be low and sessions sometimes need rescheduling, confirm a viable headcount before committing the instructor.",
     "steps": [
       "Confirm the instructor and a spring evening date/time at the {{indoorVenue}} cafeteria (past sessions ran ~3-4 hours, roughly 5:30-9:30pm).",
@@ -2441,7 +2359,6 @@
     "roleKey": "safety_officer",
     "title": "Verify certified-volunteer badges before practices start",
     "dueWeekOfFY": 21,
-    "description": "Cross-check background checks and Abuse Awareness completions so every on-field volunteer is a Certified Volunteer with a badge before practices begin.",
     "details": "Cross-check background checks and Abuse Awareness completions so every on-field volunteer is a Certified Volunteer with a league-issued badge before practices begin. {{leagueAbbrev}} requires anyone in the snack shack, on the field when children are present, or at practice facilities to wear their badge; a record is badge-eligible only when it shows \"Passed\" verification status and a \"Y\"/\"M\" for Abuse Awareness completed. Because indoor practices start in March, badges must be ready to hand out at {{indoorVenue}} (5:30 on practice days) so approved coaches and helpers can run practices.",
     "steps": [
       "Confirm each volunteer completed all three steps: registration, JDP background check, and Abuse Awareness (plus the newer Safety and First Aid Awareness courses).",
@@ -2472,7 +2389,6 @@
     "roleKey": "safety_officer",
     "title": "Distribute ASAP plan packets to all coaches",
     "dueWeekOfFY": 23,
-    "description": "Provide each coach a copy of the ASAP plan plus completed medical release forms for their players to carry to all games and practices.",
     "details": "Provide each coach a copy of the ASAP plan plus completed medical release forms for their players to carry to all games and practices. {{leagueAbbrev}} assembles these as ASAP/medical release binders distributed at the coaches safety meeting or with the season equipment (books, balls, forms), and coaches who did not receive a copy are told to contact {{infoEmail}}. A Medical Release Form must be completed annually for every player, so this pairs the safety plan with current player medical info in one packet.",
     "steps": [
       "Print current ASAP plan copies and confirm a completed, in-year Medical Release Form exists for every rostered player.",
@@ -2503,7 +2419,6 @@
     "roleKey": "safety_officer",
     "title": "Install safety bases at all fields",
     "dueWeekOfFY": 27,
-    "description": "Install break-away safety bases at every field before the first games; verify each field is game-ready and note any equipment needs.",
     "details": "Install break-away safety bases at every field before the first games and verify each field is game-ready, noting any equipment needs. {{leagueAbbrev}} has tracked this as a spring pre-season action (\"Safety Base Install - will install before games begin\") and revisits base condition during end-of-season field work at all fields. Break-away bases reduce sliding injuries, so completing the install before opening games is a safety compliance step tied to field readiness.",
     "steps": [
       "Inventory break-away safety base sets for every field and identify any missing or worn bases to reorder.",
@@ -2534,7 +2449,6 @@
     "roleKey": "safety_officer",
     "title": "File injury and concussion incident reports",
     "dueWeekOfFY": 34,
-    "description": "Complete incident reports for any injuries and especially concussions for the league insurer, and enforce physician-cleared return-to-play protocol with parents and coaches.",
     "details": "Complete incident reports for any injuries, and especially concussions, for the league insurer, and enforce the physician-cleared return-to-play protocol with parents and coaches. Coaches report incidents (e.g., a player struck by a softball) to the Safety Officer and president, who documents details and follows up on the player's care. The Safety Officer files reports as injuries occur and, for concussions, ensures the player does not return to play until cleared in writing by a physician.",
     "steps": [
       "Collect the incident details from the reporting coach: player, date, field, what happened, and any care provided.",
@@ -2560,7 +2474,6 @@
     "roleKey": "safety_officer",
     "title": "Confirm AED coverage for All-Star and summer teams",
     "dueWeekOfFY": 38,
-    "description": "Ensure AED devices, first aid kits, and current safety documentation travel with All-Star and summer/tournament teams.",
     "details": "Ensure AED devices, first aid kits, and current safety documentation travel with All-Star and summer/tournament teams, which play away games against other {{district}} towns (Westbrook, Portland, Scarborough, Cape Elizabeth, etc.) from mid-July into August. Because these teams frequently play off league-owned fields, portable safety coverage and up-to-date medical releases must go with them. Confirming this before summer play begins keeps the league compliant when kids are away from the home fields' fixed AEDs.",
     "steps": [
       "Identify each All-Star and summer team's schedule and which games are away from league-owned fields.",
@@ -2586,7 +2499,6 @@
     "roleKey": "safety_officer",
     "title": "Update ASAP plan for post-season and tournament play",
     "dueWeekOfFY": 45,
-    "description": "Revise the ASAP/SAFE plan for post-season, All-Star, and tournament activity and confirm all participating teams have current safety compliance.",
     "details": "Revise the ASAP/SAFE plan for post-season, All-Star, and tournament activity and confirm all participating teams have current safety compliance. Tournament play adds new venues, later-summer conditions, and District/Little League requirements (including that any player-absence tournament forms be completed by the parent), so the safety plan and volunteer certifications must be re-verified. This keeps {{leagueAbbrev}}'s post-season teams compliant with {{state}} {{district}} and Little League tournament rules.",
     "steps": [
       "Review the ASAP/SAFE plan and update it for tournament venues, emergency contacts, and summer conditions.",
@@ -2617,7 +2529,6 @@
     "roleKey": "safety_officer",
     "title": "Send Oct 1 Abuse Awareness reset reminder",
     "dueWeekOfFY": 51,
-    "description": "Notify all board members and volunteers that Abuse Awareness training resets October 1 and must be re-completed for the coming year.",
     "details": "Notify all board members and volunteers that Little League's Abuse Awareness Training resets October 1 and must be re-completed for the coming year. On October 1 the annual nationwide background checks reset for the new season, and District Administrators/volunteers face a December 1 completion deadline with escalating reminders. Sending this reminder promptly kicks off the certification cycle so completions are tracked and badges can be issued in the spring.",
     "steps": [
       "After the October 1 reset, send all board members and volunteers the reminder that Abuse Awareness must be re-completed for the new year.",
@@ -2648,8 +2559,7 @@
     "roleKey": "secretary",
     "title": "Record meeting minutes and elections/positions roster",
     "dueWeekOfFY": 9,
-    "description": "Serve as recorder at board meetings (president typically facilitates): capture attendees/quorum, the positions and elections roster with owning role and term year, motions/votes (mover, seconder, amount/cap, outcome), and action items. Note any new positions created by motion.",
-    "details": "The secretary serves as the recorder at board meetings while the president typically facilitates, producing the official record of who attended, what was decided, and who holds each office. This is the source of truth for the league's governance: the running Positions roster (with owning role and term year), the annual election results, and every motion/vote is captured here. It matters most at the fall/winter organizational meeting when officers are elected and new positions are created by motion, but a record is kept at each meeting throughout the year.",
+    "details": "Serve as recorder at board meetings (president typically facilitates): capture attendees/quorum, the positions and elections roster with owning role and term year, motions/votes (mover, seconder, amount/cap, outcome), and action items. Note any new positions created by motion.\n\nThe secretary serves as the recorder at board meetings while the president typically facilitates, producing the official record of who attended, what was decided, and who holds each office. This is the source of truth for the league's governance: the running Positions roster (with owning role and term year), the annual election results, and every motion/vote is captured here. It matters most at the fall/winter organizational meeting when officers are elected and new positions are created by motion, but a record is kept at each meeting throughout the year.",
     "steps": [
       "Open the meeting's Google Doc agenda/record and fill the header: Facilitator, Recorder, and the full Attendees list; confirm quorum before votes are taken.",
       "Work down the Positions roster, marking each voting officer and non-voting staff role as filled or 'Open,' and note the term year alongside each name (e.g., 'VP Softball effective 2027', 'Equipment Coordinator - 2026').",
@@ -2680,8 +2590,7 @@
     "roleKey": "secretary",
     "title": "Distribute agenda and approved minutes to the board",
     "dueWeekOfFY": 15,
-    "description": "Compile and share the meeting agenda and notes via a document link after each meeting; solicit corrections and log omissions so the running minutes stay accurate.",
-    "details": "After each board meeting the secretary shares the agenda and notes via a document link so members who attended (or missed the meeting) can review what was decided. Soliciting corrections keeps the running minutes accurate and creates an auditable record of motions, votes, and action items. This is a recurring post-meeting task done within a few days of every board meeting throughout the season.",
+    "details": "Compile and share the meeting agenda and notes via a document link after each meeting; solicit corrections and log omissions so the running minutes stay accurate.\n\nAfter each board meeting the secretary shares the agenda and notes via a document link so members who attended (or missed the meeting) can review what was decided. Soliciting corrections keeps the running minutes accurate and creates an auditable record of motions, votes, and action items. This is a recurring post-meeting task done within a few days of every board meeting throughout the season.",
     "steps": [
       "Finalize the meeting's agenda-and-notes Google Doc, ensuring attendees, motions/votes, the positions roster, and action items are all captured.",
       "Set the document's sharing so board members can open the link, then email the board using the '{{leagueAbbrev}} - Meeting Agenda & Notes' pattern with the document link inserted.",
@@ -2711,8 +2620,7 @@
     "roleKey": "secretary",
     "title": "Review, update, and upload Constitution & By-laws to LLI",
     "dueWeekOfFY": 4,
-    "description": "Complete the recurring governance obligation: review the Constitution & By-laws, incorporate adopted policy changes, and upload the updated document to Little League International.",
-    "details": "{{leagueAbbrev}} is a chartered Little League and must keep its Constitution & By-laws current on file with Little League International (LLI); the board treats this as a recurring governance obligation. This task incorporates any adopted policy changes into the governing document and re-submits it to LLI for acceptance. It sits early in the fiscal year so the league's charter documents are in order before the new season ramps up.",
+    "details": "Complete the recurring governance obligation: review the Constitution & By-laws, incorporate adopted policy changes, and upload the updated document to Little League International.\n\n{{leagueAbbrev}} is a chartered Little League and must keep its Constitution & By-laws current on file with Little League International (LLI); the board treats this as a recurring governance obligation. This task incorporates any adopted policy changes into the governing document and re-submits it to LLI for acceptance. It sits early in the fiscal year so the league's charter documents are in order before the new season ramps up.",
     "steps": [
       "Retrieve the current Constitution & By-laws and start from LLI's current sample constitution in the league's Data Center File Cabinet (the Regional office rejects documents that deviate too far from the template).",
       "Incorporate any policy or structural changes the board has adopted since the last version (new board roles, division rules, etc.), keeping template language intact where required.",
@@ -2738,8 +2646,7 @@
     "roleKey": "secretary",
     "title": "Re-upload Constitution & By-laws after mid-season policy changes",
     "dueWeekOfFY": 20,
-    "description": "Refresh the governing documents on file with LLI following any adopted amendments (e.g., division rules, social media / advertising-sponsorship policy, new board roles) during the pre-season and in-season cycle.",
-    "details": "When the board adopts amendments during the pre-season/in-season cycle (for example division rule changes, a social-media / advertising-sponsorship policy, or a newly created board role), the governing documents on file with LLI must be refreshed to match. This keeps the charter accurate mid-cycle rather than waiting for the year-end review. It is triggered by adopted motions, so it recurs whenever the board changes something material to the constitution or by-laws.",
+    "details": "Refresh the governing documents on file with LLI following any adopted amendments (e.g., division rules, social media / advertising-sponsorship policy, new board roles) during the pre-season and in-season cycle.\n\nWhen the board adopts amendments during the pre-season/in-season cycle (for example division rule changes, a social-media / advertising-sponsorship policy, or a newly created board role), the governing documents on file with LLI must be refreshed to match. This keeps the charter accurate mid-cycle rather than waiting for the year-end review. It is triggered by adopted motions, so it recurs whenever the board changes something material to the constitution or by-laws.",
     "steps": [
       "Review recent board minutes to identify adopted amendments that affect the Constitution & By-laws (e.g., new positions created by motion, division rules, sponsorship/advertising policy).",
       "Update the governing document from LLI's current sample constitution, folding in the adopted changes while preserving required template language.",
@@ -2769,8 +2676,7 @@
     "roleKey": "secretary",
     "title": "Year-end Constitution & By-laws review and upload",
     "dueWeekOfFY": 51,
-    "description": "Perform the closing-cycle review/update of the Constitution & By-laws and upload to LLI ahead of the Oct 1 fiscal-year reset.",
-    "details": "The closing-cycle review of the Constitution & By-laws ensures the league's governing documents are current with LLI ahead of the Oct 1 fiscal-year reset. The board has repeatedly listed 'Constitution & By-laws - Required to be uploaded to LLI - Need review & update' on its fall organizational agendas, making this the annual governance checkpoint. It should be completed before the new charter year so the document is accepted in time.",
+    "details": "Perform the closing-cycle review/update of the Constitution & By-laws and upload to LLI ahead of the Oct 1 fiscal-year reset.\n\nThe closing-cycle review of the Constitution & By-laws ensures the league's governing documents are current with LLI ahead of the Oct 1 fiscal-year reset. The board has repeatedly listed 'Constitution & By-laws - Required to be uploaded to LLI - Need review & update' on its fall organizational agendas, making this the annual governance checkpoint. It should be completed before the new charter year so the document is accepted in time.",
     "steps": [
       "Pull the year's adopted amendments and the current on-file Constitution & By-laws for a full review against LLI's latest sample constitution.",
       "Update the document to reflect the season's changes (new/retired board roles, elections outcomes, division and policy updates) using the current template as the baseline.",
@@ -2796,8 +2702,7 @@
     "roleKey": "secretary",
     "title": "Send Opening Day Snack Shack volunteer recruitment email",
     "dueWeekOfFY": 30,
-    "description": "Bulk-email a division's families to fill Snack Shack volunteer slots for Opening Day using the Sign Up Genius signup link; reiterate that children and players are not permitted in the snack shack for the event.",
-    "details": "Opening Day is a full day of games and hungry patrons, so the snack shack needs adult volunteers to cover every slot from morning through evening. The secretary bulk-emails the division's families with the Sign Up Genius link to fill the openings and reiterates that children and players are not permitted in the snack shack for this event. This goes out in the days leading up to Opening Day (early May) and is often followed by reminders as slots remain open.",
+    "details": "Bulk-email a division's families to fill Snack Shack volunteer slots for Opening Day using the Sign Up Genius signup link; reiterate that children and players are not permitted in the snack shack for the event.\n\nOpening Day is a full day of games and hungry patrons, so the snack shack needs adult volunteers to cover every slot from morning through evening. The secretary bulk-emails the division's families with the Sign Up Genius link to fill the openings and reiterates that children and players are not permitted in the snack shack for this event. This goes out in the days leading up to Opening Day (early May) and is often followed by reminders as slots remain open.",
     "steps": [
       "Get the Opening Day snack shack Sign Up Genius link and confirm the field, date, and open/close hours from the concessions coordinator (e.g., Pennell Field, opens 8:30am, closes 8:00pm).",
       "Draft the recruitment email using the 'Snack Shack Volunteers Needed - {{division}} Opening Day' template, filling in the division, day/date, field name, and hours.",
@@ -2827,8 +2732,7 @@
     "roleKey": "treasurer",
     "title": "Prepare monthly treasury report for board meeting",
     "dueWeekOfFY": 3,
-    "description": "Compile current bank and PayPal/online balances, outstanding invoices/obligations, and P&L/budget notes to present at each board meeting.",
-    "details": "The Treasurer presents a financial update at each board meeting so the board can make informed spending decisions and vote on motions with current cash position in hand. A typical report covers TD Bank and PayPal balances, outstanding invoices, and known obligations (e.g. Financial Update showing TD ~$31.9K / PayPal $10.1K, MSAD15 $300 rental outstanding, and a pending Fenway wall obligation in the 2023-01-08 agenda). Doing this before every meeting keeps the board's budget-vs-actuals current all season.",
+    "details": "Compile current bank and PayPal/online balances, outstanding invoices/obligations, and P&L/budget notes to present at each board meeting.\n\nThe Treasurer presents a financial update at each board meeting so the board can make informed spending decisions and vote on motions with current cash position in hand. A typical report covers TD Bank and PayPal balances, outstanding invoices, and known obligations (e.g. Financial Update showing TD ~$31.9K / PayPal $10.1K, MSAD15 $300 rental outstanding, and a pending Fenway wall obligation in the 2023-01-08 agenda). Doing this before every meeting keeps the board's budget-vs-actuals current all season.",
     "steps": [
       "Pull current balances from the league's TD Bank account and the PayPal/online donation account (and any Venmo/GoFundMe channels in use).",
       "List outstanding invoices and receivables (e.g. facility/MSAD15 rentals) and known upcoming obligations still to be paid.",
@@ -2858,8 +2762,7 @@
     "roleKey": "treasurer",
     "title": "Pay Little League charter & insurance renewal",
     "dueWeekOfFY": 8,
-    "description": "Process the annual LL charter & insurance payment (Nov-Dec, ~$1,300; up to authorized cap of $2,000).",
-    "details": "Each year the league must renew its Little League charter and insurance through the Little League Data Center, ideally by 12/31, to remain a chartered league able to field teams and All-Stars. The board authorizes the spend by motion each fall (e.g. 'Motion to authorize up to $2,000 for LL Charter & Insurance for 2022' in the 2021-12-12 agenda, with the actual cost running ~$1,300). Both general liability and accident insurance fees are built into the charter checkout, so following the prompts sets up coverage automatically.",
+    "details": "Process the annual LL charter & insurance payment (Nov-Dec, ~$1,300; up to authorized cap of $2,000).\n\nEach year the league must renew its Little League charter and insurance through the Little League Data Center, ideally by 12/31, to remain a chartered league able to field teams and All-Stars. The board authorizes the spend by motion each fall (e.g. 'Motion to authorize up to $2,000 for LL Charter & Insurance for 2022' in the 2021-12-12 agenda, with the actual cost running ~$1,300). Both general liability and accident insurance fees are built into the charter checkout, so following the prompts sets up coverage automatically.",
     "steps": [
       "Confirm the board has authorized the spend by motion (historically up to a {{amount}} cap) at a late-fall meeting.",
       "Log in to the Little League Data Center at https://apps.littleleague.org/dc/account/login before the 12/31 deadline.",
@@ -2885,8 +2788,7 @@
     "roleKey": "treasurer",
     "title": "Reconcile registration revenue after open date",
     "dueWeekOfFY": 15,
-    "description": "Track registration fee receipts by division against the approved fee schedule after registration opens 1/1; flag earmarked funds (e.g. AAA+ increase for field repairs).",
-    "details": "Registration is the league's primary revenue source, and fees are set by the board by motion; the Treasurer tracks receipts by division against the approved fee schedule once registration opens (typically 1/1). Reconciling early catches misapplied or missing payments and lets the board see revenue trends before uniform and equipment ordering. Earmarked components (such as an AAA+ increase dedicated to field repairs, or the Sandlot {{amount}} jersey add-on noted in the 2026-01-12 agenda) must be flagged and tracked separately from general funds.",
+    "details": "Track registration fee receipts by division against the approved fee schedule after registration opens 1/1; flag earmarked funds (e.g. AAA+ increase for field repairs).\n\nRegistration is the league's primary revenue source, and fees are set by the board by motion; the Treasurer tracks receipts by division against the approved fee schedule once registration opens (typically 1/1). Reconciling early catches misapplied or missing payments and lets the board see revenue trends before uniform and equipment ordering. Earmarked components (such as an AAA+ increase dedicated to field repairs, or the Sandlot {{amount}} jersey add-on noted in the 2026-01-12 agenda) must be flagged and tracked separately from general funds.",
     "steps": [
       "Confirm the approved fee schedule by division (including any non-volunteer fee and earmarked increases) from the board minutes.",
       "Export registration receipts from the online registration platform and reconcile against PayPal/online deposits after the 1/1 open date.",
@@ -2916,8 +2818,7 @@
     "roleKey": "treasurer",
     "title": "Track sponsorship payments and donor management",
     "dueWeekOfFY": 17,
-    "description": "Record sponsorship payments, manage donor tiers, and coordinate thank-you fulfillment (banners, plaques, signed/dye-sub jerseys); maintain donor records ({{donationPlatform}} subscription ~{{amount}}/yr).",
-    "details": "The Treasurer records sponsorship and donation payments across all channels (checks, PayPal, Venmo, GoFundMe) in the Annual Sponsorship Log and coordinates fulfillment of donor recognition. This work supports uniform and banner ordering (sponsorships targeted no later than mid-February) and drives thank-you acknowledgements to larger donors (e.g. $250+ and $500+ highlighted for recognition). Donor records are maintained in {{donationPlatform}} (~$1,400/yr subscription), and the league completes corporate donation forms as required.",
+    "details": "Record sponsorship payments, manage donor tiers, and coordinate thank-you fulfillment (banners, plaques, signed/dye-sub jerseys); maintain donor records ({{donationPlatform}} subscription ~{{amount}}/yr).\n\nThe Treasurer records sponsorship and donation payments across all channels (checks, PayPal, Venmo, GoFundMe) in the Annual Sponsorship Log and coordinates fulfillment of donor recognition. This work supports uniform and banner ordering (sponsorships targeted no later than mid-February) and drives thank-you acknowledgements to larger donors (e.g. $250+ and $500+ highlighted for recognition). Donor records are maintained in {{donationPlatform}} (~$1,400/yr subscription), and the league completes corporate donation forms as required.",
     "steps": [
       "Log each sponsorship/donation in the Annual Sponsorship Log with channel, amount, tier, and team/player preference from the Sponsorship Coordinator.",
       "Reconcile incoming payments (checks to {{leagueMailingAddress}}, PayPal, Venmo, GoFundMe) against submitted sponsorship forms.",
@@ -2948,8 +2849,7 @@
     "roleKey": "treasurer",
     "title": "Budget pre-season equipment and uniform spending",
     "dueWeekOfFY": 20,
-    "description": "Support equipment and uniform spending motions (e.g. up to $5,000 equipment, uniforms up to $18,000) and ensure approved caps are tracked against actuals.",
-    "details": "Pre-season equipment and uniform purchases are the league's largest controllable spend, so the board approves them by 'up to $X' motions (e.g. up to $5,000 for equipment for the 2023 season, seconded and carried unanimously in the 2022-11-14 / 2023-01-08 agendas; uniforms up to $18,000). The Treasurer supports these motions by bringing cost detail to the board and then tracks actual spending against each approved cap. This keeps purchasing on budget through the winter/early-spring ordering window.",
+    "details": "Support equipment and uniform spending motions (e.g. up to $5,000 equipment, uniforms up to $18,000) and ensure approved caps are tracked against actuals.\n\nPre-season equipment and uniform purchases are the league's largest controllable spend, so the board approves them by 'up to $X' motions (e.g. up to $5,000 for equipment for the 2023 season, seconded and carried unanimously in the 2022-11-14 / 2023-01-08 agendas; uniforms up to $18,000). The Treasurer supports these motions by bringing cost detail to the board and then tracks actual spending against each approved cap. This keeps purchasing on budget through the winter/early-spring ordering window.",
     "steps": [
       "Collect cost detail for the season's equipment and uniform needs (balls, cages, catcher's gear, helmets, jerseys) from equipment and uniform coordinators.",
       "Present the itemized figures to the board so a member can make an 'up to $X' motion (e.g. up to $5,000 equipment, up to $18,000 uniforms).",
@@ -2974,8 +2874,7 @@
     "roleKey": "treasurer",
     "title": "Establish tournament fundraising plan and goal",
     "dueWeekOfFY": 42,
-    "description": "Set the tournament/World Series fundraising goal and disbursement/per-diem plan (buckets, GoFundMe, business donations); confirm receipt and per-diem rules for the current cycle.",
-    "details": "When All-Star teams advance to State and Regional (or World Series) play, travel becomes a major cost, so the league sets a fundraising goal and disbursement/per-diem plan to cover hotels, gas, and meals for advancing families and staff. Funds come from combined channels - donation buckets at partner businesses, GoFundMe, and business donations (e.g. a local PT center offering to 'cut you guys a check' for the 2023 New England Regional run). The plan confirms per-diem rules and any retained amount (e.g. 2024 Juniors: $11,135 raised, $2,520 retained for state-champion rings, remainder paid as $114.87/day per-diem shares).",
+    "details": "Set the tournament/World Series fundraising goal and disbursement/per-diem plan (buckets, GoFundMe, business donations); confirm receipt and per-diem rules for the current cycle.\n\nWhen All-Star teams advance to State and Regional (or World Series) play, travel becomes a major cost, so the league sets a fundraising goal and disbursement/per-diem plan to cover hotels, gas, and meals for advancing families and staff. Funds come from combined channels - donation buckets at partner businesses, GoFundMe, and business donations (e.g. a local PT center offering to 'cut you guys a check' for the 2023 New England Regional run). The plan confirms per-diem rules and any retained amount (e.g. 2024 Juniors: $11,135 raised, $2,520 retained for state-champion rings, remainder paid as $114.87/day per-diem shares).",
     "steps": [
       "Estimate travel needs for the advancing team (nights of lodging, number of trips, meals) with the coach and president.",
       "Set a fundraising goal and open the channels: donation buckets at partner businesses, a GoFundMe page, and direct business-donation outreach.",
@@ -3005,8 +2904,7 @@
     "roleKey": "treasurer",
     "title": "Collect donation buckets and check mailbox",
     "dueWeekOfFY": 45,
-    "description": "Empty donation buckets at partner businesses and check the league mailbox; log and deposit fundraising proceeds.",
-    "details": "During a tournament run the league places donation buckets at partner businesses and collects mailed checks at the league PO Box; the Treasurer empties these, logs the proceeds, and deposits them toward the tournament fundraising goal. Regular collection keeps cash secure and gives an accurate running total for the per-diem calculation. Collection assignments are coordinated so every partner location is covered.",
+    "details": "Empty donation buckets at partner businesses and check the league mailbox; log and deposit fundraising proceeds.\n\nDuring a tournament run the league places donation buckets at partner businesses and collects mailed checks at the league PO Box; the Treasurer empties these, logs the proceeds, and deposits them toward the tournament fundraising goal. Regular collection keeps cash secure and gives an accurate running total for the per-diem calculation. Collection assignments are coordinated so every partner location is covered.",
     "steps": [
       "Coordinate bucket-collection assignments so each partner business location is emptied on schedule.",
       "Empty each donation bucket and check the league mailbox ({{leagueMailingAddress}}) for mailed checks and cash.",
@@ -3036,8 +2934,7 @@
     "roleKey": "treasurer",
     "title": "Disburse tournament family reimbursements",
     "dueWeekOfFY": 46,
-    "description": "Pay out hotel, per diem, and gas reimbursements to advancing tournament families per the approved stipend and receipt policy.",
-    "details": "Once the fundraising total is set, the Treasurer pays out hotel, per-diem, and gas reimbursements to advancing tournament families and staff per the approved stipend plan. Amounts follow the disbursement rules confirmed for the cycle (e.g. 2024 Juniors Regionals: after retaining $2,520 for rings, the balance paid as $114.87/day for 5 days, $574.33 per share). Families choose to pick up checks (e.g. Sunday evening at the Douglas Snack Shack) or have them mailed.",
+    "details": "Pay out hotel, per diem, and gas reimbursements to advancing tournament families per the approved stipend and receipt policy.\n\nOnce the fundraising total is set, the Treasurer pays out hotel, per-diem, and gas reimbursements to advancing tournament families and staff per the approved stipend plan. Amounts follow the disbursement rules confirmed for the cycle (e.g. 2024 Juniors Regionals: after retaining $2,520 for rings, the balance paid as $114.87/day for 5 days, $574.33 per share). Families choose to pick up checks (e.g. Sunday evening at the Douglas Snack Shack) or have them mailed.",
     "steps": [
       "Finalize the total raised and subtract any board-approved retained amount (e.g. for championship rings).",
       "Calculate per-share/per-diem amounts using the approved rate and number of eligible player families and staff.",
@@ -3062,8 +2959,7 @@
     "roleKey": "uniform_coordinator",
     "title": "Request fall vendor samples and pricing",
     "dueWeekOfFY": 2,
-    "description": "Reach out to {{uniformVendor}}, Main Street Graphics, and {{equipmentVendor}} for current-season samples and price sheets, including girl's-cut softball jerseys, and outline jersey ordering deadlines.",
-    "details": "Kicking off the uniform cycle in the fall, the coordinator gathers current-season samples and price sheets from the league's vendors so the board can compare options and set the coming season's uniform program. {{leagueAbbrev}} has historically sourced {{uniformVendor}} jerseys/hats for AAA and up, {{state}} Street Graphics for screen-printed shirts, and checked {{equipmentVendor}}, using samples as sign-up motivation. Doing this early (around October/November board meetings) leaves time to test fits at assessments and to check lead times before the ordering crunch.",
+    "details": "Reach out to {{uniformVendor}}, Main Street Graphics, and {{equipmentVendor}} for current-season samples and price sheets, including girl's-cut softball jerseys, and outline jersey ordering deadlines.\n\nKicking off the uniform cycle in the fall, the coordinator gathers current-season samples and price sheets from the league's vendors so the board can compare options and set the coming season's uniform program. {{leagueAbbrev}} has historically sourced {{uniformVendor}} jerseys/hats for AAA and up, {{state}} Street Graphics for screen-printed shirts, and checked {{equipmentVendor}}, using samples as sign-up motivation. Doing this early (around October/November board meetings) leaves time to test fits at assessments and to check lead times before the ordering crunch.",
     "steps": [
       "Contact {{uniformVendor}}, {{state}} Street Graphics, and {{equipmentVendor}} for current-season samples and printed price sheets, including a girl's-cut/softball-cut jersey option.",
       "Ask each vendor about lead times and whether delivery windows change by season, plus minimum quantities for re-orders and the minimum-fee thresholds.",
@@ -3088,8 +2984,7 @@
     "roleKey": "uniform_coordinator",
     "title": "Confirm early-signup jersey incentive terms",
     "dueWeekOfFY": 6,
-    "description": "Set the early-signup custom-uniform incentive and its Feb 15 deadline, and hand the details to registration/LIO for promotion.",
-    "details": "To drive early registration, {{leagueAbbrev}} ties the custom-uniform perk to a hard early-signup deadline: families who register by the cutoff (Feb 15) are guaranteed a customized jersey, using uniforms as motivation for sign-ups. The coordinator finalizes those terms and hands them to registration/LIO so they can be promoted. This matters because earlier team formation makes ordering cheaper and simpler and keeps the season on schedule.",
+    "details": "Set the early-signup custom-uniform incentive and its Feb 15 deadline, and hand the details to registration/LIO for promotion.\n\nTo drive early registration, {{leagueAbbrev}} ties the custom-uniform perk to a hard early-signup deadline: families who register by the cutoff (Feb 15) are guaranteed a customized jersey, using uniforms as motivation for sign-ups. The coordinator finalizes those terms and hands them to registration/LIO so they can be promoted. This matters because earlier team formation makes ordering cheaper and simpler and keeps the season on schedule.",
     "steps": [
       "Confirm the early-signup incentive (guaranteed customized jersey) and set the Feb 15 deadline with the board.",
       "Nail down exactly which divisions/levels the custom-jersey perk applies to and what late registrants receive instead.",
@@ -3118,7 +3013,6 @@
     "roleKey": "uniform_coordinator",
     "title": "Compile vendor quotes and jersey layout",
     "dueWeekOfFY": 15,
-    "description": "Assemble final vendor quotes, sponsor-on-front layout mockups, and per-division pricing (e.g. $28.50/set for TB/CP/AA and $50/player {{uniformVendor}} + Gilbert hats for AAA and up) for board review.",
     "details": "Ahead of the board decision, the coordinator assembles final vendor quotes, sponsor-on-front layout mockups, and per-division pricing into a single package for review. {{leagueAbbrev}}'s model has been sponsor names combined with the league logo on the front, player name/number on the back, roughly $28.50/set for screen-printed lower divisions (TB/CP/AA) and about $50/player {{uniformVendor}} plus Gilbert/college hats for AAA and up. Getting this right in late winter drives the spending motion and the timely order.",
     "steps": [
       "Collect final written quotes from each vendor (e.g., {{state}} Street Graphics tiered pricing like 25 @ $28.50, personalization +$5; {{uniformVendor}} shirts/hats).",
@@ -3149,7 +3043,6 @@
     "roleKey": "uniform_coordinator",
     "title": "Present uniform purchase motion to the board",
     "dueWeekOfFY": 22,
-    "description": "Bring the recommended vendor, team sizes and extras, and per-player budget to the board for a spending motion so the order can be placed on time.",
     "details": "The coordinator brings the recommended vendor, team sizes, extras, and per-player budget to a board meeting for a formal spending motion so the order can be placed on time. {{leagueAbbrev}} has done this via specific motions (e.g., {{uniformVendor}} for AAA & Majors with {{leagueAbbrev}} logo, sponsor on front, name/number on back, matching MLB team hats). A recorded, seconded, carried motion authorizes the spend and locks the design before ordering.",
     "steps": [
       "Add uniforms to the board meeting agenda with the recommended vendor and finalized design.",
@@ -3180,8 +3073,7 @@
     "roleKey": "uniform_coordinator",
     "title": "Enforce customized-jersey deadline and finalize order",
     "dueWeekOfFY": 24,
-    "description": "Lock the 3/14 customized-jersey registration deadline, reconcile personalized vs. generic backup jerseys, and finalize team rosters for the order.",
-    "details": "The coordinator locks the firm customized-jersey registration deadline (historically 3/14 / around 3/9), after which no exceptions are made, and reconciles who gets a personalized jersey versus a generic backup. This ties directly to team formation: teams are announced and rosters are finalized right before the order goes out. Getting this locked prevents costly re-orders of incorrect or extra jerseys.",
+    "details": "Lock the 3/14 customized-jersey registration deadline, reconcile personalized vs. generic backup jerseys, and finalize team rosters for the order.\n\nThe coordinator locks the firm customized-jersey registration deadline (historically 3/14 / around 3/9), after which no exceptions are made, and reconciles who gets a personalized jersey versus a generic backup. This ties directly to team formation: teams are announced and rosters are finalized right before the order goes out. Getting this locked prevents costly re-orders of incorrect or extra jerseys.",
     "steps": [
       "Enforce the firm customized-jersey registration deadline (e.g., 3/14) with no exceptions for late registrants.",
       "Reconcile personalized jerseys against generic backup jerseys (planning the standard +5 SB / +3 BB extras).",
@@ -3211,8 +3103,7 @@
     "roleKey": "uniform_coordinator",
     "title": "Submit {{uniformVendor}} and hat orders",
     "dueWeekOfFY": 25,
-    "description": "Place the AAA-and-above {{uniformVendor}} order and Gilbert/hat order by the vendor cutoff; confirm coach adult-hat allotment per team.",
-    "details": "Once rosters and sizing are locked, the coordinator places the AAA-and-above {{uniformVendor}} jersey order and the Gilbert/college-hat order by the vendor cutoff, typically the Monday after teams are announced. {{leagueAbbrev}} pays a deposit (25%) on the card to submit and confirms the coach adult-hat allotment per team. Hitting the vendor cutoff is what keeps uniforms arriving ahead of picture day and the season start.",
+    "details": "Place the AAA-and-above {{uniformVendor}} order and Gilbert/hat order by the vendor cutoff; confirm coach adult-hat allotment per team.\n\nOnce rosters and sizing are locked, the coordinator places the AAA-and-above {{uniformVendor}} jersey order and the Gilbert/college-hat order by the vendor cutoff, typically the Monday after teams are announced. {{leagueAbbrev}} pays a deposit (25%) on the card to submit and confirms the coach adult-hat allotment per team. Hitting the vendor cutoff is what keeps uniforms arriving ahead of picture day and the season start.",
     "steps": [
       "Finalize the {{uniformVendor}} order for AAA and Majors (and applicable softball levels) with confirmed names, numbers, and sizes.",
       "Place the matching hat order (college/Gilbert or MLB-team hats, excluding Red Sox/Yankees) alongside the jerseys.",
@@ -3242,8 +3133,7 @@
     "roleKey": "uniform_coordinator",
     "title": "Run the uniform sizing event",
     "dueWeekOfFY": 27,
-    "description": "Send the sizing-event announcement, bring jersey and pant size samples, collect fit corrections, and submit final order adjustments by the deadline.",
-    "details": "The coordinator holds an in-person sizing event (often at the batting cages) so families can try on jersey and pant samples and confirm fits before the order is finalized. {{leagueAbbrev}} also sends a selection form with size charts and notes learned patterns (e.g., girls'/women's styles run small and need to be sized up 1-2). This step exists because re-ordering incorrect uniforms is very expensive, so fit corrections are collected and submitted by a hard deadline.",
+    "details": "Send the sizing-event announcement, bring jersey and pant size samples, collect fit corrections, and submit final order adjustments by the deadline.\n\nThe coordinator holds an in-person sizing event (often at the batting cages) so families can try on jersey and pant samples and confirm fits before the order is finalized. {{leagueAbbrev}} also sends a selection form with size charts and notes learned patterns (e.g., girls'/women's styles run small and need to be sized up 1-2). This step exists because re-ordering incorrect uniforms is very expensive, so fit corrections are collected and submitted by a hard deadline.",
     "steps": [
       "Send the sizing-event announcement with date, time, and location (e.g., the batting cages).",
       "Distribute the online uniform selection form with jersey and pant size charts (defaulting to registration selections if not returned).",
@@ -3268,8 +3158,7 @@
     "roleKey": "uniform_coordinator",
     "title": "Track uniform delivery against picture day",
     "dueWeekOfFY": 28,
-    "description": "Monitor vendor shipments and coordinate delivery timing with information_officer's picture/photo day so uniforms arrive first.",
-    "details": "The coordinator monitors vendor shipments and coordinates delivery timing with the information officer's picture/photo day so that uniforms arrive before players are photographed. {{leagueAbbrev}} schedules photos around practices and needs teams in uniform (e.g., TB/CP pictures on a set Saturday), so uniforms must land first. Tracking shipments also gives time to place rush add-on orders for any missing or additional players.",
+    "details": "Monitor vendor shipments and coordinate delivery timing with information_officer's picture/photo day so uniforms arrive first.\n\nThe coordinator monitors vendor shipments and coordinates delivery timing with the information officer's picture/photo day so that uniforms arrive before players are photographed. {{leagueAbbrev}} schedules photos around practices and needs teams in uniform (e.g., TB/CP pictures on a set Saturday), so uniforms must land first. Tracking shipments also gives time to place rush add-on orders for any missing or additional players.",
     "steps": [
       "Confirm the photo/picture day dates with the information officer and identify which divisions are shooting when.",
       "Track each vendor shipment's status and expected arrival against those photo dates.",
@@ -3299,8 +3188,7 @@
     "roleKey": "uniform_coordinator",
     "title": "Coordinate coach uniform pickup and distribution",
     "dueWeekOfFY": 30,
-    "description": "Send the coach-pickup notice with day, time, and location; instruct one representative per team (not individual parents); provide storage access code; and send the youth-vs-adult hat clarification with coach adult-hat counts.",
-    "details": "Once uniforms are sorted and bagged by team, the coordinator sends the coach-pickup notice with day, time, and location (historically the Douglas Field snack shack) and provides the storage lock code for off-hours pickup. Only one coach or team representative should collect the whole team's bagged, labeled uniforms, not individual parents. A follow-up clarifies youth vs. adult (OSFM) hats and the 3-4 coach adult-hat count per team.",
+    "details": "Send the coach-pickup notice with day, time, and location; instruct one representative per team (not individual parents); provide storage access code; and send the youth-vs-adult hat clarification with coach adult-hat counts.\n\nOnce uniforms are sorted and bagged by team, the coordinator sends the coach-pickup notice with day, time, and location (historically the Douglas Field snack shack) and provides the storage lock code for off-hours pickup. Only one coach or team representative should collect the whole team's bagged, labeled uniforms, not individual parents. A follow-up clarifies youth vs. adult (OSFM) hats and the 3-4 coach adult-hat count per team.",
     "steps": [
       "Sort, bag, and label uniforms by team and division (e.g., 'TB' vs 'CP' to avoid repeat team-name mix-ups).",
       "Send the coach-pickup notice with day, time, and location, instructing one coach/rep per team (not individual parents).",
@@ -3330,8 +3218,7 @@
     "roleKey": "uniform_coordinator",
     "title": "Order All-Star uniforms",
     "dueWeekOfFY": 34,
-    "description": "Once All-Star rosters are voted, order team jerseys/uniforms at about {{amount}}/player per the approved per-player budget.",
-    "details": "After All-Star rosters are voted and approved by the board, the coordinator orders team jerseys/uniforms at approximately {{amount}}/player per the approved per-player budget (a recurring board motion). This happens in June once managers and rosters are set, and numbers are assigned first-come as sizes are collected. Timely ordering matters so All-Star teams have uniforms before {{district}} tournament play.",
+    "details": "Once All-Star rosters are voted, order team jerseys/uniforms at about {{amount}}/player per the approved per-player budget.\n\nAfter All-Star rosters are voted and approved by the board, the coordinator orders team jerseys/uniforms at approximately {{amount}}/player per the approved per-player budget (a recurring board motion). This happens in June once managers and rosters are set, and numbers are assigned first-come as sizes are collected. Timely ordering matters so All-Star teams have uniforms before {{district}} tournament play.",
     "steps": [
       "Wait for the board-approved All-Star rosters and the ~{{amount}}/player uniform budget motion.",
       "Collect player names, sizes, and number preferences (numbers first-come, first-served).",
@@ -3361,7 +3248,6 @@
     "roleKey": "uniform_coordinator",
     "title": "Procure Junior/Senior summer uniforms",
     "dueWeekOfFY": 35,
-    "description": "Order uniforms for Junior, Senior, and summer/tournament teams as advancing rosters are confirmed.",
     "details": "The coordinator orders uniforms for Junior, Senior, and summer/tournament teams as advancing rosters are confirmed, which happens later than the spring order and often in smaller, add-on batches. {{leagueAbbrev}} collects roster info via an editable spreadsheet (name, adult size, number) and places rush orders (paying the deposit on the card) so teams are equipped quickly. Because these rosters firm up late, orders are turned around ASAP once players commit.",
     "steps": [
       "Confirm the Junior, Senior, and summer/tournament rosters as advancing players commit.",
@@ -3392,7 +3278,6 @@
     "roleKey": "uniform_coordinator",
     "title": "Update uniform vendor and pricing research",
     "dueWeekOfFY": 45,
-    "description": "Refresh the running uniform vendor/pricing research notes with this season's results to inform next year's sampling and ordering.",
     "details": "At season's end the coordinator refreshes the running uniform vendor/pricing research notes with this season's actual results (vendors used, quotes, lead times, minimums, fit lessons) to inform next year's sampling and ordering. {{leagueAbbrev}} maintains this as a carry-forward reference that reappears in successive board agendas. Capturing it while fresh avoids re-discovering the same pricing and lead-time details next fall.",
     "steps": [
       "Record this season's final vendors, per-division pricing, and quantities actually ordered.",
@@ -3423,8 +3308,7 @@
     "roleKey": "vp_baseball",
     "title": "Publish Junior & Senior baseball roster by Nov 1",
     "dueWeekOfFY": 51,
-    "description": "Send Junior & Senior baseball commitment letters, collect responses (due Nov 30), and publish the confirmed roster by Nov 1 so summer-team formation can begin early in the fiscal year.",
-    "details": "Junior (13-14) and Senior (13-16) baseball are supplementary summer programs that play {{district}} towns after the middle-school/school season, so early commitment lets the league gauge whether it can field its own team or must combine with another town. Sending commitment letters in the fall and publishing a confirmed roster by Nov 1 gives summer-team formation a running start at the top of the fiscal year, well before spring registration crowds it out. Deadlines occasionally slide (e.g., to accommodate high-school showcase schedules), but the goal is a firm player count early.",
+    "details": "Send Junior & Senior baseball commitment letters, collect responses (due Nov 30), and publish the confirmed roster by Nov 1 so summer-team formation can begin early in the fiscal year.\n\nJunior (13-14) and Senior (13-16) baseball are supplementary summer programs that play {{district}} towns after the middle-school/school season, so early commitment lets the league gauge whether it can field its own team or must combine with another town. Sending commitment letters in the fall and publishing a confirmed roster by Nov 1 gives summer-team formation a running start at the top of the fiscal year, well before spring registration crowds it out. Deadlines occasionally slide (e.g., to accommodate high-school showcase schedules), but the goal is a firm player count early.",
     "steps": [
       "Draft and send commitment letters to eligible 13-16 baseball families explaining the Junior/Senior summer program, {{district}} opponents, and the June-July schedule window.",
       "Set a firm response deadline (target Nov 30) and note it may extend if showcase or school schedules aren't out yet.",
@@ -3455,8 +3339,7 @@
     "roleKey": "vp_baseball",
     "title": "Rules / division review for baseball",
     "dueWeekOfFY": 19,
-    "description": "Contribute to the annual rules and division review (farm system, coach-pitch/player-pitch transition, age structure, playing-up) so baseball division rules are set before assessments and drafts.",
-    "details": "Each fall/winter the board reviews baseball division structure - the farm/coach-pitch to player-pitch (AA) progression, age boundaries, and playing-up requests - so rules are locked before assessments and drafts. Setting these early ensures assessments evaluate players against the right division and that draft-eligible pools are correct. The VP Baseball contributes division-specific input (e.g., AA player-pitch pitching distance, strike-count rules, minimum lineup rules) that later flows into the playoff rules summary.",
+    "details": "Contribute to the annual rules and division review (farm system, coach-pitch/player-pitch transition, age structure, playing-up) so baseball division rules are set before assessments and drafts.\n\nEach fall/winter the board reviews baseball division structure - the farm/coach-pitch to player-pitch (AA) progression, age boundaries, and playing-up requests - so rules are locked before assessments and drafts. Setting these early ensures assessments evaluate players against the right division and that draft-eligible pools are correct. The VP Baseball contributes division-specific input (e.g., AA player-pitch pitching distance, strike-count rules, minimum lineup rules) that later flows into the playoff rules summary.",
     "steps": [
       "Review last season's division definitions and any feedback on the coach-pitch/player-pitch (AA) transition and age structure.",
       "Bring proposed baseball rule and division changes to a fall/winter board meeting for discussion (rules should be set before assessments).",
@@ -3486,8 +3369,7 @@
     "roleKey": "vp_baseball",
     "title": "Book spring indoor practice time and schedule",
     "dueWeekOfFY": 23,
-    "description": "Secure gym/YMCA time and build the clinic-style indoor practice schedule for AA/AAA/Majors, coordinating coaches, assistant coaches, and volunteer setup crews for nets and bins.",
-    "details": "Before fields are playable, {{leagueAbbrev}} runs clinic-style indoor sessions for AA/AAA/Majors at the {{leagueAbbrev}} middle school gym and at batting cage facilities (e.g., The Cages in {{townA}}). Securing gym/YMCA time and building the schedule keeps players developing through late winter and early spring, mostly with combined, skill-focused batting and fielding work. This requires coordinating head and assistant coaches plus volunteer setup crews for nets and equipment bins.",
+    "details": "Secure gym/YMCA time and build the clinic-style indoor practice schedule for AA/AAA/Majors, coordinating coaches, assistant coaches, and volunteer setup crews for nets and bins.\n\nBefore fields are playable, {{leagueAbbrev}} runs clinic-style indoor sessions for AA/AAA/Majors at the {{leagueAbbrev}} middle school gym and at batting cage facilities (e.g., The Cages in {{townA}}). Securing gym/YMCA time and building the schedule keeps players developing through late winter and early spring, mostly with combined, skill-focused batting and fielding work. This requires coordinating head and assistant coaches plus volunteer setup crews for nets and equipment bins.",
     "steps": [
       "Reserve gym/YMCA and cage time slots for AA/AAA/Majors and confirm dates for the indoor block.",
       "Build a clinic-style schedule (hitting, fielding, drills) noting that most sessions are combined/skill-development rather than single-team.",
@@ -3517,8 +3399,7 @@
     "roleKey": "vp_baseball",
     "title": "Coordinate post-draft practice/game schedule build",
     "dueWeekOfFY": 24,
-    "description": "After the draft and coaches meeting, work with the scheduler and coaches to finalize the baseball practice and game calendar leading into opening day (approx. April 10).",
-    "details": "Once the draft and coaches meeting are done, teams exist and the calendar can be built for real. The VP Baseball works with the game/practice scheduler and coaches to finalize practices and games leading into opening day (approximately April 10). Getting this locked early lets coaches plan and lets families see a full schedule before the season starts.",
+    "details": "After the draft and coaches meeting, work with the scheduler and coaches to finalize the baseball practice and game calendar leading into opening day (approx. April 10).\n\nOnce the draft and coaches meeting are done, teams exist and the calendar can be built for real. The VP Baseball works with the game/practice scheduler and coaches to finalize practices and games leading into opening day (approximately April 10). Getting this locked early lets coaches plan and lets families see a full schedule before the season starts.",
     "steps": [
       "After the draft and coaches meeting, collect coach constraints (field access, blackout dates, preferred practice slots) for each AA/AAA/Majors team.",
       "Work with the game and practice scheduler to draft the practice and game calendar toward an approx. April 10 opening day.",
@@ -3548,8 +3429,7 @@
     "roleKey": "vp_baseball",
     "title": "Enter and update baseball schedules in GameChanger",
     "dueWeekOfFY": 27,
-    "description": "Ensure AA/AAA/Majors coaches have entered practice and game schedules in GameChanger with correct start dates, fields, and times, and post league updates for families.",
-    "details": "{{leagueAbbrev}} uses the GameChanger app as the single source for team rosters, schedules, and coach-to-family communication about changes and cancellations. The VP Baseball ensures AA/AAA/Majors coaches have entered practices and games with correct start dates, fields, and times, and that league updates reach families. Because GameChanger issues can delay roster/schedule posting, this needs active follow-up early in the season.",
+    "details": "Ensure AA/AAA/Majors coaches have entered practice and game schedules in GameChanger with correct start dates, fields, and times, and post league updates for families.\n\n{{leagueAbbrev}} uses the GameChanger app as the single source for team rosters, schedules, and coach-to-family communication about changes and cancellations. The VP Baseball ensures AA/AAA/Majors coaches have entered practices and games with correct start dates, fields, and times, and that league updates reach families. Because GameChanger issues can delay roster/schedule posting, this needs active follow-up early in the season.",
     "steps": [
       "Confirm rosters are posted so each AA/AAA/Majors team appears correctly in GameChanger.",
       "Verify coaches have entered practices and games with accurate start dates, field names, and times.",
@@ -3574,8 +3454,7 @@
     "roleKey": "vp_baseball",
     "title": "Prepare baseball playoff schedule, brackets & rules",
     "dueWeekOfFY": 33,
-    "description": "Draw first-round matchups, build brackets (single vs double elimination by division), assemble the pitch-count and playoff rules summary, and coordinate the end-of-season BBQ / Home Run Derby with the president.",
-    "details": "AA, AAA, and Majors playoffs run the first two weeks of June (typically starting ~6/3, most levels double elimination). The VP Baseball draws first-round matchups by random draw (placed on the regular schedule as the last set-opponent game), builds the brackets, and assembles the pitch-count and playoff rules summary. This task also includes planning consolation games and coordinating the championship-day BBQ / Home Run Derby with the president.",
+    "details": "Draw first-round matchups, build brackets (single vs double elimination by division), assemble the pitch-count and playoff rules summary, and coordinate the end-of-season BBQ / Home Run Derby with the president.\n\nAA, AAA, and Majors playoffs run the first two weeks of June (typically starting ~6/3, most levels double elimination). The VP Baseball draws first-round matchups by random draw (placed on the regular schedule as the last set-opponent game), builds the brackets, and assembles the pitch-count and playoff rules summary. This task also includes planning consolation games and coordinating the championship-day BBQ / Home Run Derby with the president.",
     "steps": [
       "Set playoff windows per level (AA/AAA/Majors) and decide format (double elimination, with a single-elimination fallback if weather disrupts).",
       "Draw first-round matchups by random draw and place them on each team's schedule as the last game with a set opponent; add placeholders and consolation games.",
@@ -3606,8 +3485,7 @@
     "roleKey": "vp_baseball",
     "title": "Send baseball playoff schedule/rules email",
     "dueWeekOfFY": 34,
-    "description": "Distribute the league-wide 'Baseball Playoff Schedule, Rules, & Brackets' announcement using the playoffs_tournament template with placeholders for dates, formats, distances, and the pitch-count link filled in.",
-    "details": "This is the league-wide 'Baseball Playoff Schedule, Rules, & Brackets' announcement that goes to all AA/AAA/Majors families once brackets are drawn. It communicates start dates by level, the double-elimination format, the pitch-count requirement and rules link, AA player-pitch clarifications, consolation-game guidance, and championship-day BBQ details. It reinforces the positive-sportsmanship tone the league emphasizes for playoffs.",
+    "details": "Distribute the league-wide 'Baseball Playoff Schedule, Rules, & Brackets' announcement using the playoffs_tournament template with placeholders for dates, formats, distances, and the pitch-count link filled in.\n\nThis is the league-wide 'Baseball Playoff Schedule, Rules, & Brackets' announcement that goes to all AA/AAA/Majors families once brackets are drawn. It communicates start dates by level, the double-elimination format, the pitch-count requirement and rules link, AA player-pitch clarifications, consolation-game guidance, and championship-day BBQ details. It reinforces the positive-sportsmanship tone the league emphasizes for playoffs.",
     "steps": [
       "Fill the playoffs_tournament template placeholders with per-level dates, format, AA pitching distance, and the pitch-count rules link.",
       "Include the live brackets URL and note first-round matchups are already on schedules as the last set-opponent game.",
@@ -3637,8 +3515,7 @@
     "roleKey": "vp_baseball",
     "title": "Launch summer baseball registration and season",
     "dueWeekOfFY": 34,
-    "description": "Open summer baseball / summer-ball registration, set divisions and team counts, and stand up schedules and rosters for the summer program following the regular season.",
-    "details": "After the regular season, {{leagueAbbrev}} stands up a summer program for AA/AAA/Majors that plays other {{district}} towns (Westbrook, Portland, Scarborough, Cape Elizabeth, Cumberland-North Yarmouth, etc.), typically running mid-July through mid-August with 2-3 games per week. Recent practice starts with an interest poll to see which levels can field teams before opening registration, then forms teams and builds schedules/rosters. Cost has run around {{amount}}/player when interest supports teams.",
+    "details": "Open summer baseball / summer-ball registration, set divisions and team counts, and stand up schedules and rosters for the summer program following the regular season.\n\nAfter the regular season, {{leagueAbbrev}} stands up a summer program for AA/AAA/Majors that plays other {{district}} towns (Westbrook, Portland, Scarborough, Cape Elizabeth, Cumberland-North Yarmouth, etc.), typically running mid-July through mid-August with 2-3 games per week. Recent practice starts with an interest poll to see which levels can field teams before opening registration, then forms teams and builds schedules/rosters. Cost has run around {{amount}}/player when interest supports teams.",
     "steps": [
       "Post an interest poll to gauge which levels (AA/AAA/Majors) have enough players to field summer teams.",
       "Once interest is confirmed, open summer registration with a firm deadline and set the price (recently ~{{amount}}/player).",
@@ -3668,8 +3545,7 @@
     "roleKey": "vp_baseball",
     "title": "Baseball season retrospective input",
     "dueWeekOfFY": 42,
-    "description": "Review end-of-season survey results and division feedback for baseball and summarize what went well / what to change for next year's structure, scheduling, and rules.",
-    "details": "After the season, the board reviews end-of-season survey results and division feedback to decide what to keep and what to change for next year. The VP Baseball summarizes baseball-specific takeaways on structure, scheduling, and rules so improvements can be folded into the fall rules/division review. Capturing this while the season is fresh feeds the next year's planning cycle.",
+    "details": "Review end-of-season survey results and division feedback for baseball and summarize what went well / what to change for next year's structure, scheduling, and rules.\n\nAfter the season, the board reviews end-of-season survey results and division feedback to decide what to keep and what to change for next year. The VP Baseball summarizes baseball-specific takeaways on structure, scheduling, and rules so improvements can be folded into the fall rules/division review. Capturing this while the season is fresh feeds the next year's planning cycle.",
     "steps": [
       "Gather end-of-season survey results and coach/family feedback specific to the baseball divisions.",
       "Summarize what worked and what to change for structure (division boundaries, playing-up), scheduling (game counts, indoor block, playoffs), and rules.",
@@ -3699,8 +3575,7 @@
     "roleKey": "vp_softball",
     "title": "Draft softball program improvement & recruitment plan",
     "dueWeekOfFY": 2,
-    "description": "Coming off the season, write up softball program improvements and a recruitment plan to grow numbers by division; flag any low-count divisions that may need interleague merger (e.g., Yarmouth softball, Windham Juniors).",
-    "details": "Coming off the season, the VP Softball documents what worked and what didn't and lays out a plan to grow softball registrations by division for the next year. This matters because softball counts are thinner than baseball and low-count divisions (e.g., Yarmouth softball, Windham Juniors) may need interleague mergers to field viable teams. The plan sets the direction the softball parent group and board will execute against through the winter and spring.",
+    "details": "Coming off the season, write up softball program improvements and a recruitment plan to grow numbers by division; flag any low-count divisions that may need interleague merger (e.g., Yarmouth softball, Windham Juniors).\n\nComing off the season, the VP Softball documents what worked and what didn't and lays out a plan to grow softball registrations by division for the next year. This matters because softball counts are thinner than baseball and low-count divisions (e.g., Yarmouth softball, Windham Juniors) may need interleague mergers to field viable teams. The plan sets the direction the softball parent group and board will execute against through the winter and spring.",
     "steps": [
       "Pull the prior season's registration and team counts by division (AA/7-8, AAA/9-10, Majors/11-12, Juniors/12-16) and note where numbers are trending down.",
       "Flag any division that cannot field enough teams and identify interleague partners to merge with (e.g., combine Juniors with Windham/Yarmouth) via {{district}} contacts.",
@@ -3730,8 +3605,7 @@
     "roleKey": "vp_softball",
     "title": "Coordinate winter softball clinics ({{instructorName}})",
     "dueWeekOfFY": 9,
-    "description": "Work with the president on scheduling the {{instructorName}} winter softball clinic - dates, gym space, age-group slots, session fees ($10/session or 4 for $30), and budget (~$2,600-$2,800, expected to break even).",
-    "details": "Working with the president, the VP Softball books the winter softball clinics led by {{instructorName}} (former D1 pitcher / Colby pitching coach) with skills sessions from Madi Pelletier. Historically run over four Sundays starting mid-January (e.g., 1/19, 1/26, 2/2, 2/9 with a 2/16 weather makeup) at the {{indoorVenue}} gym. Session fees run around $10-15 each (4 for $30-45) with a budget near $2,600-$2,800 expected to break even, and scholarships offered on request.",
+    "details": "Work with the president on scheduling the {{instructorName}} winter softball clinic - dates, gym space, age-group slots, session fees ($10/session or 4 for $30), and budget (~$2,600-$2,800, expected to break even).\n\nWorking with the president, the VP Softball books the winter softball clinics led by {{instructorName}} (former D1 pitcher / Colby pitching coach) with skills sessions from Madi Pelletier. Historically run over four Sundays starting mid-January (e.g., 1/19, 1/26, 2/2, 2/9 with a 2/16 weather makeup) at the {{indoorVenue}} gym. Session fees run around $10-15 each (4 for $30-45) with a budget near $2,600-$2,800 expected to break even, and scholarships offered on request.",
     "steps": [
       "Confirm coach availability with {{instructorName}} (ages 9-12 pitching) and Madi Pelletier (all-levels skills) and lock four consecutive Sunday dates in mid-January with a weather-makeup date.",
       "Reserve {{indoorVenue}} gym space and set age-group time slots (e.g., 1:30 AA ages 7-9, 2:30 AAA/Majors 9-12, 3:30 pitching 9-12).",
@@ -3761,7 +3635,6 @@
     "roleKey": "vp_softball",
     "title": "Plan softball team formation & assessments",
     "dueWeekOfFY": 16,
-    "description": "Coordinate softball assessment stations, judges, and preliminary team formation across the 7-8, 9-10, 11-12, and 12-16 divisions ahead of the spring draft.",
     "details": "Ahead of the spring draft, the VP Softball runs assessment stations and judges to rate players and forms preliminary teams across the 7-8 (AA), 9-10 (AAA), 11-12 (Majors), and 12-16 (Juniors) divisions. Assessments are typically held in late February with the board's registration/assessment process, feeding the draft that determines rosters. Solid team formation keeps divisions balanced and meets the Little League 12-game minimum needed for All-Star eligibility.",
     "steps": [
       "Set assessment dates with the president (late February window) and reserve the cages/gym, planning a weather-postponement fallback.",
@@ -3792,8 +3665,7 @@
     "roleKey": "vp_softball",
     "title": "Submit softball uniform & equipment requirements",
     "dueWeekOfFY": 18,
-    "description": "Give uniform and equipment coordinators softball specifics: girl's cut jerseys, softball-sized balls, catcher's gear, and league face masks required for all infield positions per the 2017 safety rule.",
-    "details": "The VP Softball gives the uniform and equipment coordinators the softball-specific requirements so the correct gear is ordered on the tight March deadline. AAA and Majors players receive dye-sublimated custom jerseys with last name and number, so sizing must be confirmed before the order. Softball-sized balls, catcher's gear, and league face masks required for all infield positions per the 2017 safety rule must all be included; uniform orders have historically been due around March 20.",
+    "details": "Give uniform and equipment coordinators softball specifics: girl's cut jerseys, softball-sized balls, catcher's gear, and league face masks required for all infield positions per the 2017 safety rule.\n\nThe VP Softball gives the uniform and equipment coordinators the softball-specific requirements so the correct gear is ordered on the tight March deadline. AAA and Majors players receive dye-sublimated custom jerseys with last name and number, so sizing must be confirmed before the order. Softball-sized balls, catcher's gear, and league face masks required for all infield positions per the 2017 safety rule must all be included; uniform orders have historically been due around March 20.",
     "steps": [
       "Compile softball specifics for coordinators: girl's-cut jerseys, softball-sized balls, catcher's gear, and infield face masks per the 2017 safety rule.",
       "Circulate the uniform sizing form (jersey and pants size charts) to AAA/Majors families to confirm sizes and numbers, with a firm due date (e.g., Sunday before the order).",
@@ -3823,8 +3695,7 @@
     "roleKey": "vp_softball",
     "title": "Launch softball parent discussion group",
     "dueWeekOfFY": 24,
-    "description": "Kick off the bi-weekly softball parent/board discussion group; invite all softball parents, collect agenda items, and set the recurring meeting cadence and platform.",
-    "details": "The VP Softball kicks off a bi-weekly softball parent/board discussion group to build a faster, more autonomous pathway for softball decisions instead of routing everything through the full board. The first meetings were held online via Google Meet (e.g., first meeting March 11, second April 1 at 7pm, moving to bi-weekly and later to 8/8:30pm once practices start). It's the engine for recruiting volunteers, planning purchases, and driving softball equitability and growth.",
+    "details": "Kick off the bi-weekly softball parent/board discussion group; invite all softball parents, collect agenda items, and set the recurring meeting cadence and platform.\n\nThe VP Softball kicks off a bi-weekly softball parent/board discussion group to build a faster, more autonomous pathway for softball decisions instead of routing everything through the full board. The first meetings were held online via Google Meet (e.g., first meeting March 11, second April 1 at 7pm, moving to bi-weekly and later to 8/8:30pm once practices start). It's the engine for recruiting volunteers, planning purchases, and driving softball equitability and growth.",
     "steps": [
       "Invite all softball parents and set a recurring bi-weekly cadence and platform (Google Meet), targeting ~1 hour per meeting.",
       "Collect agenda items by email in advance and circulate an agenda plus notes from the prior meeting.",
@@ -3854,8 +3725,7 @@
     "roleKey": "vp_softball",
     "title": "Organize Memorial Day parade softball participation",
     "dueWeekOfFY": 31,
-    "description": "Line up softball teams for the Memorial Day parade - notify families, coordinate banners, and confirm staging/route with the board.",
-    "details": "The VP Softball lines up softball teams and families to march in the Memorial Day parade, giving softball visibility in both {{townA}} and {{townB}}. Historically there are reserved spots and staggered start times (e.g., {{townB}} meet at Memorial School 8:30 / step off 9:00; {{townA}} meet at Russell School 10:30 / step off 11:00), with candy for kids to throw. It's a community-facing event that promotes the league right in the middle of the season.",
+    "details": "Line up softball teams for the Memorial Day parade - notify families, coordinate banners, and confirm staging/route with the board.\n\nThe VP Softball lines up softball teams and families to march in the Memorial Day parade, giving softball visibility in both {{townA}} and {{townB}}. Historically there are reserved spots and staggered start times (e.g., {{townB}} meet at Memorial School 8:30 / step off 9:00; {{townA}} meet at Russell School 10:30 / step off 11:00), with candy for kids to throw. It's a community-facing event that promotes the league right in the middle of the season.",
     "steps": [
       "Confirm reserved parade spots and staging/route for both towns with the board and secure a point person for each parade.",
       "Notify softball families with meet times and locations and ask players to wear their jerseys.",
@@ -3880,7 +3750,6 @@
     "roleKey": "vp_softball",
     "title": "Coordinate District / high school softball game opportunities",
     "dueWeekOfFY": 33,
-    "description": "Pursue interleague, {{district}}, and high school game/scrimmage opportunities to give softball players competitive reps and visibility.",
     "details": "The VP Softball pursues interleague, {{district}}, and high-school game and scrimmage opportunities to give softball players competitive reps and visibility. This includes the {{district}} college softball day (e.g., at SMCC) and coordinating with the local high school softball coach. Because other leagues book games early, softball needs VP representation at the district softball scheduling meetings (typically leading up to late March) to lock in the 12-game minimum for All-Star eligibility.",
     "steps": [
       "Represent softball at {{district}} interleague softball committee meetings (aim for 2-3 sessions before the late-March scheduling meeting) via the {{district}} contact list.",
@@ -3911,8 +3780,7 @@
     "roleKey": "vp_softball",
     "title": "Staff softball program roles for next year",
     "dueWeekOfFY": 46,
-    "description": "Recruit and confirm VP Softball, Softball Equipment, Softball Concessions, Media, and Scheduler positions; report the slate ahead of board elections.",
-    "details": "Ahead of board elections, the VP Softball recruits and confirms the softball staff slate - VP Softball, Softball Equipment, Softball Concessions, Media, and Scheduler - so the program isn't dependent on a couple of informal volunteers. This directly addresses the gap where softball had no VP for multiple seasons and most operations ran unofficially. Reporting a confirmed slate lets the board seat officers cleanly during fall elections.",
+    "details": "Recruit and confirm VP Softball, Softball Equipment, Softball Concessions, Media, and Scheduler positions; report the slate ahead of board elections.\n\nAhead of board elections, the VP Softball recruits and confirms the softball staff slate - VP Softball, Softball Equipment, Softball Concessions, Media, and Scheduler - so the program isn't dependent on a couple of informal volunteers. This directly addresses the gap where softball had no VP for multiple seasons and most operations ran unofficially. Reporting a confirmed slate lets the board seat officers cleanly during fall elections.",
     "steps": [
       "Use the softball parent discussion group to canvass for volunteers and define/right-size each role.",
       "Confirm commitments for VP Softball, Softball Equipment, Concessions, Media, and Scheduler, noting the effective year for each.",
