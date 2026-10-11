@@ -12,6 +12,8 @@ import { seasonsRouter } from './routes/seasons.js'
 import { unfurlRouter } from './routes/unfurl.js'
 import { unsubscribeRouter } from './routes/unsubscribe.js'
 import { adminRouter } from './routes/admin.js'
+import { allStarsRouter } from './routes/allstars.js'
+import { publicRouter } from './routes/public.js'
 import { verifyMailer } from './lib/mailer.js'
 
 const PORT = process.env.PORT || 3001
@@ -44,6 +46,8 @@ app.use(session({
 
 app.get('/api/health', (_req, res) => res.json({ ok: true }))
 app.use('/api/unsubscribe', unsubscribeRouter) // public: no session, HMAC-signed links
+app.use('/api/public', publicRouter)   // no session: token-addressed signup/ballot
+app.use('/api/leagues/:leagueId/all-stars', allStarsRouter)
 app.use('/api/admin', adminRouter)   // super-admin only (404s for everyone else)
 app.use('/api/auth', authRouter)
 app.use('/api/invites', invitesRouter)

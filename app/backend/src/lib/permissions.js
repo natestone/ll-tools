@@ -1,7 +1,7 @@
 import { prisma } from './prisma.js'
 
 // Categories controlled by the permission matrix (league-wide documents).
-export const LEAGUE_CATEGORIES = ['policies', 'references', 'agenda_templates', 'meetings']
+export const LEAGUE_CATEGORIES = ['policies', 'references', 'agenda_templates', 'meetings', 'all_stars']
 // Categories that are role-scoped: a member may always edit items belonging to
 // a role they hold (their own tasks / email templates / calendar). Shown in the
 // matrix as informational ("own role"), plus optional cross-role grants.
@@ -14,6 +14,9 @@ export const DEFAULT_EDITORS = {
   references: ['president', 'vp_baseball', 'vp_softball', 'secretary'],
   agenda_templates: ['president', 'vp_baseball', 'vp_softball', 'secretary'],
   meetings: ['president', 'vp_baseball', 'vp_softball', 'secretary'],
+  // Sending ballots to coaches is consequential, so it starts with the officers
+  // who run All-Stars rather than everyone who can edit their own tasks.
+  all_stars: ['president', 'vp_baseball', 'vp_softball'],
 }
 
 export async function seedDefaultPermissions(leagueId) {

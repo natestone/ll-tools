@@ -18,6 +18,8 @@ import Members from './pages/Members.jsx'
 import InviteAccept from './pages/InviteAccept.jsx'
 import LeagueHome from './pages/LeagueHome.jsx'
 import Unsubscribe from './pages/Unsubscribe.jsx'
+import AllStars from './pages/AllStars.jsx'
+import PublicAllStarSignup from './pages/PublicAllStarSignup.jsx'
 import SuperAdmin from './pages/SuperAdmin.jsx'
 import ForgotPassword from './pages/ForgotPassword.jsx'
 import ResetPassword from './pages/ResetPassword.jsx'
@@ -43,6 +45,8 @@ export default function App() {
         <Route path="/invite/accept" element={<InviteAccept />} />
         {/* public: reachable by anyone holding a link from an email footer */}
         <Route path="/unsubscribe" element={<Unsubscribe />} />
+        {/* public: parents are not league members and never sign in */}
+        <Route path="/allstar/:slug" element={<PublicAllStarSignup />} />
         {!user ? (
           <Route path="*" element={<Navigate to="/login" replace />} />
         ) : (
@@ -59,6 +63,7 @@ export default function App() {
               <Route path="policies" element={<Policies />} />
               <Route path="scheduler" element={<Scheduler />} />
               <Route path="meetings" element={<Meetings />} />
+              <Route path="all-stars" element={<AllStars />} />
               <Route path="members" element={<Members />} />
               <Route path="permissions" element={<Permissions />} />
               <Route path="settings" element={<LeagueSettings />} />

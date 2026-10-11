@@ -657,3 +657,19 @@ td:hover .editable-wrap .icon-btn.pencil,
      ✎ glyph still sits on line 1's centreline while keeping the larger hit area */
   .taskitem-head .edit-title-wrap > .icon-btn { margin-top: calc((var(--task-line) - 30px) / 2); }
 }
+
+/* ===== Public All-Star signup (no app chrome) ===== */
+.signup-page { max-width: 680px; margin: 4vh auto; padding: 0 16px; }
+.signup-page .card { border-top: 5px solid var(--scarlet); }
+.consent-box { border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px;
+  background: #fbfbfc; max-height: 340px; overflow-y: auto; margin-bottom: 8px; }
+.signature-input { font-family: 'Segoe Script', 'Brush Script MT', cursive; font-size: 1.15rem; }
+.preview-banner { background: var(--navy); color: #fff; text-align: center; padding: 8px 14px;
+  border-radius: 8px; margin-bottom: 14px; font-family: var(--head); letter-spacing: 1px;
+  text-transform: uppercase; font-size: 0.78rem; }
+.level-pick { display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 20px; padding: 7px 14px; margin: 0;
+  font-family: var(--body); font-size: 0.88rem; text-transform: none; letter-spacing: 0;
+  color: var(--text); font-weight: 500; }
+.level-pick.on { border-color: var(--scarlet); background: rgba(196,30,58,0.07); color: var(--scarlet); font-weight: 600; }
+.level-pick input { width: auto !important; margin: 0; }

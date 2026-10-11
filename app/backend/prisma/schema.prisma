@@ -93,6 +93,7 @@ model League {
   schedulerStates SchedulerState[]
   categoryPermissions CategoryPermission[]
   boardMeetings   BoardMeeting[]
+  allStarSeasons  AllStarSeason[]
 }
 
 model Membership {
@@ -364,4 +365,116 @@ model SchedulerState {
 
   @@unique([leagueId, userId])
   @@index([leagueId])
+}
+
+// ---------- All-Star voting ----------
+// Scoped to a league AND a calendar year: a league runs one all-star cycle per
+// year, covering several levels (Rookies 8-10, Mid-Majors 9-11, Juniors, ...).
+
+model AllStarSeason {
+  id             Int       @id @default(autoincrement())
+  leagueId       Int
+  year           Int
+  // Unguessable token in the public signup URL. Rotatable without touching ids.
+  publicSlug     String    @unique
+  consentMd      String    @db.LongText
+  signupOpen     Boolean   @default(true)
+  votingClosesAt DateTime?
+  invitesSentAt  DateTime?
+  createdAt      DateTime  @default(now())
+
+  league  League          @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  levels  AllStarLevel[]
+  signups AllStarSignup[]
+  voters  AllStarVoter[]
+
+  @@unique([leagueId, year])
+  @@index([leagueId])
+}
+
+// A level a player can be nominated for, with the birthdate window that makes
+// them eligible. Little League eligibility is defined by date of birth, so the
+// form can filter the checkboxes from the DOB the parent types.
+model AllStarLevel {
+  id        Int      @id @default(autoincrement())
+  seasonId  Int
+  name      String
+  sortOrder Int      @default(0)
+  bornFrom  DateTime // inclusive
+  bornTo    DateTime // inclusive
+
+  season  AllStarSeason       @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+  signups AllStarSignupLevel[]
+  ballots AllStarBallot[]
+
+  @@index([seasonId])
+}
+
+model AllStarSignup {
+  id          Int      @id @default(autoincrement())
+  seasonId    Int
+  playerName  String
+  playerDob   DateTime
+  parentName  String   // typed signature
+  parentEmail String?
+  parentPhone String?
+  // The consent text as it stood when they signed. Editing the form later must
+  // not change what a parent is recorded as having agreed to.
+  consentMd   String   @db.LongText
+  signedAt    DateTime @default(now())
+  signedIp    String?
+
+  season AllStarSeason        @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+  levels AllStarSignupLevel[]
+
+  @@index([seasonId])
+}
+
+model AllStarSignupLevel {
+  signupId Int
+  levelId  Int
+
+  signup AllStarSignup @relation(fields: [signupId], references: [id], onDelete: Cascade)
+  level  AllStarLevel  @relation(fields: [levelId], references: [id], onDelete: Cascade)
+
+  @@id([signupId, levelId])
+  @@index([levelId])
+}
+
+model AllStarVoter {
+  id        Int       @id @default(autoincrement())
+  seasonId  Int
+  name      String
+  email     String
+  // Personal, non-transferable link. A second emailed code is still required,
+  // so a forwarded link alone does not let someone else vote.
+  token     String    @unique
+  codeHash  String?
+  codeSentAt DateTime?
+  codeExpiresAt DateTime?
+  verifiedAt DateTime?
+  invitedAt DateTime?
+
+  season  AllStarSeason   @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+  ballots AllStarBallot[]
+
+  @@unique([seasonId, email])
+  @@index([seasonId])
+}
+
+model AllStarBallot {
+  id          Int       @id @default(autoincrement())
+  voterId     Int
+  levelId     Int
+  // Signup ids in rank order. Shuffled per voter when the ballot is first
+  // opened, so ballot position cannot bias the result the same way for everyone.
+  ordering    Json
+  submittedAt DateTime?
+  updatedAt   DateTime  @updatedAt
+
+  voter AllStarVoter @relation(fields: [voterId], references: [id], onDelete: Cascade)
+  level AllStarLevel @relation(fields: [levelId], references: [id], onDelete: Cascade)
+
+  @@unique([voterId, levelId])
+  @@index([levelId])
 }

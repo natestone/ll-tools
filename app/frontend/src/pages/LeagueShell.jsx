@@ -72,6 +72,7 @@ export default function LeagueShell() {
           <NavLink to="templates" className={item}>Email templates</NavLink>
           <NavLink to="tasks" className={item}>Tasks</NavLink>
           <NavLink to="meetings" className={item}>Board meetings</NavLink>
+          <NavLink to="all-stars" className={item}>All-Stars</NavLink>
           <NavLink to="policies" className={item}>Policies & docs</NavLink>
           {league.isOwner && <NavLink to="members" className={item}>Members</NavLink>}
           {league.isOwner && <NavLink to="permissions" className={item}>Permissions</NavLink>}
