@@ -24,6 +24,28 @@ export default function AllStars() {
   const [inviteMsg, setInviteMsg] = useState('')
   const qrRef = useRef(null)
 
+  /* Replaces the old tally.xlsx step: the board wants these numbers in a
+     spreadsheet to attach to meeting minutes. Built from the rendered
+     standings so the file can never disagree with the screen. */
+  const exportCsv = (r) => {
+    const cell = (v) => {
+      const t = String(v ?? '')
+      return /[",\n]/.test(t) ? `"${t.replace(/"/g, '""')}"` : t
+    }
+    const rows = [['Rank', 'Player', 'Points', 'First-place votes', 'On ballots', 'Tied']]
+    r.standings.forEach((st) => rows.push([
+      st.unbrokenTie ? `T${st.rank}` : st.rank, st.playerName, st.points, st.firsts, st.ballots,
+      st.unbrokenTie ? 'yes' : '',
+    ]))
+    const csv = rows.map((row) => row.map(cell).join(',')).join('\r\n')
+    const name = `allstars-${year}-${r.levelName.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}.csv`
+    const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }))
+    const a = document.createElement('a')
+    a.href = url; a.download = name
+    document.body.appendChild(a); a.click(); a.remove()
+    URL.revokeObjectURL(url)
+  }
+
   const load = async () => {
     const d = await api.get(`/leagues/${leagueId}/all-stars?year=${year}`)
     setS(d); setConsent(d.consentMd)
@@ -278,26 +300,43 @@ export default function AllStars() {
             <div className="card" key={r.levelId}>
               <div className="section-head">
                 <h2 style={{ margin: 0 }}>{r.levelName}</h2>
-                <span className="muted">{r.ballotsCast} submitted of {r.ballotsStarted} opened · {r.candidates} candidates</span>
+                <div className="results-head">
+                  <span className="muted">{r.ballotsCast} submitted of {r.ballotsStarted} opened · {r.candidates} candidates</span>
+                  <button type="button" className="secondary results-export" onClick={() => exportCsv(r)}
+                    disabled={!r.ballotsCast} title="Download these standings as a spreadsheet">Export CSV</button>
+                </div>
               </div>
               {r.ballotsCast === 0 && <p className="muted">No ballots submitted yet — standings are all zero.</p>}
               <div className="table-scroll">
                 <table className="data-table">
-                  <thead><tr><th>#</th><th>Player</th><th>Points</th><th>On ballots</th></tr></thead>
+                  <thead><tr><th>#</th><th>Player</th><th>Points</th><th>1st-place</th><th>On ballots</th></tr></thead>
                   <tbody>
                     {r.standings.map((st, i) => (
                       <tr key={st.signupId}>
-                        <td>{i + 1}</td><td>{st.playerName}</td><td>{st.points}</td><td>{st.ballots}</td>
+                        <td>{st.unbrokenTie ? `T${st.rank}` : st.rank}</td>
+                        <td>
+                          {st.playerName}
+                          {st.unbrokenTie && <span className="badge" style={{ marginLeft: 8 }}>tied</span>}
+                        </td>
+                        <td>{st.points}</td><td>{st.firsts}</td><td>{st.ballots}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
+              {r.standings.some((s) => s.unbrokenTie) && (
+                <p className="muted" style={{ marginTop: 10 }}>
+                  Players marked <strong>tied</strong> finished on identical points <em>and</em> identical
+                  placements — the coaches ranked them the same way. The system won't invent a winner;
+                  the board needs to break these.
+                </p>
+              )}
             </div>
           ))}
           <p className="muted">
             Borda count: with N candidates, a first place is worth N points down to 1 for last.
-            Only submitted ballots count.
+            Only submitted ballots count. Equal points are separated by who was placed first most often,
+            then second, and so on.
           </p>
         </>
       )}

@@ -229,8 +229,15 @@ allStarsRouter.post('/send-invites', async (req, res) => {
 /* ---- results ------------------------------------------------------------- */
 
 /* Borda count, matching the old tally.py: with N candidates on a level, a first
-   place is worth N points, second N-1, down to 1. Players a coach left off the
-   bottom of their ballot still score, because the ballot is a full ordering. */
+   place is worth N points, second N-1, down to 1.
+
+   Ties are broken by the distribution of placements, not alphabetically: the
+   player placed first by more coaches wins, then second, and so on. Two players
+   can land on identical points from very different ballots, and at the top of an
+   All-Star list "whoever comes first in the alphabet" is not a defensible
+   answer. Anything still tied after that is reported as tied so the board can
+   decide deliberately rather than inheriting whatever order the rows came in.
+ */
 allStarsRouter.get('/results', async (req, res) => {
   const season = await ensureSeason(req.leagueId, yearOf(req))
   const levels = await prisma.allStarLevel.findMany({
@@ -241,6 +248,8 @@ allStarsRouter.get('/results', async (req, res) => {
     const names = Object.fromEntries(l.signups.map((s) => [s.signup.id, s.signup.playerName]))
     const n = l.signups.length
     const points = {}, appearances = {}
+    // placements[signupId][position] = how many coaches put them there
+    const placements = {}
     // Only SUBMITTED ballots count. A ballot row is created the moment a coach
     // opens the page, and its ordering is the random shuffle they were shown —
     // counting those would feed noise straight into the standings.
@@ -250,12 +259,38 @@ allStarsRouter.get('/results', async (req, res) => {
         if (!(sid in names)) return          // a player removed after voting began
         points[sid] = (points[sid] || 0) + Math.max(0, n - i)
         appearances[sid] = (appearances[sid] || 0) + 1
+        ;(placements[sid] ||= Array(n).fill(0))[i] += 1
       })
     }
-    const standings = Object.keys(names).map((sid) => ({
+    const rows = Object.keys(names).map((sid) => ({
       signupId: Number(sid), playerName: names[sid],
       points: points[sid] || 0, ballots: appearances[sid] || 0,
-    })).sort((a, b) => b.points - a.points || a.playerName.localeCompare(b.playerName))
+      placements: placements[sid] || Array(n).fill(0),
+    }))
+    rows.sort((a, b) => {
+      if (b.points !== a.points) return b.points - a.points
+      for (let i = 0; i < n; i++) {
+        const d = (b.placements[i] || 0) - (a.placements[i] || 0)
+        if (d) return d
+      }
+      return a.playerName.localeCompare(b.playerName)
+    })
+    // flag anything the tie-break could not separate
+    const sameAs = (x, y) => x.points === y.points && x.placements.every((v, i) => v === y.placements[i])
+    // Standard competition ranking: players the tie-break could not separate
+    // share a rank, and the next player skips the numbers they used up. Showing
+    // a tie as "1 and 2" would read as a winner and a runner-up.
+    let rank = 0
+    const standings = rows.map((r, i) => {
+      const tiedUp = i > 0 && sameAs(r, rows[i - 1])
+      if (!tiedUp) rank = i + 1
+      return {
+        signupId: r.signupId, playerName: r.playerName, points: r.points, ballots: r.ballots,
+        firsts: r.placements[0] || 0,
+        rank,
+        unbrokenTie: tiedUp || (i < rows.length - 1 && sameAs(r, rows[i + 1])),
+      }
+    })
     return {
       levelId: l.id, levelName: l.name, candidates: n,
       ballotsCast: l.ballots.filter((b) => b.submittedAt).length,
