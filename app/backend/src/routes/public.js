@@ -1,6 +1,9 @@
 import { Router } from 'express'
 import rateLimit from 'express-rate-limit'
+import crypto from 'node:crypto'
 import { prisma } from '../lib/prisma.js'
+import { sendMail } from '../lib/mailer.js'
+import { allStarVoteCode } from '../lib/emails.js'
 
 /* ============================================================================
    Public All-Star endpoints. No session: a parent filling in the signup form is
@@ -85,4 +88,160 @@ publicRouter.post('/allstar/:slug/signup', async (req, res) => {
     ok: true, playerName: signup.playerName,
     levels: signup.levels.map((l) => l.level.name),
   })
+})
+
+/* ============================================================================
+   Ballots.
+
+   Two factors: the personal link identifies the voter, and a code emailed to
+   their address proves it is them. A forwarded link alone is not enough, which
+   is the whole point of per-voter links.
+
+   Verifying returns a short-lived key the page keeps for the session; ballot
+   reads and writes carry it. The link stays valid for the cutoff window, the
+   key does not.
+   ========================================================================== */
+
+const CODE_TTL_MIN = 20
+const KEY_TTL_HOURS = 12
+const sha = (s) => crypto.createHash('sha256').update(String(s)).digest('hex')
+const sixDigits = () => String(crypto.randomInt(0, 1_000_000)).padStart(6, '0')
+
+/** Fisher-Yates, so ballot position does not bias every voter the same way. */
+function shuffle(a) {
+  const out = [...a]
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = crypto.randomInt(0, i + 1)
+    ;[out[i], out[j]] = [out[j], out[i]]
+  }
+  return out
+}
+
+async function loadVoter(token) {
+  if (!token) return null
+  return prisma.allStarVoter.findUnique({
+    where: { token }, include: { season: { include: { league: { select: { name: true } } } } },
+  })
+}
+
+const votingClosed = (season) => !!season.votingClosesAt && new Date() > season.votingClosesAt
+
+/** Who am I, is voting open, do I need a code? Emails a code on first open. */
+publicRouter.get('/vote/:token', async (req, res) => {
+  const v = await loadVoter(req.params.token)
+  if (!v) return res.status(404).json({ error: 'This ballot link is not valid.' })
+  res.json({
+    voterName: v.name,
+    maskedEmail: v.email.replace(/^(.).*(@.*)$/, (_, a, b) => `${a}•••${b}`),
+    leagueName: v.season.league.name,
+    year: v.season.year,
+    votingClosesAt: v.season.votingClosesAt,
+    closed: votingClosed(v.season),
+  })
+})
+
+publicRouter.post('/vote/:token/request-code', async (req, res) => {
+  const v = await loadVoter(req.params.token)
+  if (!v) return res.status(404).json({ error: 'This ballot link is not valid.' })
+  if (votingClosed(v.season)) return res.status(400).json({ error: 'Voting has closed.' })
+
+  const code = sixDigits()
+  await prisma.allStarVoter.update({
+    where: { id: v.id },
+    data: { codeHash: sha(code), codeSentAt: new Date(), codeExpiresAt: new Date(Date.now() + CODE_TTL_MIN * 60_000) },
+  })
+  const mail = await sendMail({ to: v.email, ...allStarVoteCode({ voterName: v.name, code, minutes: CODE_TTL_MIN }) })
+  if (!mail.ok) console.error(`[allstar] code to ${v.email} failed: ${mail.error || mail.reason}`)
+  res.json({ ok: true, sentTo: v.email.replace(/^(.).*(@.*)$/, (_, a, b) => `${a}•••${b}`) })
+})
+
+publicRouter.post('/vote/:token/verify', async (req, res) => {
+  const v = await loadVoter(req.params.token)
+  if (!v) return res.status(404).json({ error: 'This ballot link is not valid.' })
+  const code = String(req.body?.code || '').trim()
+  if (!v.codeHash || !v.codeExpiresAt || new Date() > v.codeExpiresAt)
+    return res.status(400).json({ error: 'That code has expired. Ask for a new one.' })
+  if (sha(code) !== v.codeHash) return res.status(400).json({ error: 'That code is not right.' })
+
+  const key = crypto.randomBytes(24).toString('base64url')
+  await prisma.allStarVoter.update({
+    where: { id: v.id },
+    data: {
+      verifiedAt: new Date(), codeHash: sha(`key:${key}`),
+      codeExpiresAt: new Date(Date.now() + KEY_TTL_HOURS * 3600_000),
+    },
+  })
+  res.json({ ok: true, key })
+})
+
+/** The session key issued by /verify, re-checked on every ballot call. */
+async function requireKey(req, res) {
+  const v = await loadVoter(req.params.token)
+  if (!v) { res.status(404).json({ error: 'This ballot link is not valid.' }); return null }
+  const key = String(req.get('x-ballot-key') || req.query.key || req.body?.key || '')
+  if (!key || !v.codeHash || v.codeHash !== sha(`key:${key}`) || !v.codeExpiresAt || new Date() > v.codeExpiresAt) {
+    res.status(401).json({ error: 'Confirm the emailed code to continue.' })
+    return null
+  }
+  return v
+}
+
+/** Every level this voter ranks, with their own ordering of the candidates. */
+publicRouter.get('/vote/:token/ballots', async (req, res) => {
+  const v = await requireKey(req, res); if (!v) return
+  const levels = await prisma.allStarLevel.findMany({
+    where: { seasonId: v.seasonId }, orderBy: [{ sortOrder: 'asc' }, { id: 'asc' }],
+    include: { signups: { include: { signup: true } } },
+  })
+
+  const out = []
+  for (const l of levels) {
+    const candidates = l.signups.map((s) => ({ id: s.signup.id, name: s.signup.playerName }))
+    let ballot = await prisma.allStarBallot.findFirst({ where: { voterId: v.id, levelId: l.id } })
+    if (!ballot) {
+      // First open: shuffle for this voter and persist, so the order they see
+      // is stable across reloads but differs from the next coach's.
+      ballot = await prisma.allStarBallot.create({
+        data: { voterId: v.id, levelId: l.id, ordering: shuffle(candidates.map((c) => c.id)) },
+      })
+    } else {
+      // keep the stored order usable when players are added or removed later
+      const known = new Set(candidates.map((c) => c.id))
+      const kept = (ballot.ordering || []).filter((id) => known.has(id))
+      const added = shuffle(candidates.map((c) => c.id).filter((id) => !kept.includes(id)))
+      const merged = [...kept, ...added]
+      if (merged.length !== (ballot.ordering || []).length || added.length)
+        ballot = await prisma.allStarBallot.update({ where: { id: ballot.id }, data: { ordering: merged } })
+    }
+    const byId = Object.fromEntries(candidates.map((c) => [c.id, c.name]))
+    out.push({
+      levelId: l.id, levelName: l.name,
+      ranking: (ballot.ordering || []).map((id) => ({ id, name: byId[id] })),
+      submittedAt: ballot.submittedAt, updatedAt: ballot.updatedAt,
+    })
+  }
+  res.json({
+    voterName: v.name, leagueName: v.season.league.name, year: v.season.year,
+    votingClosesAt: v.season.votingClosesAt, closed: votingClosed(v.season), ballots: out,
+  })
+})
+
+publicRouter.put('/vote/:token/ballot/:levelId', async (req, res) => {
+  const v = await requireKey(req, res); if (!v) return
+  if (votingClosed(v.season)) return res.status(400).json({ error: 'Voting has closed — this ballot is final.' })
+  const levelId = parseInt(req.params.levelId, 10)
+  const level = await prisma.allStarLevel.findFirst({ where: { id: levelId, seasonId: v.seasonId }, include: { signups: true } })
+  if (!level) return res.status(404).json({ error: 'not found' })
+
+  const valid = new Set(level.signups.map((s) => s.signupId))
+  const ordering = (Array.isArray(req.body?.ordering) ? req.body.ordering : []).map(Number).filter((id) => valid.has(id))
+  if (ordering.length !== valid.size) return res.status(400).json({ error: 'The ranking must include every candidate exactly once.' })
+  if (new Set(ordering).size !== ordering.length) return res.status(400).json({ error: 'Duplicate entries in the ranking.' })
+
+  const saved = await prisma.allStarBallot.upsert({
+    where: { voterId_levelId: { voterId: v.id, levelId } },
+    update: { ordering, ...(req.body?.submit ? { submittedAt: new Date() } : {}) },
+    create: { voterId: v.id, levelId, ordering, ...(req.body?.submit ? { submittedAt: new Date() } : {}) },
+  })
+  res.json({ ok: true, updatedAt: saved.updatedAt, submittedAt: saved.submittedAt })
 })

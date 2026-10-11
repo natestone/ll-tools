@@ -18,12 +18,18 @@ export default function AllStars() {
   const [consent, setConsent] = useState('')
   const [preview, setPreview] = useState(false)
   const [lvl, setLvl] = useState({ name: '', bornFrom: '', bornTo: '' })
+  const [voters, setVoters] = useState([])
+  const [results, setResults] = useState([])
+  const [newVoter, setNewVoter] = useState({ name: '', email: '' })
+  const [inviteMsg, setInviteMsg] = useState('')
   const qrRef = useRef(null)
 
   const load = async () => {
     const d = await api.get(`/leagues/${leagueId}/all-stars?year=${year}`)
     setS(d); setConsent(d.consentMd)
     setSignups(await api.get(`/leagues/${leagueId}/all-stars/signups?year=${year}`))
+    setVoters(await api.get(`/leagues/${leagueId}/all-stars/voters?year=${year}`))
+    setResults(await api.get(`/leagues/${leagueId}/all-stars/results?year=${year}`))
   }
   useEffect(() => { load().catch((e) => setErr(e.message)) }, [leagueId, year]) // eslint-disable-line
 
@@ -72,7 +78,8 @@ export default function AllStars() {
       {err && <p className="err" style={{ overflowWrap: 'anywhere' }}>{err}</p>}
 
       <div className="row auth-tabs" style={{ margin: '12px 0' }}>
-        {[['setup', 'Setup'], ['consent', 'Consent form'], ['signups', `Signups (${signups.length})`]].map(([k, label]) => (
+        {[['setup', 'Setup'], ['consent', 'Consent form'], ['signups', `Signups (${signups.length})`],
+          ['voters', `Voters (${voters.length})`], ['results', 'Results']].map(([k, label]) => (
           <button key={k} type="button" className={tab === k ? '' : 'secondary'} onClick={() => setTab(k)}>{label}</button>
         ))}
         <span style={{ flex: 1 }} />
@@ -187,6 +194,112 @@ export default function AllStars() {
             </div>
           )}
         </div>
+      )}
+
+      {tab === 'voters' && (<>
+        <div className="card">
+          <h2>Voters</h2>
+          <p className="muted" style={{ marginTop: -4 }}>
+            Each voter gets their own ballot link. Opening it emails them a code, so a forwarded
+            link alone can't be used by somebody else. Nothing is sent until you press the button.
+          </p>
+          <div className="table-scroll">
+            <table className="data-table">
+              <thead><tr><th>Name</th><th>Email</th><th>Invited</th><th>Progress</th><th></th></tr></thead>
+              <tbody>
+                {voters.map((v) => (
+                  <tr key={v.id}>
+                    <td>{v.name}</td>
+                    <td style={{ overflowWrap: 'anywhere' }}>{v.email}</td>
+                    <td>{v.invitedAt ? new Date(v.invitedAt).toLocaleDateString() : <span className="muted">not yet</span>}</td>
+                    <td>{v.submitted > 0
+                      ? <span className="badge cal-kind-task">{v.submitted} submitted</span>
+                      : v.started > 0 ? <span className="badge">opened</span> : <span className="muted">—</span>}</td>
+                    <td>{!ro && <button type="button" className="icon-btn danger"
+                      onClick={async () => { if (window.confirm(`Remove ${v.name}?`)) { await api.del(`/leagues/${leagueId}/all-stars/voters/${v.id}`); load() } }}>×</button>}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {voters.length === 0 && <p className="muted">No voters yet.</p>}
+          {!ro && (
+            <form className="row" style={{ gap: 8, flexWrap: 'wrap', marginTop: 12 }}
+              onSubmit={async (e) => {
+                e.preventDefault(); setErr('')
+                try { await api.post(`/leagues/${leagueId}/all-stars/voters?year=${year}`, newVoter); setNewVoter({ name: '', email: '' }); load() }
+                catch (ex) { setErr(ex.message) }
+              }}>
+              <input placeholder="Coach name" value={newVoter.name} required
+                onChange={(e) => setNewVoter({ ...newVoter, name: e.target.value })} style={{ flex: '1 1 160px', minWidth: 0 }} />
+              <input type="email" placeholder="email@example.com" value={newVoter.email} required
+                onChange={(e) => setNewVoter({ ...newVoter, email: e.target.value })} style={{ flex: '1 1 180px', minWidth: 0 }} />
+              <button type="submit">Add voter</button>
+            </form>
+          )}
+        </div>
+
+        {!ro && (
+          <div className="card" style={{ maxWidth: 620 }}>
+            <h2>Send voting invites</h2>
+            <p className="muted" style={{ marginTop: -4 }}>
+              {s.votingClosesAt
+                ? <>Emails each voter their personal ballot link and the cutoff
+                    (<strong>{new Date(s.votingClosesAt).toLocaleString()}</strong>).</>
+                : <span className="err">Set the voting cutoff on the Setup tab first.</span>}
+            </p>
+            <div className="row" style={{ gap: 8, flexWrap: 'wrap' }}>
+              <button type="button" disabled={!voters.length || !s.votingClosesAt}
+                onClick={async () => {
+                  if (!window.confirm(`Email a ballot link to ${voters.filter((v) => !v.invitedAt).length} voter(s)?`)) return
+                  const r = await api.post(`/leagues/${leagueId}/all-stars/send-invites?year=${year}`)
+                  setInviteMsg(r.message || `Sent ${r.sent}.` + (r.failed?.length ? ` ${r.failed.length} failed.` : ''))
+                  load()
+                }}>Send to the un-invited</button>
+              <button type="button" className="secondary" disabled={!voters.length || !s.votingClosesAt}
+                onClick={async () => {
+                  if (!window.confirm(`Re-send to ALL ${voters.length} voter(s)?`)) return
+                  const r = await api.post(`/leagues/${leagueId}/all-stars/send-invites?year=${year}&resend=1`)
+                  setInviteMsg(`Sent ${r.sent}.` + (r.failed?.length ? ` ${r.failed.length} failed.` : ''))
+                  load()
+                }}>Re-send to everyone</button>
+            </div>
+            {inviteMsg && <p style={{ marginTop: 10 }}>{inviteMsg}</p>}
+          </div>
+        )}
+      </>)}
+
+      {tab === 'results' && (
+        <>
+          {results.filter((r) => r.candidates > 0).length === 0 && (
+            <div className="card"><p className="muted">No candidates yet.</p></div>
+          )}
+          {results.filter((r) => r.candidates > 0).map((r) => (
+            <div className="card" key={r.levelId}>
+              <div className="section-head">
+                <h2 style={{ margin: 0 }}>{r.levelName}</h2>
+                <span className="muted">{r.ballotsCast} submitted of {r.ballotsStarted} opened · {r.candidates} candidates</span>
+              </div>
+              {r.ballotsCast === 0 && <p className="muted">No ballots submitted yet — standings are all zero.</p>}
+              <div className="table-scroll">
+                <table className="data-table">
+                  <thead><tr><th>#</th><th>Player</th><th>Points</th><th>On ballots</th></tr></thead>
+                  <tbody>
+                    {r.standings.map((st, i) => (
+                      <tr key={st.signupId}>
+                        <td>{i + 1}</td><td>{st.playerName}</td><td>{st.points}</td><td>{st.ballots}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))}
+          <p className="muted">
+            Borda count: with N candidates, a first place is worth N points down to 1 for last.
+            Only submitted ballots count.
+          </p>
+        </>
       )}
 
       {tab === 'signups' && (

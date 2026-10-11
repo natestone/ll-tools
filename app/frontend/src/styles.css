@@ -673,3 +673,16 @@ td:hover .editable-wrap .icon-btn.pencil,
   color: var(--text); font-weight: 500; }
 .level-pick.on { border-color: var(--scarlet); background: rgba(196,30,58,0.07); color: var(--scarlet); font-weight: 600; }
 .level-pick input { width: auto !important; margin: 0; }
+
+/* ===== All-Star ballot ===== */
+.countdown { font-family: var(--head); font-weight: 600; color: var(--scarlet); letter-spacing: 1px; }
+.countdown.closed { color: var(--muted); }
+.ballot { list-style: none; margin: 0; padding: 0; }
+.ballot-row { display: flex; align-items: center; gap: 12px; padding: 11px 12px;
+  border: 1px solid var(--line); border-radius: 8px; margin-bottom: 7px; background: #fff; }
+.ballot-rank { font-family: var(--head); font-weight: 700; color: var(--scarlet);
+  min-width: 26px; text-align: center; }
+.ballot-name { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.ballot-handle { cursor: grab; color: var(--muted); touch-action: none; padding: 0 4px; font-size: 1.1rem; }
+.ballot-handle:active { cursor: grabbing; }
+.ballot-ghost { opacity: 0.4; background: rgba(196,30,58,0.08); }

@@ -20,6 +20,7 @@ import LeagueHome from './pages/LeagueHome.jsx'
 import Unsubscribe from './pages/Unsubscribe.jsx'
 import AllStars from './pages/AllStars.jsx'
 import PublicAllStarSignup from './pages/PublicAllStarSignup.jsx'
+import PublicBallot from './pages/PublicBallot.jsx'
 import SuperAdmin from './pages/SuperAdmin.jsx'
 import ForgotPassword from './pages/ForgotPassword.jsx'
 import ResetPassword from './pages/ResetPassword.jsx'
@@ -47,6 +48,7 @@ export default function App() {
         <Route path="/unsubscribe" element={<Unsubscribe />} />
         {/* public: parents are not league members and never sign in */}
         <Route path="/allstar/:slug" element={<PublicAllStarSignup />} />
+        <Route path="/vote/:token" element={<PublicBallot />} />
         {!user ? (
           <Route path="*" element={<Navigate to="/login" replace />} />
         ) : (

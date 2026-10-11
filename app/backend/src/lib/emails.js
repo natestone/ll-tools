@@ -132,3 +132,49 @@ export function leagueInvite({ leagueName, inviterName, roleNames = [], token, e
       </p>`),
   }
 }
+
+/* ---- All-Star voting ----------------------------------------------------- */
+
+export function allStarBallotInvite({ voterName, leagueName, year, url, closesAt }) {
+  const when = closesAt ? new Date(closesAt).toLocaleString('en-US', { dateStyle: 'full', timeStyle: 'short' }) : null
+  return {
+    subject: `${leagueName} — ${year} All-Star ballot`,
+    text: [
+      `Hi ${voterName || 'there'},`,
+      ``,
+      `Your ballot for the ${year} ${leagueName} All-Star selection is ready.`,
+      ``,
+      `Open your personal ballot:`,
+      url,
+      ``,
+      `This link is yours alone — we'll email you a short code to confirm it's you.`,
+      when ? `\nVoting closes ${when}. You can change your rankings until then.` : '',
+    ].filter(Boolean).join('\n'),
+    html: shell(`${esc(year)} All-Star ballot`, `
+      <p>Hi ${esc(voterName || 'there')},</p>
+      <p>Your ballot for the ${esc(year)} ${esc(leagueName)} All-Star selection is ready.</p>
+      ${button(url, 'Open my ballot')}
+      <p style="font-size:13px;color:#6b7280">
+        This link is yours alone — we'll email you a short code to confirm it's you.
+        ${when ? `<br><strong>Voting closes ${esc(when)}.</strong> You can change your rankings until then.` : ''}
+      </p>`),
+  }
+}
+
+export function allStarVoteCode({ voterName, code, minutes = 20 }) {
+  return {
+    essential: true,   // they asked for it seconds ago; see ESSENTIAL_NOTE
+    subject: `Your voting code: ${code}`,
+    text: [
+      `Hi ${voterName || 'there'},`, ``,
+      `Your All-Star voting code is ${code}`, ``,
+      `It expires in ${minutes} minutes. If you didn't ask for it, ignore this email.`,
+    ].join('\n'),
+    html: shell('Your voting code', `
+      <p>Hi ${esc(voterName || 'there')},</p>
+      <p style="font-size:30px;font-family:monospace;letter-spacing:6px;margin:18px 0;color:#0b1a3b">
+        <strong>${esc(code)}</strong></p>
+      <p style="font-size:13px;color:#6b7280">
+        Expires in ${minutes} minutes. If you didn't ask for it, ignore this email.</p>`),
+  }
+}
