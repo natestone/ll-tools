@@ -31,25 +31,10 @@ trap 'printf "\n\033[1;31mFAILED on line %s\033[0m\n" "$LINENO" >&2' ERR
 cd "$ROOT"
 [ -f app/backend/.env ] || { echo "Missing app/backend/.env — copy .env.example and fill it in." >&2; exit 1; }
 
-eval "$(
-  ENV_FILE="$ROOT/app/backend/.env" python3 - <<'PY'
-import os, re, urllib.parse as u
-url = None
-for line in open(os.environ['ENV_FILE']):
-    m = re.match(r'\s*(?:export\s+)?DATABASE_URL\s*=\s*(.*)', line)
-    if m: url = m.group(1).strip().strip('"').strip("'")
-if not url: raise SystemExit('DATABASE_URL not found')
-d = u.urlparse(url)
-def q(s): return "'" + str(s).replace("'", "'\\''") + "'"
-print(f'DB_HOST={q(d.hostname or "localhost")}'); print(f'DB_PORT={q(d.port or 3306)}')
-print(f'DB_USER={q(u.unquote(d.username or ""))}'); print(f'DB_PASS={q(u.unquote(d.password or ""))}')
-print(f'DB_NAME={q(d.path.lstrip("/").split("?")[0])}')
-PY
-)"
+source "$ROOT/deploy/lib-dburl.sh"
+parse_database_url "$ROOT/app/backend/.env" || exit 1
 
-CNF="$(mktemp)"; chmod 600 "$CNF"; trap 'rm -f "$CNF"' EXIT
-printf '[client]\nhost=%s\nport=%s\nuser=%s\npassword=%s\n' \
-  "$DB_HOST" "$DB_PORT" "$DB_USER" "$DB_PASS" > "$CNF"
+CNF="$(mysql_defaults_file)"; trap 'rm -f "$CNF"' EXIT
 
 say "Checking the database connection"
 mysql --defaults-extra-file="$CNF" -e "SELECT 1" "$DB_NAME" >/dev/null

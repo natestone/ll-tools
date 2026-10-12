@@ -19,25 +19,8 @@ OUT_DIR="${OUT_DIR:-$ROOT/backups}"
 [ -f "$ENV_FILE" ] || { echo "No env file at $ENV_FILE" >&2; exit 1; }
 
 # Parse DATABASE_URL rather than asking for the parts again -- one source of truth.
-eval "$(
-  ENV_FILE="$ENV_FILE" python3 - <<'PY'
-import os, re, urllib.parse as u
-url = None
-for line in open(os.environ['ENV_FILE']):
-    m = re.match(r'\s*(?:export\s+)?DATABASE_URL\s*=\s*(.*)', line)
-    if m:
-        url = m.group(1).strip().strip('"').strip("'")
-if not url:
-    raise SystemExit('DATABASE_URL not found in env file')
-d = u.urlparse(url)
-def q(s): return "'" + str(s).replace("'", "'\\''") + "'"
-print(f'DB_HOST={q(d.hostname or "localhost")}')
-print(f'DB_PORT={q(d.port or 3306)}')
-print(f'DB_USER={q(u.unquote(d.username or ""))}')
-print(f'DB_PASS={q(u.unquote(d.password or ""))}')
-print(f'DB_NAME={q(d.path.lstrip("/").split("?")[0])}')
-PY
-)"
+source "$ROOT/deploy/lib-dburl.sh"
+parse_database_url "$ENV_FILE" || exit 1
 
 mkdir -p "$OUT_DIR"
 STAMP="$(date +%Y%m%d-%H%M%S)"
@@ -45,15 +28,8 @@ OUT="$OUT_DIR/${DB_NAME}-${STAMP}.sql.gz"
 
 # Credentials go in a 0600 file, never on the command line, where every other
 # user on the box could read them out of `ps`.
-CNF="$(mktemp)"; chmod 600 "$CNF"
+CNF="$(mysql_defaults_file)"
 trap 'rm -f "$CNF"' EXIT
-cat > "$CNF" <<CNFEOF
-[client]
-host=$DB_HOST
-port=$DB_PORT
-user=$DB_USER
-password=$DB_PASS
-CNFEOF
 
 echo "Dumping $DB_NAME from $DB_HOST ..."
 

@@ -90,6 +90,17 @@ FLUSH PRIVILEGES;
 `utf8mb4` is not optional — league content contains `·`, em dashes and curly
 quotes, and `utf8` (MySQL's 3-byte alias) mangles them.
 
+> **Passwords with punctuation must be percent-encoded in `DATABASE_URL`.**
+> `?`, `/` and `#` end the URL's authority section, so an unencoded one silently
+> truncates the host — the app fails to start and the deploy scripts cannot read
+> the database settings. (`*` and most other punctuation are fine.)
+>
+> ```bash
+> ./deploy/encode-db-url.sh     # prompts for the parts, prints the encoded line
+> ```
+>
+> Or by hand: `? = %3F`  `/ = %2F`  `# = %23`  `@ = %40`  `: = %3A`  `% = %25`.
+
 Then write the environment file:
 
 ```bash
@@ -576,6 +587,8 @@ pm2 set pm2-logrotate:retain 14
 | "table already exists" on deploy | The baseline was never recorded — §9 |
 | App serves old assets after deploy | A cached `index.html`; it is sent `no-cache`, so suspect a proxy in front |
 | Everyone signed out after deploy | `SESSION_SECRET` changed |
+| `Port could not be cast to integer` | Unencoded `?`, `/` or `#` in the DB password — §3 |
+| App won't start, `Invalid URL` | Same cause: `DATABASE_URL` needs percent-encoding |
 
 Rolling back code is `git checkout <previous-tag> && ./deploy/deploy.sh --no-pull`.
 Rolling back a **migration** is not automatic — restore the pre-deploy dump that
