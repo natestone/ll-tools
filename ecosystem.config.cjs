@@ -42,7 +42,24 @@
  *      shared MySQL store. Do not run multiple workers without it.
  * ------------------------------------------------------------------------- */
 
-const workers = Number(process.env.WEB_CONCURRENCY || 2)
+/* Worker count, in priority order:
+     1. WEB_CONCURRENCY in the environment  (one-off: WEB_CONCURRENCY=4 ./deploy/deploy.sh)
+     2. WEB_CONCURRENCY in app/backend/.env (persistent -- survives every deploy)
+     3. 2
+   Reading .env matters: without it the count reverts to the default on the next
+   deploy, silently dropping the box back to two workers. */
+const fs = require('fs')
+const path = require('path')
+
+function fromEnvFile() {
+  try {
+    const txt = fs.readFileSync(path.join(__dirname, 'app/backend/.env'), 'utf8')
+    const m = txt.match(/^\s*(?:export\s+)?WEB_CONCURRENCY\s*=\s*"?(\d+)"?/m)
+    return m ? Number(m[1]) : null
+  } catch { return null }
+}
+
+const workers = Number(process.env.WEB_CONCURRENCY) || fromEnvFile() || 2
 
 module.exports = {
   apps: [{
