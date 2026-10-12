@@ -7,7 +7,7 @@ database over as-is, and shipping updates afterwards.
 - **§2** Server prerequisites
 - **§3** Database and user
 - **§4** First deploy — carrying the existing data across
-- **§5** nginx + TLS
+- **§5** Apache reverse proxy + TLS
 - **§6** Amazon SES, so email actually sends
 - **§7** Verify the rollout
 - **§8** Shipping updates afterwards
@@ -22,7 +22,7 @@ One PM2 process, `ll-manager`, serves both the JSON API and the built front end
 from the same origin.
 
 ```
-browser ──https──> nginx :443 ──http──> node :3001 ──> MySQL :3306
+browser ──https──> apache :443 ──http──> node :3001 ──> MySQL :3306
                                  │
                                  ├─ /api/*  JSON API
                                  └─ /*      app/frontend/dist (SPA)
@@ -51,7 +51,11 @@ Ubuntu 22.04/24.04 or similar.
 ```bash
 # Node 20 LTS (the app uses --env-file, which needs >= 20.6)
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs mysql-server nginx git
+sudo apt-get install -y nodejs mysql-server apache2 git
+
+# the reverse proxy needs these four modules
+sudo a2enmod proxy proxy_http headers deflate
+sudo systemctl restart apache2
 sudo npm install -g pm2
 
 node -v        # must be >= 20.6
@@ -151,13 +155,121 @@ Without this the app does not come back after the server restarts.
 
 ---
 
-## 5. nginx + TLS
+## 5. Apache reverse proxy + TLS
+
+Apache terminates TLS and proxies everything to the app. Nothing is served from
+disk by Apache — the Node process serves both the API and the client — so there
+is no `DocumentRoot` to keep in sync and no static aliasing to get wrong.
+
+```bash
+sudo a2enmod proxy proxy_http headers deflate
+```
+
+`/etc/apache2/sites-available/ll-manager.conf`:
+
+```apache
+<VirtualHost *:80>
+    ServerName ll-manager.org
+
+    # certbot rewrites this into a redirect to https. Leave it plain for now so
+    # the first certificate issuance has a working http vhost to validate.
+    DocumentRoot /var/www/html
+    ErrorLog  ${APACHE_LOG_DIR}/ll-manager-error.log
+    CustomLog ${APACHE_LOG_DIR}/ll-manager-access.log combined
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName ll-manager.org
+
+    SSLEngine on
+    # certbot fills in the certificate paths and the hardening include.
+
+    # ---- reverse proxy ---------------------------------------------------
+    # Never a forward proxy. Off by default; stated because an open proxy on a
+    # public box gets found and abused within hours.
+    ProxyRequests Off
+    ProxyPreserveHost On
+
+    ProxyPass        / http://127.0.0.1:3001/ connectiontimeout=5 timeout=60
+    ProxyPassReverse / http://127.0.0.1:3001/
+
+    # ---- the header everything depends on --------------------------------
+    # mod_proxy_http sets X-Forwarded-For and X-Forwarded-Host on its own, but
+    # NOT X-Forwarded-Proto. Without this line Express (which has `trust proxy`
+    # set) believes the request arrived over plain http, refuses to set the
+    # Secure session cookie, and logins silently never stick -- no error
+    # anywhere, the user just bounces back to the login page.
+    RequestHeader set X-Forwarded-Proto "https"
+
+    # ---- compression -----------------------------------------------------
+    # The client bundle is ~528K of JavaScript and gzips to ~168K, a 69%
+    # saving measured on this build. Images and fonts are already compressed.
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript
+    AddOutputFilterByType DEFLATE application/javascript application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+
+    # The API accepts 2MB JSON bodies; leave headroom, reject the absurd.
+    LimitRequestBody 4194304
+
+    ErrorLog  ${APACHE_LOG_DIR}/ll-manager-error.log
+    CustomLog ${APACHE_LOG_DIR}/ll-manager-access.log combined
+</VirtualHost>
+```
+
+Enable it and issue the certificate:
+
+```bash
+sudo a2ensite ll-manager
+sudo apache2ctl configtest          # must say "Syntax OK"
+sudo systemctl reload apache2
+
+sudo certbot --apache -d ll-manager.org
+```
+
+certbot writes the certificate paths into the `*:443` vhost, adds the hardening
+include, and offers to redirect http to https — accept it. Renewal is installed
+as a systemd timer; confirm with `sudo certbot renew --dry-run`.
+
+> **If you let certbot create the SSL vhost for you** (by running it against an
+> http-only vhost), check that `RequestHeader set X-Forwarded-Proto "https"`
+> ended up in the `*:443` block. certbot copies the http vhost, and a
+> `ProxyPass` without that header is the single most common way this deployment
+> breaks.
+
+Once TLS is live, set `COOKIE_SECURE=1` and `APP_URL=https://ll-manager.org` in
+`app/backend/.env`, then `pm2 restart ll-manager --update-env`.
+
+### Why these two headers matter
+
+Verified behind this exact config:
+
+| | Through Apache | Straight to :3001 |
+|---|---|---|
+| `req.protocol` | `https` | `http` |
+| `req.secure` | `true` | `false` |
+| `X-Forwarded-For` | the real client IP | absent |
+
+`req.secure` is what lets the Secure session cookie be set at all. `X-Forwarded-For`
+is what the All-Star signup form records as the IP that signed a consent
+agreement — without it every signature is logged as coming from `127.0.0.1`,
+which makes the record worthless if it is ever questioned.
+
+The app sets `trust proxy` to **1**, meaning it trusts exactly one hop. That is
+correct for Apache on the same box. If you ever put Cloudflare or another proxy
+in front of Apache, raise it to match, or the client IP recorded will be the
+intermediate proxy's.
+
+### nginx instead
+
+Nothing here is Apache-specific — the app is a plain HTTP server on
+`127.0.0.1:3001`. The nginx equivalent:
 
 ```nginx
 server {
     server_name ll-manager.org;
-
-    client_max_body_size 4m;          # API accepts 2mb JSON bodies
+    client_max_body_size 4m;
+    gzip on;
+    gzip_types text/css application/javascript application/json image/svg+xml;
 
     location / {
         proxy_pass         http://127.0.0.1:3001;
@@ -170,21 +282,6 @@ server {
     }
 }
 ```
-
-`X-Forwarded-Proto` matters: the app sets `trust proxy`, and without it Express
-thinks the connection is plain http and refuses to set the Secure session
-cookie, so nobody can log in. `X-Forwarded-For` is what the signup form records
-as the signing IP on a consent form — without it, every signature is logged as
-coming from `127.0.0.1`.
-
-Then issue the certificate:
-
-```bash
-sudo certbot --nginx -d ll-manager.org
-```
-
-Once TLS is live, confirm `COOKIE_SECURE=1` and `APP_URL=https://...` are set in
-`.env`, and `pm2 restart ll-manager --update-env`.
 
 ---
 
@@ -456,8 +553,8 @@ pm2 set pm2-logrotate:retain 14
 
 | Symptom | Cause |
 |---|---|
-| Login never sticks | `COOKIE_SECURE=1` without TLS, or nginx not sending `X-Forwarded-Proto` |
-| 502 from nginx | Node is down — `pm2 status`, then `pm2 logs` |
+| Login never sticks | `COOKIE_SECURE=1` without TLS, or the proxy not sending `X-Forwarded-Proto` (§5) |
+| 502/503 from Apache | Node is down — `pm2 status`, then `pm2 logs` |
 | Emailed links point at localhost | `APP_URL` is wrong in `.env` |
 | No email, no error | `MAIL_DRIVER` still `console`, or the recipient is on the unsubscribe list |
 | "table already exists" on deploy | The baseline was never recorded — §9 |

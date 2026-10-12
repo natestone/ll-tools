@@ -117,7 +117,7 @@ Set PM2 to come back after a reboot (prints a command to run with sudo):
     pm2 save
 
 Then finish the checklist in app/docs/DEPLOYMENT.md:
-  - nginx reverse proxy + TLS           (§4)
-  - Amazon SES, so email actually sends (§5)
+  - Apache reverse proxy + TLS          (§5)
+  - Amazon SES, so email actually sends (§6)
   - verify the rollout                  (§7)
 DONE
