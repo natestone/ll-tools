@@ -478,3 +478,21 @@ model AllStarBallot {
   @@unique([voterId, levelId])
   @@index([levelId])
 }
+
+// Rate-limit counters, shared by every worker.
+//
+// express-rate-limit keeps counts in process memory by default. Under PM2
+// cluster mode each worker has its own copy, so a limit of 5 becomes 5 per
+// worker, and a client spread across workers by the round-robin gets N times
+// the allowance. For the password-reset limiter that is the difference between
+// 5 attempts per 15 minutes and 40.
+//
+// Keyed by limiter name + client IP. Rows are disposable: losing the table
+// loses nothing but the current window.
+model RateLimit {
+  key       String   @id @db.VarChar(191)
+  hits      Int      @default(0)
+  expiresAt DateTime
+
+  @@index([expiresAt])
+}

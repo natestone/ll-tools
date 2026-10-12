@@ -12,6 +12,7 @@ database over as-is, and shipping updates afterwards.
 - **§7** Verify the rollout
 - **§8** Shipping updates afterwards
 - **§9** How migrations work — read this before changing the schema
+- **§9a** Running more workers
 - **§10** Backups, logs, and when things break
 
 ---
@@ -538,6 +539,71 @@ npm --workspace backend run migrate:status
 
 ---
 
+## 9a. Running more workers
+
+Node uses one core per process. To use more:
+
+```bash
+WEB_CONCURRENCY=4 pm2 startOrReload ecosystem.config.cjs --env production --update-env
+pm2 save
+```
+
+`ecosystem.config.cjs` switches to PM2 cluster mode whenever `WEB_CONCURRENCY`
+is above 1, and sets `CLUSTERED=1` so rate limiting moves to its shared store.
+
+**Be honest about what this buys.** This app spends nearly all its time waiting
+on MySQL, not computing, and a single worker already absorbs far more traffic
+than a league board produces. Extra workers do not make anything measurably
+faster. They buy two real things: one worker crashing or blocking no longer
+affects everyone, and `pm2 reload` becomes genuinely zero-downtime because
+workers restart one at a time. **2–4 is the sensible range**, regardless of how
+many cores the box has.
+
+### The two things that break if you skip them
+
+**1. Database connections.** Each worker opens its own Prisma pool — default
+`(cpus * 2) + 1`, which is **65 per worker on a 32-core box** — plus ~10 for the
+session store. MySQL's default `max_connections` is 151.
+
+| Workers | Default pool, 32-core box | With `connection_limit=10` |
+|---|---|---|
+| 1 | 75 | 20 |
+| 4 | 300 — **fails** | 80 |
+| 8 | 600 — **fails** | 160 — still too many |
+
+Pin the pool in `DATABASE_URL`:
+
+```ini
+DATABASE_URL="mysql://user:pass@127.0.0.1:3306/ll_manager?connection_limit=10"
+```
+
+Keep `workers * (connection_limit + 10)` comfortably under:
+
+```sql
+SHOW VARIABLES LIKE 'max_connections';
+```
+
+**2. Rate limiting.** `express-rate-limit` counts in process memory by default,
+so N workers give N times the allowance — the password-reset limiter goes from
+5 attempts per 15 minutes to 40 at 8 workers. `CLUSTERED=1` switches every
+limiter to the MySQL-backed store in `src/lib/rateLimitStore.js`.
+
+Measured with two workers and a limit of 60, alternating requests between them:
+
+| | First 429 |
+|---|---|
+| Shared store (`CLUSTERED=1`) | request 61 — correct |
+| Per-process memory | never tripped in 64 requests |
+
+### What is already safe to cluster
+
+- **Sessions** live in MySQL, so any worker can serve any logged-in user.
+- **No in-process caches or timers** — nothing is held in a worker's memory
+  between requests.
+- **`max_memory_restart` is per worker**, so 4 workers can use 4 × 512M.
+
+---
+
 ## 10. Backups, logs, and when things break
 
 ### Backups
@@ -588,6 +654,7 @@ pm2 set pm2-logrotate:retain 14
 | App serves old assets after deploy | A cached `index.html`; it is sent `no-cache`, so suspect a proxy in front |
 | Everyone signed out after deploy | `SESSION_SECRET` changed |
 | `Port could not be cast to integer` | Unencoded `?`, `/` or `#` in the DB password — §3 |
+| `Too many connections` | Workers × pool exceeds `max_connections` — §9a |
 | App won't start, `Invalid URL` | Same cause: `DATABASE_URL` needs percent-encoding |
 
 Rolling back code is `git checkout <previous-tag> && ./deploy/deploy.sh --no-pull`.

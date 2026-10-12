@@ -2,6 +2,7 @@ import { Router } from 'express'
 import crypto from 'node:crypto'
 import bcrypt from 'bcryptjs'
 import rateLimit from 'express-rate-limit'
+import { sharedStore } from '../lib/rateLimitStore.js'
 import { prisma } from '../lib/prisma.js'
 import { sendMail } from '../lib/mailer.js'
 import { passwordReset, passwordChanged } from '../lib/emails.js'
@@ -14,11 +15,13 @@ const sha256 = (s) => crypto.createHash('sha256').update(s).digest('hex')
 // Without a limit these endpoints are a free mail cannon aimed at any address
 // someone types, and a brute-force surface for reset tokens.
 const forgotLimiter = rateLimit({
+  ...sharedStore('auth:forgot'),
   windowMs: 15 * 60 * 1000, limit: 5,
   standardHeaders: true, legacyHeaders: false,
   message: { error: 'Too many reset requests. Try again in a few minutes.' },
 })
 const resetLimiter = rateLimit({
+  ...sharedStore('auth:reset'),
   windowMs: 15 * 60 * 1000, limit: 10,
   standardHeaders: true, legacyHeaders: false,
   message: { error: 'Too many attempts. Try again in a few minutes.' },

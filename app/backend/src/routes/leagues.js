@@ -2,6 +2,7 @@ import { Router } from 'express'
 import crypto from 'node:crypto'
 import bcrypt from 'bcryptjs'
 import rateLimit from 'express-rate-limit'
+import { sharedStore } from '../lib/rateLimitStore.js'
 import { prisma, withLeague } from '../lib/prisma.js'
 import { cloneSeed } from '../lib/cloneSeed.js'
 import { seedDefaultPermissions, listEditable } from '../lib/permissions.js'
@@ -360,6 +361,7 @@ leaguesRouter.get('/:leagueId/invites', requireAuth, loadLeague, requireOwner, a
 export const invitesRouter = Router()
 
 const inviteLimiter = rateLimit({
+  ...sharedStore('invite'),
   windowMs: 15 * 60 * 1000, limit: 30,
   standardHeaders: true, legacyHeaders: false,
   message: { error: 'Too many attempts. Try again in a few minutes.' },

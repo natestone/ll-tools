@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import rateLimit from 'express-rate-limit'
+import { sharedStore } from '../lib/rateLimitStore.js'
 import { verifyUnsubToken, suppress, unsuppress, isSuppressed } from '../lib/unsubscribe.js'
 
 /* ============================================================================
@@ -18,6 +19,7 @@ import { verifyUnsubToken, suppress, unsuppress, isSuppressed } from '../lib/uns
 export const unsubscribeRouter = Router()
 
 const limiter = rateLimit({
+  ...sharedStore('unsub'),
   windowMs: 15 * 60 * 1000, limit: 60,
   standardHeaders: true, legacyHeaders: false,
   message: { error: 'Too many requests. Try again shortly.' },

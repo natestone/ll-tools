@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import rateLimit from 'express-rate-limit'
+import { sharedStore } from '../lib/rateLimitStore.js'
 import crypto from 'node:crypto'
 import { prisma } from '../lib/prisma.js'
 import { sendMail } from '../lib/mailer.js'
@@ -17,6 +18,7 @@ import { allStarVoteCode, allStarSignupConfirmation } from '../lib/emails.js'
 export const publicRouter = Router()
 
 const limiter = rateLimit({
+  ...sharedStore('public'),
   windowMs: 15 * 60 * 1000, limit: 60,
   standardHeaders: true, legacyHeaders: false,
   message: { error: 'Too many requests. Try again shortly.' },
