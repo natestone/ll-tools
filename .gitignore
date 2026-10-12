@@ -1,3 +1,10 @@
+# ---- system files ----
+.bash_logout
+.bashrc
+.cache/
+.profile
+.ssh/
+.viminfo
 # ---- dependencies & build output ----
 node_modules/
 dist/
