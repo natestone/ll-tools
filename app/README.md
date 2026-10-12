@@ -10,6 +10,9 @@ npm workspaces monorepo.
 
 ---
 
+> **Deploying to a server?** See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) — rollout,
+> PM2, migrations, Amazon SES and `deploy/deploy.sh` for subsequent updates.
+
 ## Quick start
 
 Prerequisites (already set up on this workstation): **Node 20+**, a running **MySQL 8**
@@ -93,11 +96,21 @@ Run from `app/` unless noted.
 | `npm --workspace frontend run dev` | Web only |
 | `npm --workspace frontend run build` | Production build of the frontend |
 | `npm --workspace backend run seed` | Reload the `Default*` seed tables from `seed/gngrll/` |
-| `npm --workspace backend run push` | Apply `schema.prisma` to the DB (`prisma db push`) + regenerate client |
+| `npm --workspace backend run migrate:dev` | Author + apply a migration after editing `schema.prisma` |
+| `npm --workspace backend run migrate:deploy` | Apply pending migrations (what the server runs) |
+| `npm --workspace backend run migrate:status` | Show which migrations are applied |
 | `npm --workspace backend run generate` | Regenerate the Prisma client only |
 
-> The Prisma **schema** is applied with `db push` (not migrations) for local dev — no
-> shadow database needed, and there is no migration step to run.
+> **Schema changes go through migrations now**, not `db push`. Edit `schema.prisma`, run
+> `migrate:dev --name what_changed`, and **commit the generated
+> `prisma/migrations/<timestamp>_*/` directory** — that is how the change reaches
+> production, where `deploy.sh` applies it.
+>
+> ⚠️ `npm run push` (`prisma db push`) is still in `package.json` for throwaway local
+> experiments, but it keeps no history and **must never be run against production** — it
+> will silently drop a column, and its data, to make the database match the schema. Mixing
+> it with migrations also drifts your local DB out of sync with the history. See
+> [`docs/DEPLOYMENT.md` §9](docs/DEPLOYMENT.md).
 >
 > ⚠️ **Restart the API after any schema change.** `db push` regenerates the Prisma client
 > (including its query-engine binary) underneath the running server, which makes every

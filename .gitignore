@@ -30,3 +30,6 @@ seed/*.backup-*/
 
 # one-off data backups taken before destructive migrations
 backups/
+
+# ---- pm2 runtime logs ----
+logs/
