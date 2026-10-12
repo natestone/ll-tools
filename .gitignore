@@ -5,6 +5,10 @@
 .profile
 .ssh/
 .viminfo
+.bash_history
+.gitconfig
+.npm/
+.pm2/
 # ---- dependencies & build output ----
 node_modules/
 dist/
