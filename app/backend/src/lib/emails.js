@@ -178,3 +178,43 @@ export function allStarVoteCode({ voterName, code, minutes = 20 }) {
         Expires in ${minutes} minutes. If you didn't ask for it, ignore this email.</p>`),
   }
 }
+
+/* The receipt a parent gets after signing the All-Star consent form. One
+   message covers every child on the submission — a family signing up three
+   players should not get three near-identical emails.
+
+   Deliberately NOT essential: a parent who has unsubscribed stays unsubscribed,
+   and the form's own thank-you page tells them no confirmation could be sent.
+   Nothing about the signup depends on this message arriving. */
+export function allStarSignupConfirmation({ parentName, leagueName, year, players = [] }) {
+  const line = (p) => `${p.playerName} — ${p.levels.join(', ')}`
+  const many = players.length > 1
+  return {
+    subject: `${leagueName} — ${year} All-Star signup confirmed`,
+    text: [
+      `Hi ${parentName || 'there'},`,
+      ``,
+      `We've received your ${year} ${leagueName} All-Star signup${many ? 's' : ''}:`,
+      ``,
+      ...players.map((p) => `  • ${line(p)}`),
+      ``,
+      `You signed the consent agreement electronically by typing your name on the form.`,
+      `Keep this email for your records.`,
+      ``,
+      `If anything above is wrong, reply to this email and tell the league — don't submit the form again.`,
+    ].join('\n'),
+    html: shell(`${esc(year)} All-Star signup confirmed`, `
+      <p>Hi ${esc(parentName || 'there')},</p>
+      <p>We've received your ${esc(year)} ${esc(leagueName)} All-Star signup${many ? 's' : ''}:</p>
+      <ul style="padding-left:20px;margin:14px 0">
+        ${players.map((p) => `<li style="margin-bottom:6px"><strong>${esc(p.playerName)}</strong><br>
+          <span style="color:#6b7280;font-size:13px">${esc(p.levels.join(', '))}</span></li>`).join('')}
+      </ul>
+      <p>You signed the consent agreement electronically by typing your name on the form.
+         Keep this email for your records.</p>
+      <p style="font-size:13px;color:#6b7280">
+        If anything above is wrong, reply to this email and tell the league —
+        please don't submit the form again.
+      </p>`),
+  }
+}

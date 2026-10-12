@@ -314,6 +314,18 @@ th {
 .results-head > button { flex: 0 0 auto; white-space: nowrap; }
 .results-export { padding: 6px 12px; font-size: 0.78rem; }
 
+/* Each child on the signup form gets a boxed block so a family of three
+   reads as three players, not one long run of inputs. */
+.player-block { border: 1px solid var(--line); border-radius: 8px; padding: 4px 14px 14px; margin: 0 0 14px; }
+.player-block > legend {
+  font-family: var(--head); font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--muted); padding: 0 6px;
+  display: flex; align-items: center; gap: 6px;
+}
+.player-block > legend .icon-btn { font-size: 1rem; line-height: 1; }
+.signup-recap { margin: 10px 0 16px; padding-left: 20px; }
+.signup-recap li { margin-bottom: 5px; }
+
 /* ===== Inline editing ===== */
 .editable { cursor: text; border-radius: 4px; padding: 1px 3px; margin: -1px -3px; display: inline-block; }
 .editable:hover { background: #eef1f6; box-shadow: inset 0 0 0 1px var(--line); }

@@ -3,7 +3,7 @@ import rateLimit from 'express-rate-limit'
 import crypto from 'node:crypto'
 import { prisma } from '../lib/prisma.js'
 import { sendMail } from '../lib/mailer.js'
-import { allStarVoteCode } from '../lib/emails.js'
+import { allStarVoteCode, allStarSignupConfirmation } from '../lib/emails.js'
 
 /* ============================================================================
    Public All-Star endpoints. No session: a parent filling in the signup form is
@@ -24,6 +24,7 @@ const limiter = rateLimit({
 publicRouter.use(limiter)
 
 const dateOnly = (v) => (v ? new Date(`${String(v).slice(0, 10)}T00:00:00.000Z`) : null)
+const MAX_PLAYERS_PER_FORM = 10
 const notFound = (res) => res.status(404).json({ error: 'This signup link is not valid.' })
 
 /** Everything the signup page needs: league name, consent text, levels. */
@@ -44,50 +45,102 @@ publicRouter.get('/allstar/:slug', async (req, res) => {
   })
 })
 
-/** A parent signing one player up for one or more levels. */
+/** A parent signing one or more children up, each for one or more levels. */
 publicRouter.post('/allstar/:slug/signup', async (req, res) => {
   const season = await prisma.allStarSeason.findUnique({
-    where: { publicSlug: req.params.slug }, include: { levels: true },
+    where: { publicSlug: req.params.slug },
+    include: { levels: true, league: { select: { name: true } } },
   })
   if (!season) return notFound(res)
   if (!season.signupOpen) return res.status(400).json({ error: 'Signups for this season are closed.' })
 
-  const playerName = String(req.body?.playerName || '').trim()
   const parentName = String(req.body?.parentName || '').trim()
-  const playerDob = dateOnly(req.body?.playerDob)
-  const levelIds = Array.isArray(req.body?.levelIds) ? req.body.levelIds.map(Number) : []
+  const parentEmail = String(req.body?.parentEmail || '').trim().toLowerCase()
+  const parentPhone = String(req.body?.parentPhone || '').trim() || null
 
-  if (!playerName) return res.status(400).json({ error: "The player's name is required." })
   if (!parentName) return res.status(400).json({ error: 'Type your name to sign the agreement.' })
-  if (!playerDob || Number.isNaN(playerDob.getTime())) return res.status(400).json({ error: "The player's date of birth is required." })
-  if (!levelIds.length) return res.status(400).json({ error: 'Choose at least one level.' })
+  // Required now: it is the league's only reliable way back to the family, and
+  // it is where the signed-consent receipt goes.
+  if (!parentEmail) return res.status(400).json({ error: 'Your email address is required.' })
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(parentEmail))
+    return res.status(400).json({ error: "That email address doesn't look right." })
 
-  // Eligibility is re-checked here, never trusted from the browser: the form
-  // hides ineligible levels, but the request can be made without the form.
-  const chosen = season.levels.filter((l) => levelIds.includes(l.id))
-  if (chosen.length !== levelIds.length) return res.status(400).json({ error: 'Unknown level selected.' })
-  const ineligible = chosen.filter((l) => playerDob < l.bornFrom || playerDob > l.bornTo)
-  if (ineligible.length)
-    return res.status(400).json({
-      error: `That date of birth is not eligible for ${ineligible.map((l) => l.name).join(', ')}.`,
-    })
+  /* One form can carry a whole family. A payload from the old single-player
+     form is simply a list of one, so an open tab mid-deploy still works. */
+  const raw = Array.isArray(req.body?.players) && req.body.players.length
+    ? req.body.players
+    : [{ playerName: req.body?.playerName, playerDob: req.body?.playerDob, levelIds: req.body?.levelIds }]
+  if (raw.length > MAX_PLAYERS_PER_FORM)
+    return res.status(400).json({ error: `One form can hold at most ${MAX_PLAYERS_PER_FORM} players.` })
 
-  const signup = await prisma.allStarSignup.create({
+  const players = []
+  for (const [i, p] of raw.entries()) {
+    // With several children on screen, "the player's name is required" is not
+    // enough to say which row is wrong.
+    const which = raw.length > 1 ? ` for player ${i + 1}` : ''
+    const playerName = String(p?.playerName || '').trim()
+    const playerDob = dateOnly(p?.playerDob)
+    const levelIds = Array.isArray(p?.levelIds) ? [...new Set(p.levelIds.map(Number))] : []
+
+    if (!playerName) return res.status(400).json({ error: `The player's name is required${which}.` })
+    if (!playerDob || Number.isNaN(playerDob.getTime()))
+      return res.status(400).json({ error: `The player's date of birth is required${which}.` })
+    if (!levelIds.length) return res.status(400).json({ error: `Choose at least one level${which}.` })
+
+    // Eligibility is re-checked here, never trusted from the browser: the form
+    // hides ineligible levels, but the request can be made without the form.
+    const chosen = season.levels.filter((l) => levelIds.includes(l.id))
+    if (chosen.length !== levelIds.length) return res.status(400).json({ error: 'Unknown level selected.' })
+    const ineligible = chosen.filter((l) => playerDob < l.bornFrom || playerDob > l.bornTo)
+    if (ineligible.length)
+      return res.status(400).json({
+        error: `${playerName} is not eligible for ${ineligible.map((l) => l.name).join(', ')}.`,
+      })
+
+    players.push({ playerName, playerDob, chosen })
+  }
+
+  // The same child entered twice on one form is a slip — two siblings cannot
+  // share a name and a birthday.
+  const seen = new Set()
+  for (const p of players) {
+    const key = `${p.playerName.toLowerCase()}|${p.playerDob.toISOString().slice(0, 10)}`
+    if (seen.has(key)) return res.status(400).json({ error: `${p.playerName} is on this form twice.` })
+    seen.add(key)
+  }
+
+  const signedIp = (req.headers['x-forwarded-for'] || req.socket?.remoteAddress || '')
+    .toString().split(',')[0].trim() || null
+
+  // All or nothing. A family half-registered because row three failed is worse
+  // than a submission that cleanly failed and can be retried.
+  const created = await prisma.$transaction(players.map((p) => prisma.allStarSignup.create({
     data: {
-      seasonId: season.id, playerName, playerDob, parentName,
-      parentEmail: String(req.body?.parentEmail || '').trim().toLowerCase() || null,
-      parentPhone: String(req.body?.parentPhone || '').trim() || null,
+      seasonId: season.id, playerName: p.playerName, playerDob: p.playerDob,
+      parentName, parentEmail, parentPhone,
       // snapshot: editing the form later must not change what was agreed to
       consentMd: season.consentMd,
-      signedIp: (req.headers['x-forwarded-for'] || req.socket?.remoteAddress || '').toString().split(',')[0].trim() || null,
-      levels: { create: chosen.map((l) => ({ levelId: l.id })) },
+      signedIp,
+      levels: { create: p.chosen.map((l) => ({ levelId: l.id })) },
     },
     include: { levels: { include: { level: true } } },
+  })))
+
+  const summary = created.map((s) => ({
+    playerName: s.playerName, levels: s.levels.map((x) => x.level.name),
+  }))
+
+  // One receipt for the whole family. sendMail never throws, and the signup is
+  // already committed — a mail failure must not fail the submission.
+  const mail = await sendMail({
+    to: parentEmail,
+    ...allStarSignupConfirmation({
+      parentName, leagueName: season.league.name, year: season.year, players: summary,
+    }),
   })
-  res.status(201).json({
-    ok: true, playerName: signup.playerName,
-    levels: signup.levels.map((l) => l.level.name),
-  })
+  if (!mail.ok) console.error(`[allstar] signup receipt to ${parentEmail} failed: ${mail.error || mail.reason}`)
+
+  res.status(201).json({ ok: true, players: summary, email: parentEmail, emailed: !!mail.ok })
 })
 
 /* ============================================================================
