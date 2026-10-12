@@ -142,7 +142,23 @@ That script installs dependencies, imports the dump, **baselines the migration
 history** (see §9 — this is the step that is easy to get wrong), builds the
 front end, and starts PM2.
 
-To start with an empty database instead, use `./deploy/first-deploy.sh --empty`.
+Other modes:
+
+```bash
+./deploy/first-deploy.sh --empty          # no data; build the schema from migrations
+./deploy/first-deploy.sh --skip-import    # the database is already loaded
+```
+
+`--skip-import` is for when you imported the dump by hand. Everything else in
+the script still has to happen — dependencies, the Prisma client, the migration
+baseline, the client build and the PM2 service — so skip the script entirely and
+you have a database with no application in front of it.
+
+> **"ASCII '\0' appeared in the statement"** on import means the gzipped file was
+> piped into `mysql` without being decompressed. The dump is fine; use
+> `gunzip -c dump.sql.gz | mysql ...`. Do not reach for `--binary-mode`, which
+> tells mysql to accept the gzip header as SQL. `first-deploy.sh` detects
+> compression by magic bytes, so it handles this even if the file was renamed.
 
 ### 4.3 Survive a reboot
 

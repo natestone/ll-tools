@@ -6,7 +6,12 @@
 #   3. copied the .sql.gz dump from the old machine onto this one
 #
 #   ./deploy/first-deploy.sh /path/to/gngrll_dev-20261012-203643.sql.gz
-#   ./deploy/first-deploy.sh --empty      # start with no data instead
+#   ./deploy/first-deploy.sh --empty          # start with no data instead
+#   ./deploy/first-deploy.sh --skip-import    # database is already loaded
+#
+# --skip-import is for when you imported the dump by hand. Everything else
+# still needs doing: dependencies, the Prisma client, the migration baseline,
+# the client build and the PM2 service.
 #
 # The subtle part is the migration baseline. The dump already contains every
 # table, so running `migrate deploy` against it would try to CREATE TABLE on
@@ -18,7 +23,7 @@ set -Eeuo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DUMP="${1:-}"
-[ -n "$DUMP" ] || { echo "Usage: $0 <dump.sql.gz> | --empty" >&2; exit 2; }
+[ -n "$DUMP" ] || { echo "Usage: $0 <dump.sql.gz> | --empty | --skip-import" >&2; exit 2; }
 
 say() { printf '\n\033[1;36m==> %s\033[0m\n' "$*"; }
 trap 'printf "\n\033[1;31mFAILED on line %s\033[0m\n" "$LINENO" >&2' ERR
@@ -54,33 +59,11 @@ say "Installing dependencies"
 cd "$ROOT/app" && npm ci --no-audit --no-fund
 npm --workspace backend run generate
 
-if [ "$DUMP" = "--empty" ]; then
-  say "Creating the schema from migrations (no data)"
-  npm --workspace backend run migrate:deploy
-else
-  [ -f "$DUMP" ] || { echo "No such dump: $DUMP" >&2; exit 1; }
-
-  EXISTING="$(mysql --defaults-extra-file="$CNF" -N -B -e \
-    "SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA='$DB_NAME'")"
-  if [ "$EXISTING" != "0" ]; then
-    echo "Database '$DB_NAME' already has $EXISTING tables. Refusing to import over it." >&2
-    echo "Drop and recreate it first if this is really what you want." >&2
-    exit 1
-  fi
-
-  say "Importing $(basename "$DUMP")"
-  case "$DUMP" in
-    *.gz) gunzip -c "$DUMP" ;;
-    *)    cat "$DUMP" ;;
-  esac | mysql --defaults-extra-file="$CNF" "$DB_NAME"
-
-  COUNT="$(mysql --defaults-extra-file="$CNF" -N -B -e \
-    "SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA='$DB_NAME'")"
-  echo "    imported $COUNT tables"
-
-  # The tables are already there, so record the baseline rather than running
-  # it. A dump taken from a host that was already migration-managed brings its
-  # own history, in which case there is nothing to baseline.
+# The tables already exist (they came in with the dump), so 0_init is recorded
+# as applied rather than run -- running it would fail on "table already exists".
+# A dump taken from a host that was already migration-managed brings its own
+# history, in which case there is nothing to baseline.
+baseline_and_migrate() {
   HAS_HISTORY="$(mysql --defaults-extra-file="$CNF" -N -B -e \
     "SELECT COUNT(*) FROM information_schema.TABLES
       WHERE TABLE_SCHEMA='$DB_NAME' AND TABLE_NAME='_prisma_migrations'")"
@@ -89,13 +72,68 @@ else
     say "Baselining the migration history"
     npm --workspace backend run migrate:baseline
   else
-    say "Dump already carries migration history — skipping baseline"
+    APPLIED="$(mysql --defaults-extra-file="$CNF" -N -B -e \
+      "SELECT COUNT(*) FROM \`$DB_NAME\`._prisma_migrations WHERE migration_name='0_init'")"
+    if [ "$APPLIED" = "0" ]; then
+      say "Baselining the migration history"
+      npm --workspace backend run migrate:baseline
+    else
+      say "Migration history already present — skipping baseline"
+    fi
   fi
 
-  # Anything committed after the baseline still needs applying.
   say "Applying any later migrations"
   npm --workspace backend run migrate:deploy
-fi
+}
+
+TABLES_NOW() {
+  mysql --defaults-extra-file="$CNF" -N -B -e \
+    "SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA='$DB_NAME'"
+}
+
+case "$DUMP" in
+  --empty)
+    say "Creating the schema from migrations (no data)"
+    cd "$ROOT/app" && npm --workspace backend run migrate:deploy
+    ;;
+
+  --skip-import)
+    # Trust but verify: an empty database here means the import did not land,
+    # and carrying on would build a schema with none of the league's data.
+    EXISTING="$(TABLES_NOW)"
+    if [ "$EXISTING" = "0" ]; then
+      echo "Database '$DB_NAME' has no tables — the import did not succeed." >&2
+      echo "Import the dump first, or re-run without --skip-import." >&2
+      exit 1
+    fi
+    say "Using the existing database ($EXISTING tables already present)"
+    baseline_and_migrate
+    ;;
+
+  *)
+    [ -f "$DUMP" ] || { echo "No such dump: $DUMP" >&2; exit 1; }
+
+    EXISTING="$(TABLES_NOW)"
+    if [ "$EXISTING" != "0" ]; then
+      echo "Database '$DB_NAME' already has $EXISTING tables. Refusing to import over it." >&2
+      echo "If it is already loaded, re-run with --skip-import instead." >&2
+      exit 1
+    fi
+
+    say "Importing $(basename "$DUMP")"
+    # Detect compression by magic bytes, not by filename: a dump renamed
+    # without its .gz piped straight into mysql produces the baffling
+    # "ASCII '\0' appeared in the statement" error.
+    if [ "$(head -c2 "$DUMP" | od -An -tx1 | tr -d ' ')" = "1f8b" ]; then
+      gunzip -c "$DUMP"
+    else
+      cat "$DUMP"
+    fi | mysql --defaults-extra-file="$CNF" "$DB_NAME"
+
+    echo "    imported $(TABLES_NOW) tables"
+    baseline_and_migrate
+    ;;
+esac
 
 say "Migration status"
 cd "$ROOT/app" && npm --workspace backend run migrate:status || true
