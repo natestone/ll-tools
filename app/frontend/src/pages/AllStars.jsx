@@ -3,10 +3,21 @@ import { useOutletContext } from 'react-router-dom'
 import QRCode from 'qrcode'
 import { api, isoDate } from '../api.js'
 import { MarkdownView } from '../components/Markdown.jsx'
+import { DateField, DateTimeField } from '../components/DateField.jsx'
 
 /* All-Star administration: levels and their birthdate windows, the consent text
    parents sign, the public link and its QR code, and the voting cutoff. */
 const today = () => new Date().toISOString().slice(0, 10)
+
+/* A stored instant, shown as the local wall-clock time the admin actually
+   typed. Rendering it with toISOString() redisplayed it in UTC, so a cutoff
+   set for 6pm reopened reading 10pm and crept every time it was saved. */
+const localInput = (d) => {
+  if (!d) return ''
+  const x = new Date(d)
+  const p = (n) => String(n).padStart(2, '0')
+  return `${x.getFullYear()}-${p(x.getMonth() + 1)}-${p(x.getDate())}T${p(x.getHours())}:${p(x.getMinutes())}`
+}
 
 export default function AllStars() {
   const { leagueId } = useOutletContext()
@@ -137,10 +148,10 @@ export default function AllStars() {
             <form onSubmit={addLevel} className="row" style={{ gap: 8, flexWrap: 'wrap', marginTop: 12 }}>
               <input placeholder="Level name" value={lvl.name} required
                 onChange={(e) => setLvl({ ...lvl, name: e.target.value })} style={{ flex: '1 1 160px', minWidth: 0 }} />
-              <input type="date" value={lvl.bornFrom} required title="Born on or after"
-                onChange={(e) => setLvl({ ...lvl, bornFrom: e.target.value })} style={{ flex: '0 1 165px' }} />
-              <input type="date" value={lvl.bornTo} required title="Born on or before"
-                onChange={(e) => setLvl({ ...lvl, bornTo: e.target.value })} style={{ flex: '0 1 165px' }} />
+              <DateField value={lvl.bornFrom} required title="Born on or after" placeholder="On or after"
+                onChange={(v) => setLvl({ ...lvl, bornFrom: v })} style={{ flex: '0 1 165px' }} />
+              <DateField value={lvl.bornTo} required title="Born on or before" placeholder="On or before"
+                onChange={(v) => setLvl({ ...lvl, bornTo: v })} style={{ flex: '0 1 165px' }} />
               <button type="submit">Add level</button>
             </form>
           )}
@@ -183,9 +194,8 @@ export default function AllStars() {
             <span className={'badge ' + (s.signupOpen ? 'cal-kind-task' : '')}>{s.signupOpen ? 'open' : 'closed'}</span>
           </div>
           <label>Voting closes</label>
-          <input type="datetime-local" disabled={ro} style={{ maxWidth: 260 }}
-            value={s.votingClosesAt ? new Date(s.votingClosesAt).toISOString().slice(0, 16) : ''}
-            onChange={(e) => save({ votingClosesAt: e.target.value || null })} />
+          <DateTimeField disabled={ro} value={localInput(s.votingClosesAt)} minYear={year - 1} maxYear={year + 2}
+            onChange={(v) => save({ votingClosesAt: v || null })} />
           <p className="muted" style={{ fontSize: '0.78rem' }}>
             Coaches can change their ballots until this moment. Shown as a countdown on the ballot page.
           </p>

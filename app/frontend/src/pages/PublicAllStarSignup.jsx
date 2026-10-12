@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { useParams, useSearchParams } from 'react-router-dom'
 import { MarkdownView } from '../components/Markdown.jsx'
+import { DateField } from '../components/DateField.jsx'
 
 /* The public All-Star signup form.
 
@@ -127,8 +128,9 @@ export default function PublicAllStarSignup() {
                 <input value={p.playerName} onChange={(e) => patch(i, { playerName: e.target.value })} required />
 
                 <label>Player's date of birth</label>
-                <input type="date" value={p.playerDob} onChange={(e) => setDob(i, e.target.value)}
-                  required style={{ maxWidth: 220 }} />
+                <DateField value={p.playerDob} onChange={(v) => setDob(i, v)} required
+                  minYear={new Date().getFullYear() - 22} maxYear={new Date().getFullYear()}
+                  style={{ maxWidth: 220 }} />
 
                 <label>Levels</label>
                 {!p.playerDob && <p className="muted">Enter the date of birth to see which levels they're eligible for.</p>}

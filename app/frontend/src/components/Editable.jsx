@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Modal from './Modal.jsx'
 import { weekLabel, fmtDate, isoDate, weekStartDate } from '../api.js'
+import { DateField } from './DateField.jsx'
 
 /* Click-to-edit text. Click the text -> input/textarea; clicking out (blur) saves,
    Esc cancels. Used for descriptions, details, and individual steps. */
@@ -144,9 +145,9 @@ export function WeekPicker({ value, onSave, canEdit = true, seasonYear, dueDate,
 
           <label>Exact date (optional)</label>
           <div className="row" style={{ gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
-            <input type="date" style={{ maxWidth: 200 }}
+            <DateField style={{ maxWidth: 200 }}
               value={overrideDate ? isoDate(overrideDate) : ''}
-              onChange={(e) => { onSave({ dueDateOverride: e.target.value || null }); setOpen(false) }} />
+              onChange={(v) => { onSave({ dueDateOverride: v || null }); setOpen(false) }} />
             {pinned && (
               <button type="button" className="secondary"
                 onClick={() => { onSave({ dueDateOverride: null }); setOpen(false) }}>

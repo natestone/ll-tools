@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Modal from './Modal.jsx'
 import { api, weekLabel } from '../api.js'
+import { DateField } from './DateField.jsx'
 
 // Standing sections every board meeting carries (mirrors the seeded template).
 const STANDING = [
@@ -91,7 +92,7 @@ export default function AgendaWizard({ leagueId, onClose, onCreated, seasonYear 
           <div className="row" style={{ gap: 12 }}>
             <div style={{ flex: 1 }}>
               <label>Date</label>
-              <input type="date" value={d.meetingDate} onChange={(e) => set('meetingDate', e.target.value)} />
+              <DateField value={d.meetingDate} onChange={(v) => set('meetingDate', v)} />
             </div>
             <div style={{ flex: 1 }}>
               <label>Start time</label>

@@ -4,6 +4,7 @@ import { api } from '../api.js'
 import { MarkdownDoc } from '../components/Markdown.jsx'
 import { EditableText } from '../components/Editable.jsx'
 import AgendaWizard from '../components/AgendaWizard.jsx'
+import { DateField } from '../components/DateField.jsx'
 
 const RESULTS = [['', '—'], ['carried', 'Carried'], ['failed', 'Failed'], ['tabled', 'Tabled']]
 const emptyMotion = () => ({ text: '', movedBy: '', secondedBy: '', result: '' })
@@ -180,9 +181,9 @@ export default function Meetings() {
                   <td>
                     {f === 'meetingDate' ? (
                       canEdit
-                        ? <input type="date" style={{ maxWidth: 200 }}
+                        ? <DateField style={{ maxWidth: 200 }}
                             value={sel.meetingDate ? String(sel.meetingDate).slice(0, 10) : ''}
-                            onChange={(e) => save({ meetingDate: e.target.value || null })} />
+                            onChange={(v) => save({ meetingDate: v || null })} />
                         : dateLabel(sel.meetingDate)
                     ) : (
                       <EditableText value={sel[f] || ''} canEdit={canEdit} pencil

@@ -8,6 +8,7 @@ import TeamSetup from '../scheduler/TeamSetup.jsx'
 import ScheduleList from '../scheduler/ScheduleList.jsx'
 import ScheduleCalendar from '../scheduler/ScheduleCalendar.jsx'
 import '../scheduler/scheduler.css'
+import { DateField } from '../components/DateField.jsx'
 
 // Bump this whenever the scheduling logic changes in a way that makes
 // previously-saved schedules stale. A saved schedule whose engineVersion
@@ -240,20 +241,18 @@ export default function Scheduler() {
         <div className="sched-date-inputs">
           <div>
             <label htmlFor="sched-start">Season Start Date</label>
-            <input
+            <DateField
               id="sched-start"
-              type="date"
               value={config.startDate}
-              onChange={(e) => setConfig(c => ({ ...c, startDate: e.target.value }))}
+              onChange={(v) => setConfig(c => ({ ...c, startDate: v }))}
             />
           </div>
           <div>
             <label htmlFor="sched-end">Season End Date</label>
-            <input
+            <DateField
               id="sched-end"
-              type="date"
               value={config.endDate}
-              onChange={(e) => setConfig(c => ({ ...c, endDate: e.target.value }))}
+              onChange={(v) => setConfig(c => ({ ...c, endDate: v }))}
             />
           </div>
         </div>

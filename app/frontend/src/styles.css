@@ -326,6 +326,65 @@ th {
 .signup-recap { margin: 10px 0 16px; padding-left: 20px; }
 .signup-recap li { margin-bottom: 5px; }
 
+/* ===== Date picker =====
+   Replaces the native date/datetime popups, whose month+year drill-down had no
+   obvious way back to the day grid. Month and year are always-visible selects
+   here, so there is no mode to be stranded in. The popover is portalled to
+   <body> because these fields sit inside horizontally scrolling tables that
+   would otherwise clip it. */
+.dp-wrap { position: relative; display: inline-flex; align-items: center; max-width: 200px; }
+.dp-wrap > input { width: 100%; padding-right: 32px; }
+.dp-open {
+  position: absolute; right: 4px; background: none; border: 0; box-shadow: none;
+  color: var(--muted); font-size: 0.95rem; padding: 4px 6px; cursor: pointer;
+  letter-spacing: 0; text-transform: none; line-height: 1;
+}
+.dp-open:hover { background: none; color: var(--navy); transform: none; }
+.dp-open:disabled { opacity: 0.4; cursor: default; }
+
+.dp-dt { display: inline-flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.dp-time { max-width: 130px; }
+
+.dp-pop {
+  position: fixed; z-index: 1200; width: 290px; background: #fff;
+  border: 1px solid var(--line); border-radius: 10px; padding: 10px;
+  box-shadow: 0 12px 32px rgba(11, 26, 59, 0.18);
+}
+.dp-head { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+.dp-head select {
+  flex: 1 1 auto; min-width: 0; padding: 5px 6px; font-size: 0.85rem;
+  border: 1px solid var(--line); border-radius: 6px; background: #fff;
+}
+.dp-nav {
+  flex: 0 0 auto; background: none; color: var(--navy); border: 1px solid var(--line);
+  box-shadow: none; font-size: 1.05rem; line-height: 1; padding: 3px 9px; border-radius: 6px;
+  letter-spacing: 0;
+}
+.dp-nav:hover { background: #f2f4f8; color: var(--navy); transform: none; }
+
+.dp-dow, .dp-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.dp-dow span {
+  text-align: center; font-size: 0.68rem; font-weight: 600; color: var(--muted);
+  text-transform: uppercase; padding-bottom: 4px;
+}
+.dp-day {
+  background: none; color: var(--ink); border: 0; box-shadow: none; border-radius: 6px;
+  padding: 0; height: 32px; font-size: 0.83rem; font-weight: 500; font-family: inherit;
+  letter-spacing: 0; text-transform: none; cursor: pointer;
+}
+.dp-day:hover { background: #eef1f6; color: var(--navy); transform: none; }
+.dp-day.out { color: #b6bdc9; }
+.dp-day.today { box-shadow: inset 0 0 0 1px var(--line); }
+.dp-day.sel, .dp-day.sel:hover { background: var(--scarlet); color: #fff; }
+.dp-foot { display: flex; justify-content: space-between; margin-top: 8px; }
+.dp-link {
+  background: none; color: var(--navy); border: 0; box-shadow: none; padding: 4px 6px;
+  font-size: 0.74rem; letter-spacing: 0.5px;
+}
+.dp-link:hover { background: #f2f4f8; color: var(--scarlet); transform: none; }
+
+@media (max-width: 420px) { .dp-pop { width: calc(100vw - 24px); } }
+
 /* ===== Inline editing ===== */
 .editable { cursor: text; border-radius: 4px; padding: 1px 3px; margin: -1px -3px; display: inline-block; }
 .editable:hover { background: #eef1f6; box-shadow: inset 0 0 0 1px var(--line); }
