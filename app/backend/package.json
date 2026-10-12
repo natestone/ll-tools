@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node --env-file=.env --watch src/index.js",
-    "start": "node --env-file=.env src/index.js",
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
     "push": "prisma db push",
     "generate": "prisma generate",
-    "seed": "node --env-file=.env prisma/seed.js",
+    "seed": "node prisma/seed.js",
     "migrate:deploy": "prisma migrate deploy",
     "migrate:dev": "prisma migrate dev",
     "migrate:status": "prisma migrate status",
@@ -26,5 +26,8 @@
   },
   "devDependencies": {
     "prisma": "^5.22.0"
+  },
+  "engines": {
+    "node": ">=18.18"
   }
 }

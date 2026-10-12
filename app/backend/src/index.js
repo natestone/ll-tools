@@ -1,3 +1,7 @@
+// MUST be first: populates process.env before any module that reads it is
+// evaluated. See lib/env.js.
+import './lib/env.js'
+
 import express from 'express'
 import fs from 'node:fs'
 import path from 'node:path'

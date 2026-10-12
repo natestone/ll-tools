@@ -50,7 +50,7 @@ avoids that whole category of problem, and there is a single service to watch.
 Ubuntu 22.04/24.04 or similar.
 
 ```bash
-# Node 20 LTS (the app uses --env-file, which needs >= 20.6)
+# Node 20 LTS. The app runs on 18.18+, but 18 is end-of-life -- use 20 or 22.
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs mysql-server apache2 git
 
@@ -59,7 +59,7 @@ sudo a2enmod proxy proxy_http headers deflate
 sudo systemctl restart apache2
 sudo npm install -g pm2
 
-node -v        # must be >= 20.6
+node -v        # 18.18 minimum; 20 LTS recommended
 ```
 
 Create a non-root user to own the app, and check it out:
@@ -655,6 +655,7 @@ pm2 set pm2-logrotate:retain 14
 | Everyone signed out after deploy | `SESSION_SECRET` changed |
 | `Port could not be cast to integer` | Unencoded `?`, `/` or `#` in the DB password — §3 |
 | `Too many connections` | Workers × pool exceeds `max_connections` — §9a |
+| `node: bad option: --env-file` | Node older than 20.6 running a pre-`dd6f083` checkout. Pull; the app now loads `.env` itself |
 | App won't start, `Invalid URL` | Same cause: `DATABASE_URL` needs percent-encoding |
 
 Rolling back code is `git checkout <previous-tag> && ./deploy/deploy.sh --no-pull`.

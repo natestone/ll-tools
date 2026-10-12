@@ -7,8 +7,8 @@
  *   pm2 save                 # persist across reboots (after pm2 startup)
  *   pm2 logs ll-manager
  *
- * Secrets live in app/backend/.env, which node reads via --env-file. They are
- * deliberately NOT in this file: it is committed to git.
+ * Secrets live in app/backend/.env, loaded by src/lib/env.js at startup. They
+ * are deliberately NOT in this file: it is committed to git.
  *
  * ---------------------------------------------------------------------------
  * CONCURRENCY
@@ -66,7 +66,6 @@ module.exports = {
     name: 'll-manager',
     cwd: __dirname + '/app/backend',
     script: 'src/index.js',
-    node_args: '--env-file=.env',
 
     instances: workers,
     // cluster mode shares the listening socket across workers; fork mode cannot.
