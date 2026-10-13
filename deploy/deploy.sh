@@ -60,7 +60,7 @@ fi
 # --- 2. get the code ------------------------------------------------------
 if [ "$DO_PULL" = 1 ]; then
   say "Pulling latest code"
-  BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+
   # Refuse to deploy over uncommitted edits rather than silently stashing or
   # clobbering them -- on a server they are usually an emergency hotfix.
   if [ -n "$(git status --porcelain)" ]; then
@@ -68,8 +68,25 @@ if [ "$DO_PULL" = 1 ]; then
     git status --short >&2
     exit 1
   fi
+
+  BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+  if [ "$BRANCH" = "HEAD" ]; then
+    echo "HEAD is detached — not on a branch. Fix with:" >&2
+    echo "    git checkout ${DEPLOY_BRANCH:-main}" >&2
+    exit 1
+  fi
+
+  # fetch + explicit ff-only merge, rather than `git pull`.
+  #
+  # `git pull` consults branch.<name>.merge, and when that config is missing or
+  # points somewhere else it fails with "Your configuration specifies to merge
+  # with the ref 'refs/heads/main' ... but no such ref was fetched" -- even
+  # though the fetch plainly succeeded. Naming the remote ref outright skips
+  # that config entirely, so a deploy never depends on upstream tracking being
+  # set up correctly.
   BEFORE="$(git rev-parse HEAD)"
-  git pull --ff-only origin "$BRANCH"
+  git fetch origin "$BRANCH"
+  git merge --ff-only "origin/$BRANCH"
   AFTER="$(git rev-parse HEAD)"
   if [ "$BEFORE" = "$AFTER" ]; then
     echo "    already up to date at ${AFTER:0:8}"
