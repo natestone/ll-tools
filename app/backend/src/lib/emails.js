@@ -218,3 +218,71 @@ export function allStarSignupConfirmation({ parentName, leagueName, year, player
       </p>`),
   }
 }
+
+/* ---- changing the sign-in address --------------------------------------- */
+
+/* Sent to the NEW address. Clicking the link is what proves the person
+   controls that mailbox, so this is the only message that carries the token. */
+export function emailChangeVerify({ displayName, newEmail, token, expiresMinutes = 60 }) {
+  const url = `${APP_URL()}/confirm-email?token=${encodeURIComponent(token)}`
+  return {
+    essential: true,   // user-initiated seconds ago; see ESSENTIAL_NOTE
+    subject: `Confirm your new ${BRAND()} email address`,
+    text: [
+      `Hi ${displayName || 'there'},`,
+      ``,
+      `You asked to use this address (${newEmail}) to sign in to ${BRAND()}.`,
+      `Confirm it by opening this link — it expires in ${expiresMinutes} minutes:`,
+      ``,
+      url,
+      ``,
+      `Until you do, keep signing in with your current address.`,
+      `If you didn't ask for this, ignore this email and nothing will change.`,
+    ].join('\n'),
+    html: shell('Confirm your new email address', `
+      <p>Hi ${esc(displayName || 'there')},</p>
+      <p>You asked to use this address (<strong>${esc(newEmail)}</strong>) to sign in to
+         ${esc(BRAND())}.</p>
+      ${button(url, 'Confirm this address')}
+      <p style="font-size:13px;color:#6b7280">
+        This link expires in ${expiresMinutes} minutes. Until you confirm, keep signing in
+        with your current address. If you didn't ask for this, ignore this email —
+        nothing will change.
+      </p>`),
+  }
+}
+
+/* Sent to the OLD address, both on request and on completion. This is the part
+   that makes the flow safe: someone who takes over a session can change the
+   address, but they cannot stop the real owner being told it happened. */
+export function emailChangeNotice({ displayName, newEmail, done = false }) {
+  const what = done
+    ? `Your ${BRAND()} sign-in address has been changed to ${newEmail}.`
+    : `Someone asked to change your ${BRAND()} sign-in address to ${newEmail}.`
+  return {
+    essential: true,   // a security notice; see ESSENTIAL_NOTE
+    subject: done
+      ? `Your ${BRAND()} email address was changed`
+      : `Confirm requested: your ${BRAND()} email address`,
+    text: [
+      `Hi ${displayName || 'there'},`,
+      ``,
+      what,
+      done
+        ? `You will sign in with the new address from now on.`
+        : `The change only takes effect once that address is confirmed.`,
+      ``,
+      `If this wasn't you, reset your password immediately and tell your league president.`,
+    ].join('\n'),
+    html: shell(done ? 'Your email address was changed' : 'A change to your email was requested', `
+      <p>Hi ${esc(displayName || 'there')},</p>
+      <p>${esc(what)}</p>
+      <p style="font-size:13px;color:#6b7280">
+        ${done
+          ? 'You will sign in with the new address from now on.'
+          : 'The change only takes effect once that address is confirmed.'}
+        <br><strong>If this wasn't you, reset your password immediately and tell your
+        league president.</strong>
+      </p>`),
+  }
+}

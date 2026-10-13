@@ -24,6 +24,8 @@ import PublicBallot from './pages/PublicBallot.jsx'
 import SuperAdmin from './pages/SuperAdmin.jsx'
 import ForgotPassword from './pages/ForgotPassword.jsx'
 import ResetPassword from './pages/ResetPassword.jsx'
+import Profile from './pages/Profile.jsx'
+import ConfirmEmail from './pages/ConfirmEmail.jsx'
 
 const AuthCtx = createContext(null)
 export const useAuth = () => useContext(AuthCtx)
@@ -42,6 +44,8 @@ export default function App() {
         {/* reachable signed-out: a locked-out user has no session */}
         <Route path="/forgot" element={<ForgotPassword />} />
         <Route path="/reset" element={<ResetPassword />} />
+          {/* opened from the NEW mailbox, often on a device that is not signed in */}
+          <Route path="/confirm-email" element={<ConfirmEmail />} />
         {/* an invited officer usually has no account yet — must render signed out */}
         <Route path="/invite/accept" element={<InviteAccept />} />
         {/* public: reachable by anyone holding a link from an email footer */}
@@ -55,6 +59,7 @@ export default function App() {
           <>
             <Route path="/" element={<Leagues />} />
             <Route path="/admin" element={<SuperAdmin />} />
+            <Route path="/profile" element={<Profile user={user} />} />
             <Route path="/l/:leagueId" element={<LeagueShell />}>
               <Route index element={<LeagueHome />} />
               <Route path="dashboard" element={<OwnerDashboard />} />

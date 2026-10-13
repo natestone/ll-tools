@@ -30,7 +30,7 @@ export default function Leagues() {
         <span className="brand">GNGRLL<span className="hide-sm"> League Manager</span></span>
         <span className="spacer" />
         {user.isSuperAdmin && <Link to="/admin">Admin</Link>}
-        <span className="hide-sm">{user.displayName}</span>
+        <Link to="/profile" className="hide-sm profile-link" title="Your account">{user.displayName}</Link>
         <a href="#" onClick={logout}>Log out</a>
       </div>
       <div className="content">

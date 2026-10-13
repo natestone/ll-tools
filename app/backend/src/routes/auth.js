@@ -3,9 +3,10 @@ import crypto from 'node:crypto'
 import bcrypt from 'bcryptjs'
 import rateLimit from 'express-rate-limit'
 import { sharedStore } from '../lib/rateLimitStore.js'
+import { requireAuth } from '../middleware/auth.js'
 import { prisma } from '../lib/prisma.js'
 import { sendMail } from '../lib/mailer.js'
-import { passwordReset, passwordChanged } from '../lib/emails.js'
+import { passwordReset, passwordChanged, emailChangeVerify, emailChangeNotice } from '../lib/emails.js'
 
 export const authRouter = Router()
 
@@ -19,6 +20,12 @@ const forgotLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, limit: 5,
   standardHeaders: true, legacyHeaders: false,
   message: { error: 'Too many reset requests. Try again in a few minutes.' },
+})
+const emailChangeLimiter = rateLimit({
+  ...sharedStore('auth:emailchange'),
+  windowMs: 15 * 60 * 1000, limit: 10,
+  standardHeaders: true, legacyHeaders: false,
+  message: { error: 'Too many attempts. Try again in a few minutes.' },
 })
 const resetLimiter = rateLimit({
   ...sharedStore('auth:reset'),
@@ -132,6 +139,101 @@ authRouter.post('/reset', resetLimiter, async (req, res) => {
   if (!mail.ok) console.error(`[auth] password-changed notice to ${row.user.email} failed: ${mail.error}`)
 
   res.json({ ok: true })
+})
+
+/* ============================================================================
+   Changing the sign-in address.
+
+   Two messages go out, and the second is the one that matters. The token goes
+   only to the NEW address, so following the link proves control of that
+   mailbox. The OLD address gets a notice with no token at all, which is what
+   stops a stolen session being used to quietly take an account: the thief can
+   start a change, but cannot prevent the owner hearing about it.
+   ========================================================================== */
+
+const EMAIL_CHANGE_TTL_MIN = 60
+
+authRouter.post('/email-change', requireAuth, emailChangeLimiter, async (req, res) => {
+  const newEmail = String(req.body?.email || '').trim().toLowerCase()
+  const me = await prisma.user.findUnique({ where: { id: req.session.userId } })
+  if (!me) return res.status(401).json({ error: 'not authenticated' })
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(newEmail))
+    return res.status(400).json({ error: "That email address doesn't look right." })
+  if (newEmail === me.email)
+    return res.status(400).json({ error: 'That is already your email address.' })
+
+  // Re-authenticate before changing a credential: a session left open on a
+  // shared laptop should not be enough to walk off with the account.
+  const password = String(req.body?.password || '')
+  if (!password || !(await bcrypt.compare(password, me.passwordHash)))
+    return res.status(400).json({ error: 'That password is not correct.' })
+
+  // Say the same thing whether or not the address is taken, so this is not a
+  // way to discover who has an account.
+  const taken = await prisma.user.findUnique({ where: { email: newEmail } })
+  const ok = { ok: true, message: `If that address can be used, a confirmation link is on its way to ${newEmail}.` }
+  if (taken) return res.json(ok)
+
+  // Only the newest link should work.
+  await prisma.emailChange.updateMany({
+    where: { userId: me.id, usedAt: null }, data: { usedAt: new Date() },
+  })
+  const token = crypto.randomBytes(32).toString('hex')
+  await prisma.emailChange.create({
+    data: {
+      userId: me.id, newEmail, tokenHash: sha256(token),
+      expiresAt: new Date(Date.now() + EMAIL_CHANGE_TTL_MIN * 60_000),
+    },
+  })
+
+  const sent = await sendMail({
+    to: newEmail,
+    ...emailChangeVerify({ displayName: me.displayName, newEmail, token, expiresMinutes: EMAIL_CHANGE_TTL_MIN }),
+  })
+  if (!sent.ok) console.error(`[auth] email-change verify to ${newEmail} failed: ${sent.error || sent.reason}`)
+
+  const notice = await sendMail({ to: me.email, ...emailChangeNotice({ displayName: me.displayName, newEmail }) })
+  if (!notice.ok) console.error(`[auth] email-change notice to ${me.email} failed: ${notice.error || notice.reason}`)
+
+  res.json(ok)
+})
+
+/* No session required: the link is opened from the new mailbox, often on a
+   phone that is not signed in. The token is the proof. */
+authRouter.post('/email-change/confirm', emailChangeLimiter, async (req, res) => {
+  const token = String(req.body?.token || '')
+  if (!token) return res.status(400).json({ error: 'That link is missing its code.' })
+
+  const row = await prisma.emailChange.findUnique({
+    where: { tokenHash: sha256(token) }, include: { user: true },
+  })
+  // Expired, already used and forged are deliberately indistinguishable.
+  if (!row || row.usedAt || row.expiresAt < new Date())
+    return res.status(400).json({ error: 'That link is invalid or has expired. Request a new one.' })
+
+  // Someone may have claimed the address in the meantime.
+  const clash = await prisma.user.findUnique({ where: { email: row.newEmail } })
+  if (clash && clash.id !== row.userId) {
+    await prisma.emailChange.update({ where: { id: row.id }, data: { usedAt: new Date() } })
+    return res.status(400).json({ error: 'That address is no longer available.' })
+  }
+
+  const oldEmail = row.user.email
+  await prisma.$transaction([
+    prisma.user.update({ where: { id: row.userId }, data: { email: row.newEmail } }),
+    prisma.emailChange.update({ where: { id: row.id }, data: { usedAt: new Date() } }),
+  ])
+
+  // Tell the old address it is done — the last chance for the real owner to
+  // notice if this was not them.
+  const notice = await sendMail({
+    to: oldEmail,
+    ...emailChangeNotice({ displayName: row.user.displayName, newEmail: row.newEmail, done: true }),
+  })
+  if (!notice.ok) console.error(`[auth] email-changed notice to ${oldEmail} failed: ${notice.error || notice.reason}`)
+
+  res.json({ ok: true, email: row.newEmail })
 })
 
 authRouter.get('/me', async (req, res) => {

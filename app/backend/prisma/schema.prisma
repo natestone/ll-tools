@@ -26,6 +26,7 @@ model User {
   memberships  Membership[]
   invitesSent  Invite[]     @relation("InviteInviter")
   passwordResets PasswordReset[]
+  emailChanges   EmailChange[]
 }
 
 // People who have opted out of email. Keyed by address, not user id, on purpose:
@@ -495,4 +496,25 @@ model RateLimit {
   expiresAt DateTime
 
   @@index([expiresAt])
+}
+
+// A pending change of a user's sign-in address.
+//
+// The token is emailed to the NEW address, so clicking it proves control of
+// that mailbox -- which is the whole point. The confirmation link therefore
+// works without a session: people open mail on a phone that is not signed in.
+//
+// The old address is told separately, both when a change is requested and when
+// it completes, so a hijacked account cannot be quietly walked away with.
+model EmailChange {
+  id        Int       @id @default(autoincrement())
+  userId    Int
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  newEmail  String
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
 }

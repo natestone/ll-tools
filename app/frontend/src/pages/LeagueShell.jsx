@@ -52,7 +52,7 @@ export default function LeagueShell() {
             ))}
           </select>
         )}
-        <span className="hide-sm">{user.displayName}</span>
+        <Link to="/profile" className="hide-sm profile-link" title="Your account">{user.displayName}</Link>
         <a href="#" onClick={logout}>Log out</a>
       </div>
 
