@@ -127,6 +127,13 @@ export default function Members() {
       setMembers((ms) => ms.map((m) => (m.membershipId === membershipId ? { ...m, user: r.user } : m)))
     } catch (e) { setMemberErr(e.message || 'Could not save') }
   }
+  async function cancelInvite(i) {
+    // Worth a confirm: the emailed link stops working the moment this returns.
+    if (!window.confirm(`Cancel the invitation to ${i.email}?\n\nTheir invitation link will stop working.`)) return
+    await api.del(`/leagues/${leagueId}/invites/${i.id}`)
+    setInvites((xs) => xs.filter((x) => x.id !== i.id))
+  }
+
   async function invite(e) {
     e.preventDefault()
     const r = await api.post(`/leagues/${leagueId}/invites`, { email, roleKeys: inviteRoles })
@@ -238,6 +245,8 @@ export default function Members() {
                 pushing the flex row (and the page) wider than the screen */}
             <div className="invite-email" style={{ flex: 1, minWidth: 0, overflowWrap: 'anywhere' }}>{i.email}</div>
             <div className="invite-roles">{(i.roleKeys || []).join(', ')}</div>
+            <button type="button" className="icon-btn danger" title="Cancel this invitation"
+              onClick={() => cancelInvite(i)}>×</button>
           </div>
         ))}
         {invites.filter((i) => i.status === 'pending').length === 0 && <p className="muted">None.</p>}

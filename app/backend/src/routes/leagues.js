@@ -350,6 +350,31 @@ leaguesRouter.get('/:leagueId/invites', requireAuth, loadLeague, requireOwner, a
   res.json(invites.map((i) => ({ id: i.id, email: i.email, roleKeys: i.roleKeys, status: i.status, expiresAt: i.expiresAt })))
 })
 
+/* Cancel a pending invitation.
+
+   The row is kept and marked revoked rather than deleted: loadInvite already
+   refuses anything whose status is not "pending", so the emailed link stops
+   working either way, and keeping it preserves the record of who was invited
+   and by whom. That matches how members are archived rather than destroyed.
+
+   Scoped by leagueId as well as id, so an owner of one league cannot cancel
+   another league's invitation by guessing a number. */
+leaguesRouter.delete('/:leagueId/invites/:id', requireAuth, loadLeague, requireOwner, async (req, res) => {
+  const id = Number(req.params.id)
+  if (!Number.isInteger(id)) return res.status(400).json({ error: 'bad invite id' })
+
+  const invite = await prisma.invite.findFirst({ where: { id, leagueId: req.leagueId } })
+  if (!invite) return res.status(404).json({ error: 'not found' })
+
+  // An accepted invitation is already spent; revoking it would imply it could
+  // take the membership back, which it cannot.
+  if (invite.status === 'accepted')
+    return res.status(400).json({ error: 'That invitation has already been accepted.' })
+
+  await prisma.invite.update({ where: { id }, data: { status: 'revoked' } })
+  res.status(204).end()
+})
+
 /* ============================================================================
    Invite redemption (top-level router at /api/invites)
 
